@@ -1,0 +1,1205 @@
+commit b2fbf5dadcf4447fd6b92127bcccfb7a20e9906b
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Mon Jun 7 11:55:51 2021 +0000
+
+    release: update debian/changelog
+
+diff --git a/scripts/packaging/debian/changelog b/scripts/packaging/debian/changelog
+index 9f4ce1d4c..f4b2db969 100644
+--- a/scripts/packaging/debian/changelog
++++ b/scripts/packaging/debian/changelog
+@@ -1,3 +1,9 @@
++elektra (0.9.6-4) unstable; urgency=medium
++
++  * New upstream version.
++
++ -- Jenkins (User for Elektra automated build system) <jenkins@739f6e812ee1>  Mon, 07 Jun 2021 11:55:51 +0000
++
+ elektra (0.9.6-3) unstable; urgency=medium
+ 
+   * New upstream version.
+
+commit 162b610fc708509c66db97fa1939577e8f1a41c8
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Mon Jun 7 11:55:51 2021 +0000
+
+    release: update fedora/changelog
+
+diff --git a/scripts/packaging/fedora/changelog b/scripts/packaging/fedora/changelog
+index bf4f02e69..66db09e41 100644
+--- a/scripts/packaging/fedora/changelog
++++ b/scripts/packaging/fedora/changelog
+@@ -1,3 +1,6 @@
++* Mon Jun 07 2021 elektrabot <elektrabot@libelektra.org> - 0.9.6-4
++- New upstream version
++
+ * Mon Jun 07 2021 elektrabot <elektrabot@libelektra.org> - 0.9.6-3
+ - New upstream version
+ 
+
+commit 62fa6f73eb49b1bfdf3136732654c294169f84ad
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Mon Jun 7 11:54:57 2021 +0000
+
+    release: regenerate plugins overview picture
+
+diff --git a/doc/images/plugins.pdf b/doc/images/plugins.pdf
+index 9326306d8..7f9abfede 100644
+Binary files a/doc/images/plugins.pdf and b/doc/images/plugins.pdf differ
+
+commit 618e6f6dd94f833dd3edde6dcb72d549b9f1ef46
+Merge: 70d231953 7d2714b32
+Author: Mihael Pranjić <mpranj@limun.org>
+Date:   Mon Jun 7 10:38:32 2021 +0200
+
+    Merge pull request #3883 from mpranj/releasenotes-0.9.6
+    
+    Releasenotes 0.9.6
+
+commit 7d2714b32e11a9f94e61b85c0c82a0858d4d3d9c
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Mon Jun 7 10:30:50 2021 +0200
+
+    doc: update release procedure
+
+diff --git a/doc/todo/RELEASE.md b/doc/todo/RELEASE.md
+index 4abb08ec1..9ebabd1b8 100644
+--- a/doc/todo/RELEASE.md
++++ b/doc/todo/RELEASE.md
+@@ -80,7 +80,7 @@ If no release critical problems are found during testing, continue.
+   - Add download links to release notes (api-docu, release tarball)
+   - Add hash sums to release notes
+ - Run linkchecker to verify that all download links of the current release are working:
+-  `mkdir -p build && cd build && make html && ../scripts/link-checker external-links.txt`
++  `mkdir -p build && cd build && cmake .. && make html && ../scripts/link-checker external-links.txt`
+ - Wait for master build to finish and verify website is correct
+ 
+ # Post-Release updates (depend on release artifacts)
+
+commit 86aff9d50d0febf1607e6450012e5964cdab03ba
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Mon Jun 7 10:29:41 2021 +0200
+
+    doc: update release procedure
+
+diff --git a/doc/todo/RELEASE.md b/doc/todo/RELEASE.md
+index a81651c53..4abb08ec1 100644
+--- a/doc/todo/RELEASE.md
++++ b/doc/todo/RELEASE.md
+@@ -80,7 +80,7 @@ If no release critical problems are found during testing, continue.
+   - Add download links to release notes (api-docu, release tarball)
+   - Add hash sums to release notes
+ - Run linkchecker to verify that all download links of the current release are working:
+-  `mkdir build && cd build && make html && ../scripts/link-checker external-links.txt`
++  `mkdir -p build && cd build && make html && ../scripts/link-checker external-links.txt`
+ - Wait for master build to finish and verify website is correct
+ 
+ # Post-Release updates (depend on release artifacts)
+
+commit 4b318af927cfbefb8fe1e694b95d13bc8b295bbe
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Mon Jun 7 10:28:15 2021 +0200
+
+    docker: update alpine release image
+
+diff --git a/scripts/docker/alpine/3.13/release.Dockerfile b/scripts/docker/alpine/3.13/release.Dockerfile
+index 300e954e0..1476470e9 100644
+--- a/scripts/docker/alpine/3.13/release.Dockerfile
++++ b/scripts/docker/alpine/3.13/release.Dockerfile
+@@ -29,7 +29,7 @@ RUN mkdir -p ${GTEST_ROOT} \
+     && rm gtest.tar.gz
+ 
+ ENV ELEKTRA_ROOT=/opt/elektra
+-ENV ELEKTRA_RELEASE=0.9.5
++ENV ELEKTRA_RELEASE=0.9.6
+ RUN mkdir -p ${ELEKTRA_ROOT} \
+     && cd /tmp \
+     && curl -o elektra.tar.gz \
+
+commit 7bac4574001523647da3cc51c94353b101b43699
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Mon Jun 7 10:26:18 2021 +0200
+
+    doc: move release notes to final destination
+
+diff --git a/doc/news/2021-06-07_0.9.6.md b/doc/news/2021-06-07_0.9.6.md
+new file mode 100644
+index 000000000..61c3a8ad4
+--- /dev/null
++++ b/doc/news/2021-06-07_0.9.6.md
+@@ -0,0 +1,327 @@
++# 0.9.6 Release
++
++- guid: 9af4a71a-4e03-46a8-badb-5d76ac548144
++- author: Mihael Pranjić
++- pubDate: Mon, 07 Jun 2021 09:48:41 +0200
++- shortDesc: Java Fixes, Documentation Updates, GCC 11 and Clang 12 Compatibility
++
++We are proud to release Elektra 0.9.6.
++
++## What is Elektra?
++
++Elektra serves as a universal and secure framework to access
++configuration settings in a global, hierarchical key database.
++For more information, visit [https://libelektra.org](https://libelektra.org).
++
++You can also read the news [on our website](https://www.libelektra.org/news/0.9.6-release)
++
++You can try out the latest Elektra release using our docker image [elektra/elektra](https://hub.docker.com/r/elektra/elektra).
++This is the quickest way to get started with Elektra without compiling and other obstacles, simply run
++`docker run -it elektra/elektra`.
++
++## Highlights
++
++- Java fixes: JNI plugin fixed and JNA bindings improved
++- Fedora 34 and Debian Bullseye packages added
++- Documentation Improvements & Cleanups
++- GCC 11 and Clang 12 compatibility
++
++### JNI plugin fixed
++
++The JNI plugin was encountering a double free on open. This has been fixed in conjunction with an update to JNA binding release mechanism. The previously disabled JNI test have been fixed and enabled.
++
++For how to write plugins, please refer to [java-plugins.md](../tutorials/java-plugins.md) as well as the [JNI plugin](../../src/plugins/jni/README.md) and [JNA binding](../../src/bindings/jna/README.md) documentation.
++
++## Plugins
++
++The following section lists news about the [plugins](https://www.libelektra.org/plugins/readme) we updated in this release.
++
++### JNI
++
++- Fixed double free issues and re-enabled tests
++- Updated documentation
++- Increased minimum required JDK version to 9
++
++_(Michael Tucek)_
++
++Special thanks to _(Klemens Böswirth)_, _(Mihael Pranjić)_ and _(Robert Sowula)_ for helping with the problem analysis!
++
++### Dbus, Dbusrecv and Zeromqsend
++
++- Internal changes to ensure compatibility with the new `elektraNotificationContract`. _(Klemens Böswirth)_
++
++### Xerces
++
++- Store length of an array in metakey array according to [array decision](../decisions/array.md). _(Robert Sowula)_
++
++### YAML Smith and Yan LR
++
++- Removed plugins. _(René Schwaiger)_
++
++### ni
++
++- Silence Clang 12 warnings about suspicious string literal concatenation. _(Mihael Pranjić)_
++
++### Lua
++
++- Removed outdated information from docs _(@a-kraschitzer)_
++
++## Libraries
++
++The text below summarizes updates to the [C (and C++)-based libraries](https://www.libelektra.org/libraries/readme) of Elektra.
++
++### Core
++
++- Remove keyCompareBy(Name)?Owner _(@a-kraschitzer)_
++
++## Bindings
++
++Bindings allow you to utilize Elektra using [various programming languages](https://www.libelektra.org/bindings/readme). This section keeps
++you up to date with the multi-language support provided by Elektra.
++
++### SWIG
++
++- Remove `-Wno-shift-overflow warnings` option from SWIG bindings compile flags. _(Mihael Pranjić)_
++- Suppress SWIG/Ruby bindings warning about `operator != ignored`. _(Mihael Pranjić)_
++
++### JNA
++
++- Gradle wrapper and docker images upgraded to 7.0.2
++- Minumum Gradle version decreased to 6.0
++- Upgraded JNA dependency from 4.5.2 to 5.8.0
++- Increased minimum required JDK version to 11
++- Updated Java binding API documentation
++- Migrated native resource clean-up from `finalize()` to `Cleaner`
++  - Please revisit the documentation for `Key::release` and `KeySet::release` for recommended resource release handling
++  - Currently automated native key and key set resource clean-up is deactivated due to some possible race conditions wich might result in double free errors (#3869). Manual key release is also disabled to not break current API release semantic. This leads to memory leaks, which is a known issue and will be resolved in an upcoming release.
++- Introduced multiple exceptions when native API calls fail - see updated java doc for details
++- Introduced early parameter validation for values which would otherwise lead to unspecific errors in native API calls
++- Several under the hood improvements
++- Update `Key` API introducing the following changes:
++  - Extracted exceptions from `Key` class
++  - Fixed `Key::getCurrentMeta`
++  - Moved `Elektra.KeyNewArgumentFlags` to `Key.NewArgumentTag`
++  - Changed return types from `int` to `boolean` or enabled a fluent interface where appropriate
++  - Renamed `Key::*Integer` to `Key::*Int`
++  - Renamed `KeyInvalidNameException` to `KeyNameException`
++  - Renamed `KeyTypeMismatchException` to `KeyBinaryTypeNotSupportedException`
++  - Introduced `Key::get*AndRelease` convenience methods
++  - Introduced `Key::createNameless`
++  - Introduced `KeyReleasedException` being thrown when a released `Key` is being accessed
++  - Introduced `KeyMetaException`
++  - Removed unused `KeyTypeConversionException`
++  - Removed `Key::needsSync`
++  - Removed `Key::isNull`
++    - `KeyReleasedException` is now being thrown when a released (= previously `isNull`) `Key` is being accessed
++    - `Key`s with no backing native key pointer cannot be created anymore
++- Updated `KeySet` API introducing the following changes:
++  - Changed return type enabling a fluent interface where appropriate
++  - Renamed `KeySet::head` to `KeySet::first`
++  - Renamed `KeySet::tail` to `KeySet::last`
++  - Introduced `KeySetReleasedException` being thrown when a released `KeySet` is being accessed
++  - Introduced `KeySetAppendException`
++  - Removed `KeySet::create(int, Object[])`
++  - Removed `KeySet::needsSync`
++  - Methods which have been returning a nullable `Key`, now return an `Optional<Key>´
++    - `KeySet::lookup*` now returns `Optional<Key>`
++    - `Key::getMeta` now returns `Optional<Key>`
++    - Example:
++      ```java
++      // checking whether the key has been found BEFORE API change
++      Key found = ks.lookup("/some/key");
++      if (found != null) {
++        // process found key
++      }
++      ```
++      ```java
++      // checking whether the key has been found AFTER API change
++      ks.lookup("/some/key").ifPresent(k -> // process found key );
++      ```
++- Updated `KDB` API introducing the following changes:
++  - Introduced `KDBClosedException` being thrown when a closed `KDB` session is being accessed
++  - Introduced `KDB::get(Key)`
++  - Introduced `KDB::open()`
++  - Introduced `KDB::open(KeySet)`
++  - Introduced `KDB::goptsContract(String[], String[], Key, KeySet)
++  - Changed return type enabling a fluent interface where appropriate
++- Updated tests accordingly
++
++_(Michael Tucek)_
++
++## Tools
++
++- Remove `kdb set` functionality that creates a null key. _(Robert Sowula)_
++- Rename elektraStrnDup to elektraMemDup _(@a-kraschitzer)_
++- Update specmount error message _(@a-kraschitzer)_
++- Update `elektraMemDup` to `void *` and update the documentation. _(Mihael Pranjić)_
++- There have been a few bugfixes for elektrad. _(Klemens Böswirth)_
++- Update `lodash` and `hosted-git-info` dependencies of `webd` due to security update. _(Mihael Pranjić)_
++
++## Scripts
++
++- Require clang-format 12 for reformatting C and Java. _(Mihael Pranjić)_
++- Use basename of release file in `generate-hashsums`. _(Mihael Pranjić)_
++- Use `shfmt` v3.2.4 to reformat shell scripts. _(Mihael Pranjić)_
++- Use `cmake-format` v0.6.13 (`cmakelang`) to reformat CMake. _(Mihael Pranjić)_
++- Aptly repositories are now automatically created if they do not exist during a package release. _(Robert Sowula)_
++
++## Documentation
++
++- Added Reviews for all functions contained in the Elektra Core API _(@lawli3t)_
++- Added packaging section to news template. _(Mihael Pranjić)_
++- Minor readability improvement in [highlevel.md](/doc/tutorials/highlevel.md) _(Tobias Schubert @qwepoizt)_
++- Fix examples of spec plugin. _(Robert Sowula)_
++- Added Reviews for all functions contained in the Elektra Core API _(@lawli3t)_
++- Document package names of plugins, bindings and tools. _(Robert Sowula)_
++- Small update in API docu related to different namespaces in returned keys. _(Markus Raab)_
++- improved docu of [noresolver](/src/plugins/noresolver). _(Markus Raab)_
++- improved plugin tutorial. _(Markus Raab)_
++- Adding info about syncing forks to `doc/GIT.md` _(Klemens Böswirth)_
++- Work on [COMPILE.md](/doc/COMPILE.md) and [INSTALL.md](/doc/INSTALL.md) to help with understanding _(@a-kraschitzer)_
++- Update and correct licensing information _(@a-kraschitzer)_
++- Rename [RELEASE.md](/doc/todo/RELEASE.md) _(@a-kraschitzer)_
++- Improved documentation for module kdb in Elektra Core. _(@lawli3t)_
++- Improved documentation for module key in Elektra Core. _(@lawli3t)_
++- Improved documentation for module keyname in Elektra Core. _(@lawli3t)_
++- Improved documentation for module keyvalue in Elektra Core. _(@lawli3t)_
++- Improved documentation for module keymeta in Elektra Core. _(@lawli3t)_
++- Improved documentation for module keytest in Elektra Core. _(@lawli3t)_
++- Improved documentation for module keyset in Elektra Core. _(@lawli3t)_
++- Fixed example in the "mount-configuration-files" tutorial [#3722](https://github.com/ElektraInitiative/libelektra/issues/3722). _(Philipp Oppel)_
++- Update and correct third party licensing information _(@a-kraschitzer)_
++- Added contact details to `AUTHORS.md` _(Michael Tucek)_
++- Use Ronn-NG instead of unmaintained ronn to generate man pages. _(Mihael Pranjić)_
++- Re-generate man pages to add missing information and remove unnecessary symbols and escaping. _(Mihael Pranjić)_
++- Update `doc/Doxyfile` to Doxygen 1.9.1 and fix a syntax error with the `FILTER_PATTERNS` directive. _(Mihael Pranjić)_
++
++## Tests
++
++- Fix failing `testshell_markdown_tutorial_crypto` on Mac OS and other OS with GnuPG version >= 2.3.1. _(Peter Nirschl @petermax2)_
++- Use clang-format 12 for Restyled and update Restyled version. _(Mihael Pranjić)_
++- Update all Restyled formatters to current versions. _(Mihael Pranjić)_
++
++## Packaging
++
++- We now package the Ruby bindings, ruby plugin and the gitresolver plugin. _(Robert Sowula)_
++- We added Fedora 34 packages. _(Mihael Pranjić)_
++- We added Debian Bullseye packages. _(Robert Sowula)_
++
++## Build
++
++### CMake
++
++- Disable binding tests when `BUILD_TESTING` is disabled. _(Robert Sowula)_
++- Remove unused `FindCppCMS.cmake` CMake module and unused `Boost` variables. _(Mihael Pranjić)_
++
++### Docker
++
++- Add Fedora 34 images. _(Mihael Pranjić)_
++- We added release images that come with pre-installed dependencies and sudo permissions for each distribution we build packages for. _(Robert Sowula)_
++- Use Clang 12 and Gradle 7.0 in Debian Sid image. _(Mihael Pranjić)_
++- Remove Boost and some unused dependencies from all Docker images. _(Mihael Pranjić)_
++- Use Gradle 7.0 and Ronn-NG `0.10.1.pre1` in Docker images. _(Mihael Pranjić)_
++- Remove unused Debian Buster `doc` image. _(Mihael Pranjić)_
++
++## Infrastructure
++
++### Cirrus
++
++- Use Clang 12 and Python 3.9 for macOS builds. _(Mihael Pranjić)_
++- Pin GnuPG version to 2.2.x. _(Mihael Pranjić)_
++- Update Fedora image to version 34. _(Mihael Pranjić)_
++- Clean up unused dependencies in Arch Linux image and add Ronn-NG to generate man pages. _(Mihael Pranjić)_
++
++### GitHub Actions
++
++- Pin GnuPG version to 2.2.x. _(Mihael Pranjić)_
++- Enable `jni` plugin and fix `JAVA_HOME` detection. _(Mihael Pranjić)_
++
++### Jenkins
++
++- We now build and test on Fedora 34 and 33. Fedora 32 was removed from the CI. _(Mihael Pranjić)_
++- Build release documentation on Debian Sid, due to newer TeX and Doxygen packages. _(Mihael Pranjić)_
++
++### Travis
++
++- Update Ubuntu to Focal, use GCC 10 and clean up travis scripts. _(Mihael Pranjić)_
++
++## Website
++
++The website is generated from the repository, so all information about
++plugins, bindings and tools are always up to date. Furthermore, we changed:
++
++- Update `highlight.js` due to a [ReDOS vulnerability](https://github.com/advisories/GHSA-7wwv-vh3v-89cq) and upgrade other dependencies as well. _(Mihael Pranjić)_
++- Catch errors when code highlighting fails. _(Mihael Pranjić)_
++- Get rid of unused code: authentication, backend, users, snippets and conversion service. _(Mihael Pranjić)_
++- Fix docsearch sourcemap error. _(Mihael Pranjić)_
++- Update `lodash` dependency due to security update. _(Mihael Pranjić)_
++
++## Outlook
++
++We are currently working on following topics:
++
++- Elektrify KDE _(Dardan Haxhimustafa)_, _(Felix Resch)_ and _(Mihael Pranjić)_
++- 1.0 API _(Stefan Hanreich)_ and _(Klemens Böswirth)_
++- Improve Java Development Experience _(Michael Tucek)_
++- Elektrify GNOME _(Mihael Pranjić)_
++- Continious Releases _(Robert Sowula)_
++- KDB access using FUSE _(Alexander Firbas)_
++- Default TOML plugin _(Jakob Fischer)_
++- Improve Plugin Framework _(Vid Leskovar)_
++- Improve 3-way merge _(Dominic Jäger)_
++- Shell completion _(Ulrike Schäfer)_
++- Ansible bindings _(Thomas Waser)_
++
++## Statistics
++
++We closed [39 issues](https://github.com/ElektraInitiative/libelektra/milestone/27?closed=1) for this release.
++
++About 17 authors changed 627 files with 15988 insertions(+) and 16768 deletions(-) in 465 commits.
++
++Thanks to all authors for making this release possible!
++
++## Join the Initiative!
++
++We welcome new contributors!
++Read [here](https://www.libelektra.org/devgettingstarted/ideas) about how to get started.
++
++As first step, you could give us feedback about these release notes.
++Contact us via our [issue tracker](https://issues.libelektra.org).
++
++## Get the Release!
++
++You can download the release from [here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.6.tar.gz)
++or [GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.6.tar.gz?raw=true)
++
++The [hashsums are:](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.6.tar.gz.hashsum?raw=true)
++
++- name: elektra-0.9.6.tar.gz
++- size: 7649484
++- md5sum: e471277ca43a73f222c5e2d32ac19efc
++- sha1: 97c2acd4c651dd79feabc96b09ce6a28152dc1bf
++- sha256: 89a464952600ebfa6e675723a73a2b19f0942c27eee7b193224e50704b68866d
++
++The release tarball is also available signed using GnuPG from
++[here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.6.tar.gz.gpg) or on
++[GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.6.tar.gz.gpg?raw=true)
++
++The following GPG Key was used to sign this release: 12CC44541E1B8AD9B66AFAD55262E7353324914A
++
++Already built API-Docu can be found [here](https://doc.libelektra.org/api/0.9.6/html/)
++or on [GitHub](https://github.com/ElektraInitiative/doc/tree/master/api/0.9.6).
++
++## Stay tuned!
++
++Subscribe to the
++[RSS feed](https://www.libelektra.org/news/feed.rss)
++to always get the release notifications.
++
++If you also want to participate, or for any questions and comments
++please contact us via our issue tracker [on GitHub](http://issues.libelektra.org).
++
++[Permalink to this NEWS entry](https://www.libelektra.org/news/0.9.6-release)
++
++For more information, see [https://libelektra.org](https://libelektra.org)
++
++Best regards,
++[Elektra Initiative](https://www.libelektra.org/developers/authors)
+diff --git a/doc/news/_preparation_next_release.md b/doc/news/_preparation_next_release.md
+index 61c3a8ad4..aa9497d5d 100644
+--- a/doc/news/_preparation_next_release.md
++++ b/doc/news/_preparation_next_release.md
+@@ -1,11 +1,19 @@
+-# 0.9.6 Release
++# 0.9.<<VERSION>> Release
+ 
+-- guid: 9af4a71a-4e03-46a8-badb-5d76ac548144
+-- author: Mihael Pranjić
+-- pubDate: Mon, 07 Jun 2021 09:48:41 +0200
+-- shortDesc: Java Fixes, Documentation Updates, GCC 11 and Clang 12 Compatibility
++This release did not happen yet.
+ 
+-We are proud to release Elektra 0.9.6.
++Please update this file within PRs accordingly.
++For non-trivial changes, you can choose to be
++part of the highlighted changes. Please make
++sure to add some short tutorial (checked by
++shell recorder) or asciinema for highlighted items.
++
++Please add your name at the end of every contribution.
++**Syntax:** _(your name)_
++
++<<`scripts/generate-news-entry`>>
++
++We are proud to release Elektra 0.9.<<VERSION>>.
+ 
+ ## What is Elektra?
+ 
+@@ -13,7 +21,7 @@ Elektra serves as a universal and secure framework to access
+ configuration settings in a global, hierarchical key database.
+ For more information, visit [https://libelektra.org](https://libelektra.org).
+ 
+-You can also read the news [on our website](https://www.libelektra.org/news/0.9.6-release)
++You can also read the news [on our website](https://www.libelektra.org/news/0.9.<<VERSION>>-release)
+ 
+ You can try out the latest Elektra release using our docker image [elektra/elektra](https://hub.docker.com/r/elektra/elektra).
+ This is the quickest way to get started with Elektra without compiling and other obstacles, simply run
+@@ -21,264 +29,173 @@ This is the quickest way to get started with Elektra without compiling and other
+ 
+ ## Highlights
+ 
+-- Java fixes: JNI plugin fixed and JNA bindings improved
+-- Fedora 34 and Debian Bullseye packages added
+-- Documentation Improvements & Cleanups
+-- GCC 11 and Clang 12 compatibility
++- <<HIGHLIGHT1>>
++- <<HIGHLIGHT2>>
++- <<HIGHLIGHT3>>
+ 
+-### JNI plugin fixed
++### <<HIGHLIGHT1>>
+ 
+-The JNI plugin was encountering a double free on open. This has been fixed in conjunction with an update to JNA binding release mechanism. The previously disabled JNI test have been fixed and enabled.
++### <<HIGHLIGHT2>>
+ 
+-For how to write plugins, please refer to [java-plugins.md](../tutorials/java-plugins.md) as well as the [JNI plugin](../../src/plugins/jni/README.md) and [JNA binding](../../src/bindings/jna/README.md) documentation.
++### <<HIGHLIGHT2>>
+ 
+ ## Plugins
+ 
+ The following section lists news about the [plugins](https://www.libelektra.org/plugins/readme) we updated in this release.
+ 
+-### JNI
++### <<Plugin1>>
+ 
+-- Fixed double free issues and re-enabled tests
+-- Updated documentation
+-- Increased minimum required JDK version to 9
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+-_(Michael Tucek)_
++### <<Plugin2>>
+ 
+-Special thanks to _(Klemens Böswirth)_, _(Mihael Pranjić)_ and _(Robert Sowula)_ for helping with the problem analysis!
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+-### Dbus, Dbusrecv and Zeromqsend
++### <<Plugin3>>
+ 
+-- Internal changes to ensure compatibility with the new `elektraNotificationContract`. _(Klemens Böswirth)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+-### Xerces
++## Libraries
+ 
+-- Store length of an array in metakey array according to [array decision](../decisions/array.md). _(Robert Sowula)_
++The text below summarizes updates to the [C (and C++)-based libraries](https://www.libelektra.org/libraries/readme) of Elektra.
+ 
+-### YAML Smith and Yan LR
++### Compatibility
+ 
+-- Removed plugins. _(René Schwaiger)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+-### ni
++### Core
+ 
+-- Silence Clang 12 warnings about suspicious string literal concatenation. _(Mihael Pranjić)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+-### Lua
++### <<Library1>>
+ 
+-- Removed outdated information from docs _(@a-kraschitzer)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+-## Libraries
++### <<Library2>>
+ 
+-The text below summarizes updates to the [C (and C++)-based libraries](https://www.libelektra.org/libraries/readme) of Elektra.
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+-### Core
++### <<Library3>>
+ 
+-- Remove keyCompareBy(Name)?Owner _(@a-kraschitzer)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ## Bindings
+ 
+ Bindings allow you to utilize Elektra using [various programming languages](https://www.libelektra.org/bindings/readme). This section keeps
+ you up to date with the multi-language support provided by Elektra.
+ 
+-### SWIG
+-
+-- Remove `-Wno-shift-overflow warnings` option from SWIG bindings compile flags. _(Mihael Pranjić)_
+-- Suppress SWIG/Ruby bindings warning about `operator != ignored`. _(Mihael Pranjić)_
+-
+-### JNA
+-
+-- Gradle wrapper and docker images upgraded to 7.0.2
+-- Minumum Gradle version decreased to 6.0
+-- Upgraded JNA dependency from 4.5.2 to 5.8.0
+-- Increased minimum required JDK version to 11
+-- Updated Java binding API documentation
+-- Migrated native resource clean-up from `finalize()` to `Cleaner`
+-  - Please revisit the documentation for `Key::release` and `KeySet::release` for recommended resource release handling
+-  - Currently automated native key and key set resource clean-up is deactivated due to some possible race conditions wich might result in double free errors (#3869). Manual key release is also disabled to not break current API release semantic. This leads to memory leaks, which is a known issue and will be resolved in an upcoming release.
+-- Introduced multiple exceptions when native API calls fail - see updated java doc for details
+-- Introduced early parameter validation for values which would otherwise lead to unspecific errors in native API calls
+-- Several under the hood improvements
+-- Update `Key` API introducing the following changes:
+-  - Extracted exceptions from `Key` class
+-  - Fixed `Key::getCurrentMeta`
+-  - Moved `Elektra.KeyNewArgumentFlags` to `Key.NewArgumentTag`
+-  - Changed return types from `int` to `boolean` or enabled a fluent interface where appropriate
+-  - Renamed `Key::*Integer` to `Key::*Int`
+-  - Renamed `KeyInvalidNameException` to `KeyNameException`
+-  - Renamed `KeyTypeMismatchException` to `KeyBinaryTypeNotSupportedException`
+-  - Introduced `Key::get*AndRelease` convenience methods
+-  - Introduced `Key::createNameless`
+-  - Introduced `KeyReleasedException` being thrown when a released `Key` is being accessed
+-  - Introduced `KeyMetaException`
+-  - Removed unused `KeyTypeConversionException`
+-  - Removed `Key::needsSync`
+-  - Removed `Key::isNull`
+-    - `KeyReleasedException` is now being thrown when a released (= previously `isNull`) `Key` is being accessed
+-    - `Key`s with no backing native key pointer cannot be created anymore
+-- Updated `KeySet` API introducing the following changes:
+-  - Changed return type enabling a fluent interface where appropriate
+-  - Renamed `KeySet::head` to `KeySet::first`
+-  - Renamed `KeySet::tail` to `KeySet::last`
+-  - Introduced `KeySetReleasedException` being thrown when a released `KeySet` is being accessed
+-  - Introduced `KeySetAppendException`
+-  - Removed `KeySet::create(int, Object[])`
+-  - Removed `KeySet::needsSync`
+-  - Methods which have been returning a nullable `Key`, now return an `Optional<Key>´
+-    - `KeySet::lookup*` now returns `Optional<Key>`
+-    - `Key::getMeta` now returns `Optional<Key>`
+-    - Example:
+-      ```java
+-      // checking whether the key has been found BEFORE API change
+-      Key found = ks.lookup("/some/key");
+-      if (found != null) {
+-        // process found key
+-      }
+-      ```
+-      ```java
+-      // checking whether the key has been found AFTER API change
+-      ks.lookup("/some/key").ifPresent(k -> // process found key );
+-      ```
+-- Updated `KDB` API introducing the following changes:
+-  - Introduced `KDBClosedException` being thrown when a closed `KDB` session is being accessed
+-  - Introduced `KDB::get(Key)`
+-  - Introduced `KDB::open()`
+-  - Introduced `KDB::open(KeySet)`
+-  - Introduced `KDB::goptsContract(String[], String[], Key, KeySet)
+-  - Changed return type enabling a fluent interface where appropriate
+-- Updated tests accordingly
+-
+-_(Michael Tucek)_
++### <<Binding1>>
++
++### <<Binding2>>
++
++### <<Binding3>>
+ 
+ ## Tools
+ 
+-- Remove `kdb set` functionality that creates a null key. _(Robert Sowula)_
+-- Rename elektraStrnDup to elektraMemDup _(@a-kraschitzer)_
+-- Update specmount error message _(@a-kraschitzer)_
+-- Update `elektraMemDup` to `void *` and update the documentation. _(Mihael Pranjić)_
+-- There have been a few bugfixes for elektrad. _(Klemens Böswirth)_
+-- Update `lodash` and `hosted-git-info` dependencies of `webd` due to security update. _(Mihael Pranjić)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ## Scripts
+ 
+-- Require clang-format 12 for reformatting C and Java. _(Mihael Pranjić)_
+-- Use basename of release file in `generate-hashsums`. _(Mihael Pranjić)_
+-- Use `shfmt` v3.2.4 to reformat shell scripts. _(Mihael Pranjić)_
+-- Use `cmake-format` v0.6.13 (`cmakelang`) to reformat CMake. _(Mihael Pranjić)_
+-- Aptly repositories are now automatically created if they do not exist during a package release. _(Robert Sowula)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ## Documentation
+ 
+-- Added Reviews for all functions contained in the Elektra Core API _(@lawli3t)_
+-- Added packaging section to news template. _(Mihael Pranjić)_
+-- Minor readability improvement in [highlevel.md](/doc/tutorials/highlevel.md) _(Tobias Schubert @qwepoizt)_
+-- Fix examples of spec plugin. _(Robert Sowula)_
+-- Added Reviews for all functions contained in the Elektra Core API _(@lawli3t)_
+-- Document package names of plugins, bindings and tools. _(Robert Sowula)_
+-- Small update in API docu related to different namespaces in returned keys. _(Markus Raab)_
+-- improved docu of [noresolver](/src/plugins/noresolver). _(Markus Raab)_
+-- improved plugin tutorial. _(Markus Raab)_
+-- Adding info about syncing forks to `doc/GIT.md` _(Klemens Böswirth)_
+-- Work on [COMPILE.md](/doc/COMPILE.md) and [INSTALL.md](/doc/INSTALL.md) to help with understanding _(@a-kraschitzer)_
+-- Update and correct licensing information _(@a-kraschitzer)_
+-- Rename [RELEASE.md](/doc/todo/RELEASE.md) _(@a-kraschitzer)_
+-- Improved documentation for module kdb in Elektra Core. _(@lawli3t)_
+-- Improved documentation for module key in Elektra Core. _(@lawli3t)_
+-- Improved documentation for module keyname in Elektra Core. _(@lawli3t)_
+-- Improved documentation for module keyvalue in Elektra Core. _(@lawli3t)_
+-- Improved documentation for module keymeta in Elektra Core. _(@lawli3t)_
+-- Improved documentation for module keytest in Elektra Core. _(@lawli3t)_
+-- Improved documentation for module keyset in Elektra Core. _(@lawli3t)_
+-- Fixed example in the "mount-configuration-files" tutorial [#3722](https://github.com/ElektraInitiative/libelektra/issues/3722). _(Philipp Oppel)_
+-- Update and correct third party licensing information _(@a-kraschitzer)_
+-- Added contact details to `AUTHORS.md` _(Michael Tucek)_
+-- Use Ronn-NG instead of unmaintained ronn to generate man pages. _(Mihael Pranjić)_
+-- Re-generate man pages to add missing information and remove unnecessary symbols and escaping. _(Mihael Pranjić)_
+-- Update `doc/Doxyfile` to Doxygen 1.9.1 and fix a syntax error with the `FILTER_PATTERNS` directive. _(Mihael Pranjić)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ## Tests
+ 
+-- Fix failing `testshell_markdown_tutorial_crypto` on Mac OS and other OS with GnuPG version >= 2.3.1. _(Peter Nirschl @petermax2)_
+-- Use clang-format 12 for Restyled and update Restyled version. _(Mihael Pranjić)_
+-- Update all Restyled formatters to current versions. _(Mihael Pranjić)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ## Packaging
+ 
+-- We now package the Ruby bindings, ruby plugin and the gitresolver plugin. _(Robert Sowula)_
+-- We added Fedora 34 packages. _(Mihael Pranjić)_
+-- We added Debian Bullseye packages. _(Robert Sowula)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ## Build
+ 
+ ### CMake
+ 
+-- Disable binding tests when `BUILD_TESTING` is disabled. _(Robert Sowula)_
+-- Remove unused `FindCppCMS.cmake` CMake module and unused `Boost` variables. _(Mihael Pranjić)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ### Docker
+ 
+-- Add Fedora 34 images. _(Mihael Pranjić)_
+-- We added release images that come with pre-installed dependencies and sudo permissions for each distribution we build packages for. _(Robert Sowula)_
+-- Use Clang 12 and Gradle 7.0 in Debian Sid image. _(Mihael Pranjić)_
+-- Remove Boost and some unused dependencies from all Docker images. _(Mihael Pranjić)_
+-- Use Gradle 7.0 and Ronn-NG `0.10.1.pre1` in Docker images. _(Mihael Pranjić)_
+-- Remove unused Debian Buster `doc` image. _(Mihael Pranjić)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ## Infrastructure
+ 
+ ### Cirrus
+ 
+-- Use Clang 12 and Python 3.9 for macOS builds. _(Mihael Pranjić)_
+-- Pin GnuPG version to 2.2.x. _(Mihael Pranjić)_
+-- Update Fedora image to version 34. _(Mihael Pranjić)_
+-- Clean up unused dependencies in Arch Linux image and add Ronn-NG to generate man pages. _(Mihael Pranjić)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ### GitHub Actions
+ 
+-- Pin GnuPG version to 2.2.x. _(Mihael Pranjić)_
+-- Enable `jni` plugin and fix `JAVA_HOME` detection. _(Mihael Pranjić)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ### Jenkins
+ 
+-- We now build and test on Fedora 34 and 33. Fedora 32 was removed from the CI. _(Mihael Pranjić)_
+-- Build release documentation on Debian Sid, due to newer TeX and Doxygen packages. _(Mihael Pranjić)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ### Travis
+ 
+-- Update Ubuntu to Focal, use GCC 10 and clean up travis scripts. _(Mihael Pranjić)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ## Website
+ 
+ The website is generated from the repository, so all information about
+ plugins, bindings and tools are always up to date. Furthermore, we changed:
+ 
+-- Update `highlight.js` due to a [ReDOS vulnerability](https://github.com/advisories/GHSA-7wwv-vh3v-89cq) and upgrade other dependencies as well. _(Mihael Pranjić)_
+-- Catch errors when code highlighting fails. _(Mihael Pranjić)_
+-- Get rid of unused code: authentication, backend, users, snippets and conversion service. _(Mihael Pranjić)_
+-- Fix docsearch sourcemap error. _(Mihael Pranjić)_
+-- Update `lodash` dependency due to security update. _(Mihael Pranjić)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ## Outlook
+ 
+ We are currently working on following topics:
+ 
+-- Elektrify KDE _(Dardan Haxhimustafa)_, _(Felix Resch)_ and _(Mihael Pranjić)_
+-- 1.0 API _(Stefan Hanreich)_ and _(Klemens Böswirth)_
+-- Improve Java Development Experience _(Michael Tucek)_
+-- Elektrify GNOME _(Mihael Pranjić)_
+-- Continious Releases _(Robert Sowula)_
+-- KDB access using FUSE _(Alexander Firbas)_
+-- Default TOML plugin _(Jakob Fischer)_
+-- Improve Plugin Framework _(Vid Leskovar)_
+-- Improve 3-way merge _(Dominic Jäger)_
+-- Shell completion _(Ulrike Schäfer)_
+-- Ansible bindings _(Thomas Waser)_
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ## Statistics
+ 
+-We closed [39 issues](https://github.com/ElektraInitiative/libelektra/milestone/27?closed=1) for this release.
+-
+-About 17 authors changed 627 files with 15988 insertions(+) and 16768 deletions(-) in 465 commits.
+-
+-Thanks to all authors for making this release possible!
++<<`scripts/git-release-stats 0.9.VER-1 0.9.<<VERSION>>`>>
+ 
+ ## Join the Initiative!
+ 
+@@ -290,25 +207,21 @@ Contact us via our [issue tracker](https://issues.libelektra.org).
+ 
+ ## Get the Release!
+ 
+-You can download the release from [here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.6.tar.gz)
+-or [GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.6.tar.gz?raw=true)
++You can download the release from [here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.<<VERSION>>.tar.gz)
++or [GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.<<VERSION>>.tar.gz?raw=true)
+ 
+-The [hashsums are:](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.6.tar.gz.hashsum?raw=true)
++The [hashsums are:](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.<<VERSION>>.tar.gz.hashsum?raw=true)
+ 
+-- name: elektra-0.9.6.tar.gz
+-- size: 7649484
+-- md5sum: e471277ca43a73f222c5e2d32ac19efc
+-- sha1: 97c2acd4c651dd79feabc96b09ce6a28152dc1bf
+-- sha256: 89a464952600ebfa6e675723a73a2b19f0942c27eee7b193224e50704b68866d
++<<`scripts/generate-hashsums elektra-0.9.<<VERSION>>.tar.gz`>>
+ 
+ The release tarball is also available signed using GnuPG from
+-[here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.6.tar.gz.gpg) or on
+-[GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.6.tar.gz.gpg?raw=true)
++[here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.<<VERSION>>.tar.gz.gpg) or on
++[GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.<<VERSION>>.tar.gz.gpg?raw=true)
+ 
+ The following GPG Key was used to sign this release: 12CC44541E1B8AD9B66AFAD55262E7353324914A
+ 
+-Already built API-Docu can be found [here](https://doc.libelektra.org/api/0.9.6/html/)
+-or on [GitHub](https://github.com/ElektraInitiative/doc/tree/master/api/0.9.6).
++Already built API-Docu can be found [here](https://doc.libelektra.org/api/0.9.<<VERSION>>/html/)
++or on [GitHub](https://github.com/ElektraInitiative/doc/tree/master/api/0.9.<<VERSION>>).
+ 
+ ## Stay tuned!
+ 
+@@ -319,7 +232,7 @@ to always get the release notifications.
+ If you also want to participate, or for any questions and comments
+ please contact us via our issue tracker [on GitHub](http://issues.libelektra.org).
+ 
+-[Permalink to this NEWS entry](https://www.libelektra.org/news/0.9.6-release)
++[Permalink to this NEWS entry](https://www.libelektra.org/news/0.9.<<VERSION>>-release)
+ 
+ For more information, see [https://libelektra.org](https://libelektra.org)
+ 
+
+commit 1ca2277eefa11cb62619a95084644175b667d1ee
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Mon Jun 7 10:24:37 2021 +0200
+
+    doc: finalize release notes
+
+diff --git a/doc/news/_preparation_next_release.md b/doc/news/_preparation_next_release.md
+index 816f67a38..61c3a8ad4 100644
+--- a/doc/news/_preparation_next_release.md
++++ b/doc/news/_preparation_next_release.md
+@@ -3,7 +3,7 @@
+ - guid: 9af4a71a-4e03-46a8-badb-5d76ac548144
+ - author: Mihael Pranjić
+ - pubDate: Mon, 07 Jun 2021 09:48:41 +0200
+-- shortDesc: Java Fixes and Compatibility Improvements
++- shortDesc: Java Fixes, Documentation Updates, GCC 11 and Clang 12 Compatibility
+ 
+ We are proud to release Elektra 0.9.6.
+ 
+@@ -22,7 +22,7 @@ This is the quickest way to get started with Elektra without compiling and other
+ ## Highlights
+ 
+ - Java fixes: JNI plugin fixed and JNA bindings improved
+-- Fresh Fedora 34 packages
++- Fedora 34 and Debian Bullseye packages added
+ - Documentation Improvements & Cleanups
+ - GCC 11 and Clang 12 compatibility
+ 
+@@ -46,11 +46,7 @@ _(Michael Tucek)_
+ 
+ Special thanks to _(Klemens Böswirth)_, _(Mihael Pranjić)_ and _(Robert Sowula)_ for helping with the problem analysis!
+ 
+-### Dbus
+-
+-- Internal changes to ensure compatibility with the new `elektraNotificationContract`. _(Klemens Böswirth)_
+-
+-### Dbusrecv
++### Dbus, Dbusrecv and Zeromqsend
+ 
+ - Internal changes to ensure compatibility with the new `elektraNotificationContract`. _(Klemens Böswirth)_
+ 
+@@ -58,17 +54,9 @@ Special thanks to _(Klemens Böswirth)_, _(Mihael Pranjić)_ and _(Robert Sowula
+ 
+ - Store length of an array in metakey array according to [array decision](../decisions/array.md). _(Robert Sowula)_
+ 
+-### YAML Smith
+-
+-- Removed plugin _(René Schwaiger)_
+-
+-### Yan LR
++### YAML Smith and Yan LR
+ 
+-- Removed plugin _(René Schwaiger)_
+-
+-### Zeromqsend
+-
+-- Internal changes to ensure compatibility with the new `elektraNotificationContract`. _(Klemens Böswirth)_
++- Removed plugins. _(René Schwaiger)_
+ 
+ ### ni
+ 
+@@ -214,7 +202,7 @@ _(Michael Tucek)_
+ 
+ ## Packaging
+ 
+-- We now package the ruby bindings, ruby plugin and the gitresolver plugin. _(Robert Sowula)_
++- We now package the Ruby bindings, ruby plugin and the gitresolver plugin. _(Robert Sowula)_
+ - We added Fedora 34 packages. _(Mihael Pranjić)_
+ - We added Debian Bullseye packages. _(Robert Sowula)_
+ 
+@@ -230,7 +218,7 @@ _(Michael Tucek)_
+ - Add Fedora 34 images. _(Mihael Pranjić)_
+ - We added release images that come with pre-installed dependencies and sudo permissions for each distribution we build packages for. _(Robert Sowula)_
+ - Use Clang 12 and Gradle 7.0 in Debian Sid image. _(Mihael Pranjić)_
+-- Remove boost and some unused dependencies from all Docker images. _(Mihael Pranjić)_
++- Remove Boost and some unused dependencies from all Docker images. _(Mihael Pranjić)_
+ - Use Gradle 7.0 and Ronn-NG `0.10.1.pre1` in Docker images. _(Mihael Pranjić)_
+ - Remove unused Debian Buster `doc` image. _(Mihael Pranjić)_
+ 
+@@ -286,7 +274,11 @@ We are currently working on following topics:
+ 
+ ## Statistics
+ 
+-<<`scripts/git-release-stats 0.9.VER-1 0.9.6`>>
++We closed [39 issues](https://github.com/ElektraInitiative/libelektra/milestone/27?closed=1) for this release.
++
++About 17 authors changed 627 files with 15988 insertions(+) and 16768 deletions(-) in 465 commits.
++
++Thanks to all authors for making this release possible!
+ 
+ ## Join the Initiative!
+ 
+@@ -303,7 +295,11 @@ or [GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektr
+ 
+ The [hashsums are:](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.6.tar.gz.hashsum?raw=true)
+ 
+-<<`scripts/generate-hashsums elektra-0.9.6.tar.gz`>>
++- name: elektra-0.9.6.tar.gz
++- size: 7649484
++- md5sum: e471277ca43a73f222c5e2d32ac19efc
++- sha1: 97c2acd4c651dd79feabc96b09ce6a28152dc1bf
++- sha256: 89a464952600ebfa6e675723a73a2b19f0942c27eee7b193224e50704b68866d
+ 
+ The release tarball is also available signed using GnuPG from
+ [here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.6.tar.gz.gpg) or on
+
+commit 1f26ac6c3322578f4d2932dc8e989268a4f8574b
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Mon Jun 7 10:01:11 2021 +0200
+
+    doc: update release notes
+
+diff --git a/doc/news/_preparation_next_release.md b/doc/news/_preparation_next_release.md
+index 5aa704ae3..816f67a38 100644
+--- a/doc/news/_preparation_next_release.md
++++ b/doc/news/_preparation_next_release.md
+@@ -1,19 +1,11 @@
+-# 0.9.<<VERSION>> Release
++# 0.9.6 Release
+ 
+-This release did not happen yet.
++- guid: 9af4a71a-4e03-46a8-badb-5d76ac548144
++- author: Mihael Pranjić
++- pubDate: Mon, 07 Jun 2021 09:48:41 +0200
++- shortDesc: Java Fixes and Compatibility Improvements
+ 
+-Please update this file within PRs accordingly.
+-For non-trivial changes, you can choose to be
+-part of the highlighted changes. Please make
+-sure to add some short tutorial (checked by
+-shell recorder) or asciinema for highlighted items.
+-
+-Please add your name at the end of every contribution.
+-**Syntax:** _(your name)_
+-
+-<<`scripts/generate-news-entry`>>
+-
+-We are proud to release Elektra 0.9.<<VERSION>>.
++We are proud to release Elektra 0.9.6.
+ 
+ ## What is Elektra?
+ 
+@@ -21,7 +13,7 @@ Elektra serves as a universal and secure framework to access
+ configuration settings in a global, hierarchical key database.
+ For more information, visit [https://libelektra.org](https://libelektra.org).
+ 
+-You can also read the news [on our website](https://www.libelektra.org/news/0.9.<<VERSION>>-release)
++You can also read the news [on our website](https://www.libelektra.org/news/0.9.6-release)
+ 
+ You can try out the latest Elektra release using our docker image [elektra/elektra](https://hub.docker.com/r/elektra/elektra).
+ This is the quickest way to get started with Elektra without compiling and other obstacles, simply run
+@@ -294,7 +286,7 @@ We are currently working on following topics:
+ 
+ ## Statistics
+ 
+-<<`scripts/git-release-stats 0.9.VER-1 0.9.<<VERSION>>`>>
++<<`scripts/git-release-stats 0.9.VER-1 0.9.6`>>
+ 
+ ## Join the Initiative!
+ 
+@@ -306,21 +298,21 @@ Contact us via our [issue tracker](https://issues.libelektra.org).
+ 
+ ## Get the Release!
+ 
+-You can download the release from [here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.<<VERSION>>.tar.gz)
+-or [GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.<<VERSION>>.tar.gz?raw=true)
++You can download the release from [here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.6.tar.gz)
++or [GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.6.tar.gz?raw=true)
+ 
+-The [hashsums are:](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.<<VERSION>>.tar.gz.hashsum?raw=true)
++The [hashsums are:](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.6.tar.gz.hashsum?raw=true)
+ 
+-<<`scripts/generate-hashsums elektra-0.9.<<VERSION>>.tar.gz`>>
++<<`scripts/generate-hashsums elektra-0.9.6.tar.gz`>>
+ 
+ The release tarball is also available signed using GnuPG from
+-[here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.<<VERSION>>.tar.gz.gpg) or on
+-[GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.<<VERSION>>.tar.gz.gpg?raw=true)
++[here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.6.tar.gz.gpg) or on
++[GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.6.tar.gz.gpg?raw=true)
+ 
+ The following GPG Key was used to sign this release: 12CC44541E1B8AD9B66AFAD55262E7353324914A
+ 
+-Already built API-Docu can be found [here](https://doc.libelektra.org/api/0.9.<<VERSION>>/html/)
+-or on [GitHub](https://github.com/ElektraInitiative/doc/tree/master/api/0.9.<<VERSION>>).
++Already built API-Docu can be found [here](https://doc.libelektra.org/api/0.9.6/html/)
++or on [GitHub](https://github.com/ElektraInitiative/doc/tree/master/api/0.9.6).
+ 
+ ## Stay tuned!
+ 
+@@ -331,7 +323,7 @@ to always get the release notifications.
+ If you also want to participate, or for any questions and comments
+ please contact us via our issue tracker [on GitHub](http://issues.libelektra.org).
+ 
+-[Permalink to this NEWS entry](https://www.libelektra.org/news/0.9.<<VERSION>>-release)
++[Permalink to this NEWS entry](https://www.libelektra.org/news/0.9.6-release)
+ 
+ For more information, see [https://libelektra.org](https://libelektra.org)
+ 
+
+commit 70d23195399ba8aca2abb1843508d2d8add0ff55
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Mon Jun 7 06:29:42 2021 +0000
+
+    release: update debian/changelog
+
+diff --git a/scripts/packaging/debian/changelog b/scripts/packaging/debian/changelog
+index d205f506f..9f4ce1d4c 100644
+--- a/scripts/packaging/debian/changelog
++++ b/scripts/packaging/debian/changelog
+@@ -1,3 +1,9 @@
++elektra (0.9.6-3) unstable; urgency=medium
++
++  * New upstream version.
++
++ -- Jenkins (User for Elektra automated build system) <jenkins@739f6e812ee1>  Mon, 07 Jun 2021 06:29:42 +0000
++
+ elektra (0.9.5-1) unstable; urgency=medium
+ 
+   * New upstream version.
+
+commit 4c19736b1990a6dae26ebb95a265d3406aa53580
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Mon Jun 7 06:29:42 2021 +0000
+
+    release: update fedora/changelog
+
+diff --git a/scripts/packaging/fedora/changelog b/scripts/packaging/fedora/changelog
+index cdaa9e685..bf4f02e69 100644
+--- a/scripts/packaging/fedora/changelog
++++ b/scripts/packaging/fedora/changelog
+@@ -1,3 +1,6 @@
++* Mon Jun 07 2021 elektrabot <elektrabot@libelektra.org> - 0.9.6-3
++- New upstream version
++
+ * Mon Apr 12 2021 elektrabot <elektrabot@libelektra.org> - 0.9.5-1
+ - New upstream version
+ 
+
+commit 223cc3a1fe82e38c3befd32f4f3bdaab26997320
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Mon Jun 7 06:28:52 2021 +0000
+
+    release: regenerate plugins overview picture
+
+diff --git a/doc/images/plugins.pdf b/doc/images/plugins.pdf
+index b57bc0399..9326306d8 100644
+Binary files a/doc/images/plugins.pdf and b/doc/images/plugins.pdf differ
+
+commit f33d25100f55f8a3787326e4e518d501d8e6a51d
+Merge: e3ac4e1f5 35ef77994
+Author: Mihael Pranjić <mpranj@limun.org>
+Date:   Sun Jun 6 23:28:51 2021 +0200
+
+    Merge pull request #3879 from robaerd/fix-aply-repo-creation
+    
+    Fix aptly repo creation
+
+commit 35ef77994edac00c9b8d005676b5572931f3d2d0
+Author: Robert Sowula <robert@sowula.at>
+Date:   Sun Jun 6 17:33:38 2021 +0200
+
+    doc: add release notes
+
+diff --git a/doc/news/_preparation_next_release.md b/doc/news/_preparation_next_release.md
+index c8235e846..5aa704ae3 100644
+--- a/doc/news/_preparation_next_release.md
++++ b/doc/news/_preparation_next_release.md
+@@ -183,6 +183,7 @@ _(Michael Tucek)_
+ - Use basename of release file in `generate-hashsums`. _(Mihael Pranjić)_
+ - Use `shfmt` v3.2.4 to reformat shell scripts. _(Mihael Pranjić)_
+ - Use `cmake-format` v0.6.13 (`cmakelang`) to reformat CMake. _(Mihael Pranjić)_
++- Aptly repositories are now automatically created if they do not exist during a package release. _(Robert Sowula)_
+ 
+ ## Documentation
+ 
+
+commit f7efcaef5abf0feba496507d65eb5c9a55d97e3f
+Author: Robert Sowula <robert@sowula.at>
+Date:   Sun Jun 6 17:30:46 2021 +0200
+
+    release: create and publish aptly repository if it does not exist
+
+diff --git a/scripts/release/update-aptly-repo.sh b/scripts/release/update-aptly-repo.sh
+index 9714690f2..fa222959d 100644
+--- a/scripts/release/update-aptly-repo.sh
++++ b/scripts/release/update-aptly-repo.sh
+@@ -9,12 +9,26 @@
+ 
+ set -ex
+ 
++# Arguments
+ REPO_NAME=$1
+ REPO_PREFIX=$2
+ RELEASE_VERSION=$3
+ PACKAGE_REVISION=$4
++# Constants
++GPG_KEY="A9A25CC1CC83E839"
++KEYRING="/home/jenkins/.gnupg/pubring.kbx"
++PASSPHRASE_FILE="/home/jenkins/.aptly/secret"
++
++REPO_SHOW_RET_VAL=0
++aptly repo show $REPO_NAME > /dev/null 2>&1 || REPO_SHOW_RET_VAL=$?
++if [ $REPO_SHOW_RET_VAL -ne 0 ]; then
++	# Repository does not exist and needs to be created
++	echo "Creating repository with name $REPO_NAME and publishing it under $REPO_PREFIX/$REPO_NAME"
++	aptly repo create -architectures="amd64" -component=main -distribution=$REPO_NAME $REPO_NAME
++	aptly publish repo -gpg-key="$GPG_KEY" -keyring="$KEYRING" -batch=true --passphrase-file="$PASSPHRASE_FILE" $REPO_NAME $REPO_PREFIX
++fi
+ 
+ aptly repo add -remove-files -force-replace $REPO_NAME /srv/libelektra/packaging/incoming/$REPO_NAME/*.d*eb
+ aptly repo remove $REPO_NAME "\$Version (<< $RELEASE_VERSION-$PACKAGE_REVISION)"
+ aptly repo show $REPO_NAME
+-aptly publish update -gpg-key="A9A25CC1CC83E839" -keyring=/home/jenkins/.gnupg/pubring.kbx -batch=true --passphrase-file="/home/jenkins/.aptly/secret" $REPO_NAME $REPO_PREFIX
++aptly publish update -gpg-key="$GPG_KEY" -keyring="$KEYRING" -batch=true --passphrase-file="$PASSPHRASE_FILE" $REPO_NAME $REPO_PREFIX
