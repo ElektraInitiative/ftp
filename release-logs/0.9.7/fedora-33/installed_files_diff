@@ -1,0 +1,38 @@
+690,695d689
+< 
+< 
+< 
+< 
+< 
+< 
+739,756d732
+< checks_toml_1_0_0
+< checks_toml_1_0_0/invalid_read
+< checks_toml_1_0_0/invalid_read/apostroph_too_much.toml
+< checks_toml_1_0_0/invalid_read/array_redefined_table_array.toml
+< checks_toml_1_0_0/invalid_read/empty_assignment.toml
+< checks_toml_1_0_0/invalid_read/floats.toml
+< checks_toml_1_0_0/invalid_read/inline_appending.toml
+< checks_toml_1_0_0/invalid_read/inline_appending2.toml
+< checks_toml_1_0_0/invalid_read/integer_redefined_table.toml
+< checks_toml_1_0_0/invalid_read/key_redefinition.toml
+< checks_toml_1_0_0/invalid_read/key_redefinition_quotes.toml
+< checks_toml_1_0_0/invalid_read/no_keyname.toml
+< checks_toml_1_0_0/invalid_read/simple_redefined_table_array.toml
+< checks_toml_1_0_0/invalid_read/table_array_simple_table_same_name.toml
+< checks_toml_1_0_0/invalid_read/table_redefine_value.toml
+< checks_toml_1_0_0/invalid_read/table_redefinition.toml
+< checks_toml_1_0_0/invalid_read/two_assignments_one_line.toml
+< checks_toml_1_0_0/roundtrip.toml
+884,891d859
+< integer.h
+< integer.toml
+< integer_overflow
+< integer_overflow/binary.toml
+< integer_overflow/decimal.toml
+< integer_overflow/decimal_under.toml
+< integer_overflow/hexadecimal.toml
+< integer_overflow/octal.toml
+901,902d868
+< key_names_empty.h
+< key_names_empty.toml

@@ -1,0 +1,156 @@
+97d96
+< lib/elektra/libelektra-blacklist.so
+117d115
+< lib/elektra/libelektra-email.so
+138d135
+< lib/elektra/libelektra-length.so
+238d234
+< lib/elektra/tool_exec/fuse
+317d312
+< lib/elektra/tool_exec/testmod_blacklist
+329d323
+< lib/elektra/tool_exec/testmod_email
+346d339
+< lib/elektra/tool_exec/testmod_length
+403c396
+< lib/libelektra-core.so.0.9.7
+---
+> lib/libelektra-core.so.0.9.6
+406c399
+< lib/libelektra-ease.so.0.9.7
+---
+> lib/libelektra-ease.so.0.9.6
+409c402
+< lib/libelektra-full.so.0.9.7
+---
+> lib/libelektra-full.so.0.9.6
+412c405
+< lib/libelektra-globbing.so.0.9.7
+---
+> lib/libelektra-globbing.so.0.9.6
+415c408
+< lib/libelektra-highlevel.so.0.9.7
+---
+> lib/libelektra-highlevel.so.0.9.6
+418c411
+< lib/libelektra-invoke.so.0.9.7
+---
+> lib/libelektra-invoke.so.0.9.6
+421c414
+< lib/libelektra-io.so.0.9.7
+---
+> lib/libelektra-io.so.0.9.6
+424c417
+< lib/libelektra-kdb.so.0.9.7
+---
+> lib/libelektra-kdb.so.0.9.6
+427c420
+< lib/libelektra-merge.so.0.9.7
+---
+> lib/libelektra-merge.so.0.9.6
+430c423
+< lib/libelektra-meta.so.0.9.7
+---
+> lib/libelektra-meta.so.0.9.6
+433c426
+< lib/libelektra-notification.so.0.9.7
+---
+> lib/libelektra-notification.so.0.9.6
+436c429
+< lib/libelektra-opts.so.0.9.7
+---
+> lib/libelektra-opts.so.0.9.6
+439c432
+< lib/libelektra-plugin.so.0.9.7
+---
+> lib/libelektra-plugin.so.0.9.6
+442c435
+< lib/libelektra-pluginprocess.so.0.9.7
+---
+> lib/libelektra-pluginprocess.so.0.9.6
+446c439
+< lib/libelektra-utility.so.0.9.7
+---
+> lib/libelektra-utility.so.0.9.6
+452c445
+< lib/libelektraintercept-env.so.0.9.7
+---
+> lib/libelektraintercept-env.so.0.9.6
+454c447
+< lib/libelektratools-full.so.0.9.7
+---
+> lib/libelektratools-full.so.0.9.6
+458c451
+< lib/libelektratools.so.0.9.7
+---
+> lib/libelektratools.so.0.9.6
+998a992,994
+> share/doc/elektra-api/html/dir_000161_000031.html
+> share/doc/elektra-api/html/dir_000162_000031.html
+> share/doc/elektra-api/html/dir_000163_000031.html
+1000,1002d995
+< share/doc/elektra-api/html/dir_000165_000031.html
+< share/doc/elektra-api/html/dir_000166_000031.html
+< share/doc/elektra-api/html/dir_000167_000031.html
+1145d1137
+< share/doc/elektra-api/html/dir_76eb4c248d2f74aaea0099e3afc571ae.html
+1264d1255
+< share/doc/elektra-api/html/dir_c60f85bcbca029793d9ebc06b7c0a997.html
+1271d1261
+< share/doc/elektra-api/html/dir_d1a8ed4fae8d4b7b0786abec76002cf0.html
+1640d1629
+< share/doc/elektra-api/html/doc_tutorials_specification_md.html
+2580d2568
+< share/doc/elektra-api/html/md_src_plugins_blacklist_README.html
+2601d2588
+< share/doc/elektra-api/html/md_src_plugins_email_README.html
+2622d2608
+< share/doc/elektra-api/html/md_src_plugins_length_README.html
+3571,3588d3556
+< share/elektra/test_data/toml/checks_toml_1_0_0
+< share/elektra/test_data/toml/checks_toml_1_0_0/invalid_read
+< share/elektra/test_data/toml/checks_toml_1_0_0/invalid_read/apostroph_too_much.toml
+< share/elektra/test_data/toml/checks_toml_1_0_0/invalid_read/array_redefined_table_array.toml
+< share/elektra/test_data/toml/checks_toml_1_0_0/invalid_read/empty_assignment.toml
+< share/elektra/test_data/toml/checks_toml_1_0_0/invalid_read/floats.toml
+< share/elektra/test_data/toml/checks_toml_1_0_0/invalid_read/inline_appending.toml
+< share/elektra/test_data/toml/checks_toml_1_0_0/invalid_read/inline_appending2.toml
+< share/elektra/test_data/toml/checks_toml_1_0_0/invalid_read/integer_redefined_table.toml
+< share/elektra/test_data/toml/checks_toml_1_0_0/invalid_read/key_redefinition.toml
+< share/elektra/test_data/toml/checks_toml_1_0_0/invalid_read/key_redefinition_quotes.toml
+< share/elektra/test_data/toml/checks_toml_1_0_0/invalid_read/no_keyname.toml
+< share/elektra/test_data/toml/checks_toml_1_0_0/invalid_read/simple_redefined_table_array.toml
+< share/elektra/test_data/toml/checks_toml_1_0_0/invalid_read/table_array_simple_table_same_name.toml
+< share/elektra/test_data/toml/checks_toml_1_0_0/invalid_read/table_redefine_value.toml
+< share/elektra/test_data/toml/checks_toml_1_0_0/invalid_read/table_redefinition.toml
+< share/elektra/test_data/toml/checks_toml_1_0_0/invalid_read/two_assignments_one_line.toml
+< share/elektra/test_data/toml/checks_toml_1_0_0/roundtrip.toml
+3599,3608d3566
+< share/elektra/test_data/toml/integer.h
+< share/elektra/test_data/toml/integer.toml
+< share/elektra/test_data/toml/integer_overflow
+< share/elektra/test_data/toml/integer_overflow/binary.toml
+< share/elektra/test_data/toml/integer_overflow/decimal.toml
+< share/elektra/test_data/toml/integer_overflow/decimal_under.toml
+< share/elektra/test_data/toml/integer_overflow/hexadecimal.toml
+< share/elektra/test_data/toml/integer_overflow/octal.toml
+< share/elektra/test_data/toml/key_names_empty.h
+< share/elektra/test_data/toml/key_names_empty.toml
+3698,3701c3656,3659
+< share/java/libelektra-0.9.7-javadoc.jar
+< share/java/libelektra-0.9.7-sources.jar
+< share/java/libelektra-0.9.7.jar
+< share/java/libelektra-0.9.7.pom.xml
+---
+> share/java/libelektra-0.9.6-javadoc.jar
+> share/java/libelektra-0.9.6-sources.jar
+> share/java/libelektra-0.9.6.jar
+> share/java/libelektra-0.9.6.pom.xml
+4087d4044
+< share/man/man3/doc_tutorials_specification_md.3elektra
+4263d4219
+< share/man/man3/md_src_plugins_blacklist_README.3elektra
+4284d4239
+< share/man/man3/md_src_plugins_email_README.3elektra
+4305d4259
+< share/man/man3/md_src_plugins_length_README.3elektra
