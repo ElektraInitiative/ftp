@@ -1,0 +1,522 @@
+commit 8227a2baeef80ef31c3b1eef9292b0e0a4ef302a
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Mon Oct 4 04:29:46 2021 +0000
+
+    release: update debian/changelog
+
+diff --git a/scripts/packaging/debian/changelog b/scripts/packaging/debian/changelog
+index 506e8890c..8e91a4323 100644
+--- a/scripts/packaging/debian/changelog
++++ b/scripts/packaging/debian/changelog
+@@ -1,3 +1,9 @@
++elektra (0.9.8-1) unstable; urgency=medium
++
++  * New upstream version.
++
++ -- Jenkins (User for Elektra automated build system) <jenkins@localhost>  Mon, 04 Oct 2021 04:29:46 +0000
++
+ elektra (0.9.7-5) unstable; urgency=medium
+ 
+   * New upstream version.
+
+commit 06905bee514a818df8aa72a32682d58952219af9
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Mon Oct 4 04:29:45 2021 +0000
+
+    release: update fedora/changelog
+
+diff --git a/scripts/packaging/fedora/changelog b/scripts/packaging/fedora/changelog
+index 931bb2103..96c785660 100644
+--- a/scripts/packaging/fedora/changelog
++++ b/scripts/packaging/fedora/changelog
+@@ -1,3 +1,6 @@
++* Mon Oct 04 2021 elektrabot <elektrabot@libelektra.org> - 0.9.8-1
++- New upstream version
++
+ * Sat Jul 10 2021 elektrabot <elektrabot@libelektra.org> - 0.9.7-5
+ - New upstream version
+ 
+
+commit a64b24647c48f568415d8d5ea33b4b762536493e
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Mon Oct 4 04:28:48 2021 +0000
+
+    release: regenerate plugins overview picture
+
+diff --git a/doc/images/plugins.pdf b/doc/images/plugins.pdf
+index 0e56f6ff4..6e21a257f 100644
+Binary files a/doc/images/plugins.pdf and b/doc/images/plugins.pdf differ
+
+commit 77c0bbaf48074f85df53cf51133bdfdaaf72f5d4
+Author: Mihael Pranjić <mpranj@limun.org>
+Date:   Mon Oct 4 00:03:29 2021 +0200
+
+    release: update news entry
+
+diff --git a/doc/news/_preparation_next_release.md b/doc/news/_preparation_next_release.md
+index 743343d3c..1ba111685 100644
+--- a/doc/news/_preparation_next_release.md
++++ b/doc/news/_preparation_next_release.md
+@@ -1,8 +1,8 @@
+ # 0.9.<<VERSION>> Release
+ 
+-- guid: 351E5EBD-402A-4643-A553-2F1A578C5C4F
++- guid: 0CB8C139-730C-4CCD-9FB4-0C7C4AA4DBF2
+ - author: Mihael Pranjić
+-- pubDate: Sun, 03 Oct 2021 21:45:46 +0200
++- pubDate: Mon, 04 Oct 2021 00:02:45 +0200
+ - shortDesc: Redshift Elektrified, HL API & Java Binding Improvements
+ 
+ We are proud to release Elektra 0.9.<<VERSION>>.
+
+commit ce7f5418d5cef71f375a0ffea83e98d783c0ff08
+Author: Mihael Pranjić <mpranj@limun.org>
+Date:   Sun Oct 3 22:20:29 2021 +0200
+
+    release: bump Elektra to 0.9.8
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 2992bd1f3..2dadb9e6d 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -5,7 +5,7 @@ set (CMAKE_USER_MAKE_RULES_OVERRIDE "${CMAKE_SOURCE_DIR}/scripts/cmake/Platform.
+ 
+ set (KDB_VERSION_MAJOR 0)
+ set (KDB_VERSION_MINOR 9)
+-set (KDB_VERSION_PATCH 7)
++set (KDB_VERSION_PATCH 8)
+ set (KDB_VERSION "${KDB_VERSION_MAJOR}.${KDB_VERSION_MINOR}.${KDB_VERSION_PATCH}")
+ 
+ set (ELEKTRA_DESCRIPTION
+diff --git a/doc/tutorials/hello-elektra.md b/doc/tutorials/hello-elektra.md
+index 8f888b707..445b20293 100644
+--- a/doc/tutorials/hello-elektra.md
++++ b/doc/tutorials/hello-elektra.md
+@@ -50,7 +50,7 @@ This basic tutorial shows you how to compile and run a very basic Elektra applic
+    -- Detecting CXX compiler ABI info - done
+    -- Detecting CXX compile features
+    -- Detecting CXX compile features - done
+-   -- Elektra 0.9.7 found
++   -- Elektra 0.9.8 found
+    -- Configuring done
+    -- Generating done
+    -- Build files have been written to: Hello/build
+diff --git a/scripts/docker/alpine/3.14/Dockerfile b/scripts/docker/alpine/3.14/Dockerfile
+index bfcf1f89c..64069b8f4 100644
+--- a/scripts/docker/alpine/3.14/Dockerfile
++++ b/scripts/docker/alpine/3.14/Dockerfile
+@@ -1,4 +1,4 @@
+-FROM alpine:3.14.0
++FROM alpine:3.14.2
+ 
+ RUN apk update \
+     && apk add --no-cache \
+diff --git a/scripts/docker/alpine/3.14/release.Dockerfile b/scripts/docker/alpine/3.14/release.Dockerfile
+index e83cdc24d..2837414c0 100644
+--- a/scripts/docker/alpine/3.14/release.Dockerfile
++++ b/scripts/docker/alpine/3.14/release.Dockerfile
+@@ -1,5 +1,5 @@
+ # syntax = docker/dockerfile:1.2
+-FROM alpine:3.14.0
++FROM alpine:3.14.2
+ 
+ RUN apk update \
+     && apk add --no-cache --upgrade\
+@@ -30,7 +30,7 @@ RUN mkdir -p ${GTEST_ROOT} \
+     && rm gtest.tar.gz
+ 
+ ENV ELEKTRA_ROOT=/opt/elektra
+-ENV ELEKTRA_RELEASE=0.9.7
++ENV ELEKTRA_RELEASE=0.9.8
+ RUN mkdir -p ${ELEKTRA_ROOT} \
+     && cd /tmp \
+     && curl -o elektra.tar.gz \
+@@ -65,7 +65,7 @@ RUN --mount=type=tmpfs,target=/tmp \
+     && rm -Rf ${GTEST_ROOT}
+ 
+ 
+-FROM alpine:3.14.0
++FROM alpine:3.14.2
+ COPY --from=0 ${ELEKTRA_ROOT} \
+               ${ELEKTRA_ROOT}
+ ARG USERID=1000
+diff --git a/src/bindings/jna/README.md b/src/bindings/jna/README.md
+index 5e1791975..65a4b7126 100644
+--- a/src/bindings/jna/README.md
++++ b/src/bindings/jna/README.md
+@@ -69,7 +69,7 @@ Simply add libelektra as dependency using:
+     <dependency>
+       <groupId>org.libelektra</groupId>
+       <artifactId>libelektra</artifactId>
+-      <version>0.9.7</version>
++      <version>0.9.8</version>
+     </dependency>
+ ```
+ 
+
+commit 499ce93847095db12f08886a3b159e4496cb7909
+Author: Mihael Pranjić <mpranj@limun.org>
+Date:   Sun Oct 3 22:15:28 2021 +0200
+
+    doc: update release notes for 0.9.8
+
+diff --git a/doc/news/_preparation_next_release.md b/doc/news/_preparation_next_release.md
+index 9f025c9a7..743343d3c 100644
+--- a/doc/news/_preparation_next_release.md
++++ b/doc/news/_preparation_next_release.md
+@@ -1,17 +1,9 @@
+ # 0.9.<<VERSION>> Release
+ 
+-This release did not happen yet.
+-
+-Please update this file within PRs accordingly.
+-For non-trivial changes, you can choose to be
+-part of the highlighted changes. Please make
+-sure to add some short tutorial (checked by
+-shell recorder) or asciinema for highlighted items.
+-
+-Please add your name at the end of every contribution.
+-**Syntax:** _(your name)_
+-
+-<<`scripts/generate-news-entry`>>
++- guid: 351E5EBD-402A-4643-A553-2F1A578C5C4F
++- author: Mihael Pranjić
++- pubDate: Sun, 03 Oct 2021 21:45:46 +0200
++- shortDesc: Redshift Elektrified, HL API & Java Binding Improvements
+ 
+ We are proud to release Elektra 0.9.<<VERSION>>.
+ 
+@@ -34,8 +26,7 @@ docker run -it elektra/elektra
+ ## Highlights
+ 
+ - `kdb` now prohibits write operations on cascading keys that miss a corresponding existing key. See the details in the `Tools` section below and the new subsection on cascading writes in the [tutorial](/doc/tutorials/cascading.md) on cascading keys for further information. _(Alexander Firbas)_
+-- <<HIGHLIGHT2>>
+-- <<HIGHLIGHT3>>
++- Redshift is now elektrified. _(Tobias Schubert @qwepoizt)_
+ 
+ ### Redshift and Elektra
+ 
+@@ -77,10 +68,6 @@ We are now shipping experimental releases for Windows 32- and 64-bit! They can b
+ 
+ A big success is that Redshift already works with Elektra under Windows.
+ 
+-### <<HIGHLIGHT2>>
+-
+-### <<HIGHLIGHT2>>
+-
+ ## Plugins
+ 
+ The following section lists news about the [plugins](https://www.libelektra.org/plugins/readme) we updated in this release.
+@@ -119,12 +106,6 @@ The following section lists news about the [plugins](https://www.libelektra.org/
+ - The `comment/#/space` metakey is now used correctly to store the actual whitespace characters from the file,
+   instead of a number. _(Klemens Böswirth)_
+ 
+-### Python
+-
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-
+ ## Libraries
+ 
+ The text below summarizes updates to the [C (and C++)-based libraries](https://www.libelektra.org/libraries/readme) of Elektra.
+@@ -136,14 +117,8 @@ The text below summarizes updates to the [C (and C++)-based libraries](https://w
+ 
+ _(Michael Tucek)_
+ 
+-- <<TODO>>
+-- <<TODO>>
+-
+ ### Core
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ - Remove obsolete `ksNeedSync` function. _(Mihael Pranjić)_
+ - Replace various occurences of `sprintf` by `snprintf` and fix out of bounds array access in markdownlinkconverter. _(Mihael Pranjić)_
+ 
+@@ -165,24 +140,6 @@ _(Michael Tucek)_
+ - Implement calculation of a specification token (=sha-256 hash). _(Tobias Schubert @qwepoizt)_
+ - Add [asmonier's sha-2](https://github.com/amosnier/sha-2) for sha-256 hash calculation. _(Tobias Schubert @qwepoizt)_
+ 
+-### <<Library1>>
+-
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-
+-### <<Library2>>
+-
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-
+-### <<Library3>>
+-
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-
+ ## Bindings
+ 
+ Bindings allow you to utilize Elektra using [various programming languages](https://www.libelektra.org/bindings/readme). This section keeps
+@@ -216,7 +173,7 @@ you up to date with the multi-language support provided by Elektra.
+   - now works with a standard installation of Elektra
+   - updated code to work with current Java binding
+ - `KeySetReleasedException` and `KeyReleasedException` have been replaced by the native `IllegalStateException`
+-- Introduced abstraction `ReadableKey` for better reflecting the limitations of meta data keys via a type hierarchy, leading to meta data keys are now returned as `ReadableKey`s:
++- Introduced abstraction `ReadableKey` to better reflect the limitations of meta data keys via a type hierarchy. Meta data keys are now returned as `ReadableKey`s:
+   - `Key` extends `ReadableKey`
+   - `Key` class is now final
+   - Changed `Key Key::nextMeta()` to `Optional<ReadableKey> Key::nextMeta()`, no longer throwing NoSuchElementException for non-exceptional behavior
+@@ -244,15 +201,13 @@ _(Michael Tucek)_
+ 
+ - Compile `glib` binding with `-Wno-pedantic` for compatibility. _(Mihael Pranjić)_
+ 
+-### <<Binding3>>
+-
+ ## Tools
+ 
+ - Really add all tools when using `-DTOOLS=ALL`. _(Markus Raab)_
+ - ZeroMQ Hub: fix compilation and man page. _(Markus Raab)_
+ - Configure packaging for FUSE tool. _(Alexander Firbas)_
+ - FUSE: fix bug preventing binary writes. _(Alexander Firbas)_
+-- ambiguous write operations now disabled in kdb _(Alexander Firbas)_
++- Ambiguous write operations are now disabled in kdb. _(Alexander Firbas)_
+ - `webd`: update npm dependencies. _(Mihael Pranjić)_
+ 
+ ### KDB
+@@ -270,16 +225,9 @@ _(Michael Tucek)_
+ - `kdb gen`: Improve naming of variables to make code easier to understand. _(Tobias Schubert @qwepoizt)_
+ - `kdb spec-mount`: Improve usability by failing with helpful error messages, if the specification contains errors. _(Tobias Schubert @qwepoizt)_
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-
+ ## Scripts
+ 
+ - Add script for mingw-w64 i686 build. _(Tobias Schubert @qwepoizt)_
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Documentation
+ 
+@@ -287,7 +235,6 @@ _(Michael Tucek)_
+ - doc: add pre/postconditions and invariants to module key _(@lawli3t)_
+ - doc: add pre/postconditions and invariants to module keymeta _(@lawli3t)_
+ - Fix broken links _(@lawli3t)_
+-- <<TODO>>
+ - Remove previous authors. _(Markus Raab)_
+ - add pre/postconditions and invariants to module keytest _(@lawli3t)_
+ - Updated the news template. _(Mihael Pranjić)_
+@@ -297,11 +244,9 @@ _(Michael Tucek)_
+ - add pre/postconditions and invariants to module keyvalue _(@lawli3t)_
+ - Update and improve inline documentation of `kdb gen`. _(Tobias Schubert @qwepoizt)_
+ - Fix broken links. _(Robert Sowula)_
+-- <<TODO>>
+ 
+ ## Tests
+ 
+-- <<TODO>>
+ - Fix failing `testshell_markdown_tutorial_crypto` on Mac OS and other OS with GnuPG version >= 2.3.1. _(Peter Nirschl @petermax2)_
+ - Use clang-format 12 for Restyled and update Restyled version. _(Mihael Pranjić)_
+ - Update all Restyled formatters to current versions. _(Mihael Pranjić)_
+@@ -310,22 +255,15 @@ _(Michael Tucek)_
+ - Add tests for libease's sha-256. _(Tobias Schubert @qwepoizt)_
+ - Add tests for sha-256 hash calculation of a KeySet. _(Tobias Schubert @qwepoizt)_
+ - Add additional test cases for module `keymeta` _(@lawli3t)_
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Packaging
+ 
+ - Add packages for openSuse Leap 15.3. _(Robert Sowula)_
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Build
+ 
+ ### CMake
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ - Add files generated by CMake to .gitignore. _(Tobias Schubert @qwepoizt)_
+ - Add support for i686 to mingw-w64 toolchains. _(Tobias Schubert @qwepoizt)_
+ - Add plugins type, cache, spec, gopts, sync to mingw-w64 builds. _(Tobias Schubert @qwepoizt)_
+@@ -337,7 +275,6 @@ _(Michael Tucek)_
+ - Bump Gradle to version 7.2. _(Mihael Pranjić)_
+ - Bump Debian Buster images to Bullseye and Stretch images to Buster. We still leave one Debian Stretch job due to upstream Debian LTS support until June 2022. _(Mihael Pranjić)_
+ - Add Dockerfiles for openSUSE Leap 15.3 and CentOS Stream 8. _(Robert Sowula)_
+-- <<TODO>>
+ - Add docker image for OpenWrt package building. _(Robert Sowula)_
+ - Add files generated by docker when tutorial [run-all-tests-with-docker](https://www.libelektra.org/tutorials/run-all-tests-with-docker) is followed to .gitignore. _(Tobias Schubert @qwepoizt)_
+ 
+@@ -351,8 +288,6 @@ _(Michael Tucek)_
+ ### Jenkins
+ 
+ - Add ABI test stage for release pipeline. _(Robert Sowula)_
+-- <<TODO>>
+-- <<TODO>>
+ - Move check stages that don't build the code to a dedicated stage, to avoid confusion when parallel builds are aborted. _(Robert Sowula)_
+ - Add test stages for openSUSE and CentOS. _(Robert Sowula)_
+ - Use `tmpfs` in Docker to speed up the test suite. _(Mihael Pranjić)_
+@@ -361,19 +296,13 @@ _(Michael Tucek)_
+ 
+ ### Cirrus
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- Migrate most macOS build jobs to GitHub actions to speed up builds. _(Mihael Pranjić)_
+ - Bump FreeBSD images to 12.2 and 13.0 using the LLVM 12 toolchain, drop FreeBSD 11. _(Mihael Pranjić)_
+ - Fix cirrus-file parsing errors. _(Mihael Pranjić)_
+ - Redistribute CPU and memory resources and enable greedy instances. _(Mihael Pranjić)_
+ 
+ ### GitHub Actions
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
++- Migrate most macOS build jobs to GitHub actions to speed up builds. _(Mihael Pranjić)_
+ - Upgrade macOS GCC build job to GCC 11. _(Mihael Pranjić)_
+ 
+ ## Website
+@@ -381,22 +310,27 @@ _(Michael Tucek)_
+ The website is generated from the repository, so all information about
+ plugins, bindings and tools are always up to date. Furthermore, we changed:
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ - Update npm dependencies. _(Mihael Pranjić)_
+ 
+ ## Outlook
+ 
+ We are currently working on following topics:
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
++- 1.0 API _(Stefan Hanreich)_ and _(Klemens Böswirth)_
++- KDB access using FUSE _(Alexander Firbas)_
++- Improve Java Development Experience _(Michael Tucek)_
++- Improve Plugin Framework _(Klemens Böswirth)_
++- Default TOML plugin _(Klemens Böswirth)_, _(Markus Raab)_ and _(Jakob Fischer)_
++- Elektrify KDE _(Dardan Haxhimustafa)_, _(Felix Resch)_ and _(Mihael Pranjić)_
++- Elektrify GNOME _(Mihael Pranjić)_
++- Continious Releases _(Robert Sowula)_
++- Improve 3-way merge _(Dominic Jäger)_
++- Shell completion _(Ulrike Schäfer)_
++- Ansible module _(Thomas Waser)_
+ 
+ ## Statistics
+ 
+-We closed [<<NUMISSUES>> issues](https://github.com/ElektraInitiative/libelektra/milestone/<<MILESTONE>>?closed=1) for this release.
++We closed [59 issues](https://github.com/ElektraInitiative/libelektra/milestone/29?closed=1) for this release.
+ 
+ <<`scripts/git-release-stats 0.9.VER-1 0.9.<<VERSION>>`>>
+ 
+
+commit 04f0b48358cc2861acf2b6dc2a9d4b4ae5a778f7
+Merge: 0e69dde0f ebbcf0eed
+Author: Mihael Pranjić <mpranj@limun.org>
+Date:   Sun Oct 3 21:35:25 2021 +0200
+
+    Merge pull request #3865 from tucek/#3756_prettierJava
+    
+    Java source format
+
+commit 0e69dde0fc16dbf04241ebfe730d5ee2f18e65e9
+Author: Mihael Pranjić <mpranj@limun.org>
+Date:   Sun Oct 3 21:20:36 2021 +0200
+
+    doc: document disabled test
+
+diff --git a/doc/todo/TESTING b/doc/todo/TESTING
+index 438a2c19e..94af76c1c 100644
+--- a/doc/todo/TESTING
++++ b/doc/todo/TESTING
+@@ -8,6 +8,8 @@ tests/shell/shell_recorder/mathcheck.esr     for INI (hard-coded ni)
+ doc/help/kdb-get.md   for INI
+ src/bindings/swig/ruby/tests/CMakeLists.txt disabled testruby_tools_plugindatabase.rb in commit 87d1a4f1ec19a0cf86b877e6d2eb9e1d124d96ee
+ 
++scripts/jenkins/Jenkinsfile disabled buildint openwrt packages in c0ffb72e10e6e145989b61bad8a36e4a77450acf
++
+ ### Jenkins
+ 
+ We disabled the tests
+
+commit c0ffb72e10e6e145989b61bad8a36e4a77450acf
+Author: Mihael Pranjić <mpranj@limun.org>
+Date:   Sun Oct 3 21:20:11 2021 +0200
+
+    Jenkinsfile: disable building packages for OpenWRT
+
+diff --git a/scripts/jenkins/Jenkinsfile b/scripts/jenkins/Jenkinsfile
+index 87bd39892..c4fa42f5d 100644
+--- a/scripts/jenkins/Jenkinsfile
++++ b/scripts/jenkins/Jenkinsfile
+@@ -1196,7 +1196,7 @@ def generateArtifactStages() {
+     true
+   )
+ 
+-  tasks << buildOpenwrtPackage(DOCKER_IMAGES.openwrt_sdk)
++  // tasks << buildOpenwrtPackage(DOCKER_IMAGES.openwrt_sdk)
+ 
+   tasks << buildWebsite()
+   // tasks << buildWebUI()
+
+commit ebbcf0eed3889e84f97ae7fe18841329190b8340
+Author: Michel Tucek <tucek@hellwach.at>
+Date:   Sun Oct 3 21:13:24 2021 +0200
+
+    #3865 moved Google Java formatter location to /opt/google-java-format.jar and updated debian sid Dockerfile
+
+diff --git a/scripts/dev/reformat-java b/scripts/dev/reformat-java
+index 83665a3e8..d48e2f3a7 100755
+--- a/scripts/dev/reformat-java
++++ b/scripts/dev/reformat-java
+@@ -5,13 +5,24 @@
+ # @date 30.09.2021
+ # @tags reformat
+ 
+-FORMATTER_JAR=/tmp/google-java-format.jar
++FORMATTER_JAR=/opt/google-java-format.jar
+ FORMATTER_DOWNLOAD_URL=https://github.com/google/google-java-format/releases/download/v1.11.0/google-java-format-1.11.0-all-deps.jar
++if [ "$1" = "-d" ]; then
++	if [ -f $FORMATTER_JAR ]; then
++		echo "$FORMATTER_JAR already exists!"
++	else
++		echo "Downloading $FORMATTER_DOWNLOAD_URL to $FORMATTER_JAR"
++		curl -o $FORMATTER_JAR -L $FORMATTER_DOWNLOAD_URL
++	fi
++	exit 0
++fi
++
+ if [ -f $FORMATTER_JAR ]; then
+ 	echo "Using existing $FORMATTER_JAR"
+ else
+-	echo "Downloading $FORMATTER_DOWNLOAD_URL to $FORMATTER_JAR"
+-	curl -o $FORMATTER_JAR -L $FORMATTER_DOWNLOAD_URL
++	echo "Formatter JAR not found in $FORMATTER_JAR"
++	echo "Use switch -d to download $FORMATTER_DOWNLOAD_URL to $FORMATTER_JAR"
++	exit 0
+ fi
+ 
+ SCRIPTS_DIR=$(dirname "$0")
+diff --git a/scripts/docker/debian/sid/Dockerfile b/scripts/docker/debian/sid/Dockerfile
+index b8433fa0e..040b7b1b8 100644
+--- a/scripts/docker/debian/sid/Dockerfile
++++ b/scripts/docker/debian/sid/Dockerfile
+@@ -89,7 +89,7 @@ RUN mkdir -p ${GTEST_ROOT} \
+ RUN npm install --global prettier@2.3.2
+ 
+ # Google Java formatter
+-RUN cd /tmp \
++RUN cd /opt \
+     && curl -o google-java-format.jar \
+       -L https://github.com/google/google-java-format/releases/download/v1.11.0/google-java-format-1.11.0-all-deps.jar
+ 

@@ -1,0 +1,330 @@
+256d255
+< lib/elektra/tool_exec/run-hub-zeromq
+259d257
+< lib/elektra/tool_exec/stop-hub-zeromq
+270d267
+< lib/elektra/tool_exec/test_hash
+286d282
+< lib/elektra/tool_exec/test_sha-256
+407c403
+< lib/libelektra-core.so.0.9.8
+---
+> lib/libelektra-core.so.0.9.7
+410c406
+< lib/libelektra-ease.so.0.9.8
+---
+> lib/libelektra-ease.so.0.9.7
+413c409
+< lib/libelektra-full.so.0.9.8
+---
+> lib/libelektra-full.so.0.9.7
+416c412
+< lib/libelektra-globbing.so.0.9.8
+---
+> lib/libelektra-globbing.so.0.9.7
+419c415
+< lib/libelektra-highlevel.so.0.9.8
+---
+> lib/libelektra-highlevel.so.0.9.7
+422c418
+< lib/libelektra-invoke.so.0.9.8
+---
+> lib/libelektra-invoke.so.0.9.7
+425c421
+< lib/libelektra-io.so.0.9.8
+---
+> lib/libelektra-io.so.0.9.7
+428c424
+< lib/libelektra-kdb.so.0.9.8
+---
+> lib/libelektra-kdb.so.0.9.7
+431c427
+< lib/libelektra-merge.so.0.9.8
+---
+> lib/libelektra-merge.so.0.9.7
+434c430
+< lib/libelektra-meta.so.0.9.8
+---
+> lib/libelektra-meta.so.0.9.7
+437c433
+< lib/libelektra-notification.so.0.9.8
+---
+> lib/libelektra-notification.so.0.9.7
+440c436
+< lib/libelektra-opts.so.0.9.8
+---
+> lib/libelektra-opts.so.0.9.7
+443c439
+< lib/libelektra-plugin.so.0.9.8
+---
+> lib/libelektra-plugin.so.0.9.7
+446c442
+< lib/libelektra-pluginprocess.so.0.9.8
+---
+> lib/libelektra-pluginprocess.so.0.9.7
+450c446
+< lib/libelektra-utility.so.0.9.8
+---
+> lib/libelektra-utility.so.0.9.7
+456c452
+< lib/libelektraintercept-env.so.0.9.8
+---
+> lib/libelektraintercept-env.so.0.9.7
+458c454
+< lib/libelektratools-full.so.0.9.8
+---
+> lib/libelektratools-full.so.0.9.7
+462c458
+< lib/libelektratools.so.0.9.8
+---
+> lib/libelektratools.so.0.9.7
+845a842,843
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1KeyNameIterator-members.html
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1KeyNameIterator.html
+848,855c846,847
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1Key__coll__graph.dot
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1Key__coll__graph.map
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1Key__coll__graph.md5
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1Key__coll__graph.png
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1Key__inherit__graph.dot
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1Key__inherit__graph.map
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1Key__inherit__graph.md5
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1Key__inherit__graph.png
+---
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1KeySetIterator-members.html
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1KeySetIterator.html
+868,873d859
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1ReadableKey-members.html
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1ReadableKey.html
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1ReadableKey__inherit__graph.dot
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1ReadableKey__inherit__graph.map
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1ReadableKey__inherit__graph.md5
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1ReadableKey__inherit__graph.png
+876,877c862,871
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeyBinaryValueException-members.html
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeyBinaryValueException.html
+---
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeyBinaryTypeNotSupportedException-members.html
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeyBinaryTypeNotSupportedException.html
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeyBinaryTypeNotSupportedException__coll__graph.dot
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeyBinaryTypeNotSupportedException__coll__graph.map
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeyBinaryTypeNotSupportedException__coll__graph.md5
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeyBinaryTypeNotSupportedException__coll__graph.png
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeyBinaryTypeNotSupportedException__inherit__graph.dot
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeyBinaryTypeNotSupportedException__inherit__graph.map
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeyBinaryTypeNotSupportedException__inherit__graph.md5
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeyBinaryTypeNotSupportedException__inherit__graph.png
+904,907c898,911
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeySetException-members.html
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeySetException.html
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeyStringValueException-members.html
+< share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeyStringValueException.html
+---
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeyReleasedException-members.html
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeyReleasedException.html
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeySetAppendException-members.html
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeySetAppendException.html
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeySetAppendException__coll__graph.dot
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeySetAppendException__coll__graph.map
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeySetAppendException__coll__graph.md5
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeySetAppendException__coll__graph.png
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeySetAppendException__inherit__graph.dot
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeySetAppendException__inherit__graph.map
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeySetAppendException__inherit__graph.md5
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeySetAppendException__inherit__graph.png
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeySetReleasedException-members.html
+> share/doc/elektra-api/html/classorg_1_1libelektra_1_1exception_1_1KeySetReleasedException.html
+1492a1497
+> share/doc/elektra-api/html/doc_dev_logging_md.html
+1519d1523
+< share/doc/elektra-api/html/doc_help_kdb-basename_md.html
+1528d1531
+< share/doc/elektra-api/html/doc_help_kdb-dirname_md.html
+1555d1557
+< share/doc/elektra-api/html/doc_help_kdb-namespace_md.html
+1606d1607
+< share/doc/elektra-api/html/doc_news_2021-07-09_0_9_7_md.html
+1630d1630
+< share/doc/elektra-api/html/doc_tutorials_logger_md.html
+1783d1782
+< share/doc/elektra-api/html/functions_j.html
+1822d1820
+< share/doc/elektra-api/html/globals_func_c.html
+1887,1891d1884
+< share/doc/elektra-api/html/hash_8c.html
+< share/doc/elektra-api/html/hash_8c__incl.dot
+< share/doc/elektra-api/html/hash_8c__incl.map
+< share/doc/elektra-api/html/hash_8c__incl.md5
+< share/doc/elektra-api/html/hash_8c__incl.png
+2111a2105,2112
+> share/doc/elektra-api/html/inherit_graph_55.dot
+> share/doc/elektra-api/html/inherit_graph_55.map
+> share/doc/elektra-api/html/inherit_graph_55.md5
+> share/doc/elektra-api/html/inherit_graph_55.png
+> share/doc/elektra-api/html/inherit_graph_56.dot
+> share/doc/elektra-api/html/inherit_graph_56.map
+> share/doc/elektra-api/html/inherit_graph_56.md5
+> share/doc/elektra-api/html/inherit_graph_56.png
+2142a2144,2145
+> share/doc/elektra-api/html/interfaceorg_1_1libelektra_1_1Elektra-members.html
+> share/doc/elektra-api/html/interfaceorg_1_1libelektra_1_1Elektra.html
+3275,3277d3277
+< share/doc/libelektra5-fuse
+< share/doc/libelektra5-fuse/changelog.Debian.gz
+< share/doc/libelektra5-fuse/copyright
+3691,3793d3690
+< share/elektra/tool_data
+< share/elektra/tool_data/fuse
+< share/elektra/tool_data/fuse/__pycache__
+< share/elektra/tool_data/fuse/__pycache__/fuse.cpython-39.pyc
+< share/elektra/tool_data/fuse/elektra_fuse
+< share/elektra/tool_data/fuse/elektra_fuse-1.0.0.dist-info
+< share/elektra/tool_data/fuse/elektra_fuse-1.0.0.dist-info/INSTALLER
+< share/elektra/tool_data/fuse/elektra_fuse-1.0.0.dist-info/LICENSE.md
+< share/elektra/tool_data/fuse/elektra_fuse-1.0.0.dist-info/METADATA
+< share/elektra/tool_data/fuse/elektra_fuse-1.0.0.dist-info/RECORD
+< share/elektra/tool_data/fuse/elektra_fuse-1.0.0.dist-info/REQUESTED
+< share/elektra/tool_data/fuse/elektra_fuse-1.0.0.dist-info/WHEEL
+< share/elektra/tool_data/fuse/elektra_fuse-1.0.0.dist-info/direct_url.json
+< share/elektra/tool_data/fuse/elektra_fuse-1.0.0.dist-info/top_level.txt
+< share/elektra/tool_data/fuse/elektra_fuse/__init__.py
+< share/elektra/tool_data/fuse/elektra_fuse/__pycache__
+< share/elektra/tool_data/fuse/elektra_fuse/__pycache__/__init__.cpython-39.pyc
+< share/elektra/tool_data/fuse/elektra_fuse/__pycache__/elektra_fuse_interface.cpython-39.pyc
+< share/elektra/tool_data/fuse/elektra_fuse/__pycache__/elektra_util.cpython-39.pyc
+< share/elektra/tool_data/fuse/elektra_fuse/__pycache__/mock_context.cpython-39.pyc
+< share/elektra/tool_data/fuse/elektra_fuse/__pycache__/rootlevel_resolver.cpython-39.pyc
+< share/elektra/tool_data/fuse/elektra_fuse/elektra_fuse_interface.py
+< share/elektra/tool_data/fuse/elektra_fuse/elektra_util.py
+< share/elektra/tool_data/fuse/elektra_fuse/mock_context.py
+< share/elektra/tool_data/fuse/elektra_fuse/rootlevel_resolver.py
+< share/elektra/tool_data/fuse/fuse.py
+< share/elektra/tool_data/fuse/fusepy-3.0.1.dist-info
+< share/elektra/tool_data/fuse/fusepy-3.0.1.dist-info/INSTALLER
+< share/elektra/tool_data/fuse/fusepy-3.0.1.dist-info/METADATA
+< share/elektra/tool_data/fuse/fusepy-3.0.1.dist-info/RECORD
+< share/elektra/tool_data/fuse/fusepy-3.0.1.dist-info/WHEEL
+< share/elektra/tool_data/fuse/fusepy-3.0.1.dist-info/top_level.txt
+< share/elektra/tool_data/fuse/psutil
+< share/elektra/tool_data/fuse/psutil-5.8.0.dist-info
+< share/elektra/tool_data/fuse/psutil-5.8.0.dist-info/INSTALLER
+< share/elektra/tool_data/fuse/psutil-5.8.0.dist-info/LICENSE
+< share/elektra/tool_data/fuse/psutil-5.8.0.dist-info/METADATA
+< share/elektra/tool_data/fuse/psutil-5.8.0.dist-info/RECORD
+< share/elektra/tool_data/fuse/psutil-5.8.0.dist-info/WHEEL
+< share/elektra/tool_data/fuse/psutil-5.8.0.dist-info/top_level.txt
+< share/elektra/tool_data/fuse/psutil/__init__.py
+< share/elektra/tool_data/fuse/psutil/__pycache__
+< share/elektra/tool_data/fuse/psutil/__pycache__/__init__.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/__pycache__/_common.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/__pycache__/_compat.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/__pycache__/_psaix.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/__pycache__/_psbsd.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/__pycache__/_pslinux.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/__pycache__/_psosx.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/__pycache__/_psposix.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/__pycache__/_pssunos.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/__pycache__/_pswindows.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/_common.py
+< share/elektra/tool_data/fuse/psutil/_compat.py
+< share/elektra/tool_data/fuse/psutil/_psaix.py
+< share/elektra/tool_data/fuse/psutil/_psbsd.py
+< share/elektra/tool_data/fuse/psutil/_pslinux.py
+< share/elektra/tool_data/fuse/psutil/_psosx.py
+< share/elektra/tool_data/fuse/psutil/_psposix.py
+< share/elektra/tool_data/fuse/psutil/_pssunos.py
+< share/elektra/tool_data/fuse/psutil/_psutil_linux.cpython-39-x86_64-linux-gnu.so
+< share/elektra/tool_data/fuse/psutil/_psutil_posix.cpython-39-x86_64-linux-gnu.so
+< share/elektra/tool_data/fuse/psutil/_pswindows.py
+< share/elektra/tool_data/fuse/psutil/tests
+< share/elektra/tool_data/fuse/psutil/tests/__init__.py
+< share/elektra/tool_data/fuse/psutil/tests/__main__.py
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/__init__.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/__main__.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/runner.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/test_aix.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/test_bsd.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/test_connections.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/test_contracts.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/test_linux.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/test_memleaks.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/test_misc.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/test_osx.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/test_posix.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/test_process.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/test_sunos.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/test_system.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/test_testutils.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/test_unicode.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/test_windows.cpython-39.pyc
+< share/elektra/tool_data/fuse/psutil/tests/runner.py
+< share/elektra/tool_data/fuse/psutil/tests/test_aix.py
+< share/elektra/tool_data/fuse/psutil/tests/test_bsd.py
+< share/elektra/tool_data/fuse/psutil/tests/test_connections.py
+< share/elektra/tool_data/fuse/psutil/tests/test_contracts.py
+< share/elektra/tool_data/fuse/psutil/tests/test_linux.py
+< share/elektra/tool_data/fuse/psutil/tests/test_memleaks.py
+< share/elektra/tool_data/fuse/psutil/tests/test_misc.py
+< share/elektra/tool_data/fuse/psutil/tests/test_osx.py
+< share/elektra/tool_data/fuse/psutil/tests/test_posix.py
+< share/elektra/tool_data/fuse/psutil/tests/test_process.py
+< share/elektra/tool_data/fuse/psutil/tests/test_sunos.py
+< share/elektra/tool_data/fuse/psutil/tests/test_system.py
+< share/elektra/tool_data/fuse/psutil/tests/test_testutils.py
+< share/elektra/tool_data/fuse/psutil/tests/test_unicode.py
+< share/elektra/tool_data/fuse/psutil/tests/test_windows.py
+< share/elektra/tool_data/hub-zeromq
+< share/elektra/tool_data/hub-zeromq/hub-zeromq
+3801,3805c3698,3701
+< share/java/libelektra-0.9.8-all.jar
+< share/java/libelektra-0.9.8-javadoc.jar
+< share/java/libelektra-0.9.8-sources.jar
+< share/java/libelektra-0.9.8.jar
+< share/java/libelektra-0.9.8.pom.xml
+---
+> share/java/libelektra-0.9.7-javadoc.jar
+> share/java/libelektra-0.9.7-sources.jar
+> share/java/libelektra-0.9.7.jar
+> share/java/libelektra-0.9.7.pom.xml
+3813d3708
+< share/man/man1/kdb-basename.1
+3822d3716
+< share/man/man1/kdb-dirname.1
+3850d3743
+< share/man/man1/kdb-namespace.1
+3860d3752
+< share/man/man1/kdb-run-hub-zeromq.1
+4051a3944
+> share/man/man3/doc_dev_logging_md.3elektra
+4078d3970
+< share/man/man3/doc_help_kdb-basename_md.3elektra
+4087d3978
+< share/man/man3/doc_help_kdb-dirname_md.3elektra
+4114d4004
+< share/man/man3/doc_help_kdb-namespace_md.3elektra
+4165d4054
+< share/man/man3/doc_news_2021-07-09_0_9_7_md.3elektra
+4189d4077
+< share/man/man3/doc_tutorials_logger_md.3elektra
+4242d4129
+< share/man/man3/hash.c.3elektra
+4503a4391
+> share/man/man3/org_libelektra_Elektra.3elektra
+4506a4395
+> share/man/man3/org_libelektra_KeyNameIterator.3elektra
+4507a4397
+> share/man/man3/org_libelektra_KeySetIterator.3elektra
+4512d4401
+< share/man/man3/org_libelektra_ReadableKey.3elektra
+4515c4404
+< share/man/man3/org_libelektra_exception_KeyBinaryValueException.3elektra
+---
+> share/man/man3/org_libelektra_exception_KeyBinaryTypeNotSupportedException.3elektra
+4519,4520c4408,4410
+< share/man/man3/org_libelektra_exception_KeySetException.3elektra
+< share/man/man3/org_libelektra_exception_KeyStringValueException.3elektra
+---
+> share/man/man3/org_libelektra_exception_KeyReleasedException.3elektra
+> share/man/man3/org_libelektra_exception_KeySetAppendException.3elektra
+> share/man/man3/org_libelektra_exception_KeySetReleasedException.3elektra

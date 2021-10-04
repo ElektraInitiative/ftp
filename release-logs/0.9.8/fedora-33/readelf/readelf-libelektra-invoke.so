@@ -1,0 +1,413 @@
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              DYN (Shared object file)
+  Machine:                           Advanced Micro Devices X86-64
+  Version:                           0x1
+  Entry point address:               0x1190
+  Start of program headers:          64 (bytes into file)
+  Start of section headers:          31528 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         9
+  Size of section headers:           64 (bytes)
+  Number of section headers:         35
+  Section header string table index: 34
+
+Section Headers:
+  [Nr] Name              Type             Address           Offset
+       Size              EntSize          Flags  Link  Info  Align
+  [ 0]                   NULL             0000000000000000  00000000
+       0000000000000000  0000000000000000           0     0     0
+  [ 1] .note.gnu.bu[...] NOTE             0000000000000238  00000238
+       0000000000000024  0000000000000000   A       0     0     4
+  [ 2] .gnu.hash         GNU_HASH         0000000000000260  00000260
+       00000000000000b8  0000000000000000   A       3     0     8
+  [ 3] .dynsym           DYNSYM           0000000000000318  00000318
+       0000000000000408  0000000000000018   A       4     1     8
+  [ 4] .dynstr           STRTAB           0000000000000720  00000720
+       00000000000003f4  0000000000000000   A       0     0     1
+  [ 5] .gnu.version      VERSYM           0000000000000b14  00000b14
+       0000000000000056  0000000000000002   A       3     0     2
+  [ 6] .gnu.version_d    VERDEF           0000000000000b70  00000b70
+       00000000000000a4  0000000000000000   A       4     5     8
+  [ 7] .gnu.version_r    VERNEED          0000000000000c18  00000c18
+       0000000000000060  0000000000000000   A       4     3     8
+  [ 8] .rela.dyn         RELA             0000000000000c78  00000c78
+       00000000000000a8  0000000000000018   A       3     0     8
+  [ 9] .rela.plt         RELA             0000000000000d20  00000d20
+       0000000000000210  0000000000000018  AI       3    22     8
+  [10] .init             PROGBITS         0000000000001000  00001000
+       000000000000001b  0000000000000000  AX       0     0     4
+  [11] .plt              PROGBITS         0000000000001020  00001020
+       0000000000000170  0000000000000010  AX       0     0     16
+  [12] .text             PROGBITS         0000000000001190  00001190
+       0000000000000611  0000000000000000  AX       0     0     16
+  [13] .fini             PROGBITS         00000000000017a4  000017a4
+       000000000000000d  0000000000000000  AX       0     0     4
+  [14] .rodata           PROGBITS         0000000000002000  00002000
+       000000000000002f  0000000000000001 AMS       0     0     1
+  [15] .eh_frame_hdr     PROGBITS         0000000000002030  00002030
+       000000000000009c  0000000000000000   A       0     0     4
+  [16] .eh_frame         PROGBITS         00000000000020d0  000020d0
+       00000000000002d0  0000000000000000   A       0     0     8
+  [17] .init_array       INIT_ARRAY       0000000000003d98  00002d98
+       0000000000000008  0000000000000008  WA       0     0     8
+  [18] .fini_array       FINI_ARRAY       0000000000003da0  00002da0
+       0000000000000008  0000000000000008  WA       0     0     8
+  [19] .data.rel.ro      PROGBITS         0000000000003da8  00002da8
+       0000000000000008  0000000000000000  WA       0     0     8
+  [20] .dynamic          DYNAMIC          0000000000003db0  00002db0
+       0000000000000230  0000000000000010  WA       4     0     8
+  [21] .got              PROGBITS         0000000000003fe0  00002fe0
+       0000000000000020  0000000000000008  WA       0     0     8
+  [22] .got.plt          PROGBITS         0000000000004000  00003000
+       00000000000000c8  0000000000000008  WA       0     0     8
+  [23] .bss              NOBITS           00000000000040c8  000030c8
+       0000000000000008  0000000000000000  WA       0     0     1
+  [24] .comment          PROGBITS         0000000000000000  000030c8
+       000000000000002e  0000000000000001  MS       0     0     1
+  [25] .gnu.build.a[...] NOTE             00000000000060d0  000030f8
+       0000000000000120  0000000000000000           0     0     4
+  [26] .debug_aranges    PROGBITS         0000000000000000  00003218
+       0000000000000030  0000000000000000           0     0     1
+  [27] .debug_info       PROGBITS         0000000000000000  00003248
+       0000000000001459  0000000000000000           0     0     1
+  [28] .debug_abbrev     PROGBITS         0000000000000000  000046a1
+       0000000000000324  0000000000000000           0     0     1
+  [29] .debug_line       PROGBITS         0000000000000000  000049c5
+       00000000000006f3  0000000000000000           0     0     1
+  [30] .debug_str        PROGBITS         0000000000000000  000050b8
+       0000000000000958  0000000000000001  MS       0     0     1
+  [31] .debug_loc        PROGBITS         0000000000000000  00005a10
+       00000000000011c2  0000000000000000           0     0     1
+  [32] .symtab           SYMTAB           0000000000000000  00006bd8
+       00000000000008b8  0000000000000018          33    51     8
+  [33] .strtab           STRTAB           0000000000000000  00007490
+       0000000000000530  0000000000000000           0     0     1
+  [34] .shstrtab         STRTAB           0000000000000000  000079c0
+       0000000000000164  0000000000000000           0     0     1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  l (large), p (processor specific)
+
+There are no section groups in this file.
+
+Program Headers:
+  Type           Offset             VirtAddr           PhysAddr
+                 FileSiz            MemSiz              Flags  Align
+  LOAD           0x0000000000000000 0x0000000000000000 0x0000000000000000
+                 0x0000000000000f30 0x0000000000000f30  R      0x1000
+  LOAD           0x0000000000001000 0x0000000000001000 0x0000000000001000
+                 0x00000000000007b1 0x00000000000007b1  R E    0x1000
+  LOAD           0x0000000000002000 0x0000000000002000 0x0000000000002000
+                 0x00000000000003a0 0x00000000000003a0  R      0x1000
+  LOAD           0x0000000000002d98 0x0000000000003d98 0x0000000000003d98
+                 0x0000000000000330 0x0000000000000338  RW     0x1000
+  DYNAMIC        0x0000000000002db0 0x0000000000003db0 0x0000000000003db0
+                 0x0000000000000230 0x0000000000000230  RW     0x8
+  NOTE           0x0000000000000238 0x0000000000000238 0x0000000000000238
+                 0x0000000000000024 0x0000000000000024  R      0x4
+  GNU_EH_FRAME   0x0000000000002030 0x0000000000002030 0x0000000000002030
+                 0x000000000000009c 0x000000000000009c  R      0x4
+  GNU_STACK      0x0000000000000000 0x0000000000000000 0x0000000000000000
+                 0x0000000000000000 0x0000000000000000  RW     0x10
+  GNU_RELRO      0x0000000000002d98 0x0000000000003d98 0x0000000000003d98
+                 0x0000000000000268 0x0000000000000268  R      0x1
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .note.gnu.build-id .gnu.hash .dynsym .dynstr .gnu.version .gnu.version_d .gnu.version_r .rela.dyn .rela.plt 
+   01     .init .plt .text .fini 
+   02     .rodata .eh_frame_hdr .eh_frame 
+   03     .init_array .fini_array .data.rel.ro .dynamic .got .got.plt .bss 
+   04     .dynamic 
+   05     .note.gnu.build-id 
+   06     .eh_frame_hdr 
+   07     
+   08     .init_array .fini_array .data.rel.ro .dynamic .got 
+
+Dynamic section at offset 0x2db0 contains 31 entries:
+  Tag        Type                         Name/Value
+ 0x0000000000000001 (NEEDED)             Shared library: [libelektra-kdb.so.5]
+ 0x0000000000000001 (NEEDED)             Shared library: [libelektra-core.so.5]
+ 0x0000000000000001 (NEEDED)             Shared library: [libdl.so.2]
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x000000000000000e (SONAME)             Library soname: [libelektra-invoke.so.5]
+ 0x000000000000000f (RPATH)              Library rpath: [/home/jenkins/workspace/libelektra-release@2/system/lib/elektra]
+ 0x000000000000000c (INIT)               0x1000
+ 0x000000000000000d (FINI)               0x17a4
+ 0x0000000000000019 (INIT_ARRAY)         0x3d98
+ 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)
+ 0x000000000000001a (FINI_ARRAY)         0x3da0
+ 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)
+ 0x000000006ffffef5 (GNU_HASH)           0x260
+ 0x0000000000000005 (STRTAB)             0x720
+ 0x0000000000000006 (SYMTAB)             0x318
+ 0x000000000000000a (STRSZ)              1012 (bytes)
+ 0x000000000000000b (SYMENT)             24 (bytes)
+ 0x0000000000000003 (PLTGOT)             0x4000
+ 0x0000000000000002 (PLTRELSZ)           528 (bytes)
+ 0x0000000000000014 (PLTREL)             RELA
+ 0x0000000000000017 (JMPREL)             0xd20
+ 0x0000000000000007 (RELA)               0xc78
+ 0x0000000000000008 (RELASZ)             168 (bytes)
+ 0x0000000000000009 (RELAENT)            24 (bytes)
+ 0x000000006ffffffc (VERDEF)             0xb70
+ 0x000000006ffffffd (VERDEFNUM)          5
+ 0x000000006ffffffe (VERNEED)            0xc18
+ 0x000000006fffffff (VERNEEDNUM)         3
+ 0x000000006ffffff0 (VERSYM)             0xb14
+ 0x000000006ffffff9 (RELACOUNT)          3
+ 0x0000000000000000 (NULL)               0x0
+
+Relocation section '.rela.dyn' at offset 0xc78 contains 7 entries:
+  Offset          Info           Type           Sym. Value    Sym. Name + Addend
+000000003d98  000000000008 R_X86_64_RELATIVE                    1240
+000000003da0  000000000008 R_X86_64_RELATIVE                    1200
+000000003da8  000000000008 R_X86_64_RELATIVE                    3da8
+000000003fe0  000400000006 R_X86_64_GLOB_DAT 0000000000000000 _ITM_deregisterTM[...] + 0
+000000003fe8  000c00000006 R_X86_64_GLOB_DAT 0000000000000000 __gmon_start__ + 0
+000000003ff0  001200000006 R_X86_64_GLOB_DAT 0000000000000000 _ITM_registerTMCl[...] + 0
+000000003ff8  001400000006 R_X86_64_GLOB_DAT 0000000000000000 __cxa_finalize@GLIBC_2.2.5 + 0
+
+Relocation section '.rela.plt' at offset 0xd20 contains 22 entries:
+  Offset          Info           Type           Sym. Value    Sym. Name + Addend
+000000004018  000100000007 R_X86_64_JUMP_SLO 0000000000000000 elektraCalloc@libelektra_0.8 + 0
+000000004020  000200000007 R_X86_64_JUMP_SLO 0000000000000000 elektraPluginOpen@libelektra_0.8 + 0
+000000004028  002300000007 R_X86_64_JUMP_SLO 0000000000001740 elektraDeferredCa[...]@@libelektra_0.8 + 0
+000000004030  000300000007 R_X86_64_JUMP_SLO 0000000000000000 elektraStrDup@libelektra_0.8 + 0
+000000004038  000500000007 R_X86_64_JUMP_SLO 0000000000000000 elektraPluginClose@libelektra_0.8 + 0
+000000004040  000600000007 R_X86_64_JUMP_SLO 0000000000000000 keyAddBaseName@libelektra_0.8 + 0
+000000004048  000700000007 R_X86_64_JUMP_SLO 0000000000000000 elektraModulesInit@libelektra_0.8 + 0
+000000004050  000800000007 R_X86_64_JUMP_SLO 0000000000000000 elektraModulesClose@libelektra_0.8 + 0
+000000004058  000900000007 R_X86_64_JUMP_SLO 0000000000000000 keyValue@libelektra_0.8 + 0
+000000004060  000a00000007 R_X86_64_JUMP_SLO 0000000000000000 ksDel@libelektra_0.8 + 0
+000000004068  000b00000007 R_X86_64_JUMP_SLO 0000000000000000 elektraPluginGetF[...]@libelektra_0.8 + 0
+000000004070  000d00000007 R_X86_64_JUMP_SLO 0000000000000000 keyNew@libelektra_0.8 + 0
+000000004078  000e00000007 R_X86_64_JUMP_SLO 0000000000000000 keyDel@libelektra_0.8 + 0
+000000004080  002700000007 R_X86_64_JUMP_SLO 0000000000001250 elektraInvokeOpen@@libelektra_0.8 + 0
+000000004088  001e00000007 R_X86_64_JUMP_SLO 0000000000001370 elektraInvokeGetF[...]@@libelektra_0.8 + 0
+000000004090  000f00000007 R_X86_64_JUMP_SLO 0000000000000000 elektraFree@libelektra_0.8 + 0
+000000004098  001000000007 R_X86_64_JUMP_SLO 0000000000000000 ksDup@libelektra_0.8 + 0
+0000000040a0  001100000007 R_X86_64_JUMP_SLO 0000000000000000 ksNew@libelektra_0.8 + 0
+0000000040a8  002800000007 R_X86_64_JUMP_SLO 00000000000015b0 elektraDeferredCall@@libelektra_0.8 + 0
+0000000040b0  001300000007 R_X86_64_JUMP_SLO 0000000000000000 elektraMalloc@libelektra_0.8 + 0
+0000000040b8  001400000007 R_X86_64_JUMP_SLO 0000000000000000 __cxa_finalize@GLIBC_2.2.5 + 0
+0000000040c0  001500000007 R_X86_64_JUMP_SLO 0000000000000000 ksLookup@libelektra_0.8 + 0
+
+The decoding of unwind sections for machine type Advanced Micro Devices X86-64 is not currently supported.
+
+Symbol table '.dynsym' contains 43 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@libelektra_0.8 (6)
+     2: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@libelektra_0.8 (7)
+     3: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@libelektra_0.8 (6)
+     4: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_deregisterT[...]
+     5: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@libelektra_0.8 (7)
+     6: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@libelektra_0.8 (6)
+     7: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@libelektra_0.8 (6)
+     8: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@libelektra_0.8 (6)
+     9: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@libelektra_0.8 (6)
+    10: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@libelektra_0.8 (6)
+    11: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@libelektra_0.8 (7)
+    12: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND __gmon_start__
+    13: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@libelektra_0.8 (6)
+    14: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@libelektra_0.8 (6)
+    15: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@libelektra_0.8 (6)
+    16: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@libelektra_0.8 (6)
+    17: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@libelektra_0.8 (6)
+    18: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_registerTMC[...]
+    19: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@libelektra_0.8 (6)
+    20: 0000000000000000     0 FUNC    WEAK   DEFAULT  UND [...]@GLIBC_2.2.5 (8)
+    21: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND [...]@libelektra_0.8 (6)
+    22: 0000000000000000     0 OBJECT  GLOBAL DEFAULT  ABS libelektraprivate_1.0
+    23: 0000000000001630   136 FUNC    GLOBAL DEFAULT   12 [...]@@libelektra_0.8
+    24: 0000000000001790    17 FUNC    GLOBAL DEFAULT   12 [...]@@libelektra_0.8
+    25: 0000000000001530   127 FUNC    GLOBAL DEFAULT   12 [...]@@libelektra_0.8
+    26: 0000000000001480    19 FUNC    GLOBAL DEFAULT   12 [...]@@libelektra_0.8
+    27: 0000000000001460    19 FUNC    GLOBAL DEFAULT   12 [...]@@libelektra_0.8
+    28: 00000000000016c0    39 FUNC    GLOBAL DEFAULT   12 [...]@@libelektra_0.8
+    29: 00000000000014c0    19 FUNC    GLOBAL DEFAULT   12 [...]@@libelektra_0.8
+    30: 0000000000001370   203 FUNC    GLOBAL DEFAULT   12 [...]@@libelektra_0.8
+    31: 00000000000014e0    67 FUNC    GLOBAL DEFAULT   12 [...]@@libelektra_0.8
+    32: 0000000000001610    19 FUNC    GLOBAL DEFAULT   12 [...]@@libelektra_0.8
+    33: 0000000000000000     0 OBJECT  GLOBAL DEFAULT  ABS libelektra_1.0
+    34: 0000000000001360     9 FUNC    GLOBAL DEFAULT   12 [...]@@libelektra_0.8
+    35: 0000000000001740    65 FUNC    GLOBAL DEFAULT   12 [...]@@libelektra_0.8
+    36: 00000000000014a0    19 FUNC    GLOBAL DEFAULT   12 [...]@@libelektra_0.8
+    37: 0000000000001440    19 FUNC    GLOBAL DEFAULT   12 [...]@@libelektra_0.8
+    38: 00000000000016f0    72 FUNC    GLOBAL DEFAULT   12 [...]@@libelektra_0.8
+    39: 0000000000001250   262 FUNC    GLOBAL DEFAULT   12 [...]@@libelektra_0.8
+    40: 00000000000015b0    87 FUNC    GLOBAL DEFAULT   12 [...]@@libelektra_0.8
+    41: 0000000000000000     0 OBJECT  GLOBAL DEFAULT  ABS libelektra_0.8
+    42: 0000000000000000     0 OBJECT  GLOBAL DEFAULT  ABS libelektra_0.9
+
+Symbol table '.symtab' contains 93 entries:
+   Num:    Value          Size Type    Bind   Vis      Ndx Name
+     0: 0000000000000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 0000000000000238     0 SECTION LOCAL  DEFAULT    1 
+     2: 0000000000000260     0 SECTION LOCAL  DEFAULT    2 
+     3: 0000000000000318     0 SECTION LOCAL  DEFAULT    3 
+     4: 0000000000000720     0 SECTION LOCAL  DEFAULT    4 
+     5: 0000000000000b14     0 SECTION LOCAL  DEFAULT    5 
+     6: 0000000000000b70     0 SECTION LOCAL  DEFAULT    6 
+     7: 0000000000000c18     0 SECTION LOCAL  DEFAULT    7 
+     8: 0000000000000c78     0 SECTION LOCAL  DEFAULT    8 
+     9: 0000000000000d20     0 SECTION LOCAL  DEFAULT    9 
+    10: 0000000000001000     0 SECTION LOCAL  DEFAULT   10 
+    11: 0000000000001020     0 SECTION LOCAL  DEFAULT   11 
+    12: 0000000000001190     0 SECTION LOCAL  DEFAULT   12 
+    13: 00000000000017a4     0 SECTION LOCAL  DEFAULT   13 
+    14: 0000000000002000     0 SECTION LOCAL  DEFAULT   14 
+    15: 0000000000002030     0 SECTION LOCAL  DEFAULT   15 
+    16: 00000000000020d0     0 SECTION LOCAL  DEFAULT   16 
+    17: 0000000000003d98     0 SECTION LOCAL  DEFAULT   17 
+    18: 0000000000003da0     0 SECTION LOCAL  DEFAULT   18 
+    19: 0000000000003da8     0 SECTION LOCAL  DEFAULT   19 
+    20: 0000000000003db0     0 SECTION LOCAL  DEFAULT   20 
+    21: 0000000000003fe0     0 SECTION LOCAL  DEFAULT   21 
+    22: 0000000000004000     0 SECTION LOCAL  DEFAULT   22 
+    23: 00000000000040c8     0 SECTION LOCAL  DEFAULT   23 
+    24: 0000000000000000     0 SECTION LOCAL  DEFAULT   24 
+    25: 00000000000060d0     0 SECTION LOCAL  DEFAULT   25 
+    26: 0000000000000000     0 SECTION LOCAL  DEFAULT   26 
+    27: 0000000000000000     0 SECTION LOCAL  DEFAULT   27 
+    28: 0000000000000000     0 SECTION LOCAL  DEFAULT   28 
+    29: 0000000000000000     0 SECTION LOCAL  DEFAULT   29 
+    30: 0000000000000000     0 SECTION LOCAL  DEFAULT   30 
+    31: 0000000000000000     0 SECTION LOCAL  DEFAULT   31 
+    32: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS crtstuff.c
+    33: 0000000000001190     0 FUNC    LOCAL  DEFAULT   12 deregister_tm_clones
+    34: 00000000000011c0     0 FUNC    LOCAL  DEFAULT   12 register_tm_clones
+    35: 0000000000001200     0 FUNC    LOCAL  DEFAULT   12 __do_global_dtors_aux
+    36: 00000000000040c8     1 OBJECT  LOCAL  DEFAULT   23 completed.0
+    37: 0000000000003da0     0 OBJECT  LOCAL  DEFAULT   18 __do_global_dtor[...]
+    38: 0000000000001240     0 FUNC    LOCAL  DEFAULT   12 frame_dummy
+    39: 0000000000003d98     0 OBJECT  LOCAL  DEFAULT   17 __frame_dummy_in[...]
+    40: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS invoke.c
+    41: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS crtstuff.c
+    42: 000000000000239c     0 OBJECT  LOCAL  DEFAULT   16 __FRAME_END__
+    43: 0000000000000000     0 FILE    LOCAL  DEFAULT  ABS 
+    44: 00000000000017a4     0 FUNC    LOCAL  DEFAULT   13 _fini
+    45: 0000000000003da8     0 OBJECT  LOCAL  DEFAULT   19 __dso_handle
+    46: 0000000000003db0     0 OBJECT  LOCAL  DEFAULT   20 _DYNAMIC
+    47: 0000000000002030     0 NOTYPE  LOCAL  DEFAULT   15 __GNU_EH_FRAME_HDR
+    48: 00000000000040c8     0 OBJECT  LOCAL  DEFAULT   22 __TMC_END__
+    49: 0000000000004000     0 OBJECT  LOCAL  DEFAULT   22 _GLOBAL_OFFSET_TABLE_
+    50: 0000000000001000     0 FUNC    LOCAL  DEFAULT   10 _init
+    51: 0000000000001790    17 FUNC    GLOBAL DEFAULT   12 elektraInvokeExe[...]
+    52: 0000000000001360     9 FUNC    GLOBAL DEFAULT   12 elektraInvokeIni[...]
+    53: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND elektraCalloc@@l[...]
+    54: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND elektraPluginOpe[...]
+    55: 0000000000001740    65 FUNC    GLOBAL DEFAULT   12 elektraDeferredC[...]
+    56: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND elektraStrDup@@l[...]
+    57: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_deregisterT[...]
+    58: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND elektraPluginClo[...]
+    59: 00000000000014c0    19 FUNC    GLOBAL DEFAULT   12 elektraInvokeGet[...]
+    60: 0000000000001460    19 FUNC    GLOBAL DEFAULT   12 elektraInvokeGet[...]
+    61: 00000000000016f0    72 FUNC    GLOBAL DEFAULT   12 elektraDeferredC[...]
+    62: 00000000000014e0    67 FUNC    GLOBAL DEFAULT   12 elektraInvoke2Args
+    63: 0000000000001610    19 FUNC    GLOBAL DEFAULT   12 elektraInvokeCal[...]
+    64: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND keyAddBaseName@@[...]
+    65: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND elektraModulesIn[...]
+    66: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND elektraModulesCl[...]
+    67: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND keyValue@@libele[...]
+    68: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND ksDel@@libelektra_0.8
+    69: 00000000000014a0    19 FUNC    GLOBAL DEFAULT   12 elektraInvokeGet[...]
+    70: 0000000000001530   127 FUNC    GLOBAL DEFAULT   12 elektraInvokeClose
+    71: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND elektraPluginGet[...]
+    72: 0000000000000000     0 OBJECT  GLOBAL DEFAULT  ABS libelektra_1.0
+    73: 0000000000000000     0 OBJECT  GLOBAL DEFAULT  ABS libelektra_0.8
+    74: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND __gmon_start__
+    75: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND keyNew@@libelekt[...]
+    76: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND keyDel@@libelekt[...]
+    77: 0000000000001250   262 FUNC    GLOBAL DEFAULT   12 elektraInvokeOpen
+    78: 0000000000000000     0 OBJECT  GLOBAL DEFAULT  ABS libelektraprivate_1.0
+    79: 0000000000001370   203 FUNC    GLOBAL DEFAULT   12 elektraInvokeGet[...]
+    80: 0000000000001630   136 FUNC    GLOBAL DEFAULT   12 elektraDeferredC[...]
+    81: 00000000000016c0    39 FUNC    GLOBAL DEFAULT   12 elektraDeferredC[...]
+    82: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND elektraFree@@lib[...]
+    83: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND ksDup@@libelektra_0.8
+    84: 0000000000001440    19 FUNC    GLOBAL DEFAULT   12 elektraInvokeGet[...]
+    85: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND ksNew@@libelektra_0.8
+    86: 0000000000001480    19 FUNC    GLOBAL DEFAULT   12 elektraInvokeGet[...]
+    87: 00000000000015b0    87 FUNC    GLOBAL DEFAULT   12 elektraDeferredCall
+    88: 0000000000000000     0 NOTYPE  WEAK   DEFAULT  UND _ITM_registerTMC[...]
+    89: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND elektraMalloc@@l[...]
+    90: 0000000000000000     0 FUNC    WEAK   DEFAULT  UND __cxa_finalize@@[...]
+    91: 0000000000000000     0 OBJECT  GLOBAL DEFAULT  ABS libelektra_0.9
+    92: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND ksLookup@@libele[...]
+
+Histogram for `.gnu.hash' bucket list length (total of 17 buckets):
+ Length  Number     % of total  Coverage
+      0  5          ( 29.4%)
+      1  6          ( 35.3%)     28.6%
+      2  3          ( 17.6%)     57.1%
+      3  3          ( 17.6%)    100.0%
+
+Version symbols section '.gnu.version' contains 43 entries:
+ Addr: 0x0000000000000b14  Offset: 0x000b14  Link: 3 (.dynsym)
+  000:   0 (*local*)       6 (libelektra_0.8)    7 (libelektra_0.8)    6 (libelektra_0.8) 
+  004:   0 (*local*)       7 (libelektra_0.8)    6 (libelektra_0.8)    6 (libelektra_0.8) 
+  008:   6 (libelektra_0.8)    6 (libelektra_0.8)    6 (libelektra_0.8)    7 (libelektra_0.8) 
+  00c:   0 (*local*)       6 (libelektra_0.8)    6 (libelektra_0.8)    6 (libelektra_0.8) 
+  010:   6 (libelektra_0.8)    6 (libelektra_0.8)    0 (*local*)       6 (libelektra_0.8) 
+  014:   8 (GLIBC_2.2.5)   6 (libelektra_0.8)    5 (libelektraprivate_1.0)           2 (libelektra_0.8) 
+  018:   2 (libelektra_0.8)    2 (libelektra_0.8)    2 (libelektra_0.8)    2 (libelektra_0.8) 
+  01c:   2 (libelektra_0.8)    2 (libelektra_0.8)    2 (libelektra_0.8)    2 (libelektra_0.8) 
+  020:   2 (libelektra_0.8)    4 (libelektra_1.0)    2 (libelektra_0.8)    2 (libelektra_0.8) 
+  024:   2 (libelektra_0.8)    2 (libelektra_0.8)    2 (libelektra_0.8)    2 (libelektra_0.8) 
+  028:   2 (libelektra_0.8)    2 (libelektra_0.8)    3 (libelektra_0.9) 
+
+Version definition section '.gnu.version_d' contains 5 entries:
+ Addr: 0x0000000000000b70  Offset: 0x000b70  Link: 4 (.dynstr)
+  000000: Rev: 1  Flags: BASE  Index: 1  Cnt: 1  Name: libelektra-invoke.so.5
+  0x001c: Rev: 1  Flags: none  Index: 2  Cnt: 1  Name: libelektra_0.8
+  0x0038: Rev: 1  Flags: none  Index: 3  Cnt: 2  Name: libelektra_0.9
+  0x0054: Parent 1: libelektra_0.8
+  0x005c: Rev: 1  Flags: none  Index: 4  Cnt: 2  Name: libelektra_1.0
+  0x0078: Parent 1: libelektra_0.9
+  0x0080: Rev: 1  Flags: none  Index: 5  Cnt: 2  Name: libelektraprivate_1.0
+  0x009c: Parent 1: libelektra_0.9
+
+Version needs section '.gnu.version_r' contains 3 entries:
+ Addr: 0x0000000000000c18  Offset: 0x000c18  Link: 4 (.dynstr)
+  000000: Version: 1  File: libc.so.6  Cnt: 1
+  0x0010:   Name: GLIBC_2.2.5  Flags: none  Version: 8
+  0x0020: Version: 1  File: libelektra-kdb.so.5  Cnt: 1
+  0x0030:   Name: libelektra_0.8  Flags: none  Version: 7
+  0x0040: Version: 1  File: libelektra-core.so.5  Cnt: 1
+  0x0050:   Name: libelektra_0.8  Flags: none  Version: 6
+
+Displaying notes found in: .note.gnu.build-id
+  Owner                Data size 	Description
+  GNU                  0x00000014	NT_GNU_BUILD_ID (unique build ID bitstring)
+    Build ID: 15e2676755cd07fb0831bde1009d9b75fe8a5b83
+
+Displaying notes found in: .gnu.build.attributes
+  Owner                Data size 	Description
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x1190 to 0x1190
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x1000 to 0x1016
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x17a4 to 0x17ac
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x1190 to 0x1249
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x17a1 to 0x17a1
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x17a1 to 0x17a1
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x1016 to 0x101b
+  GA$<version>3a1      0x00000010	OPEN
+    Applies to region from 0x17ac to 0x17b1
