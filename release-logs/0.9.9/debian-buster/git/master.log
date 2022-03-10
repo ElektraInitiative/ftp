@@ -1,0 +1,266 @@
+commit 5cd62ee5a0722aaaa7754265a54be9ac487f228a
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Thu Mar 10 14:45:28 2022 +0000
+
+    release: update debian/changelog
+
+diff --git a/scripts/packaging/debian/changelog b/scripts/packaging/debian/changelog
+index df8df871a..4a0119101 100644
+--- a/scripts/packaging/debian/changelog
++++ b/scripts/packaging/debian/changelog
+@@ -1,3 +1,9 @@
++elektra (0.9.9-6) unstable; urgency=medium
++
++  * New upstream version.
++
++ -- Jenkins (User for Elektra automated build system) <jenkins@localhost>  Thu, 10 Mar 2022 14:45:27 +0000
++
+ elektra (0.9.8-5) unstable; urgency=medium
+ 
+   * Pump version to make new packages visible #4255.
+
+commit 0900aef178c5e3ac69496fac6bfef98b3a7c8eaf
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Thu Mar 10 14:45:27 2022 +0000
+
+    release: update fedora/changelog
+
+diff --git a/scripts/packaging/fedora/changelog b/scripts/packaging/fedora/changelog
+index 96c785660..11b1cb73e 100644
+--- a/scripts/packaging/fedora/changelog
++++ b/scripts/packaging/fedora/changelog
+@@ -1,3 +1,6 @@
++* Thu Mar 10 2022 elektrabot <elektrabot@libelektra.org> - 0.9.9-6
++- New upstream version
++
+ * Mon Oct 04 2021 elektrabot <elektrabot@libelektra.org> - 0.9.8-1
+ - New upstream version
+ 
+
+commit 7dbb76d18a2d9eb4e87744dd299e86f2082b271f
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Thu Mar 10 14:44:23 2022 +0000
+
+    release: regenerate plugins overview picture
+
+diff --git a/doc/images/plugins.pdf b/doc/images/plugins.pdf
+index 6e21a257f..5d9fad638 100644
+Binary files a/doc/images/plugins.pdf and b/doc/images/plugins.pdf differ
+
+commit 2c6c332acf47d1fb1a9058dd5983535bf2b12a88
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Thu Mar 10 11:40:29 2022 +0100
+
+    centos: revert java path
+
+diff --git a/scripts/docker/centos/stream8/Dockerfile b/scripts/docker/centos/stream8/Dockerfile
+index 318c35dde..b4d58c0d1 100644
+--- a/scripts/docker/centos/stream8/Dockerfile
++++ b/scripts/docker/centos/stream8/Dockerfile
+@@ -107,7 +107,7 @@ RUN useradd \
+ RUN cd /tmp && wget https://services.gradle.org/distributions/gradle-7.4-bin.zip && unzip gradle-7.4-bin.zip && rm gradle-7.4-bin.zip && mv gradle-7.4 /opt/gradle
+ RUN alternatives --auto java && alternatives --auto javac
+ ENV PATH="${PATH}:/opt/gradle/bin" \
+-    JAVA_HOME="/usr/lib/jvm/java"
++    JAVA_HOME="/etc/alternatives/jre"
+ 
+ USER ${JENKINS_USERID}
+ 
+
+commit 2eae6f8392077722c97938c732eaf4819a6420cc
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Thu Mar 10 10:17:18 2022 +0100
+
+    opensuse: revert java path
+
+diff --git a/scripts/docker/opensuse/15.3/Dockerfile b/scripts/docker/opensuse/15.3/Dockerfile
+index b3331a873..689d56cdd 100644
+--- a/scripts/docker/opensuse/15.3/Dockerfile
++++ b/scripts/docker/opensuse/15.3/Dockerfile
+@@ -96,7 +96,7 @@ RUN useradd \
+ RUN cd /tmp && wget https://services.gradle.org/distributions/gradle-7.4-bin.zip && unzip gradle-7.4-bin.zip && rm gradle-7.4-bin.zip && mv gradle-7.4 /opt/gradle
+ RUN alternatives --auto java && alternatives --auto javac
+ ENV PATH="${PATH}:/opt/gradle/bin" \
+-    JAVA_HOME="/usr/lib/jvm/java"
++    JAVA_HOME="/etc/alternatives/jre"
+ 
+ USER ${JENKINS_USERID}
+ 
+
+commit 556a5a7f0310dea29e5a09864cb0dd8d9f561ede
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Thu Mar 10 09:23:40 2022 +0100
+
+    rpm: set JAVA_HOME properly
+
+diff --git a/scripts/docker/centos/stream8/Dockerfile b/scripts/docker/centos/stream8/Dockerfile
+index b4d58c0d1..318c35dde 100644
+--- a/scripts/docker/centos/stream8/Dockerfile
++++ b/scripts/docker/centos/stream8/Dockerfile
+@@ -107,7 +107,7 @@ RUN useradd \
+ RUN cd /tmp && wget https://services.gradle.org/distributions/gradle-7.4-bin.zip && unzip gradle-7.4-bin.zip && rm gradle-7.4-bin.zip && mv gradle-7.4 /opt/gradle
+ RUN alternatives --auto java && alternatives --auto javac
+ ENV PATH="${PATH}:/opt/gradle/bin" \
+-    JAVA_HOME="/etc/alternatives/jre"
++    JAVA_HOME="/usr/lib/jvm/java"
+ 
+ USER ${JENKINS_USERID}
+ 
+diff --git a/scripts/docker/cirrus/fedora/Dockerfile b/scripts/docker/cirrus/fedora/Dockerfile
+index 60e5a55bd..7ab00a589 100644
+--- a/scripts/docker/cirrus/fedora/Dockerfile
++++ b/scripts/docker/cirrus/fedora/Dockerfile
+@@ -62,4 +62,4 @@ RUN mkdir -p ${GTEST_ROOT} \
+ RUN cd /tmp && wget https://services.gradle.org/distributions/gradle-7.4-bin.zip && unzip gradle-7.4-bin.zip && rm gradle-7.4-bin.zip && mv gradle-7.4 /opt/gradle
+ RUN alternatives --auto java && alternatives --auto javac
+ ENV PATH="${PATH}:/opt/gradle/bin" \
+-    JAVA_HOME="/etc/alternatives/jre"
++    JAVA_HOME="/usr/lib/jvm/java"
+diff --git a/scripts/docker/fedora/31/Dockerfile b/scripts/docker/fedora/31/Dockerfile
+index 4306a0dec..8896a51a5 100644
+--- a/scripts/docker/fedora/31/Dockerfile
++++ b/scripts/docker/fedora/31/Dockerfile
+@@ -92,7 +92,7 @@ RUN cd /tmp && wget https://services.gradle.org/distributions/gradle-7.4-bin.zip
+ # Pipe in 1 as Java 11 is first in the list
+ RUN echo 1 | alternatives --config java && alternatives --auto javac
+ ENV PATH="${PATH}:/opt/gradle/bin" \
+-    JAVA_HOME="/etc/alternatives/jre"
++    JAVA_HOME="/usr/lib/jvm/java"
+ 
+ USER ${JENKINS_USERID}
+ 
+diff --git a/scripts/docker/fedora/32/Dockerfile b/scripts/docker/fedora/32/Dockerfile
+index 6e890fe8b..5aff24530 100644
+--- a/scripts/docker/fedora/32/Dockerfile
++++ b/scripts/docker/fedora/32/Dockerfile
+@@ -93,7 +93,7 @@ RUN cd /tmp && wget https://services.gradle.org/distributions/gradle-7.4-bin.zip
+ # Pipe in 1 as Java 11 is first in the list
+ RUN echo 1 | alternatives --config java && alternatives --auto javac
+ ENV PATH="${PATH}:/opt/gradle/bin" \
+-    JAVA_HOME="/etc/alternatives/jre"
++    JAVA_HOME="/usr/lib/jvm/java"
+ 
+ USER ${JENKINS_USERID}
+ 
+diff --git a/scripts/docker/fedora/33/Dockerfile b/scripts/docker/fedora/33/Dockerfile
+index 06b2b5259..4fd416869 100644
+--- a/scripts/docker/fedora/33/Dockerfile
++++ b/scripts/docker/fedora/33/Dockerfile
+@@ -104,7 +104,7 @@ RUN useradd \
+ RUN cd /tmp && wget https://services.gradle.org/distributions/gradle-7.4-bin.zip && unzip gradle-7.4-bin.zip && rm gradle-7.4-bin.zip && mv gradle-7.4 /opt/gradle
+ RUN alternatives --auto java && alternatives --auto javac
+ ENV PATH="${PATH}:/opt/gradle/bin" \
+-    JAVA_HOME="/etc/alternatives/jre"
++    JAVA_HOME="/usr/lib/jvm/java"
+ 
+ USER ${JENKINS_USERID}
+ 
+diff --git a/scripts/docker/fedora/34/Dockerfile b/scripts/docker/fedora/34/Dockerfile
+index 57854594d..bbe2ba165 100644
+--- a/scripts/docker/fedora/34/Dockerfile
++++ b/scripts/docker/fedora/34/Dockerfile
+@@ -104,7 +104,7 @@ RUN useradd \
+ RUN cd /tmp && wget https://services.gradle.org/distributions/gradle-7.4-bin.zip && unzip gradle-7.4-bin.zip && rm gradle-7.4-bin.zip && mv gradle-7.4 /opt/gradle
+ RUN alternatives --auto java && alternatives --auto javac
+ ENV PATH="${PATH}:/opt/gradle/bin" \
+-    JAVA_HOME="/etc/alternatives/jre"
++    JAVA_HOME="/usr/lib/jvm/java"
+ 
+ USER ${JENKINS_USERID}
+ 
+diff --git a/scripts/docker/fedora/35/Dockerfile b/scripts/docker/fedora/35/Dockerfile
+index 2207bb787..f2ed9f93a 100644
+--- a/scripts/docker/fedora/35/Dockerfile
++++ b/scripts/docker/fedora/35/Dockerfile
+@@ -104,7 +104,7 @@ RUN useradd \
+ RUN cd /tmp && wget https://services.gradle.org/distributions/gradle-7.4-bin.zip && unzip gradle-7.4-bin.zip && rm gradle-7.4-bin.zip && mv gradle-7.4 /opt/gradle
+ RUN alternatives --auto java && alternatives --auto javac
+ ENV PATH="${PATH}:/opt/gradle/bin" \
+-    JAVA_HOME="/etc/alternatives/jre"
++    JAVA_HOME="/usr/lib/jvm/java"
+ 
+ USER ${JENKINS_USERID}
+ 
+diff --git a/scripts/docker/opensuse/15.3/Dockerfile b/scripts/docker/opensuse/15.3/Dockerfile
+index 689d56cdd..b3331a873 100644
+--- a/scripts/docker/opensuse/15.3/Dockerfile
++++ b/scripts/docker/opensuse/15.3/Dockerfile
+@@ -96,7 +96,7 @@ RUN useradd \
+ RUN cd /tmp && wget https://services.gradle.org/distributions/gradle-7.4-bin.zip && unzip gradle-7.4-bin.zip && rm gradle-7.4-bin.zip && mv gradle-7.4 /opt/gradle
+ RUN alternatives --auto java && alternatives --auto javac
+ ENV PATH="${PATH}:/opt/gradle/bin" \
+-    JAVA_HOME="/etc/alternatives/jre"
++    JAVA_HOME="/usr/lib/jvm/java"
+ 
+ USER ${JENKINS_USERID}
+ 
+
+commit 691b017a8432d79aaa0f494da3b93353de136cd2
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Thu Mar 10 09:23:14 2022 +0100
+
+    jni: do not resolve java paths
+
+diff --git a/src/plugins/jni/CMakeLists.txt b/src/plugins/jni/CMakeLists.txt
+index ce7369a68..d7fd8ec12 100644
+--- a/src/plugins/jni/CMakeLists.txt
++++ b/src/plugins/jni/CMakeLists.txt
+@@ -3,11 +3,6 @@ include (LibAddBinding)
+ include (SafeCheckSymbolExists)
+ 
+ if (DEPENDENCY_PHASE)
+-	if (DEFINED ENV{JAVA_HOME} AND NOT $ENV{JAVA_HOME} STREQUAL "")
+-		# resolve full path to avoid invalid RPATH (e.g. on Fedora 35)
+-		get_filename_component (JAVA_HOME $ENV{JAVA_HOME} REALPATH)
+-	endif ()
+-
+ 	if (APPLE)
+ 		if (NOT DEFINED JAVA_HOME)
+ 			execute_process (
+
+commit 51272034f3dcaa2cecb67659ed250c4fc3fff986
+Author: Mihael Pranjić <mpranj@limun.org>
+Date:   Thu Mar 10 07:41:48 2022 +0100
+
+    release: upadate publication date
+
+diff --git a/doc/news/_preparation_next_release.md b/doc/news/_preparation_next_release.md
+index bff783ae3..9416a096e 100644
+--- a/doc/news/_preparation_next_release.md
++++ b/doc/news/_preparation_next_release.md
+@@ -1,8 +1,8 @@
+ # 0.9.<<VERSION>> Release
+ 
+-- guid: 29B844BA-9DED-4BBE-8FE4-6DB3DD73B82D
++- guid: 3177C958-9473-41BA-9918-A56A18CF20E8
+ - author: Mihael Pranjić
+-- pubDate: Wed, 09 Mar 2022 12:56:24 +0100
++- pubDate: Thu, 10 Mar 2022 07:40:35 +0100
+ - shortDesc: Bug Fixes, Java Plugins, Elektra 1.0 Decisions
+ 
+ We are proud to release Elektra 0.9.<<VERSION>>.
+
+commit aed5c30acc08129d8a4798175e31f4c7e68908d5
+Author: Mihael Pranjić <mpranj@limun.org>
+Date:   Wed Mar 9 22:53:41 2022 +0100
+
+    release: log all tests verbose
+
+diff --git a/scripts/release/release-tests.sh b/scripts/release/release-tests.sh
+index c911f7f22..507374a6c 100755
+--- a/scripts/release/release-tests.sh
++++ b/scripts/release/release-tests.sh
+@@ -29,11 +29,11 @@ run_log_tests() {
+ 	KDB=kdb kdb run_all -v 2>&1 | tee $BASE_DIR/$VERSION/$CONTEXT/run_all
+ 	check_test_amount $BASE_DIR/$VERSION/$CONTEXT/run_all
+ 
+-	KDB=kdb-full kdb-full run_all > $BASE_DIR/$VERSION/$CONTEXT/run_all_full 2>&1
++	KDB=kdb-full kdb-full run_all -v 2>&1 | tee $BASE_DIR/$VERSION/$CONTEXT/run_all_full
+ 	check_test_amount $BASE_DIR/$VERSION/$CONTEXT/run_all_full
+ 
+ 	if [ "$STATIC" = "ON" ]; then
+-		KDB=kdb-static kdb-static run_all > $BASE_DIR/$VERSION/$CONTEXT/run_all_static 2>&1
++		KDB=kdb-static kdb-static run_all -v 2>&1 | tee $BASE_DIR/$VERSION/$CONTEXT/run_all_static
+ 		check_test_amount $BASE_DIR/$VERSION/$CONTEXT/run_all_static
+ 	fi
+ }
