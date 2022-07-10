@@ -1,0 +1,414 @@
+1/9352/9353/9354/9355/9356/9357/9358/9359/93510/93511/93512/93513/93514/93515/93516/93517/93518/93519/935whitelisted: http://github.com/petermax2
+17/935whitelisted: http://github.com/ElektraInitiative/homebrew-elektra
+16/935whitelisted: http://github.com/sanssecours
+18/93520/93521/93522/93523/93524/93525/93526/93527/93528/935whitelisted: http://issues.libelektra.org
+19/93529/93530/93531/93532/93533/93534/93535/93536/93537/93538/93539/93540/93541/93542/93543/93544/93545/93546/93547/93548/93549/93550/93551/93552/93553/93554/93555/935whitelisted: http://localhost:33333
+54/935whitelisted: http://lloyd.github.com/yajl
+52/93556/93557/93558/93559/93560/93561/93562/93563/93564/935whitelisted: http://localhost:33334
+55/935whitelisted: http://master.libelektra.org/scripts/dev/fix-spelling
+56/935whitelisted: http://puppet.libelektra.org
+62/935whitelisted: http://master.libelektra.org/src/libs/pluginprocess
+58/935whitelisted: http://master.libelektra.org/scripts/randoop/randoop.in
+57/93565/93566/93567/93568/93569/93570/93571/93572/93573/93574/93575/93576/93577/93578/93579/93580/93581/93582/93583/93584/93585/93586/93587/93588/93589/93590/93591/93592/93593/93594/93595/93596/93597/93598/93599/935100/935101/935102/935103/935104/935105/935106/935107/935108/935109/935110/935111/935112/935113/935114/935115/935116/935117/935118/935whitelisted: https://cfp.linuxwochen.at/de/LWW18/public/events/798
+113/935whitelisted: https://build.libelektra.org/job/libelektra/pipeline-syntax
+109/935whitelisted: https://cgit.kde.org/kconfig.git
+114/935119/935120/935121/935122/935123/935124/935125/935126/935127/935whitelisted: https://community.kde.org/Akademy/2018/Config_Workshop
+126/935128/935129/935130/935131/935132/935133/935134/935135/935136/935whitelisted: https://debian-stretch-repo.libelektra.org
+132/935whitelisted: https://crates.io/crates/elektra
+130/935whitelisted: https://crates.io/crates/elektra-sys
+129/935137/935138/935139/935140/935141/935142/935143/935144/935145/935whitelisted: https://developer.gnome.org/gio/2.26/GSettingsBackend.html
+136/935146/935147/935148/935149/935150/935151/935152/935153/935154/935155/935156/935157/935158/935159/935160/935161/935162/935163/935164/935165/935166/935167/935168/935169/935170/935171/935172/935173/935174/935175/935176/935177/935178/935179/935180/935181/935182/935183/935184/935185/935186/935187/935188/935189/935190/935whitelisted: https://doc.libelektra.org/coverage/master/debian-buster-full
+188/935191/935192/935193/935194/935195/935196/935197/935198/935199/935200/935201/935202/935203/935204/935205/935206/935207/935208/935whitelisted: https://docs.github.com/en/github/getting-started-with-github/fork-a-repo
+200/935209/935210/935211/935212/935213/935214/935215/935216/935217/935218/935219/935220/935221/935222/935223/935224/935225/935226/935227/935228/935229/935230/935231/935232/935233/935234/935235/935236/935237/935238/935239/935240/935241/935242/935243/935244/935whitelisted: https://git.libelektra.org/blob/master/src/bindings/jna/HelloElektra.java
+241/935whitelisted: https://git.libelektra.org/blob/debian/debian/copyright
+238/935whitelisted: https://git.libelektra.org/blob/master/doc/GOALS.md
+239/935whitelisted: https://git.libelektra.org/blob/master/src/bindings/swig/python/tests/test_key.py
+243/935whitelisted: https://git.libelektra.org/blob/master/doc/METADATA.ini
+240/935whitelisted: https://git.libelektra.org/blob/master/src/bindings/swig/lua/tests/test_key.lua
+242/935245/935246/935247/935248/935249/935250/935251/935252/935253/935whitelisted: https://git.libelektra.org/issues/new
+250/935whitelisted: https://git.libelektra.org/blob/master/src/libs/getenv/README.md
+244/935whitelisted: https://git.libelektra.org/blob/master/src/plugins/python
+245/935whitelisted: https://git.libelektra.org/issues/559
+248/935whitelisted: https://git.libelektra.org/issues/262
+whitelisted: https://git.libelektra.org/issues/1006
+247/935246/935whitelisted: https://git.libelektra.org/issues
+251/935whitelisted: https://git.libelektra.org/milestone/12
+252/935whitelisted: https://git.libelektra.org/issues/labels/question
+249/935254/935255/935256/935257/935258/935259/935260/935261/935262/935whitelisted: https://git.libelektra.org/projects/7
+253/935whitelisted: https://git.libelektra.org/tree/debian
+whitelisted: https://github.com/0003088/qt-gui
+254/935whitelisted: https://git.libelektra.org
+256/935255/935whitelisted: https://github.com/BernhardDenner
+258/935whitelisted: https://github.com/Crascit/DownloadProject
+whitelisted: https://github.com/0003088
+259/935257/935whitelisted: https://github.com/ElektraInitiative/doc/tree/master/api/0.8.20
+260/935whitelisted: https://github.com/ElektraInitiative/doc/tree/master/api/0.8.21
+261/935263/935264/935265/935266/935267/935268/935269/935270/935271/935whitelisted: https://github.com/ElektraInitiative/doc/tree/master/api/0.8.23
+263/935whitelisted: https://github.com/ElektraInitiative/doc/tree/master/api/0.8.24
+264/935whitelisted: https://github.com/ElektraInitiative/doc/tree/master/api/0.8.25
+265/935whitelisted: https://github.com/ElektraInitiative/doc/tree/master/api/0.8.22
+262/935whitelisted: https://github.com/ElektraInitiative/doc/tree/master/api/0.9.3
+270/935whitelisted: https://github.com/ElektraInitiative/doc/tree/master/api/0.9.2
+269/935whitelisted: https://github.com/ElektraInitiative/doc/tree/master/api/0.8.26
+266/935whitelisted: https://github.com/ElektraInitiative/doc/tree/master/api/0.9.1
+whitelisted: https://github.com/ElektraInitiative/doc/tree/master/api/0.9.0
+268/935267/935272/935273/935274/935275/935276/935277/935278/935279/935280/935whitelisted: https://github.com/ElektraInitiative/doc/tree/master/api/0.9.4
+271/935whitelisted: https://github.com/ElektraInitiative/doc/tree/master/api/0.9.6
+273/935whitelisted: https://github.com/ElektraInitiative/doc/tree/master/api/0.9.5
+272/935whitelisted: https://github.com/ElektraInitiative/doc/tree/master/api/0.9.9
+276/935whitelisted: https://github.com/ElektraInitiative/doc/tree/master/api/0.9.7
+274/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases//elektra-0.8.20.tar.gz.gpg?raw=true
+277/935whitelisted: https://github.com/ElektraInitiative/doc/tree/master/api/0.9.8
+whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases//elektra-0.8.22.tar.gz.gpg?raw=true
+275/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases//elektra-0.8.21.tar.gz.gpg?raw=true
+279/935278/935281/935282/935283/935284/935285/935286/935287/935288/935289/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases//elektra-0.8.25.tar.gz.gpg?raw=true
+282/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases//elektra-0.8.23.tar.gz.gpg?raw=true
+280/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases//elektra-0.8.26.tar.gz.gpg?raw=true
+283/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.8.20.tar.gz?raw=true
+285/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.8.21.tar.gz?raw=true
+287/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.8.21.tar.gz.hashsum?raw=true
+286/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.8.22.tar.gz.hashsum?raw=true
+whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases//elektra-0.8.24.tar.gz.gpg?raw=true
+288/935281/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.8.20.tar.gz.hashsum?raw=true
+284/935290/935291/935292/935293/935294/935295/935296/935297/935298/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.8.24.tar.gz?raw=true
+293/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.8.23.tar.gz.hashsum?raw=true
+whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.8.23.tar.gz?raw=true
+290/935291/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.8.25.tar.gz?raw=true
+295/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.8.22.tar.gz?raw=true
+289/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.8.25.tar.gz.hashsum?raw=true
+294/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.8.26.tar.gz?raw=true
+297/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.8.24.tar.gz.hashsum?raw=true
+292/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.8.26.tar.gz.hashsum?raw=true
+296/935299/935300/935301/935302/935303/935304/935305/935306/935307/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.0.tar.gz.gpg?raw=true
+298/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.0.tar.gz.hashsum?raw=true
+299/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.0.tar.gz?raw=true
+300/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.2.tar.gz.gpg?raw=true
+304/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.2.tar.gz.hashsum?raw=true
+305/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.2.tar.gz?raw=true
+306/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.1.tar.gz.hashsum?raw=true
+302/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.1.tar.gz.gpg?raw=true
+301/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.1.tar.gz?raw=true
+303/935308/935309/935310/935311/935312/935313/935314/935315/935316/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.3.tar.gz.gpg?raw=true
+307/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.4.tar.gz?raw=true
+312/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.4.tar.gz.gpg?raw=true
+whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.5.tar.gz?raw=true
+310/935315/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.3.tar.gz.hashsum?raw=true
+308/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.3.tar.gz?raw=true
+309/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.5.tar.gz.hashsum?raw=true
+314/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.5.tar.gz.gpg?raw=true
+313/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.4.tar.gz.hashsum?raw=true
+311/935317/935318/935319/935320/935321/935322/935323/935324/935325/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.6.tar.gz?raw=true
+318/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.7.tar.gz.gpg?raw=true
+319/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.6.tar.gz.hashsum?raw=true
+whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.7.tar.gz?raw=true
+321/935317/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.6.tar.gz.gpg?raw=true
+316/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.7.tar.gz.hashsum?raw=true
+320/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.8.tar.gz?raw=true
+324/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.8.tar.gz.gpg?raw=true
+322/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.8.tar.gz.hashsum?raw=true
+323/935326/935327/935328/935329/935330/935331/935332/935333/935334/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.9.tar.gz.hashsum?raw=true
+326/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.9.tar.gz?raw=true
+327/935whitelisted: https://github.com/ElektraInitiative/ftp/tree/master/releases/elektra-0.8.14.tar.gz
+330/935whitelisted: https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.9.tar.gz.gpg?raw=true
+325/935whitelisted: https://github.com/ElektraInitiative/ftp/tree/master/releases/elektra-0.8.12.tar.gz
+328/935whitelisted: https://github.com/ElektraInitiative/ftp/tree/master/releases/elektra-0.8.13.tar.gz
+329/935whitelisted: https://github.com/ElektraInitiative/ftp/tree/master/releases/elektra-0.8.17.tar.gz
+whitelisted: https://github.com/ElektraInitiative/ftp/tree/master/releases/elektra-0.8.15.tar.gz
+whitelisted: https://github.com/ElektraInitiative/ftp/tree/master/releases/elektra-0.8.16.tar.gz
+333/935331/935332/935335/935336/935337/935338/935339/935340/935341/935342/935343/935whitelisted: https://github.com/ElektraInitiative/ftp/tree/master/releases/elektra-0.8.18.tar.gz
+334/935whitelisted: https://github.com/ElektraInitiative/go-elektra
+336/935whitelisted: https://github.com/ElektraInitiative/ftp/tree/master/releases/elektra-0.8.19.tar.gz
+335/935whitelisted: https://github.com/ElektraInitiative/kconfig
+339/935whitelisted: https://github.com/ElektraInitiative/jenkins-library/blob/master/README.md
+337/935whitelisted: https://github.com/ElektraInitiative/libelektra#packages
+340/935whitelisted: https://github.com/ElektraInitiative/jenkins-library
+338/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/524397669f800cb76b742514fd3aaae7a58a07da/scripts/benchmark_libsplit.sh
+342/935whitelisted: https://github.com/ElektraInitiative/libelektra/actions/workflows/macOS.yml/badge.svg
+341/935344/935345/935346/935347/935348/935349/935350/935351/935352/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/5f6e902af5ac8f4c4228fc0859b7ecef7707bbfb/doc/help/kdb-introduction.md
+343/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/benchmarks/large.c
+344/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/doc/CODING.md
+whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/doc/decisions/bootstrap.md
+346/935348/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/doc/CODING.md#cmake-guidelines
+345/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/doc/help/elektra-namespaces.md#dir
+351/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/doc/METADATA.ini
+347/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/doc/dev/data-structures.md#order-preserving-minimal-perfect-hash-map-aka-opmphm
+350/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/doc/decisions/library_split.md
+349/935353/935354/935355/935356/935357/935358/935359/935360/935361/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/doc/help/elektra-namespaces.md#spec
+353/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/doc/help/elektra-namespaces.md#system
+354/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/doc/images/screenshot-qt-gui.png
+357/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/doc/help/elektra-namespaces.md#proc
+352/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/doc/help/elektra-namespaces.md#user
+355/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/doc/news/2016-04-29_0.8.16.md
+359/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/doc/help/elektra-namespaces.md
+356/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/doc/news/2016-02-16_0.8.15.md
+358/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/doc/tutorials/application-integration.md
+360/935362/935363/935364/935365/935366/935367/935368/935369/935370/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/scripts/jenkins/Jenkinsfile
+361/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/src/libs/tools/examples/merging.cpp
+363/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues/1697
+whitelisted: https://github.com/ElektraInitiative/libelektra/compare
+369/935365/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/src/include/kdbproposal.h
+whitelisted: https://github.com/ElektraInitiative/libelektra/issues/1451
+362/935368/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues/106
+366/935whitelisted: https://github.com/ElektraInitiative/libelektra/blob/master/src/plugins/README.md#storage
+364/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues/1416
+367/935371/935372/935373/935374/935375/935376/935377/935378/935379/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues/1793
+370/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues/1981
+372/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues/2591
+376/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues/252
+375/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues/2477
+374/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues/2133
+373/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues/1895
+371/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues/2668
+377/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues/302
+378/935380/935381/935382/935383/935384/935385/935386/935387/935388/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues/3379
+379/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues/3450
+380/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues/3881
+382/935whitelisted: https://github.com/ElektraInitiative/libelektra/milestone/11
+whitelisted: https://github.com/ElektraInitiative/libelektra/issues/3722
+387/935381/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues?q=is%3Aissue%2Bis%3Aopen+label%3A%22good+first+issue%22
+386/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues/51
+383/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues?q=is%3Aissue%2Bis%3Aopen+label%3A%22beginner+friendly%22
+385/935whitelisted: https://github.com/ElektraInitiative/libelektra/issues/775
+384/935389/935390/935391/935392/935393/935394/935395/935396/935397/935whitelisted: https://github.com/ElektraInitiative/libelektra/milestone/12
+388/935whitelisted: https://github.com/ElektraInitiative/libelektra/milestone/21?closed=1
+390/935whitelisted: https://github.com/ElektraInitiative/libelektra/milestone/22?closed=1
+391/935whitelisted: https://github.com/ElektraInitiative/libelektra/milestone/26?closed=1
+394/935whitelisted: https://github.com/ElektraInitiative/libelektra/milestone/27?closed=1
+395/935whitelisted: https://github.com/ElektraInitiative/libelektra/milestone/24?closed=1
+392/935whitelisted: https://github.com/ElektraInitiative/libelektra/milestone/28?closed=1
+396/935whitelisted: https://github.com/ElektraInitiative/libelektra/milestone/20?closed=1
+389/935whitelisted: https://github.com/ElektraInitiative/libelektra/milestone/25?closed=1
+393/935398/935399/935400/935401/935402/935403/935404/935405/935406/935whitelisted: https://github.com/ElektraInitiative/libelektra/milestone/30?closed=1
+398/935whitelisted: https://github.com/ElektraInitiative/libelektra/pull/1173
+400/935whitelisted: https://github.com/ElektraInitiative/libelektra/pull/1903#discussion_r189332987
+405/935whitelisted: https://github.com/ElektraInitiative/libelektra/milestone/31?closed=1
+399/935whitelisted: https://github.com/ElektraInitiative/libelektra/pull/1787
+whitelisted: https://github.com/ElektraInitiative/libelektra/milestone/29?closed=1
+403/935397/935whitelisted: https://github.com/ElektraInitiative/libelektra/pull/1761
+402/935whitelisted: https://github.com/ElektraInitiative/libelektra/pull/1801
+404/935whitelisted: https://github.com/ElektraInitiative/libelektra/pull/1698
+401/935407/935408/935409/935410/935411/935412/935413/935414/935415/935whitelisted: https://github.com/ElektraInitiative/libelektra/pull/26
+406/935whitelisted: https://github.com/ElektraInitiative/libelektra/pull/2836
+407/935whitelisted: https://github.com/ElektraInitiative/libelektra/tree/master/examples/keyNew.c
+412/935whitelisted: https://github.com/ElektraInitiative/libelektra/tree/master/doc/tutorials/notifications.md
+410/935whitelisted: https://github.com/ElektraInitiative/libelektra/pull/733
+408/935whitelisted: https://github.com/ElektraInitiative/libelektra/tree/master/doc/COMPILE.md
+whitelisted: https://github.com/ElektraInitiative/libelektra/tree/master/scripts/docker/jenkinsnode/README.md
+409/935413/935whitelisted: https://github.com/ElektraInitiative/libelektra/tree/master/scripts/kdb/mount-augeas
+414/935whitelisted: https://github.com/ElektraInitiative/libelektra/tree/master/examples/keyCopy.c
+411/935416/935417/935418/935419/935420/935421/935422/935423/935424/935whitelisted: https://github.com/ElektraInitiative/libelektra/tree/master/src/bindings/cpp/examples/cpp_example_dup.cpp
+416/935whitelisted: https://github.com/ElektraInitiative/libelektra/tree/master/src/bindings/jna
+whitelisted: https://github.com/ElektraInitiative/libelektra/tree/master/src/libs/pluginprocess
+418/935420/935whitelisted: https://github.com/ElektraInitiative/libelektra/tree/master/scripts/kdb/mount-info
+415/935whitelisted: https://github.com/ElektraInitiative/libelektra/tree/master/src/bindings
+419/935whitelisted: https://github.com/ElektraInitiative/libelektra/tree/master/src/plugins/ini
+422/935whitelisted: https://github.com/ElektraInitiative/libelektra/tree/master/src/libs
+421/935whitelisted: https://github.com/ElektraInitiative/libelektra/tree/master/src/plugins/jni
+423/935whitelisted: https://github.com/ElektraInitiative/libelektra/tree/master/src/bindings/cpp/examples/cpp_example_ordering.cpp
+417/935425/935426/935427/935428/935429/935430/935431/935432/935433/935whitelisted: https://github.com/ElektraInitiative/libelektra/tree/master/src/tools/qt-gui
+424/935whitelisted: https://github.com/ElektraInitiative/libelektra/tree/master/tests/shell/shell_recorder/tutorial_wrapper
+425/935whitelisted: https://github.com/ElektraInitiative/snippets
+430/935whitelisted: https://github.com/ElektraInitiative/rawdata/blob/master/YAML/Input/keyframes.yaml
+whitelisted: https://github.com/ElektraInitiative/rawdata
+whitelisted: https://github.com/ElektraInitiative/libelektra
+428/935426/935429/935whitelisted: https://github.com/ElektraInitiative/puppet-libelektra
+427/935whitelisted: https://github.com/GStreamer/gstreamer/blob/a7db80f9a98287f012108845e121f6f6fb62171b/gst/gsterror.h#L63-L80
+431/935whitelisted: https://github.com/GStreamer/gstreamer
+432/935434/935435/935436/935437/935438/935439/935440/935441/935442/935whitelisted: https://github.com/Linuxbrew/homebrew-core/blob/master/Formula/elektra.rb
+435/935whitelisted: https://github.com/amosnier/sha-2
+438/935whitelisted: https://github.com/advisories/GHSA-7wwv-vh3v-89cq
+437/935whitelisted: https://github.com/antlr/antlr4/releases/tag/4.9
+439/935whitelisted: https://github.com/Namoshek
+436/935whitelisted: https://github.com/apache/httpd/blob/1acebd4933e5315c669605c3c9222ed8bb0ee9ea/include/http_log.h#L378-L403
+whitelisted: https://github.com/Homebrew/linuxbrew-core/blob/master/Formula/elektra.rb
+440/935433/935whitelisted: https://github.com/Kitware/CMake/blob/master/Modules/FindIconv.cmake
+434/935whitelisted: https://github.com/apache/httpd
+441/935443/935444/935445/935446/935447/935448/935449/935450/935451/935whitelisted: https://github.com/apjanke/ronn-ng/blob/master/INSTALLING.md
+443/935whitelisted: https://github.com/atmaxinger
+whitelisted: https://github.com/apiaryio/apiary-client
+444/935442/935whitelisted: https://github.com/cheshirekow/cmake_format#integrations
+445/935whitelisted: https://github.com/doxygen/doxygen/issues/6456
+448/935whitelisted: https://github.com/elektrainitiative/libelektra/tree/master/doc/AUTHORS.md
+449/935whitelisted: https://github.com/elektrainitiative/libelektra/tree/master/doc/GIT.md
+450/935whitelisted: https://github.com/darddan
+447/935whitelisted: https://github.com/cheshirekow/cmake_format
+446/935452/935453/935454/935455/935456/935457/935458/935459/935460/935whitelisted: https://github.com/elektrainitiative/libelektra/tree/master/doc/decisions/cmake_plugins.md
+453/935whitelisted: https://github.com/elektrainitiative/libelektra/tree/master/scripts/README.md
+454/935whitelisted: https://github.com/etcd-io/etcd/blob/master/etcdserver/api/v3rpc/rpctypes/error.go
+457/935whitelisted: https://github.com/elektrainitiative/libelektra/tree/master/doc/TESTING.md
+451/935whitelisted: https://github.com/elektrainitiative/libelektra/tree/master/doc/WHY.md
+452/935whitelisted: https://github.com/etcd-io/etcd
+458/935whitelisted: https://github.com/elektrainitiative/libelektra/tree/master/src/bindings/gsettings
+455/935whitelisted: https://github.com/google/google-java-format
+459/935whitelisted: https://github.com/elektrainitiative/libelektra/tree/master/src/plugins/README.md
+456/935461/935462/935463/935464/935465/935466/935467/935468/935469/935whitelisted: https://github.com/google/googletest
+460/935whitelisted: https://github.com/java-native-access/jna
+465/935whitelisted: https://github.com/google/sanitizers/wiki/AddressSanitizerLeakSanitizer
+461/935whitelisted: https://github.com/haraldg/packages
+463/935whitelisted: https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md
+464/935whitelisted: https://github.com/jbeder/yaml-cpp
+467/935whitelisted: https://github.com/jbeder/yaml-cpp/releases/tag/yaml-cpp-0.6.0
+466/935whitelisted: https://github.com/google/sanitizers/wiki/AddressSanitizer
+462/935whitelisted: https://github.com/jenkinsci/jenkins
+468/935470/935471/935472/935473/935474/935475/935476/935477/935478/935whitelisted: https://github.com/jonls/redshift
+470/935whitelisted: https://github.com/jonls/redshift/pull/837
+469/935whitelisted: https://github.com/kodebach
+473/935whitelisted: https://github.com/kodebach/eqd-bench
+472/935whitelisted: https://github.com/mpranj
+476/935whitelisted: https://github.com/lcdproc/lcdproc/releases
+474/935whitelisted: https://github.com/lcdproc/lcdproc
+475/935whitelisted: https://github.com/kainjow/Mustache
+471/935whitelisted: https://github.com/mvdan/sh#related-projects
+477/935479/935480/935481/935482/935483/935484/935485/935486/935487/935whitelisted: https://github.com/openjournals/joss
+whitelisted: https://github.com/openwrt/packages/tree/master/libs/elektra
+480/935483/935whitelisted: https://github.com/openwrt/packages/blob/master/libs/elektra/Makefile
+482/935whitelisted: https://github.com/mvdan/sh
+whitelisted: https://github.com/postgres/postgres/commit/ddfe26f6441c24660595c5efe5fd0bd3974cdc5c
+479/935485/935whitelisted: https://github.com/mvdan/sh/releases
+478/935whitelisted: https://github.com/postgres/postgres/blob/master/src/backend/utils/errcodes.txt
+484/935whitelisted: https://github.com/postgres/postgres
+486/935whitelisted: https://github.com/openwrt/openwrt/blob/master/include/cmake.mk
+481/935488/935489/935490/935491/935492/935493/935494/935495/935496/935whitelisted: https://github.com/qwepoizt/redshift/blob/improve-config/elektrify/CONTRIBUTING.md
+487/935whitelisted: https://github.com/robaerd
+488/935whitelisted: https://github.com/sanssecours
+whitelisted: https://github.com/sanssecours/Configuration-File-Parsing/releases
+490/935489/935whitelisted: https://github.com/waht
+494/935whitelisted: https://github.com/westes/flex
+495/935whitelisted: https://github.com/tom-wa
+492/935whitelisted: https://github.com/sharkdp/hyperfine
+491/935whitelisted: https://github.com/tucek
+493/935497/935498/935499/935500/935501/935502/935503/935504/935505/935whitelisted: https://github.com/zeromq/JSMQ
+496/935whitelisted: https://github.com
+whitelisted: https://help.github.com/en/articles/creating-and-highlighting-code-blocks#syntax-highlighting
+497/935504/935506/935507/935508/935509/935510/935511/935512/935513/935514/935whitelisted: https://help.github.com/en/articles/creating-and-highlighting-code-blocks
+505/935whitelisted: https://help.github.com/en/articles/set-up-git
+507/935whitelisted: https://help.github.com/en/articles/fork-a-repo
+506/935515/935516/935517/935518/935519/935520/935521/935522/935523/935whitelisted: https://issues.libelektra.org/1042
+514/935whitelisted: https://issues.libelektra.org/1134
+515/935whitelisted: https://issues.libelektra.org/160
+518/935whitelisted: https://issues.libelektra.org/1511
+whitelisted: https://issues.libelektra.org/2103
+517/935521/935whitelisted: https://issues.libelektra.org/1266
+516/935whitelisted: https://issues.libelektra.org/1773
+519/935whitelisted: https://issues.libelektra.org/2113
+whitelisted: https://issues.libelektra.org/2037
+522/935520/935524/935525/935526/935527/935528/935529/935530/935531/935532/935whitelisted: https://issues.libelektra.org/2439
+523/935whitelisted: https://issues.libelektra.org/2927#issuecomment-528058641
+whitelisted: https://issues.libelektra.org/2670
+529/935524/935whitelisted: https://issues.libelektra.org/2814
+527/935whitelisted: https://issues.libelektra.org/2871
+528/935whitelisted: https://issues.libelektra.org/2751
+525/935whitelisted: https://issues.libelektra.org/3086
+530/935whitelisted: https://issues.libelektra.org/2764
+526/935whitelisted: https://issues.libelektra.org/3504
+531/935533/935534/935535/935536/935537/935538/935539/935540/935541/935whitelisted: https://issues.libelektra.org/3896
+536/935whitelisted: https://issues.libelektra.org
+538/935whitelisted: https://issues.libelektra.org/3633
+534/935whitelisted: https://issues.libelektra.org/3881
+535/935whitelisted: https://issues.libelektra.org/3520
+532/935whitelisted: https://issues.libelektra.org/3561
+533/935whitelisted: https://issues.libelektra.org/51
+537/935542/935543/935544/935545/935546/935547/935548/935549/935550/935whitelisted: https://lgtm.com
+547/935551/935552/935553/935554/935555/935556/935557/935558/935559/935560/935561/935562/935563/935564/935565/935566/935567/935568/935whitelisted: https://master.libelektra.org/.github/CONTRIBUTING.md
+563/935whitelisted: https://master.libelektra.org/README.md
+whitelisted: https://master.libelektra.org/doc/BIGPICTURE.md
+565/935567/935whitelisted: https://master.libelektra.org/benchmarks/plugingetset.c
+566/935whitelisted: https://master.libelektra.org/CODE_OF_CONDUCT.md
+564/935569/935570/935571/935572/935573/935574/935575/935576/935577/935whitelisted: https://master.libelektra.org/doc/GIT.md
+570/935whitelisted: https://master.libelektra.org/doc/BUILDSERVER.md
+568/935whitelisted: https://master.libelektra.org/doc/TESTING.md
+572/935whitelisted: https://master.libelektra.org/doc/decisions/deferred_plugin_calls.md
+576/935whitelisted: https://master.libelektra.org/doc/SECURITY.md
+571/935whitelisted: https://master.libelektra.org/doc/api_blueprints/webd.apib
+whitelisted: https://master.libelektra.org/doc/WHY.md
+whitelisted: https://master.libelektra.org/doc/api_blueprints/elektrad.apib
+575/935573/935574/935whitelisted: https://master.libelektra.org/doc/DESIGN.md
+569/935578/935579/935580/935581/935582/935583/935584/935585/935586/935whitelisted: https://master.libelektra.org/doc/dev/plugins-ordering.md
+579/935whitelisted: https://master.libelektra.org/doc/help/elektra-faq.md
+whitelisted: https://master.libelektra.org/doc/dev/data-structures.md#order-preserving-minimal-perfect-hash-map-aka-opmphm
+581/935578/935whitelisted: https://master.libelektra.org/doc/help/elektra-glossary.md
+582/935whitelisted: https://master.libelektra.org/doc/decisions
+577/935whitelisted: https://master.libelektra.org/doc/help/elektra-contracts.md
+580/935whitelisted: https://master.libelektra.org/doc/help/kdb-change-resolver-symlink.md
+584/935whitelisted: https://master.libelektra.org/doc/help/kdb-change-storage-symlink.md
+585/935whitelisted: https://master.libelektra.org/doc/help/kdb-backup.md
+583/935587/935588/935589/935590/935591/935592/935593/935594/935595/935whitelisted: https://master.libelektra.org/doc/help/kdb-find.md
+587/935whitelisted: https://master.libelektra.org/doc/help/kdb-check-env-dep.md
+586/935whitelisted: https://master.libelektra.org/doc/help/kdb-restore.md
+591/935whitelisted: https://master.libelektra.org/doc/help/kdb-mountpoint-info.md
+590/935whitelisted: https://master.libelektra.org/doc/help/kdb-mount-list-all-files.md
+589/935whitelisted: https://master.libelektra.org/doc/help/kdb-stash.md
+592/935whitelisted: https://master.libelektra.org/doc/help/kdb-ls.md
+588/935whitelisted: https://master.libelektra.org/doc/help/kdb.md
+593/935whitelisted: https://master.libelektra.org/doc/news/2016-12-17_website_release.md
+594/935596/935597/935598/935599/935600/935601/935602/935603/935604/935whitelisted: https://master.libelektra.org/doc/tutorials/mount.md
+597/935whitelisted: https://master.libelektra.org/examples/helloElektra.c
+599/935whitelisted: https://master.libelektra.org/doc/tutorials/README.md
+596/935whitelisted: https://master.libelektra.org/examples
+600/935whitelisted: https://master.libelektra.org/doc/tutorials/validation.md
+598/935whitelisted: https://master.libelektra.org/doc/todo/TESTING
+whitelisted: https://master.libelektra.org/scripts/cmake/Modules/FindAugeas.cmake
+whitelisted: https://master.libelektra.org/scripts/check-env-dep
+595/935603/935601/935whitelisted: https://master.libelektra.org/scripts/cmake/ElektraUninstall.cmake
+602/935605/935606/935607/935608/935609/935610/935611/935612/935613/935whitelisted: https://master.libelektra.org/scripts/cmake/Modules/FindGLib.cmake
+604/935whitelisted: https://master.libelektra.org/scripts/cmake/Modules/FindLua.cmake
+608/935whitelisted: https://master.libelektra.org/scripts/dev/reformat-cmake
+610/935whitelisted: https://master.libelektra.org/scripts/cmake/Modules/FindLibgcrypt.cmake
+607/935whitelisted: https://master.libelektra.org/scripts/cmake/Modules/FindLibOpenSSL.cmake
+606/935whitelisted: https://master.libelektra.org/scripts/dev/copy-template
+whitelisted: https://master.libelektra.org/scripts/dev/reformat-markdown
+609/935611/935whitelisted: https://master.libelektra.org/scripts/cmake/Modules/FindLibGit2.cmake
+whitelisted: https://master.libelektra.org/scripts/docker/README.md#building-images-locally
+605/935612/935614/935615/935616/935617/935618/935619/935620/935621/935622/935whitelisted: https://master.libelektra.org/scripts/docker
+616/935whitelisted: https://master.libelektra.org/scripts/docker/README.md#testing-elektra-via-docker-images
+whitelisted: https://master.libelektra.org/scripts/docker/legacy/Dockerfile
+613/935615/935whitelisted: https://master.libelektra.org/scripts/jenkins/Jenkinsfile.release
+619/935whitelisted: https://master.libelektra.org/scripts/sed
+whitelisted: https://master.libelektra.org/scripts/jenkins/Jenkinsfile
+621/935620/935whitelisted: https://master.libelektra.org/scripts/docker/debian/sid/Dockerfile
+614/935whitelisted: https://master.libelektra.org/scripts/jenkins/Jenkinsfile.monthly
+618/935whitelisted: https://master.libelektra.org/scripts/jenkins/Jenkinsfile.daily
+617/935623/935624/935625/935626/935627/935628/935629/935630/935631/935whitelisted: https://master.libelektra.org/scripts
+622/935whitelisted: https://master.libelektra.org/src/bindings/intercept/env
+623/935whitelisted: https://master.libelektra.org/src/bindings/swig/ruby/examples
+627/935whitelisted: https://master.libelektra.org/src/bindings/jna/libelektra5j/src/main/java/org/libelektra/plugin
+whitelisted: https://master.libelektra.org/src/bindings/swig/ruby/README.md
+625/935626/935whitelisted: https://master.libelektra.org/src/libs/getenv/README.md
+629/935whitelisted: https://master.libelektra.org/src/plugins/base64
+630/935whitelisted: https://master.libelektra.org/src/include/kdbproposal.h
+628/935whitelisted: https://master.libelektra.org/src/bindings/intercept
+624/935632/935633/935634/935635/935636/935637/935638/935639/935640/935whitelisted: https://master.libelektra.org/src/plugins/crypto
+633/935whitelisted: https://master.libelektra.org/src/plugins/blockresolver
+631/935whitelisted: https://master.libelektra.org/src/plugins/csvstorage
+634/935whitelisted: https://master.libelektra.org/src/plugins/fcrypt/README.md#known-issues
+638/935whitelisted: https://master.libelektra.org/src/plugins/fcrypt
+639/935whitelisted: https://master.libelektra.org/src/plugins/c
+636/935whitelisted: https://master.libelektra.org/src/plugins/curlget
+635/935whitelisted: https://master.libelektra.org/src/plugins/conditionals
+632/935whitelisted: https://master.libelektra.org/src/plugins/desktop
+637/935641/935642/935643/935644/935645/935646/935647/935648/935649/935whitelisted: https://master.libelektra.org/src/plugins/glob
+641/935whitelisted: https://master.libelektra.org/src/plugins/gitresolver
+640/935whitelisted: https://master.libelektra.org/src/plugins/line/line.c
+643/935whitelisted: https://master.libelektra.org/src/plugins/simpleini
+whitelisted: https://master.libelektra.org/src/plugins/hosts
+648/935642/935whitelisted: https://master.libelektra.org/src/plugins/mathcheck
+645/935whitelisted: https://master.libelektra.org/src/plugins/resolver/resolver.c
+647/935whitelisted: https://master.libelektra.org/src/plugins/lua
+644/935whitelisted: https://master.libelektra.org/src/plugins/python
+646/935650/935651/935652/935653/935654/935655/935656/935657/935658/935whitelisted: https://master.libelektra.org/src/plugins/yamlcpp/README.md
+650/935whitelisted: https://master.libelektra.org/src/plugins/yanlr/YAML.g4
+whitelisted: https://master.libelektra.org/src/tools/qt-gui
+651/935653/935whitelisted: https://master.libelektra.org/tests/README.md
+654/935whitelisted: https://master.libelektra.org/src/plugins/yajl
+649/935whitelisted: https://master.libelektra.org/tests/shell/check_formatting.sh
+whitelisted: https://master.libelektra.org/tests/shell/check_bashisms.sh
+657/935656/935whitelisted: https://master.libelektra.org/tests/cframework
+655/935whitelisted: https://master.libelektra.org/src/tools/pythongen
+652/935659/935660/935661/935662/935663/935664/935665/935666/935667/935whitelisted: https://master.libelektra.org/tests/shell/shell_recorder/tutorial_wrapper
+658/935whitelisted: https://oyranos.org
+664/935668/935669/935670/935671/935672/935673/935674/935675/935676/935677/935678/935679/935680/935681/935682/935683/935684/935685/935whitelisted: https://puppet.libelektra.org
+678/935whitelisted: https://researchcourse.pbworks.com/f/structural%2Bengineering.pdf
+683/935686/935687/935688/935689/935690/935691/935692/935693/935694/935695/935696/935697/935698/935699/935700/935701/935702/935703/935whitelisted: https://webdemo.libelektra.org
+699/935704/935705/935706/935707/935708/935709/935710/935711/935712/935713/935714/935715/935716/935717/935718/935719/935720/935721/935722/935723/935724/935725/935726/935727/935728/935729/935730/935731/935732/935733/935734/935735/935736/935737/935738/935739/935740/935741/935742/935743/935744/935745/935746/935747/935748/935749/935750/935751/935752/935753/935754/935755/935756/935757/935758/935759/935760/935761/935762/935763/935764/935765/935766/935767/935768/935769/935770/935771/935772/935773/935774/935775/935776/935777/935778/935779/935780/935781/935782/935783/935784/935785/935786/935787/935788/935789/935790/935791/935792/935793/935794/935795/935796/935797/935798/935799/935800/935801/935802/935803/935804/935805/935806/935807/935808/935809/935810/935811/935812/935813/935814/935815/935816/935817/935818/935819/935820/935821/935822/935823/935824/935825/935826/935827/935828/935829/935830/935831/935832/935833/935834/935835/935836/935837/935838/935839/935840/935841/935842/935843/935844/935845/935846/935847/935848/935849/935850/935851/935852/935853/935854/935855/935856/935857/935858/935859/935860/935861/935862/935863/935864/935865/935866/935867/935868/935869/935870/935871/935872/935873/935874/935875/935876/935877/935878/935879/935880/935881/935882/935883/935884/935885/935886/935887/935888/935889/935890/935891/935892/935893/935894/935895/935896/935897/935898/935899/935900/935901/935902/935903/935904/935905/935906/935907/935908/935909/935910/935911/935912/935913/935914/935915/935916/935917/935918/935919/935920/935921/935922/935923/935924/935925/935926/935927/935928/935whitelisted: https://www.openicc.info/index.php%3Ftitle=OpenICC_Configuration_0.1.html
+926/935929/935930/935931/935932/935933/935934/935935/935whitelisted: https://www.sciencedaily.com/releases/2005/11/051103080801.htm
+930/935

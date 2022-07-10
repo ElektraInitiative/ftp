@@ -1,0 +1,260 @@
+418c418
+< lib/libelektra-core.so.0.9.10
+---
+> lib/libelektra-core.so.0.9.9
+421c421
+< lib/libelektra-ease.so.0.9.10
+---
+> lib/libelektra-ease.so.0.9.9
+424c424
+< lib/libelektra-full.so.0.9.10
+---
+> lib/libelektra-full.so.0.9.9
+427c427
+< lib/libelektra-globbing.so.0.9.10
+---
+> lib/libelektra-globbing.so.0.9.9
+430c430
+< lib/libelektra-highlevel.so.0.9.10
+---
+> lib/libelektra-highlevel.so.0.9.9
+433c433
+< lib/libelektra-invoke.so.0.9.10
+---
+> lib/libelektra-invoke.so.0.9.9
+436c436
+< lib/libelektra-io.so.0.9.10
+---
+> lib/libelektra-io.so.0.9.9
+439c439
+< lib/libelektra-kdb.so.0.9.10
+---
+> lib/libelektra-kdb.so.0.9.9
+442c442
+< lib/libelektra-merge.so.0.9.10
+---
+> lib/libelektra-merge.so.0.9.9
+445c445
+< lib/libelektra-meta.so.0.9.10
+---
+> lib/libelektra-meta.so.0.9.9
+448c448
+< lib/libelektra-notification.so.0.9.10
+---
+> lib/libelektra-notification.so.0.9.9
+451c451
+< lib/libelektra-opts.so.0.9.10
+---
+> lib/libelektra-opts.so.0.9.9
+454c454
+< lib/libelektra-plugin.so.0.9.10
+---
+> lib/libelektra-plugin.so.0.9.9
+457c457
+< lib/libelektra-pluginprocess.so.0.9.10
+---
+> lib/libelektra-pluginprocess.so.0.9.9
+461c461
+< lib/libelektra-utility.so.0.9.10
+---
+> lib/libelektra-utility.so.0.9.9
+467c467
+< lib/libelektraintercept-env.so.0.9.10
+---
+> lib/libelektraintercept-env.so.0.9.9
+469c469
+< lib/libelektratools-full.so.0.9.10
+---
+> lib/libelektratools-full.so.0.9.9
+473c473
+< lib/libelektratools.so.0.9.10
+---
+> lib/libelektratools.so.0.9.9
+969,1017c969,1017
+< share/doc/elektra-api/html/dir_000003_000039.html
+< share/doc/elektra-api/html/dir_000012_000030.html
+< share/doc/elektra-api/html/dir_000012_000039.html
+< share/doc/elektra-api/html/dir_000013_000039.html
+< share/doc/elektra-api/html/dir_000015_000030.html
+< share/doc/elektra-api/html/dir_000015_000039.html
+< share/doc/elektra-api/html/dir_000016_000018.html
+< share/doc/elektra-api/html/dir_000016_000030.html
+< share/doc/elektra-api/html/dir_000016_000039.html
+< share/doc/elektra-api/html/dir_000017_000018.html
+< share/doc/elektra-api/html/dir_000018_000030.html
+< share/doc/elektra-api/html/dir_000019_000030.html
+< share/doc/elektra-api/html/dir_000020_000039.html
+< share/doc/elektra-api/html/dir_000021_000018.html
+< share/doc/elektra-api/html/dir_000021_000030.html
+< share/doc/elektra-api/html/dir_000022_000030.html
+< share/doc/elektra-api/html/dir_000022_000039.html
+< share/doc/elektra-api/html/dir_000023_000030.html
+< share/doc/elektra-api/html/dir_000026_000018.html
+< share/doc/elektra-api/html/dir_000026_000030.html
+< share/doc/elektra-api/html/dir_000028_000018.html
+< share/doc/elektra-api/html/dir_000029_000030.html
+< share/doc/elektra-api/html/dir_000030_000039.html
+< share/doc/elektra-api/html/dir_000039_000040.html
+< share/doc/elektra-api/html/dir_000041_000039.html
+< share/doc/elektra-api/html/dir_000042_000039.html
+< share/doc/elektra-api/html/dir_000043_000039.html
+< share/doc/elektra-api/html/dir_000048_000039.html
+< share/doc/elektra-api/html/dir_000049_000039.html
+< share/doc/elektra-api/html/dir_000052_000039.html
+< share/doc/elektra-api/html/dir_000057_000039.html
+< share/doc/elektra-api/html/dir_000058_000039.html
+< share/doc/elektra-api/html/dir_000059_000039.html
+< share/doc/elektra-api/html/dir_000060_000039.html
+< share/doc/elektra-api/html/dir_000061_000039.html
+< share/doc/elektra-api/html/dir_000062_000039.html
+< share/doc/elektra-api/html/dir_000065_000039.html
+< share/doc/elektra-api/html/dir_000067_000018.html
+< share/doc/elektra-api/html/dir_000067_000030.html
+< share/doc/elektra-api/html/dir_000067_000039.html
+< share/doc/elektra-api/html/dir_000068_000039.html
+< share/doc/elektra-api/html/dir_000069_000039.html
+< share/doc/elektra-api/html/dir_000070_000039.html
+< share/doc/elektra-api/html/dir_000072_000039.html
+< share/doc/elektra-api/html/dir_000073_000039.html
+< share/doc/elektra-api/html/dir_000171_000039.html
+< share/doc/elektra-api/html/dir_000172_000039.html
+< share/doc/elektra-api/html/dir_000173_000039.html
+< share/doc/elektra-api/html/dir_000174_000039.html
+---
+> share/doc/elektra-api/html/dir_000005_000024.html
+> share/doc/elektra-api/html/dir_000005_000033.html
+> share/doc/elektra-api/html/dir_000006_000033.html
+> share/doc/elektra-api/html/dir_000008_000024.html
+> share/doc/elektra-api/html/dir_000008_000033.html
+> share/doc/elektra-api/html/dir_000009_000011.html
+> share/doc/elektra-api/html/dir_000009_000024.html
+> share/doc/elektra-api/html/dir_000009_000033.html
+> share/doc/elektra-api/html/dir_000010_000011.html
+> share/doc/elektra-api/html/dir_000011_000024.html
+> share/doc/elektra-api/html/dir_000012_000024.html
+> share/doc/elektra-api/html/dir_000013_000033.html
+> share/doc/elektra-api/html/dir_000014_000011.html
+> share/doc/elektra-api/html/dir_000014_000024.html
+> share/doc/elektra-api/html/dir_000015_000024.html
+> share/doc/elektra-api/html/dir_000015_000033.html
+> share/doc/elektra-api/html/dir_000016_000024.html
+> share/doc/elektra-api/html/dir_000017_000033.html
+> share/doc/elektra-api/html/dir_000020_000011.html
+> share/doc/elektra-api/html/dir_000020_000024.html
+> share/doc/elektra-api/html/dir_000022_000011.html
+> share/doc/elektra-api/html/dir_000023_000024.html
+> share/doc/elektra-api/html/dir_000024_000033.html
+> share/doc/elektra-api/html/dir_000033_000034.html
+> share/doc/elektra-api/html/dir_000035_000033.html
+> share/doc/elektra-api/html/dir_000036_000033.html
+> share/doc/elektra-api/html/dir_000037_000033.html
+> share/doc/elektra-api/html/dir_000042_000033.html
+> share/doc/elektra-api/html/dir_000043_000033.html
+> share/doc/elektra-api/html/dir_000046_000033.html
+> share/doc/elektra-api/html/dir_000051_000033.html
+> share/doc/elektra-api/html/dir_000052_000033.html
+> share/doc/elektra-api/html/dir_000053_000033.html
+> share/doc/elektra-api/html/dir_000054_000033.html
+> share/doc/elektra-api/html/dir_000055_000033.html
+> share/doc/elektra-api/html/dir_000056_000033.html
+> share/doc/elektra-api/html/dir_000059_000033.html
+> share/doc/elektra-api/html/dir_000061_000011.html
+> share/doc/elektra-api/html/dir_000061_000024.html
+> share/doc/elektra-api/html/dir_000061_000033.html
+> share/doc/elektra-api/html/dir_000062_000033.html
+> share/doc/elektra-api/html/dir_000063_000033.html
+> share/doc/elektra-api/html/dir_000064_000033.html
+> share/doc/elektra-api/html/dir_000066_000033.html
+> share/doc/elektra-api/html/dir_000067_000033.html
+> share/doc/elektra-api/html/dir_000166_000033.html
+> share/doc/elektra-api/html/dir_000167_000033.html
+> share/doc/elektra-api/html/dir_000168_000033.html
+> share/doc/elektra-api/html/dir_000169_000033.html
+1025d1024
+< share/doc/elektra-api/html/dir_0e16e732df819f7ff26422223d7ff0d6.html
+1027d1025
+< share/doc/elektra-api/html/dir_1005ed10ae49e1dc5e16f6c8472a6903.html
+1057d1054
+< share/doc/elektra-api/html/dir_2b0b97074abe0f693d2925c5aad7750a.html
+1170d1166
+< share/doc/elektra-api/html/dir_79c37fd63c35f35713d0c44f4effbbf2.html
+1288d1283
+< share/doc/elektra-api/html/dir_c52a360ec35ad79466475eff99a09645.html
+1540d1534
+< share/doc/elektra-api/html/doc_dev_iterators_md.html
+1624d1617
+< share/doc/elektra-api/html/doc_man_README_md.html
+1659d1651
+< share/doc/elektra-api/html/doc_news_2022-03-10_0_9_9_md.html
+1824d1815
+< share/doc/elektra-api/html/functions_func_m.html
+2698d2688
+< share/doc/elektra-api/html/md_src_plugins_python_python_dns_README.html
+3235,3236d3224
+< share/doc/elektra-api/html/toolchains_add.png
+< share/doc/elektra-api/html/toolchains_detected.png
+3544,3547c3532,3533
+< share/elektra/test_data/lineendings/inconsistent1
+< share/elektra/test_data/lineendings/inconsistent2
+< share/elektra/test_data/lineendings/invalid1
+< share/elektra/test_data/lineendings/invalid2
+---
+> share/elektra/test_data/lineendings/inconsistent
+> share/elektra/test_data/lineendings/invalid
+3550,3551d3535
+< share/elektra/test_data/lineendings/valid3
+< share/elektra/test_data/lineendings/valid4
+3568,3576d3551
+< share/elektra/test_data/python/dns
+< share/elektra/test_data/python/dns/README.md
+< share/elektra/test_data/python/dns/src
+< share/elektra/test_data/python/dns/src/main
+< share/elektra/test_data/python/dns/src/main/__init__.py
+< share/elektra/test_data/python/dns/src/main/dns_plugin.py
+< share/elektra/test_data/python/dns/src/test
+< share/elektra/test_data/python/dns/src/test/__init__.py
+< share/elektra/test_data/python/dns/src/test/test_dns_plugin.py
+3810,3816c3785,3791
+< share/elektra/tool_data/fuse/psutil-5.9.1.dist-info
+< share/elektra/tool_data/fuse/psutil-5.9.1.dist-info/INSTALLER
+< share/elektra/tool_data/fuse/psutil-5.9.1.dist-info/LICENSE
+< share/elektra/tool_data/fuse/psutil-5.9.1.dist-info/METADATA
+< share/elektra/tool_data/fuse/psutil-5.9.1.dist-info/RECORD
+< share/elektra/tool_data/fuse/psutil-5.9.1.dist-info/WHEEL
+< share/elektra/tool_data/fuse/psutil-5.9.1.dist-info/top_level.txt
+---
+> share/elektra/tool_data/fuse/psutil-5.9.0.dist-info
+> share/elektra/tool_data/fuse/psutil-5.9.0.dist-info/INSTALLER
+> share/elektra/tool_data/fuse/psutil-5.9.0.dist-info/LICENSE
+> share/elektra/tool_data/fuse/psutil-5.9.0.dist-info/METADATA
+> share/elektra/tool_data/fuse/psutil-5.9.0.dist-info/RECORD
+> share/elektra/tool_data/fuse/psutil-5.9.0.dist-info/WHEEL
+> share/elektra/tool_data/fuse/psutil-5.9.0.dist-info/top_level.txt
+3887,3891c3862,3866
+< share/java/libelektra-0.9.10-all.jar
+< share/java/libelektra-0.9.10-javadoc.jar
+< share/java/libelektra-0.9.10-sources.jar
+< share/java/libelektra-0.9.10.jar
+< share/java/libelektra-0.9.10.pom.xml
+---
+> share/java/libelektra-0.9.9-all.jar
+> share/java/libelektra-0.9.9-javadoc.jar
+> share/java/libelektra-0.9.9-sources.jar
+> share/java/libelektra-0.9.9.jar
+> share/java/libelektra-0.9.9.pom.xml
+3897,3900c3872,3873
+< share/java/plugins/linkchecker-0.9.10.jar
+< share/java/plugins/sorted-0.9.10.jar
+< share/java/plugins/whitelist-0.9.10.jar
+< share/java/process-0.9.10.jar
+---
+> share/java/plugins/whitelist-0.9.9.jar
+> share/java/process-0.9.9.jar
+4158d4130
+< share/man/man3/doc_dev_iterators_md.3elektra
+4242d4213
+< share/man/man3/doc_man_README_md.3elektra
+4277d4247
+< share/man/man3/doc_news_2022-03-10_0_9_9_md.3elektra
+4552d4521
+< share/man/man3/md_src_plugins_python_python_dns_README.3elektra

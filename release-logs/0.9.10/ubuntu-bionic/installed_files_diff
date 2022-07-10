@@ -1,0 +1,489 @@
+416c416
+< lib/libelektra-core.so.0.9.10
+---
+> lib/libelektra-core.so.0.9.9
+419c419
+< lib/libelektra-ease.so.0.9.10
+---
+> lib/libelektra-ease.so.0.9.9
+422c422
+< lib/libelektra-full.so.0.9.10
+---
+> lib/libelektra-full.so.0.9.9
+425c425
+< lib/libelektra-globbing.so.0.9.10
+---
+> lib/libelektra-globbing.so.0.9.9
+428c428
+< lib/libelektra-highlevel.so.0.9.10
+---
+> lib/libelektra-highlevel.so.0.9.9
+431c431
+< lib/libelektra-invoke.so.0.9.10
+---
+> lib/libelektra-invoke.so.0.9.9
+434c434
+< lib/libelektra-io.so.0.9.10
+---
+> lib/libelektra-io.so.0.9.9
+437c437
+< lib/libelektra-kdb.so.0.9.10
+---
+> lib/libelektra-kdb.so.0.9.9
+440c440
+< lib/libelektra-merge.so.0.9.10
+---
+> lib/libelektra-merge.so.0.9.9
+443c443
+< lib/libelektra-meta.so.0.9.10
+---
+> lib/libelektra-meta.so.0.9.9
+446c446
+< lib/libelektra-notification.so.0.9.10
+---
+> lib/libelektra-notification.so.0.9.9
+449c449
+< lib/libelektra-opts.so.0.9.10
+---
+> lib/libelektra-opts.so.0.9.9
+452c452
+< lib/libelektra-plugin.so.0.9.10
+---
+> lib/libelektra-plugin.so.0.9.9
+455c455
+< lib/libelektra-pluginprocess.so.0.9.10
+---
+> lib/libelektra-pluginprocess.so.0.9.9
+459c459
+< lib/libelektra-utility.so.0.9.10
+---
+> lib/libelektra-utility.so.0.9.9
+465c465
+< lib/libelektraintercept-env.so.0.9.10
+---
+> lib/libelektraintercept-env.so.0.9.9
+467c467
+< lib/libelektratools-full.so.0.9.10
+---
+> lib/libelektratools-full.so.0.9.9
+471c471
+< lib/libelektratools.so.0.9.10
+---
+> lib/libelektratools.so.0.9.9
+575,576c575,577
+< share/doc/elektra-api/html/autotoc_md423.html
+< share/doc/elektra-api/html/autotoc_md427.html
+---
+> share/doc/elektra-api/html/autotoc_md422.html
+> share/doc/elektra-api/html/autotoc_md426.html
+> share/doc/elektra-api/html/autotoc_md429.html
+578,584c579,584
+< share/doc/elektra-api/html/autotoc_md430.html
+< share/doc/elektra-api/html/autotoc_md436.html
+< share/doc/elektra-api/html/autotoc_md441.html
+< share/doc/elektra-api/html/autotoc_md445.html
+< share/doc/elektra-api/html/autotoc_md472.html
+< share/doc/elektra-api/html/autotoc_md486.html
+< share/doc/elektra-api/html/autotoc_md508.html
+---
+> share/doc/elektra-api/html/autotoc_md435.html
+> share/doc/elektra-api/html/autotoc_md440.html
+> share/doc/elektra-api/html/autotoc_md444.html
+> share/doc/elektra-api/html/autotoc_md471.html
+> share/doc/elektra-api/html/autotoc_md485.html
+> share/doc/elektra-api/html/autotoc_md507.html
+586,599c586,600
+< share/doc/elektra-api/html/autotoc_md516.html
+< share/doc/elektra-api/html/autotoc_md524.html
+< share/doc/elektra-api/html/autotoc_md529.html
+< share/doc/elektra-api/html/autotoc_md545.html
+< share/doc/elektra-api/html/autotoc_md555.html
+< share/doc/elektra-api/html/autotoc_md557.html
+< share/doc/elektra-api/html/autotoc_md564.html
+< share/doc/elektra-api/html/autotoc_md574.html
+< share/doc/elektra-api/html/autotoc_md583.html
+< share/doc/elektra-api/html/autotoc_md586.html
+< share/doc/elektra-api/html/autotoc_md588.html
+< share/doc/elektra-api/html/autotoc_md595.html
+< share/doc/elektra-api/html/autotoc_md611.html
+< share/doc/elektra-api/html/autotoc_md618.html
+---
+> share/doc/elektra-api/html/autotoc_md515.html
+> share/doc/elektra-api/html/autotoc_md523.html
+> share/doc/elektra-api/html/autotoc_md528.html
+> share/doc/elektra-api/html/autotoc_md544.html
+> share/doc/elektra-api/html/autotoc_md554.html
+> share/doc/elektra-api/html/autotoc_md556.html
+> share/doc/elektra-api/html/autotoc_md563.html
+> share/doc/elektra-api/html/autotoc_md573.html
+> share/doc/elektra-api/html/autotoc_md582.html
+> share/doc/elektra-api/html/autotoc_md585.html
+> share/doc/elektra-api/html/autotoc_md592.html
+> share/doc/elektra-api/html/autotoc_md608.html
+> share/doc/elektra-api/html/autotoc_md615.html
+> share/doc/elektra-api/html/autotoc_md638.html
+> share/doc/elektra-api/html/autotoc_md639.html
+602,606c603,606
+< share/doc/elektra-api/html/autotoc_md642.html
+< share/doc/elektra-api/html/autotoc_md644.html
+< share/doc/elektra-api/html/autotoc_md651.html
+< share/doc/elektra-api/html/autotoc_md667.html
+< share/doc/elektra-api/html/autotoc_md678.html
+---
+> share/doc/elektra-api/html/autotoc_md648.html
+> share/doc/elektra-api/html/autotoc_md664.html
+> share/doc/elektra-api/html/autotoc_md675.html
+> share/doc/elektra-api/html/autotoc_md679.html
+608,617c608,616
+< share/doc/elektra-api/html/autotoc_md682.html
+< share/doc/elektra-api/html/autotoc_md688.html
+< share/doc/elektra-api/html/autotoc_md690.html
+< share/doc/elektra-api/html/autotoc_md696.html
+< share/doc/elektra-api/html/autotoc_md709.html
+< share/doc/elektra-api/html/autotoc_md715.html
+< share/doc/elektra-api/html/autotoc_md717.html
+< share/doc/elektra-api/html/autotoc_md719.html
+< share/doc/elektra-api/html/autotoc_md725.html
+< share/doc/elektra-api/html/autotoc_md729.html
+---
+> share/doc/elektra-api/html/autotoc_md685.html
+> share/doc/elektra-api/html/autotoc_md687.html
+> share/doc/elektra-api/html/autotoc_md693.html
+> share/doc/elektra-api/html/autotoc_md706.html
+> share/doc/elektra-api/html/autotoc_md712.html
+> share/doc/elektra-api/html/autotoc_md714.html
+> share/doc/elektra-api/html/autotoc_md716.html
+> share/doc/elektra-api/html/autotoc_md722.html
+> share/doc/elektra-api/html/autotoc_md726.html
+621c620,621
+< share/doc/elektra-api/html/autotoc_md836.html
+---
+> share/doc/elektra-api/html/autotoc_md833.html
+> share/doc/elektra-api/html/autotoc_md837.html
+623,630c623,629
+< share/doc/elektra-api/html/autotoc_md840.html
+< share/doc/elektra-api/html/autotoc_md847.html
+< share/doc/elektra-api/html/autotoc_md852.html
+< share/doc/elektra-api/html/autotoc_md857.html
+< share/doc/elektra-api/html/autotoc_md862.html
+< share/doc/elektra-api/html/autotoc_md864.html
+< share/doc/elektra-api/html/autotoc_md871.html
+< share/doc/elektra-api/html/autotoc_md876.html
+---
+> share/doc/elektra-api/html/autotoc_md844.html
+> share/doc/elektra-api/html/autotoc_md849.html
+> share/doc/elektra-api/html/autotoc_md854.html
+> share/doc/elektra-api/html/autotoc_md859.html
+> share/doc/elektra-api/html/autotoc_md861.html
+> share/doc/elektra-api/html/autotoc_md868.html
+> share/doc/elektra-api/html/autotoc_md873.html
+632,634c631,633
+< share/doc/elektra-api/html/autotoc_md907.html
+< share/doc/elektra-api/html/autotoc_md989.html
+< share/doc/elektra-api/html/autotoc_md996.html
+---
+> share/doc/elektra-api/html/autotoc_md904.html
+> share/doc/elektra-api/html/autotoc_md986.html
+> share/doc/elektra-api/html/autotoc_md993.html
+1065,1113c1064,1112
+< share/doc/elektra-api/html/dir_000001_000033.html
+< share/doc/elektra-api/html/dir_000008_000024.html
+< share/doc/elektra-api/html/dir_000008_000033.html
+< share/doc/elektra-api/html/dir_000009_000033.html
+< share/doc/elektra-api/html/dir_000010_000024.html
+< share/doc/elektra-api/html/dir_000010_000033.html
+< share/doc/elektra-api/html/dir_000011_000013.html
+< share/doc/elektra-api/html/dir_000011_000024.html
+< share/doc/elektra-api/html/dir_000011_000033.html
+< share/doc/elektra-api/html/dir_000012_000013.html
+< share/doc/elektra-api/html/dir_000013_000024.html
+< share/doc/elektra-api/html/dir_000014_000024.html
+< share/doc/elektra-api/html/dir_000015_000033.html
+< share/doc/elektra-api/html/dir_000016_000013.html
+< share/doc/elektra-api/html/dir_000016_000024.html
+< share/doc/elektra-api/html/dir_000017_000024.html
+< share/doc/elektra-api/html/dir_000017_000033.html
+< share/doc/elektra-api/html/dir_000018_000024.html
+< share/doc/elektra-api/html/dir_000021_000013.html
+< share/doc/elektra-api/html/dir_000021_000024.html
+< share/doc/elektra-api/html/dir_000022_000013.html
+< share/doc/elektra-api/html/dir_000023_000024.html
+< share/doc/elektra-api/html/dir_000024_000033.html
+< share/doc/elektra-api/html/dir_000033_000034.html
+< share/doc/elektra-api/html/dir_000035_000033.html
+< share/doc/elektra-api/html/dir_000036_000033.html
+< share/doc/elektra-api/html/dir_000037_000033.html
+< share/doc/elektra-api/html/dir_000040_000033.html
+< share/doc/elektra-api/html/dir_000041_000033.html
+< share/doc/elektra-api/html/dir_000043_000033.html
+< share/doc/elektra-api/html/dir_000048_000033.html
+< share/doc/elektra-api/html/dir_000049_000033.html
+< share/doc/elektra-api/html/dir_000050_000033.html
+< share/doc/elektra-api/html/dir_000051_000033.html
+< share/doc/elektra-api/html/dir_000052_000033.html
+< share/doc/elektra-api/html/dir_000053_000033.html
+< share/doc/elektra-api/html/dir_000054_000033.html
+< share/doc/elektra-api/html/dir_000057_000013.html
+< share/doc/elektra-api/html/dir_000057_000024.html
+< share/doc/elektra-api/html/dir_000057_000033.html
+< share/doc/elektra-api/html/dir_000058_000033.html
+< share/doc/elektra-api/html/dir_000059_000033.html
+< share/doc/elektra-api/html/dir_000060_000033.html
+< share/doc/elektra-api/html/dir_000061_000033.html
+< share/doc/elektra-api/html/dir_000062_000033.html
+< share/doc/elektra-api/html/dir_000064_000033.html
+< share/doc/elektra-api/html/dir_000065_000033.html
+< share/doc/elektra-api/html/dir_000066_000033.html
+< share/doc/elektra-api/html/dir_000067_000033.html
+---
+> share/doc/elektra-api/html/dir_000001_000018.html
+> share/doc/elektra-api/html/dir_000001_000027.html
+> share/doc/elektra-api/html/dir_000002_000027.html
+> share/doc/elektra-api/html/dir_000003_000018.html
+> share/doc/elektra-api/html/dir_000003_000027.html
+> share/doc/elektra-api/html/dir_000004_000006.html
+> share/doc/elektra-api/html/dir_000004_000018.html
+> share/doc/elektra-api/html/dir_000004_000027.html
+> share/doc/elektra-api/html/dir_000005_000006.html
+> share/doc/elektra-api/html/dir_000006_000018.html
+> share/doc/elektra-api/html/dir_000007_000018.html
+> share/doc/elektra-api/html/dir_000008_000027.html
+> share/doc/elektra-api/html/dir_000009_000006.html
+> share/doc/elektra-api/html/dir_000009_000018.html
+> share/doc/elektra-api/html/dir_000010_000018.html
+> share/doc/elektra-api/html/dir_000010_000027.html
+> share/doc/elektra-api/html/dir_000011_000018.html
+> share/doc/elektra-api/html/dir_000012_000027.html
+> share/doc/elektra-api/html/dir_000015_000006.html
+> share/doc/elektra-api/html/dir_000015_000018.html
+> share/doc/elektra-api/html/dir_000016_000006.html
+> share/doc/elektra-api/html/dir_000017_000018.html
+> share/doc/elektra-api/html/dir_000018_000027.html
+> share/doc/elektra-api/html/dir_000027_000028.html
+> share/doc/elektra-api/html/dir_000029_000027.html
+> share/doc/elektra-api/html/dir_000030_000027.html
+> share/doc/elektra-api/html/dir_000031_000027.html
+> share/doc/elektra-api/html/dir_000034_000027.html
+> share/doc/elektra-api/html/dir_000035_000027.html
+> share/doc/elektra-api/html/dir_000037_000027.html
+> share/doc/elektra-api/html/dir_000042_000027.html
+> share/doc/elektra-api/html/dir_000043_000027.html
+> share/doc/elektra-api/html/dir_000044_000027.html
+> share/doc/elektra-api/html/dir_000045_000027.html
+> share/doc/elektra-api/html/dir_000046_000027.html
+> share/doc/elektra-api/html/dir_000047_000027.html
+> share/doc/elektra-api/html/dir_000048_000027.html
+> share/doc/elektra-api/html/dir_000051_000006.html
+> share/doc/elektra-api/html/dir_000051_000018.html
+> share/doc/elektra-api/html/dir_000051_000027.html
+> share/doc/elektra-api/html/dir_000052_000027.html
+> share/doc/elektra-api/html/dir_000053_000027.html
+> share/doc/elektra-api/html/dir_000054_000027.html
+> share/doc/elektra-api/html/dir_000055_000027.html
+> share/doc/elektra-api/html/dir_000056_000027.html
+> share/doc/elektra-api/html/dir_000060_000027.html
+> share/doc/elektra-api/html/dir_000061_000027.html
+> share/doc/elektra-api/html/dir_000062_000027.html
+> share/doc/elektra-api/html/dir_000063_000027.html
+1115,1116d1113
+< share/doc/elektra-api/html/dir_0e16e732df819f7ff26422223d7ff0d6.html
+< share/doc/elektra-api/html/dir_1005ed10ae49e1dc5e16f6c8472a6903.html
+1137d1133
+< share/doc/elektra-api/html/dir_2b0b97074abe0f693d2925c5aad7750a.html
+1216d1211
+< share/doc/elektra-api/html/dir_79c37fd63c35f35713d0c44f4effbbf2.html
+1529d1523
+< share/doc/elektra-api/html/doc_dev_iterators_md.html
+1613d1606
+< share/doc/elektra-api/html/doc_man_README_md.html
+1648d1640
+< share/doc/elektra-api/html/doc_news_2022-03-10_0_9_9_md.html
+1814d1805
+< share/doc/elektra-api/html/functions_func_m.html
+3126,3127d3116
+< share/doc/elektra-api/html/toolchains_add.png
+< share/doc/elektra-api/html/toolchains_detected.png
+3432,3435c3421,3422
+< share/elektra/test_data/lineendings/inconsistent1
+< share/elektra/test_data/lineendings/inconsistent2
+< share/elektra/test_data/lineendings/invalid1
+< share/elektra/test_data/lineendings/invalid2
+---
+> share/elektra/test_data/lineendings/inconsistent
+> share/elektra/test_data/lineendings/invalid
+3438,3439d3424
+< share/elektra/test_data/lineendings/valid3
+< share/elektra/test_data/lineendings/valid4
+3456,3464d3440
+< share/elektra/test_data/python/dns
+< share/elektra/test_data/python/dns/README.md
+< share/elektra/test_data/python/dns/src
+< share/elektra/test_data/python/dns/src/main
+< share/elektra/test_data/python/dns/src/main/__init__.py
+< share/elektra/test_data/python/dns/src/main/dns_plugin.py
+< share/elektra/test_data/python/dns/src/test
+< share/elektra/test_data/python/dns/src/test/__init__.py
+< share/elektra/test_data/python/dns/src/test/test_dns_plugin.py
+3680,3687c3656,3663
+< share/elektra/tool_data/fuse/psutil-5.9.1.egg-info
+< share/elektra/tool_data/fuse/psutil-5.9.1.egg-info/PKG-INFO
+< share/elektra/tool_data/fuse/psutil-5.9.1.egg-info/SOURCES.txt
+< share/elektra/tool_data/fuse/psutil-5.9.1.egg-info/dependency_links.txt
+< share/elektra/tool_data/fuse/psutil-5.9.1.egg-info/installed-files.txt
+< share/elektra/tool_data/fuse/psutil-5.9.1.egg-info/not-zip-safe
+< share/elektra/tool_data/fuse/psutil-5.9.1.egg-info/requires.txt
+< share/elektra/tool_data/fuse/psutil-5.9.1.egg-info/top_level.txt
+---
+> share/elektra/tool_data/fuse/psutil-5.9.0.egg-info
+> share/elektra/tool_data/fuse/psutil-5.9.0.egg-info/PKG-INFO
+> share/elektra/tool_data/fuse/psutil-5.9.0.egg-info/SOURCES.txt
+> share/elektra/tool_data/fuse/psutil-5.9.0.egg-info/dependency_links.txt
+> share/elektra/tool_data/fuse/psutil-5.9.0.egg-info/installed-files.txt
+> share/elektra/tool_data/fuse/psutil-5.9.0.egg-info/not-zip-safe
+> share/elektra/tool_data/fuse/psutil-5.9.0.egg-info/requires.txt
+> share/elektra/tool_data/fuse/psutil-5.9.0.egg-info/top_level.txt
+3717d3692
+< share/elektra/tool_data/fuse/psutil/tests/__pycache__/foo.cpython-36.pyc
+3734d3708
+< share/elektra/tool_data/fuse/psutil/tests/foo.py
+3760,3764c3734,3738
+< share/java/libelektra-0.9.10-all.jar
+< share/java/libelektra-0.9.10-javadoc.jar
+< share/java/libelektra-0.9.10-sources.jar
+< share/java/libelektra-0.9.10.jar
+< share/java/libelektra-0.9.10.pom.xml
+---
+> share/java/libelektra-0.9.9-all.jar
+> share/java/libelektra-0.9.9-javadoc.jar
+> share/java/libelektra-0.9.9-sources.jar
+> share/java/libelektra-0.9.9.jar
+> share/java/libelektra-0.9.9.pom.xml
+3770,3773c3744,3745
+< share/java/plugins/linkchecker-0.9.10.jar
+< share/java/plugins/sorted-0.9.10.jar
+< share/java/plugins/whitelist-0.9.10.jar
+< share/java/process-0.9.10.jar
+---
+> share/java/plugins/whitelist-0.9.9.jar
+> share/java/process-0.9.9.jar
+3888,3889c3860,3862
+< share/man/man3/autotoc_md423.3elektra
+< share/man/man3/autotoc_md427.3elektra
+---
+> share/man/man3/autotoc_md422.3elektra
+> share/man/man3/autotoc_md426.3elektra
+> share/man/man3/autotoc_md429.3elektra
+3891,3897c3864,3869
+< share/man/man3/autotoc_md430.3elektra
+< share/man/man3/autotoc_md436.3elektra
+< share/man/man3/autotoc_md441.3elektra
+< share/man/man3/autotoc_md445.3elektra
+< share/man/man3/autotoc_md472.3elektra
+< share/man/man3/autotoc_md486.3elektra
+< share/man/man3/autotoc_md508.3elektra
+---
+> share/man/man3/autotoc_md435.3elektra
+> share/man/man3/autotoc_md440.3elektra
+> share/man/man3/autotoc_md444.3elektra
+> share/man/man3/autotoc_md471.3elektra
+> share/man/man3/autotoc_md485.3elektra
+> share/man/man3/autotoc_md507.3elektra
+3899,3912c3871,3885
+< share/man/man3/autotoc_md516.3elektra
+< share/man/man3/autotoc_md524.3elektra
+< share/man/man3/autotoc_md529.3elektra
+< share/man/man3/autotoc_md545.3elektra
+< share/man/man3/autotoc_md555.3elektra
+< share/man/man3/autotoc_md557.3elektra
+< share/man/man3/autotoc_md564.3elektra
+< share/man/man3/autotoc_md574.3elektra
+< share/man/man3/autotoc_md583.3elektra
+< share/man/man3/autotoc_md586.3elektra
+< share/man/man3/autotoc_md588.3elektra
+< share/man/man3/autotoc_md595.3elektra
+< share/man/man3/autotoc_md611.3elektra
+< share/man/man3/autotoc_md618.3elektra
+---
+> share/man/man3/autotoc_md515.3elektra
+> share/man/man3/autotoc_md523.3elektra
+> share/man/man3/autotoc_md528.3elektra
+> share/man/man3/autotoc_md544.3elektra
+> share/man/man3/autotoc_md554.3elektra
+> share/man/man3/autotoc_md556.3elektra
+> share/man/man3/autotoc_md563.3elektra
+> share/man/man3/autotoc_md573.3elektra
+> share/man/man3/autotoc_md582.3elektra
+> share/man/man3/autotoc_md585.3elektra
+> share/man/man3/autotoc_md592.3elektra
+> share/man/man3/autotoc_md608.3elektra
+> share/man/man3/autotoc_md615.3elektra
+> share/man/man3/autotoc_md638.3elektra
+> share/man/man3/autotoc_md639.3elektra
+3915,3919c3888,3891
+< share/man/man3/autotoc_md642.3elektra
+< share/man/man3/autotoc_md644.3elektra
+< share/man/man3/autotoc_md651.3elektra
+< share/man/man3/autotoc_md667.3elektra
+< share/man/man3/autotoc_md678.3elektra
+---
+> share/man/man3/autotoc_md648.3elektra
+> share/man/man3/autotoc_md664.3elektra
+> share/man/man3/autotoc_md675.3elektra
+> share/man/man3/autotoc_md679.3elektra
+3921,3930c3893,3901
+< share/man/man3/autotoc_md682.3elektra
+< share/man/man3/autotoc_md688.3elektra
+< share/man/man3/autotoc_md690.3elektra
+< share/man/man3/autotoc_md696.3elektra
+< share/man/man3/autotoc_md709.3elektra
+< share/man/man3/autotoc_md715.3elektra
+< share/man/man3/autotoc_md717.3elektra
+< share/man/man3/autotoc_md719.3elektra
+< share/man/man3/autotoc_md725.3elektra
+< share/man/man3/autotoc_md729.3elektra
+---
+> share/man/man3/autotoc_md685.3elektra
+> share/man/man3/autotoc_md687.3elektra
+> share/man/man3/autotoc_md693.3elektra
+> share/man/man3/autotoc_md706.3elektra
+> share/man/man3/autotoc_md712.3elektra
+> share/man/man3/autotoc_md714.3elektra
+> share/man/man3/autotoc_md716.3elektra
+> share/man/man3/autotoc_md722.3elektra
+> share/man/man3/autotoc_md726.3elektra
+3934c3905,3906
+< share/man/man3/autotoc_md836.3elektra
+---
+> share/man/man3/autotoc_md833.3elektra
+> share/man/man3/autotoc_md837.3elektra
+3936,3943c3908,3914
+< share/man/man3/autotoc_md840.3elektra
+< share/man/man3/autotoc_md847.3elektra
+< share/man/man3/autotoc_md852.3elektra
+< share/man/man3/autotoc_md857.3elektra
+< share/man/man3/autotoc_md862.3elektra
+< share/man/man3/autotoc_md864.3elektra
+< share/man/man3/autotoc_md871.3elektra
+< share/man/man3/autotoc_md876.3elektra
+---
+> share/man/man3/autotoc_md844.3elektra
+> share/man/man3/autotoc_md849.3elektra
+> share/man/man3/autotoc_md854.3elektra
+> share/man/man3/autotoc_md859.3elektra
+> share/man/man3/autotoc_md861.3elektra
+> share/man/man3/autotoc_md868.3elektra
+> share/man/man3/autotoc_md873.3elektra
+3945,3947c3916,3918
+< share/man/man3/autotoc_md907.3elektra
+< share/man/man3/autotoc_md989.3elektra
+< share/man/man3/autotoc_md996.3elektra
+---
+> share/man/man3/autotoc_md904.3elektra
+> share/man/man3/autotoc_md986.3elektra
+> share/man/man3/autotoc_md993.3elektra
+4130d4100
+< share/man/man3/doc_dev_iterators_md.3elektra
+4214d4183
+< share/man/man3/doc_man_README_md.3elektra
+4249d4217
+< share/man/man3/doc_news_2022-03-10_0_9_9_md.3elektra

@@ -1,0 +1,42 @@
+727,728d726
+< 
+< 
+797,805d794
+< dns
+< dns/README.md
+< dns/src
+< dns/src/main
+< dns/src/main/__init__.py
+< dns/src/main/dns_plugin.py
+< dns/src/test
+< dns/src/test/__init__.py
+< dns/src/test/test_dns_plugin.py
+947,948c936
+< inconsistent1
+< inconsistent2
+---
+> inconsistent
+964,965c952
+< invalid1
+< invalid2
+---
+> invalid
+1014,1020c1001,1007
+< psutil-5.9.1.dist-info
+< psutil-5.9.1.dist-info/INSTALLER
+< psutil-5.9.1.dist-info/LICENSE
+< psutil-5.9.1.dist-info/METADATA
+< psutil-5.9.1.dist-info/RECORD
+< psutil-5.9.1.dist-info/WHEEL
+< psutil-5.9.1.dist-info/top_level.txt
+---
+> psutil-5.9.0.dist-info
+> psutil-5.9.0.dist-info/INSTALLER
+> psutil-5.9.0.dist-info/LICENSE
+> psutil-5.9.0.dist-info/METADATA
+> psutil-5.9.0.dist-info/RECORD
+> psutil-5.9.0.dist-info/WHEEL
+> psutil-5.9.0.dist-info/top_level.txt
+1193,1194d1179
+< valid3
+< valid4
