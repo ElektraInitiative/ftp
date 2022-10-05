@@ -1,0 +1,835 @@
+commit 307caa60e02190d5293f1ffc475c45242b049432
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Tue Oct 4 22:58:39 2022 +0000
+
+    release: update debian/changelog
+
+diff --git a/scripts/packaging/debian/changelog b/scripts/packaging/debian/changelog
+index d0220d00f..bfe1a7015 100644
+--- a/scripts/packaging/debian/changelog
++++ b/scripts/packaging/debian/changelog
+@@ -1,3 +1,9 @@
++elektra (0.9.11-1) unstable; urgency=medium
++
++  * New upstream version.
++
++ -- Jenkins (User for Elektra automated build system) <jenkins@localhost>  Tue, 04 Oct 2022 22:58:38 +0000
++
+ elektra (0.9.10-8) unstable; urgency=medium
+ 
+   * New upstream version.
+
+commit 92bef5d6d1a0b349b0b7c929434efa3bcc862db6
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Tue Oct 4 22:58:38 2022 +0000
+
+    release: update fedora/changelog
+
+diff --git a/scripts/packaging/fedora/changelog b/scripts/packaging/fedora/changelog
+index 101051352..f1a3982e2 100644
+--- a/scripts/packaging/fedora/changelog
++++ b/scripts/packaging/fedora/changelog
+@@ -1,3 +1,6 @@
++* Tue Oct 04 2022 elektrabot <elektrabot@libelektra.org> - 0.9.11-1
++- New upstream version
++
+ * Mon Jul 11 2022 elektrabot <elektrabot@libelektra.org> - 0.9.10-8
+ - New upstream version
+ 
+
+commit f6c5d36b2ddc18d625882a416d10047e9a4080af
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Tue Oct 4 22:57:48 2022 +0000
+
+    release: regenerate plugins overview picture
+
+diff --git a/doc/images/plugins.pdf b/doc/images/plugins.pdf
+index 88bb2c75c..017444c4f 100644
+Binary files a/doc/images/plugins.pdf and b/doc/images/plugins.pdf differ
+
+commit decd6237b5a4e9a0f4de18dac3fd7458d78018b9
+Author: Mihael Pranjić <mpranj@limun.org>
+Date:   Wed Oct 5 00:46:10 2022 +0200
+
+    release: build ABI images only when needed
+
+diff --git a/scripts/jenkins/Jenkinsfile.release b/scripts/jenkins/Jenkinsfile.release
+index 33479c3f9..35a2e881d 100644
+--- a/scripts/jenkins/Jenkinsfile.release
++++ b/scripts/jenkins/Jenkinsfile.release
+@@ -115,6 +115,10 @@ stage('Test packages') {
+   parallel generateInstalledPackagesTestStages()
+ }
+ 
++maybeStage('Build ABI images', params.abi_test) {
++  parallel generateAbiImages()
++}
++
+ maybeStage('ABI tests', params.abi_test) {
+   parallel generateAbiTestStages()
+ }
+@@ -460,16 +464,6 @@ def generateDockerBuildStagesWithPackagesInstalled() {
+   // build website
+   tasks << buildWebsite('debian-buster')
+ 
+-  // build abi images
+-  tasks << buildImageWithPackagesStage(
+-    DOCKER_IMAGES.fedora_36_abi,
+-    'fedora-36'
+-  )
+-  tasks << buildImageWithPackagesStage(
+-    DOCKER_IMAGES.bullseye_abi,
+-    'debian-bullseye'
+-  )
+-
+   return tasks
+ }
+ 
+@@ -510,6 +504,20 @@ def generateInstalledPackagesTestStages() {
+   return tasks
+ }
+ 
++def generateAbiImages() {
++  // build abi images
++  tasks << buildImageWithPackagesStage(
++    DOCKER_IMAGES.fedora_36_abi,
++    'fedora-36'
++  )
++  tasks << buildImageWithPackagesStage(
++    DOCKER_IMAGES.bullseye_abi,
++    'debian-bullseye'
++  )
++
++  return tasks
++}
++
+ def generateAbiTestStages() {
+   def tasks = [:]
+ 
+
+commit a2312f9fcc7b00670386de6ccf5fdb4edd692ac7
+Author: Mihael Pranjić <mpranj@limun.org>
+Date:   Tue Oct 4 23:08:18 2022 +0200
+
+    fedora: fix abi links
+
+diff --git a/scripts/docker/fedora/35/abi.Dockerfile b/scripts/docker/fedora/35/abi.Dockerfile
+index 5d3481206..c1973617b 100644
+--- a/scripts/docker/fedora/35/abi.Dockerfile
++++ b/scripts/docker/fedora/35/abi.Dockerfile
+@@ -27,7 +27,7 @@ RUN rm -rf ${ELEKTRA_ROOT}/elektra-tests* ${ELEKTRA_ROOT}/elektra-dbg*
+ 
+ RUN yum localinstall -y ${ELEKTRA_ROOT}/*
+ 
+-RUN wget https://rpms.libelektra.org/fedora-34/libelektra.repo -O libelektra.repo \
++RUN wget https://rpms.libelektra.org/fedora-35/libelektra.repo -O libelektra.repo \
+     && mv libelektra.repo /etc/yum.repos.d/ \
+     && yum update -y
+ 
+diff --git a/scripts/docker/fedora/36/abi.Dockerfile b/scripts/docker/fedora/36/abi.Dockerfile
+index d82eff625..908d7779f 100644
+--- a/scripts/docker/fedora/36/abi.Dockerfile
++++ b/scripts/docker/fedora/36/abi.Dockerfile
+@@ -27,7 +27,7 @@ RUN rm -rf ${ELEKTRA_ROOT}/elektra-tests* ${ELEKTRA_ROOT}/elektra-dbg*
+ 
+ RUN yum localinstall -y ${ELEKTRA_ROOT}/*
+ 
+-RUN wget https://rpms.libelektra.org/fedora-35/libelektra.repo -O libelektra.repo \
++RUN wget https://rpms.libelektra.org/fedora-36/libelektra.repo -O libelektra.repo \
+     && mv libelektra.repo /etc/yum.repos.d/ \
+     && yum update -y
+ 
+
+commit 258e48448376ba45b09b1ebbe9b2611ec41b0a76
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Tue Oct 4 18:52:25 2022 +0200
+
+    fedora: fix Fedora 36 abi tests
+
+diff --git a/scripts/docker/fedora/36/abi.Dockerfile b/scripts/docker/fedora/36/abi.Dockerfile
+index 6b954774c..d82eff625 100644
+--- a/scripts/docker/fedora/36/abi.Dockerfile
++++ b/scripts/docker/fedora/36/abi.Dockerfile
+@@ -27,7 +27,7 @@ RUN rm -rf ${ELEKTRA_ROOT}/elektra-tests* ${ELEKTRA_ROOT}/elektra-dbg*
+ 
+ RUN yum localinstall -y ${ELEKTRA_ROOT}/*
+ 
+-RUN wget https://rpms.libelektra.org/fedora-34/libelektra.repo -O libelektra.repo \
++RUN wget https://rpms.libelektra.org/fedora-35/libelektra.repo -O libelektra.repo \
+     && mv libelektra.repo /etc/yum.repos.d/ \
+     && yum update -y
+ 
+
+commit 9bb9b16a4eef839d14b44bcedfd49a837a9573ac
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Tue Oct 4 17:24:19 2022 +0200
+
+    release: fix previous release version
+
+diff --git a/scripts/release/populate-release-notes.sh b/scripts/release/populate-release-notes.sh
+index 6818dd4f7..d22e56f7e 100755
+--- a/scripts/release/populate-release-notes.sh
++++ b/scripts/release/populate-release-notes.sh
+@@ -19,7 +19,7 @@ RELEASE_NOTE_FILENAME="$CURRENT_DATE"_"$KDB_VERSION".md
+ RELEASE_NOTE_PATH="$NEWS_DIR/$RELEASE_NOTE_FILENAME"
+ 
+ # get previous release version from git tags
+-PREVIOUS_RELEASE=$(git tag -l '[0-9].[0-9].[0-9]*' --sort=version:refname | tail -n1)
++PREVIOUS_RELEASE=$(git tag -l '[0-9].[0-9].[0-9]*' --sort=version:refname | tail -n2 | head -n1)
+ PREVIOUS_RELEASE_MAJOR_MINOR_VERSION=$(echo $PREVIOUS_RELEASE | grep -Po '^\d+.\d+')
+ 
+ generate_git_release_stats_minimal() {
+
+commit cbd16a37b390278d85141d9d762d25e6626262e9
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Tue Oct 4 16:42:20 2022 +0200
+
+    release: fix determining last version
+
+diff --git a/scripts/jenkins/Jenkinsfile.release b/scripts/jenkins/Jenkinsfile.release
+index cc4d96fcf..33479c3f9 100644
+--- a/scripts/jenkins/Jenkinsfile.release
++++ b/scripts/jenkins/Jenkinsfile.release
+@@ -152,7 +152,7 @@ def initVariables() {
+     } else {
+       script {
+         PREVIOUS_RELEASE_VERSION = sh(
+-          script: "git tag -l '[0-9].[0-9].[0-9]' | tail -n1",
++          script: "git tag -l '[0-9].[0-9].[0-9]*' --sort=version:refname | tail -n1",
+           returnStdout: true
+         ).trim()
+       }
+@@ -813,9 +813,8 @@ def buildRelease(stageName, image, packageRevision='1',
+               if (params.populate_release_notes) {
+                 sh "scripts/release/populate-release-notes.sh ${RELEASE_VERSION} ../${RELEASE_VERSION}/"
+                 sh "git add doc/news"
+-                sh "git commit -m 'release: add hashsums and statistics to release notes'"
+                 sh "git add scripts/docker/alpine"
+-                sh "git commit -m 'docker: update alpine release image'"
++                sh "git commit -m 'release: add hashsums and statistics to release notes, update alpine release image'"
+               }
+               if (bundleRepo) {
+                 sh 'git bundle create libelektra.bundle --all'
+diff --git a/scripts/release/populate-release-notes.sh b/scripts/release/populate-release-notes.sh
+index df36e67f5..6818dd4f7 100755
+--- a/scripts/release/populate-release-notes.sh
++++ b/scripts/release/populate-release-notes.sh
+@@ -19,7 +19,7 @@ RELEASE_NOTE_FILENAME="$CURRENT_DATE"_"$KDB_VERSION".md
+ RELEASE_NOTE_PATH="$NEWS_DIR/$RELEASE_NOTE_FILENAME"
+ 
+ # get previous release version from git tags
+-PREVIOUS_RELEASE=$(git tag -l '[0-9].[0-9].[0-9]' | tail -n1 | head -n1)
++PREVIOUS_RELEASE=$(git tag -l '[0-9].[0-9].[0-9]*' --sort=version:refname | tail -n1)
+ PREVIOUS_RELEASE_MAJOR_MINOR_VERSION=$(echo $PREVIOUS_RELEASE | grep -Po '^\d+.\d+')
+ 
+ generate_git_release_stats_minimal() {
+diff --git a/scripts/release/release.sh b/scripts/release/release.sh
+index 846c301fe..35599137e 100755
+--- a/scripts/release/release.sh
++++ b/scripts/release/release.sh
+@@ -13,10 +13,10 @@ BUILD_DIR="$SRC_DIR/build"
+ PREVIOUS_RELEASE_LOGS="$BASE_DIR/prev-release-logs"
+ 
+ get_current_git_version_tag() {
+-	git tag -l '[0-9].[0-9].[0-9]' | tail -n1
++	git tag -l '[0-9].[0-9].[0-9]*' --sort=version:refname | tail -n1
+ }
+ get_previous_git_version_tag() {
+-	git tag -l '[0-9].[0-9].[0-9]' | tail -n2 | head -n1
++	git tag -l '[0-9].[0-9].[0-9]*' --sort=version:refname | tail -n2 | head -n1
+ }
+ 
+ cd $SRC_DIR
+
+commit 9db9a63cf8e2c82018e6c839689b6d49531c2eb8
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Tue Oct 4 15:02:30 2022 +0200
+
+    doc: use bullseye for release docu build
+
+diff --git a/scripts/jenkins/Jenkinsfile.release b/scripts/jenkins/Jenkinsfile.release
+index 3d868f9ab..cc4d96fcf 100644
+--- a/scripts/jenkins/Jenkinsfile.release
++++ b/scripts/jenkins/Jenkinsfile.release
+@@ -318,10 +318,10 @@ def dockerInit() {
+     /* Build Elektra's documentation with this image.
+      * Also contains latex for pdf creation.
+      */
+-    DOCKER_IMAGES.sid_doc = dockerUtils.createDockerImageDesc(
+-      'debian-sid-doc', dockerUtils.&idTesting,
+-      './scripts/docker/debian/sid',
+-      './scripts/docker/debian/sid/doc.Dockerfile'
++    DOCKER_IMAGES.bullseye_doc = dockerUtils.createDockerImageDesc(
++      'debian-bullseye-doc', dockerUtils.&idTesting,
++      './scripts/docker/debian/bullseye',
++      './scripts/docker/debian/bullseye/doc.Dockerfile'
+     )
+ 
+     /*
+@@ -623,9 +623,9 @@ def generatePublishStages() {
+ 
+   tasks << buildDoc()
+ 
+-  // publish source package built in debian-buster stage
++  // publish source package built in debian-bullseye stage
+   if (params.publish_source_package) {
+-    tasks << publishSource('debian-buster')
++    tasks << publishSource('debian-bullseye')
+   }
+ 
+   tasks << buildAndPublishMaven()
+@@ -682,8 +682,8 @@ def generateFinalPublishStages() {
+   def tasks = [:]
+ 
+   // publish main repo which got modified during the
+-  // debian-buster release stage
+-  tasks << publishMainRepo('debian-buster')
++  // debian-bullseye release stage
++  tasks << publishMainRepo('debian-bullseye')
+   // publish website
+   tasks << release.deployWebsite(DOCKER_IMAGES.website)
+ 
+@@ -998,7 +998,7 @@ def buildDoc() {
+   ]
+   return [(stageName): {
+     stage(stageName) {
+-      withDockerEnv(DOCKER_IMAGES.sid_doc) {
++      withDockerEnv(DOCKER_IMAGES.bullseye_doc) {
+         configureGitUser()
+ 
+         dir('build') {
+
+commit fe8b751f05caabaa3c8cc7127f978c4bb61781ec
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Tue Oct 4 12:46:12 2022 +0200
+
+    elektra: bump to 0.9.11
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 2722f3b93..87a7029c1 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -5,7 +5,7 @@ set (CMAKE_USER_MAKE_RULES_OVERRIDE "${CMAKE_SOURCE_DIR}/scripts/cmake/Platform.
+ 
+ set (KDB_VERSION_MAJOR 0)
+ set (KDB_VERSION_MINOR 9)
+-set (KDB_VERSION_PATCH 10)
++set (KDB_VERSION_PATCH 11)
+ set (KDB_VERSION "${KDB_VERSION_MAJOR}.${KDB_VERSION_MINOR}.${KDB_VERSION_PATCH}")
+ 
+ set (ELEKTRA_DESCRIPTION
+diff --git a/doc/tutorials/hello-elektra.md b/doc/tutorials/hello-elektra.md
+index 9ffbc50e2..7375d35f2 100644
+--- a/doc/tutorials/hello-elektra.md
++++ b/doc/tutorials/hello-elektra.md
+@@ -50,7 +50,7 @@ This basic tutorial shows you how to compile and run a very basic Elektra applic
+    -- Detecting CXX compiler ABI info - done
+    -- Detecting CXX compile features
+    -- Detecting CXX compile features - done
+-   -- Elektra 0.9.10 found
++   -- Elektra 0.9.11 found
+    -- Configuring done
+    -- Generating done
+    -- Build files have been written to: Hello/build
+diff --git a/src/bindings/jna/README.md b/src/bindings/jna/README.md
+index e95a0ded1..b4f8a4e17 100644
+--- a/src/bindings/jna/README.md
++++ b/src/bindings/jna/README.md
+@@ -77,7 +77,7 @@ Simply add libelektra as dependency using:
+     <dependency>
+       <groupId>org.libelektra</groupId>
+       <artifactId>libelektra</artifactId>
+-      <version>0.9.10</version>
++      <version>0.9.11</version>
+     </dependency>
+ ```
+ 
+@@ -94,7 +94,7 @@ repositories {
+ }
+ 
+ dependencies {
+-    implementation "org.libelektra:libelektra:0.9.10"
++    implementation "org.libelektra:libelektra:0.9.11"
+ }
+ ```
+ 
+
+commit 46cb9a317a40ef9deb4e4ac95b03c70ae0a14e0c
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Tue Oct 4 12:43:38 2022 +0200
+
+    doc: update release notes
+
+diff --git a/doc/news/_preparation_next_release.md b/doc/news/_preparation_next_release.md
+index 3b92aefc1..02550d263 100644
+--- a/doc/news/_preparation_next_release.md
++++ b/doc/news/_preparation_next_release.md
+@@ -1,29 +1,9 @@
+ # 0.9.<<VERSION>> Release
+ 
+-This release did not happen yet.
+-
+-Please always update this file within **every PR**:
+-
+-1. write what changed
+-2. use links pointing to your change
+-3. add your name at the end of the line **Syntax:** _(your name)_
+-
+-For example, Max would write:
+-
+-```
+-- Added a new [doc plugin](/src/plugins/doc) _(Max)_
+-```
+-
+-Pick a random line to write your changes to minimize the chances of conflicts in this file.
+-
+-For non-trivial changes, you can choose to be part of the highlighted changes.
+-Please write a highlight section in this case.
+-
+-After the horizontal line the release notes for the next version starts.
+-
+----
+-
+-<<`scripts/generate-news-entry`>>
++- guid: e064a23b-b5d6-4bd9-bfd9-7466fab67892
++- author: Mihael Pranjić
++- pubDate: Tue, 04 Oct 2022 12:35:30 +0200
++- shortDesc: New Backend System, Opensesame Application, FLOSS Course
+ 
+ We are proud to release Elektra 0.9.<<VERSION>>.
+ 
+@@ -188,7 +168,7 @@ We are currently working on following topics:
+ 
+ ## Statistics
+ 
+-We closed [<<NUMISSUES>> issues](https://github.com/ElektraInitiative/libelektra/milestone/<<MILESTONE>>?closed=1) for this release.
++We closed [17 issues](https://github.com/ElektraInitiative/libelektra/milestone/32?closed=1) for this release.
+ 
+ <<`scripts/git-release-stats 0.9.VER-1 0.9.<<VERSION>>`>>
+ 
+
+commit 2f860db153849da02266b189458eb959647de7e1
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Tue Oct 4 12:31:42 2022 +0200
+
+    doc: update tested compilers
+
+diff --git a/doc/COMPILE.md b/doc/COMPILE.md
+index 66f6988a7..0913fa4c8 100644
+--- a/doc/COMPILE.md
++++ b/doc/COMPILE.md
+@@ -158,15 +158,16 @@ For a list of compilers we test with have a look at:
+ 
+ Here is an additional list of compilers used by developers (for build servers, see links above):
+ 
+-| Compiler | Version                                         | Target                    |
+-| -------- | ----------------------------------------------- | ------------------------- |
+-| gcc      | gcc (Debian 8.3.0-6) 8.3.0                      | x86_64-linux-gnu          |
+-| gcc      | gcc (Debian 10.2.1-6) 10.2.1 20210110           | x86_64-linux-gnu          |
+-| gcc      | gcc (GCC) 11.2.1 20220127 (Red Hat 11.2.1-9)    | x86_64-redhat-linux       |
+-| gcc      | gcc-11 (Homebrew GCC 11.2.0_3) 11.2.0           | x86_64-apple-darwin21     |
+-| gcc      | Homebrew clang version 13.0.1                   | x86_64-apple-darwin21.3.0 |
+-| clang    | clang version 13.0.0 (Fedora 13.0.0-3.fc35)     | x86_64-redhat-linux-gnu   |
+-| clang    | Apple clang version 13.0.0 (clang-1300.0.29.30) | x86_64-apple-darwin21.3.0 |
++| Compiler | Version                                          | Target                    |
++| -------- | ------------------------------------------------ | ------------------------- |
++| gcc      | gcc (Debian 8.3.0-6) 8.3.0                       | x86_64-linux-gnu          |
++| gcc      | gcc (Debian 10.2.1-6) 10.2.1 20210110            | x86_64-linux-gnu          |
++| gcc      | gcc (GCC) 11.2.1 20220127 (Red Hat 11.2.1-9)     | x86_64-redhat-linux       |
++| gcc      | gcc (GCC) 12.2.1 20220819 (Red Hat 12.2.1-2)     | x86_64-redhat-linux       |
++| gcc      | gcc-12 (Homebrew GCC 12.2.0) 12.2.0              | x86_64-apple-darwin21     |
++| gcc      | Homebrew clang version 15.0.1                    | x86_64-apple-darwin21.6.0 |
++| clang    | clang version 14.0.5 (Fedora 14.0.5-1.fc36)      | x86_64-redhat-linux-gnu   |
++| clang    | Apple clang version 14.0.0 (clang-1400.0.29.102) | x86_64-apple-darwin21.6.0 |
+ 
+ > (¹) OpenBSD ships an old version of GCC per default, which can not compile Elektra.
+ > A manual installation of egcc/eg++ is required. Note that not every OpenBSD
+
+commit 4d974e0403a1f5ade92c016cbf8c3d331340cac7
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Tue Oct 4 12:15:20 2022 +0200
+
+    scripts: remove last newline when generating hashsums, fix markdown formatting after release pipeline
+
+diff --git a/scripts/generate-hashsums b/scripts/generate-hashsums
+index a1b6c70ed..fb30ded00 100755
+--- a/scripts/generate-hashsums
++++ b/scripts/generate-hashsums
+@@ -13,4 +13,4 @@ echo -n "- sha1: "
+ sha1sum $* | cut -f 1 -d " "
+ 
+ echo -n "- sha256: "
+-sha256sum $* | cut -f 1 -d " "
++sha256sum $* | cut -f 1 -d " " | head -c -1
+
+commit 15327f49ba4c336fbf8275d5e83de5916f3b006f
+Merge: ad0b6b1e7 572faaaae
+Author: Mihael Pranjić <mpranj@limun.org>
+Date:   Tue Oct 4 11:42:34 2022 +0200
+
+    Merge pull request #4505 from markus2330/master
+    
+    news: finish release notes
+
+commit 572faaaae42ba8e8e93a4a344e627520e80b7be7
+Author: Markus Raab <elektra@markus-raab.org>
+Date:   Tue Oct 4 06:56:59 2022 +0200
+
+    news: more improvements
+
+diff --git a/doc/news/_preparation_next_release.md b/doc/news/_preparation_next_release.md
+index 560643f8b..3b92aefc1 100644
+--- a/doc/news/_preparation_next_release.md
++++ b/doc/news/_preparation_next_release.md
+@@ -34,7 +34,7 @@ For more information, visit [https://libelektra.org](https://libelektra.org).
+ 
+ You can also read the news [on our website](https://www.libelektra.org/news/0.9.<<VERSION>>-release).
+ 
+-You can try out the latest Elektra release using our docker image [elektra/elektra](https://hub.docker.com/r/elektra/elektra).
++You can try out the latest Elektra release using our Docker image [elektra/elektra](https://hub.docker.com/r/elektra/elektra).
+ This is the quickest way to get started with Elektra without compiling and other obstacles, simply run:
+ 
+ ```sh
+@@ -44,11 +44,11 @@ docker run -it elektra/elektra
+ 
+ ## Highlights
+ 
+-- Prepare for new-backend merge
++- Preparing new-backend merge
+ - Olimex
+ - Improving Elektra in FLOSS course
+ 
+-### Prepare for new-backend merge
++### Preparing new-backend merge
+ 
+ In a separated branch we rewrote the whole backend system.
+ With this new backend system, backends are now also plugins, allowing backends also to be non-file-based, e.g., using databases.
+@@ -61,33 +61,36 @@ Thanks to _(Richard Stöckl @Eiskasten)_ for testing.
+ ### Olimex
+ 
+ Elektra is used for [server, desktop and embedded](/doc/WHO.md).
+-With this release, we again strengthen our embedded mainstay.
+-We developed a major application running on Olimex boards, called [opensesame](https://opensesame.libelektra.org).
++With this release, we strengthen our embedded mainstay, specifically in [open source hardware OSHW](https://freedomdefined.org/OSHW).
++We developed a major application running on OSHW [Olimex](https://www.olimex.com/Products/OLinuXino/open-source-hardware) boards.
++The application is called [opensesame](https://opensesame.libelektra.org).
+ It is heavily relying on Elektra and [ansible-libelektra](https://github.com/ElektraInitiative/ansible-libelektra).
+ 
+ In the initial release [opensesame](https://opensesame.libelektra.org) already allows:
+ 
+-- [x] opening (garage) doors
++- [x] opening (garage) doors via a novel PIN entry method: you can press and release buttons in any sequence
+ - [x] switching on entry lights
+ - [x] ringing doorbells
+ - [x] detection of fire
+ - [x] report events to Nextcloud chats (English and German)
+ 
+-To give a smooth experience when running such an application we develop Ansible scripts to customize the Olimex base images.
+-They allow changing the language, time zone, static network configuration etc.
++To give a smoother experience when running such an application we will develop Ansible scripts to customize the Olimex base images.
++They will allow changing the language, time zone, static network configuration etc.
+ 
+ Olimex likes this idea and will send us an A20 board.
+-A big thanks to Olimex.
++A big thanks to [Olimex](https://www.olimex.com).
+ 
+ ### Improving Elektra in FLOSS course
+ 
+ Also in the [upcoming term](https://tiss.tuwien.ac.at/course/courseDetails.xhtml?courseNr=194114&semester=2022W) Elektra will be object of study how FLOSS initiatives work.
+ Students will make improvements in Elektra as part of their homework, teamwork and, if chosen, also for their project.
+-Alternatively, they can also improve other other FLOSS initiatives.
++Alternatively, they can also improve other self-chosen FLOSS initiatives.
+ 
+ ## Plugins
+ 
+-The following section lists news about the [plugins](https://www.libelektra.org/plugins/readme) we updated in this release.
++The following text list news about the [plugins](https://www.libelektra.org/plugins/readme) we updated in this release.
++
++- fix unused-but-set-variable warnings. _(Markus Raab)_
+ 
+ ### csvstorage
+ 
+@@ -109,8 +112,8 @@ The text below summarizes updates to the [C (and C++)-based libraries](https://w
+ 
+ ## Bindings
+ 
+-Bindings allow you to utilize Elektra using [various programming languages](https://www.libelektra.org/bindings/readme). This section keeps
+-you up-to-date with the multi-language support provided by Elektra.
++Bindings allow you to utilize Elektra using [various programming languages](https://www.libelektra.org/bindings/readme).
++This section keeps you up-to-date with the multi-language support provided by Elektra.
+ 
+ ### Python
+ 
+@@ -178,6 +181,7 @@ We are currently working on following topics:
+ - Mounting SQL databases _(Florian Lindner @flo91)_
+ - Recording Configuration _(Maximilian Irlinger)_
+ - Ansible-Elektra _(Lukas Hartl)_ and _(Maximilian Irlinger)_
++- Configure Olimex Base Images _(Maximilian Irlinger)_
+ - Improving Build Server Infrastructure _(Lukas Hartl)_ and _(Maximilian Irlinger)_
+ - Improve Java Development Experience _(Michael Tucek)_
+ - Rewriting tools in C _(@hannes99)_
+@@ -200,30 +204,29 @@ Contact us via our [issue tracker](https://issues.libelektra.org).
+ 
+ ## Get the Release!
+ 
+-You can download the release from [here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.<<VERSION>>.tar.gz)
+-or [GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.<<VERSION>>.tar.gz?raw=true)
++You can download the release from
++
++- [here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.<<VERSION>>.tar.gz) or from
++- [GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.<<VERSION>>.tar.gz?raw=true)
+ 
+ The [hashsums are:](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.<<VERSION>>.tar.gz.hashsum?raw=true)
+ 
+ <<`scripts/generate-hashsums elektra-0.9.<<VERSION>>.tar.gz`>>
+ 
+ The release tarball is also available signed using GnuPG from
+-[here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.<<VERSION>>.tar.gz.gpg) or on
+-[GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.<<VERSION>>.tar.gz.gpg?raw=true)
++
++- [here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.<<VERSION>>.tar.gz.gpg) or on
++- [GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.<<VERSION>>.tar.gz.gpg?raw=true)
+ 
+ The following GPG Key was used to sign this release: 12CC44541E1B8AD9B66AFAD55262E7353324914A
+ 
+-Already built API-Docu can be found [here](https://doc.libelektra.org/api/0.9.<<VERSION>>/html/)
+-or on [GitHub](https://github.com/ElektraInitiative/doc/tree/master/api/0.9.<<VERSION>>).
++Already built API-Docu can be found [here](https://doc.libelektra.org/api/0.9.<<VERSION>>/html/) or on [GitHub](https://github.com/ElektraInitiative/doc/tree/master/api/0.9.<<VERSION>>).
+ 
+ ## Stay tuned!
+ 
+-Subscribe to the
+-[RSS feed](https://www.libelektra.org/news/feed.rss)
+-to always get the release notifications.
++Subscribe to the [RSS feed](https://www.libelektra.org/news/feed.rss) to always get the release notifications.
+ 
+-If you also want to participate, or for any questions and comments
+-please contact us via our issue tracker [on GitHub](http://issues.libelektra.org).
++If you also want to participate, or for any questions and comments please contact us via our issue tracker [on GitHub](http://issues.libelektra.org).
+ 
+ [Permalink to this NEWS entry](https://www.libelektra.org/news/0.9.<<VERSION>>-release)
+ 
+diff --git a/doc/todo/NEWS.md b/doc/todo/NEWS.md
+index c78a3b5d2..00b617f06 100644
+--- a/doc/todo/NEWS.md
++++ b/doc/todo/NEWS.md
+@@ -5,20 +5,18 @@ This release did not happen yet.
+ Please always update this file within **every PR**:
+ 
+ 1. write what changed
+-2. use links pointing to your change
++2. use links pointing to your change (See [Documentation Guidelines](/doc/contrib/documentation.md))
+ 3. add your name at the end of the line **Syntax:** _(your name)_
+ 
+ For example, Max would write:
+ 
+ ```
+-- Added a new [doc plugin](/src/plugins/doc) _(Max)_
++- Added a new [doc plugin](https://www.libelektra.org/plugins/doc) _(Max)_
+ ```
+ 
+-Pick a random line to write your changes to minimize
+-the chances of conflicts in this file.
++Pick a random line to write your changes to minimize the chances of conflicts in this file.
+ 
+-For non-trivial changes, you can choose to be
+-part of the highlighted changes.
++For non-trivial changes, you can choose to be part of the highlighted changes.
+ Please write a highlight section in this case.
+ 
+ After the horizontal line the release notes for the next version starts.
+@@ -31,8 +29,7 @@ We are proud to release Elektra 0.9.<<VERSION>>.
+ 
+ ## What is Elektra?
+ 
+-Elektra serves as a universal and secure framework to access
+-configuration settings in a global, hierarchical key database.
++Elektra serves as a universal and secure framework to access configuration settings in a global, hierarchical key database.
+ For more information, visit [https://libelektra.org](https://libelektra.org).
+ 
+ You can also read the news [on our website](https://www.libelektra.org/news/0.9.<<VERSION>>-release).
+@@ -59,7 +56,13 @@ docker run -it elektra/elektra
+ 
+ ## Plugins
+ 
+-The following section lists news about the [plugins](https://www.libelektra.org/plugins/readme) we updated in this release.
++The following text lists news about the [plugins](https://www.libelektra.org/plugins/readme) we updated in this release.
++
++### <<Plugin>>
++
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ### <<Plugin>>
+ 
+@@ -143,10 +146,34 @@ The text below summarizes updates to the [C (and C++)-based libraries](https://w
+ - <<TODO>>
+ - <<TODO>>
+ 
++### <<Library>>
++
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
++
++### <<Library>>
++
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
++
+ ## Bindings
+ 
+-Bindings allow you to utilize Elektra using [various programming languages](https://www.libelektra.org/bindings/readme). This section keeps
+-you up-to-date with the multi-language support provided by Elektra.
++Bindings allow you to utilize Elektra using [various programming languages](https://www.libelektra.org/bindings/readme).
++This section keeps you up-to-date with the multi-language support provided by Elektra.
++
++### <<Binding>>
++
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
++
++### <<Binding>>
++
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ### <<Binding>>
+ 
+@@ -186,6 +213,12 @@ you up-to-date with the multi-language support provided by Elektra.
+ - <<TODO>>
+ - <<TODO>>
+ 
++### <<Tool>>
++
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
++
+ ## Scripts
+ 
+ - <<TODO>>
+@@ -206,6 +239,8 @@ you up-to-date with the multi-language support provided by Elektra.
+ - <<TODO>>
+ - <<TODO>>
+ - <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ## Documentation
+ 
+@@ -236,9 +271,21 @@ you up-to-date with the multi-language support provided by Elektra.
+ - <<TODO>>
+ - <<TODO>>
+ - <<TODO>>
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ### Tutorials
+ 
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ - <<TODO>>
+ - <<TODO>>
+ - <<TODO>>
+@@ -254,6 +301,9 @@ you up-to-date with the multi-language support provided by Elektra.
+ - <<TODO>>
+ - <<TODO>>
+ - <<TODO>>
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ## Tests
+ 
+@@ -281,6 +331,8 @@ you up-to-date with the multi-language support provided by Elektra.
+ - <<TODO>>
+ - <<TODO>>
+ - <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ 
+ ### C
+ 
+@@ -333,6 +385,15 @@ you up-to-date with the multi-language support provided by Elektra.
+ 
+ ### Jenkins
+ 
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
++- <<TODO>>
+ - <<TODO>>
+ - <<TODO>>
+ - <<TODO>>
+@@ -360,8 +421,7 @@ you up-to-date with the multi-language support provided by Elektra.
+ 
+ ## Website
+ 
+-The website is generated from the repository, so all information about
+-plugins, bindings and tools are always up-to-date. Furthermore, we changed:
++The website is generated from the repository, so all information about plugins, bindings and tools are always up-to-date. Furthermore, we changed:
+ 
+ - <<TODO>>
+ - <<TODO>>
+@@ -396,30 +456,32 @@ Contact us via our [issue tracker](https://issues.libelektra.org).
+ 
+ ## Get the Release!
+ 
+-You can download the release from [here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.<<VERSION>>.tar.gz)
+-or [GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.<<VERSION>>.tar.gz?raw=true)
++You can download the release from
++
++- [here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.<<VERSION>>.tar.gz) or
++- [GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.<<VERSION>>.tar.gz?raw=true)
+ 
+ The [hashsums are:](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.<<VERSION>>.tar.gz.hashsum?raw=true)
+ 
+ <<`scripts/generate-hashsums elektra-0.9.<<VERSION>>.tar.gz`>>
+ 
+ The release tarball is also available signed using GnuPG from
+-[here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.<<VERSION>>.tar.gz.gpg) or on
+-[GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.<<VERSION>>.tar.gz.gpg?raw=true)
++
++- [here](https://www.libelektra.org/ftp/elektra/releases/elektra-0.9.<<VERSION>>.tar.gz.gpg) or
++- [GitHub](https://github.com/ElektraInitiative/ftp/blob/master/releases/elektra-0.9.<<VERSION>>.tar.gz.gpg?raw=true)
+ 
+ The following GPG Key was used to sign this release: 12CC44541E1B8AD9B66AFAD55262E7353324914A
+ 
+-Already built API-Docu can be found [here](https://doc.libelektra.org/api/0.9.<<VERSION>>/html/)
+-or on [GitHub](https://github.com/ElektraInitiative/doc/tree/master/api/0.9.<<VERSION>>).
++Already built API-Docu can be found
++
++- [here](https://doc.libelektra.org/api/0.9.<<VERSION>>/html/) or
++- [GitHub](https://github.com/ElektraInitiative/doc/tree/master/api/0.9.<<VERSION>>).
+ 
+ ## Stay tuned!
+ 
+-Subscribe to the
+-[RSS feed](https://www.libelektra.org/news/feed.rss)
+-to always get the release notifications.
++Subscribe to the [RSS feed](https://www.libelektra.org/news/feed.rss) to always get the release notifications.
+ 
+-If you also want to participate, or for any questions and comments
+-please contact us via our issue tracker [on GitHub](http://issues.libelektra.org).
++If you also want to participate, or for any questions and comments, please contact us via our issue tracker [on GitHub](http://issues.libelektra.org).
+ 
+ [Permalink to this NEWS entry](https://www.libelektra.org/news/0.9.<<VERSION>>-release)
+ 
