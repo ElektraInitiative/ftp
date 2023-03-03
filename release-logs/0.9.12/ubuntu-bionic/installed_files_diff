@@ -1,0 +1,1401 @@
+104d103
+< lib/elektra/libelektra-backend.so
+108a108
+> lib/elektra/libelektra-cache.so
+148a149
+> lib/elektra/libelektra-list.so
+154,155c155,156
+< lib/elektra/libelektra-missing.so
+< lib/elektra/libelektra-modules.so
+---
+> lib/elektra/libelektra-mmapstorage.so
+> lib/elektra/libelektra-mmapstorage_crc.so
+197d197
+< lib/elektra/libelektra-version.so
+212a213
+> lib/elektra/tool_exec/check_doc
+232d232
+< lib/elektra/tool_exec/check_shellcheck
+234d233
+< lib/elektra/tool_exec/check_spec_set
+272c271
+< lib/elektra/tool_exec/test_backends
+---
+> lib/elektra/tool_exec/test_backend
+281d279
+< lib/elektra/tool_exec/test_hooks
+284,285d281
+< lib/elektra/tool_exec/test_keyCopy_memerror
+< lib/elektra/tool_exec/test_key_cow
+287d282
+< lib/elektra/tool_exec/test_keyset_cow
+291a287,288
+> lib/elektra/tool_exec/test_mount
+> lib/elektra/tool_exec/test_mountsplit
+301a299,301
+> lib/elektra/tool_exec/test_split
+> lib/elektra/tool_exec/test_splitget
+> lib/elektra/tool_exec/test_splitset
+302a303
+> lib/elektra/tool_exec/test_trie
+329d329
+< lib/elektra/tool_exec/testmod_backend
+332a333
+> lib/elektra/tool_exec/testmod_cache
+340d340
+< lib/elektra/tool_exec/testmod_desktop
+362a363
+> lib/elektra/tool_exec/testmod_list
+367c368,369
+< lib/elektra/tool_exec/testmod_modules
+---
+> lib/elektra/tool_exec/testmod_mmapstorage
+> lib/elektra/tool_exec/testmod_mmapstorage_crc
+389d390
+< lib/elektra/tool_exec/testmod_version
+416c417
+< lib/libelektra-core.so.0.9.12
+---
+> lib/libelektra-core.so.0.9.11
+419c420
+< lib/libelektra-ease.so.0.9.12
+---
+> lib/libelektra-ease.so.0.9.11
+422c423
+< lib/libelektra-full.so.0.9.12
+---
+> lib/libelektra-full.so.0.9.11
+425c426
+< lib/libelektra-globbing.so.0.9.12
+---
+> lib/libelektra-globbing.so.0.9.11
+428c429
+< lib/libelektra-highlevel.so.0.9.12
+---
+> lib/libelektra-highlevel.so.0.9.11
+431c432
+< lib/libelektra-invoke.so.0.9.12
+---
+> lib/libelektra-invoke.so.0.9.11
+434c435
+< lib/libelektra-io.so.0.9.12
+---
+> lib/libelektra-io.so.0.9.11
+437c438
+< lib/libelektra-kdb.so.0.9.12
+---
+> lib/libelektra-kdb.so.0.9.11
+440c441
+< lib/libelektra-merge.so.0.9.12
+---
+> lib/libelektra-merge.so.0.9.11
+443c444
+< lib/libelektra-meta.so.0.9.12
+---
+> lib/libelektra-meta.so.0.9.11
+446c447
+< lib/libelektra-notification.so.0.9.12
+---
+> lib/libelektra-notification.so.0.9.11
+449c450
+< lib/libelektra-opts.so.0.9.12
+---
+> lib/libelektra-opts.so.0.9.11
+452c453
+< lib/libelektra-plugin.so.0.9.12
+---
+> lib/libelektra-plugin.so.0.9.11
+455c456
+< lib/libelektra-pluginprocess.so.0.9.12
+---
+> lib/libelektra-pluginprocess.so.0.9.11
+459c460
+< lib/libelektra-utility.so.0.9.12
+---
+> lib/libelektra-utility.so.0.9.11
+465c466
+< lib/libelektraintercept-env.so.0.9.12
+---
+> lib/libelektraintercept-env.so.0.9.11
+467c468
+< lib/libelektratools-full.so.0.9.12
+---
+> lib/libelektratools-full.so.0.9.11
+471c472
+< lib/libelektratools.so.0.9.12
+---
+> lib/libelektratools.so.0.9.11
+539,540c540,541
+< share/doc/elektra-api/html/autotoc_md1010.html
+< share/doc/elektra-api/html/autotoc_md1017.html
+---
+> share/doc/elektra-api/html/autotoc_md1003.html
+> share/doc/elektra-api/html/autotoc_md115.html
+542,551c543,552
+< share/doc/elektra-api/html/autotoc_md119.html
+< share/doc/elektra-api/html/autotoc_md122.html
+< share/doc/elektra-api/html/autotoc_md126.html
+< share/doc/elektra-api/html/autotoc_md140.html
+< share/doc/elektra-api/html/autotoc_md157.html
+< share/doc/elektra-api/html/autotoc_md166.html
+< share/doc/elektra-api/html/autotoc_md171.html
+< share/doc/elektra-api/html/autotoc_md184.html
+< share/doc/elektra-api/html/autotoc_md189.html
+< share/doc/elektra-api/html/autotoc_md194.html
+---
+> share/doc/elektra-api/html/autotoc_md120.html
+> share/doc/elektra-api/html/autotoc_md124.html
+> share/doc/elektra-api/html/autotoc_md138.html
+> share/doc/elektra-api/html/autotoc_md155.html
+> share/doc/elektra-api/html/autotoc_md164.html
+> share/doc/elektra-api/html/autotoc_md169.html
+> share/doc/elektra-api/html/autotoc_md182.html
+> share/doc/elektra-api/html/autotoc_md187.html
+> share/doc/elektra-api/html/autotoc_md192.html
+> share/doc/elektra-api/html/autotoc_md211.html
+554,568c555,569
+< share/doc/elektra-api/html/autotoc_md217.html
+< share/doc/elektra-api/html/autotoc_md222.html
+< share/doc/elektra-api/html/autotoc_md243.html
+< share/doc/elektra-api/html/autotoc_md248.html
+< share/doc/elektra-api/html/autotoc_md263.html
+< share/doc/elektra-api/html/autotoc_md276.html
+< share/doc/elektra-api/html/autotoc_md279.html
+< share/doc/elektra-api/html/autotoc_md284.html
+< share/doc/elektra-api/html/autotoc_md289.html
+< share/doc/elektra-api/html/autotoc_md294.html
+< share/doc/elektra-api/html/autotoc_md299.html
+< share/doc/elektra-api/html/autotoc_md309.html
+< share/doc/elektra-api/html/autotoc_md314.html
+< share/doc/elektra-api/html/autotoc_md319.html
+< share/doc/elektra-api/html/autotoc_md337.html
+---
+> share/doc/elektra-api/html/autotoc_md220.html
+> share/doc/elektra-api/html/autotoc_md241.html
+> share/doc/elektra-api/html/autotoc_md246.html
+> share/doc/elektra-api/html/autotoc_md261.html
+> share/doc/elektra-api/html/autotoc_md274.html
+> share/doc/elektra-api/html/autotoc_md277.html
+> share/doc/elektra-api/html/autotoc_md282.html
+> share/doc/elektra-api/html/autotoc_md287.html
+> share/doc/elektra-api/html/autotoc_md292.html
+> share/doc/elektra-api/html/autotoc_md297.html
+> share/doc/elektra-api/html/autotoc_md307.html
+> share/doc/elektra-api/html/autotoc_md312.html
+> share/doc/elektra-api/html/autotoc_md317.html
+> share/doc/elektra-api/html/autotoc_md335.html
+> share/doc/elektra-api/html/autotoc_md342.html
+570c571
+< share/doc/elektra-api/html/autotoc_md346.html
+---
+> share/doc/elektra-api/html/autotoc_md362.html
+572,584c573,584
+< share/doc/elektra-api/html/autotoc_md366.html
+< share/doc/elektra-api/html/autotoc_md376.html
+< share/doc/elektra-api/html/autotoc_md379.html
+< share/doc/elektra-api/html/autotoc_md395.html
+< share/doc/elektra-api/html/autotoc_md404.html
+< share/doc/elektra-api/html/autotoc_md417.html
+< share/doc/elektra-api/html/autotoc_md427.html
+< share/doc/elektra-api/html/autotoc_md431.html
+< share/doc/elektra-api/html/autotoc_md434.html
+< share/doc/elektra-api/html/autotoc_md440.html
+< share/doc/elektra-api/html/autotoc_md445.html
+< share/doc/elektra-api/html/autotoc_md449.html
+< share/doc/elektra-api/html/autotoc_md477.html
+---
+> share/doc/elektra-api/html/autotoc_md374.html
+> share/doc/elektra-api/html/autotoc_md377.html
+> share/doc/elektra-api/html/autotoc_md393.html
+> share/doc/elektra-api/html/autotoc_md402.html
+> share/doc/elektra-api/html/autotoc_md415.html
+> share/doc/elektra-api/html/autotoc_md425.html
+> share/doc/elektra-api/html/autotoc_md429.html
+> share/doc/elektra-api/html/autotoc_md433.html
+> share/doc/elektra-api/html/autotoc_md436.html
+> share/doc/elektra-api/html/autotoc_md442.html
+> share/doc/elektra-api/html/autotoc_md447.html
+> share/doc/elektra-api/html/autotoc_md451.html
+585a586
+> share/doc/elektra-api/html/autotoc_md49.html
+587d587
+< share/doc/elektra-api/html/autotoc_md50.html
+589,606c589,605
+< share/doc/elektra-api/html/autotoc_md515.html
+< share/doc/elektra-api/html/autotoc_md523.html
+< share/doc/elektra-api/html/autotoc_md531.html
+< share/doc/elektra-api/html/autotoc_md536.html
+< share/doc/elektra-api/html/autotoc_md552.html
+< share/doc/elektra-api/html/autotoc_md562.html
+< share/doc/elektra-api/html/autotoc_md564.html
+< share/doc/elektra-api/html/autotoc_md571.html
+< share/doc/elektra-api/html/autotoc_md58.html
+< share/doc/elektra-api/html/autotoc_md581.html
+< share/doc/elektra-api/html/autotoc_md59.html
+< share/doc/elektra-api/html/autotoc_md590.html
+< share/doc/elektra-api/html/autotoc_md593.html
+< share/doc/elektra-api/html/autotoc_md595.html
+< share/doc/elektra-api/html/autotoc_md602.html
+< share/doc/elektra-api/html/autotoc_md618.html
+< share/doc/elektra-api/html/autotoc_md625.html
+< share/doc/elektra-api/html/autotoc_md649.html
+---
+> share/doc/elektra-api/html/autotoc_md522.html
+> share/doc/elektra-api/html/autotoc_md530.html
+> share/doc/elektra-api/html/autotoc_md535.html
+> share/doc/elektra-api/html/autotoc_md551.html
+> share/doc/elektra-api/html/autotoc_md561.html
+> share/doc/elektra-api/html/autotoc_md563.html
+> share/doc/elektra-api/html/autotoc_md57.html
+> share/doc/elektra-api/html/autotoc_md570.html
+> share/doc/elektra-api/html/autotoc_md580.html
+> share/doc/elektra-api/html/autotoc_md589.html
+> share/doc/elektra-api/html/autotoc_md592.html
+> share/doc/elektra-api/html/autotoc_md594.html
+> share/doc/elektra-api/html/autotoc_md601.html
+> share/doc/elektra-api/html/autotoc_md617.html
+> share/doc/elektra-api/html/autotoc_md624.html
+> share/doc/elektra-api/html/autotoc_md647.html
+> share/doc/elektra-api/html/autotoc_md648.html
+608,612c607,611
+< share/doc/elektra-api/html/autotoc_md652.html
+< share/doc/elektra-api/html/autotoc_md659.html
+< share/doc/elektra-api/html/autotoc_md675.html
+< share/doc/elektra-api/html/autotoc_md686.html
+< share/doc/elektra-api/html/autotoc_md690.html
+---
+> share/doc/elektra-api/html/autotoc_md657.html
+> share/doc/elektra-api/html/autotoc_md673.html
+> share/doc/elektra-api/html/autotoc_md684.html
+> share/doc/elektra-api/html/autotoc_md688.html
+> share/doc/elektra-api/html/autotoc_md694.html
+614,617c613,616
+< share/doc/elektra-api/html/autotoc_md698.html
+< share/doc/elektra-api/html/autotoc_md704.html
+< share/doc/elektra-api/html/autotoc_md717.html
+< share/doc/elektra-api/html/autotoc_md72.html
+---
+> share/doc/elektra-api/html/autotoc_md70.html
+> share/doc/elektra-api/html/autotoc_md702.html
+> share/doc/elektra-api/html/autotoc_md715.html
+> share/doc/elektra-api/html/autotoc_md721.html
+620,640c619,642
+< share/doc/elektra-api/html/autotoc_md727.html
+< share/doc/elektra-api/html/autotoc_md734.html
+< share/doc/elektra-api/html/autotoc_md738.html
+< share/doc/elektra-api/html/autotoc_md76.html
+< share/doc/elektra-api/html/autotoc_md82.html
+< share/doc/elektra-api/html/autotoc_md83.html
+< share/doc/elektra-api/html/autotoc_md845.html
+< share/doc/elektra-api/html/autotoc_md849.html
+< share/doc/elektra-api/html/autotoc_md856.html
+< share/doc/elektra-api/html/autotoc_md862.html
+< share/doc/elektra-api/html/autotoc_md867.html
+< share/doc/elektra-api/html/autotoc_md872.html
+< share/doc/elektra-api/html/autotoc_md873.html
+< share/doc/elektra-api/html/autotoc_md875.html
+< share/doc/elektra-api/html/autotoc_md882.html
+< share/doc/elektra-api/html/autotoc_md89.html
+< share/doc/elektra-api/html/autotoc_md892.html
+< share/doc/elektra-api/html/autotoc_md897.html
+< share/doc/elektra-api/html/autotoc_md92.html
+< share/doc/elektra-api/html/autotoc_md928.html
+< share/doc/elektra-api/html/autotoc_md98.html
+---
+> share/doc/elektra-api/html/autotoc_md732.html
+> share/doc/elektra-api/html/autotoc_md736.html
+> share/doc/elektra-api/html/autotoc_md74.html
+> share/doc/elektra-api/html/autotoc_md80.html
+> share/doc/elektra-api/html/autotoc_md81.html
+> share/doc/elektra-api/html/autotoc_md843.html
+> share/doc/elektra-api/html/autotoc_md847.html
+> share/doc/elektra-api/html/autotoc_md854.html
+> share/doc/elektra-api/html/autotoc_md859.html
+> share/doc/elektra-api/html/autotoc_md864.html
+> share/doc/elektra-api/html/autotoc_md869.html
+> share/doc/elektra-api/html/autotoc_md87.html
+> share/doc/elektra-api/html/autotoc_md871.html
+> share/doc/elektra-api/html/autotoc_md878.html
+> share/doc/elektra-api/html/autotoc_md883.html
+> share/doc/elektra-api/html/autotoc_md90.html
+> share/doc/elektra-api/html/autotoc_md914.html
+> share/doc/elektra-api/html/autotoc_md96.html
+> share/doc/elektra-api/html/autotoc_md996.html
+> share/doc/elektra-api/html/backend_8c.html
+> share/doc/elektra-api/html/backend_8c__incl.dot
+> share/doc/elektra-api/html/backend_8c__incl.map
+> share/doc/elektra-api/html/backend_8c__incl.md5
+> share/doc/elektra-api/html/backend_8c__incl.png
+678,682d679
+< share/doc/elektra-api/html/backends_8c.html
+< share/doc/elektra-api/html/backends_8c__incl.dot
+< share/doc/elektra-api/html/backends_8c__incl.map
+< share/doc/elektra-api/html/backends_8c__incl.md5
+< share/doc/elektra-api/html/backends_8c__incl.png
+797,806d793
+< share/doc/elektra-api/html/classkdb_1_1tools_1_1CommitPlugins-members.html
+< share/doc/elektra-api/html/classkdb_1_1tools_1_1CommitPlugins.html
+< share/doc/elektra-api/html/classkdb_1_1tools_1_1CommitPlugins__coll__graph.dot
+< share/doc/elektra-api/html/classkdb_1_1tools_1_1CommitPlugins__coll__graph.map
+< share/doc/elektra-api/html/classkdb_1_1tools_1_1CommitPlugins__coll__graph.md5
+< share/doc/elektra-api/html/classkdb_1_1tools_1_1CommitPlugins__coll__graph.png
+< share/doc/elektra-api/html/classkdb_1_1tools_1_1CommitPlugins__inherit__graph.dot
+< share/doc/elektra-api/html/classkdb_1_1tools_1_1CommitPlugins__inherit__graph.map
+< share/doc/elektra-api/html/classkdb_1_1tools_1_1CommitPlugins__inherit__graph.md5
+< share/doc/elektra-api/html/classkdb_1_1tools_1_1CommitPlugins__inherit__graph.png
+1064,1068d1050
+< share/doc/elektra-api/html/cow_8c.html
+< share/doc/elektra-api/html/cow_8c__incl.dot
+< share/doc/elektra-api/html/cow_8c__incl.map
+< share/doc/elektra-api/html/cow_8c__incl.md5
+< share/doc/elektra-api/html/cow_8c__incl.png
+1098,1100c1080,1082
+< share/doc/elektra-api/html/dir_000015_000013.html
+< share/doc/elektra-api/html/dir_000015_000024.html
+< share/doc/elektra-api/html/dir_000016_000033.html
+---
+> share/doc/elektra-api/html/dir_000015_000033.html
+> share/doc/elektra-api/html/dir_000016_000013.html
+> share/doc/elektra-api/html/dir_000016_000024.html
+1107d1088
+< share/doc/elektra-api/html/dir_000022_000033.html
+1396a1378
+> share/doc/elektra-api/html/doc_GIT_md.html
+1398d1379
+< share/doc/elektra-api/html/doc_Git_md.html
+1409,1488c1390,1463
+< share/doc/elektra-api/html/doc_contrib_README_md.html
+< share/doc/elektra-api/html/doc_contrib_api_review_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_README_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_kdbClose_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_kdbGet_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_kdbOpen_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_kdbSet_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyAddBaseName_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyAddName_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyBaseName_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyClear_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyCmp_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyCopyAllMeta_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyCopyMeta_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyCopy_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyCurrentMeta_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyDecRef_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyDel_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyDup_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyGetBaseNameSize_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyGetBaseName_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyGetBinary_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyGetMeta_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyGetNameSize_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyGetName_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyGetNamespace_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyGetRef_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyGetString_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyGetUnescapedNameSize_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyGetValueSize_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyIncRef_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyIsBelowOrSame_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyIsBelow_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyIsBinary_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyIsDirectlyBelow_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyIsLocked_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyIsString_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyLock_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyMeta_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyName_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyNeedSync_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyNew_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyNextMeta_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyRewindMeta_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keySetBaseName_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keySetBinary_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keySetMeta_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keySetName_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keySetNamespace_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keySetString_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyString_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyUnescapedName_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyVNew_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_keyValue_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksAppendKey_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksAppend_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksAtCursor_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksClear_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksCopy_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksCurrent_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksCut_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksDel_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksDup_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksGetCursor_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksGetSize_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksHead_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksLookupByName_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksLookup_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksNeedSync_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksNew_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksNext_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksPop_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksRewind_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksSetCursor_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksTail_md.html
+< share/doc/elektra-api/html/doc_contrib_api_reviews_core_ksVNew_md.html
+< share/doc/elektra-api/html/doc_contrib_api_usecases_README_md.html
+< share/doc/elektra-api/html/doc_contrib_api_usecases_core_md.html
+< share/doc/elektra-api/html/doc_contrib_api_usecases_kdb_md.html
+< share/doc/elektra-api/html/doc_contrib_copy_on_write_md.html
+---
+> share/doc/elektra-api/html/doc_api_review_README_md.html
+> share/doc/elektra-api/html/doc_api_review_core_kdbClose_md.html
+> share/doc/elektra-api/html/doc_api_review_core_kdbGet_md.html
+> share/doc/elektra-api/html/doc_api_review_core_kdbOpen_md.html
+> share/doc/elektra-api/html/doc_api_review_core_kdbSet_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyAddBaseName_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyAddName_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyBaseName_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyClear_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyCmp_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyCopyAllMeta_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyCopyMeta_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyCopy_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyCurrentMeta_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyDecRef_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyDel_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyDup_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyGetBaseNameSize_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyGetBaseName_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyGetBinary_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyGetMeta_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyGetNameSize_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyGetName_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyGetNamespace_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyGetRef_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyGetString_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyGetUnescapedNameSize_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyGetValueSize_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyIncRef_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyIsBelowOrSame_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyIsBelow_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyIsBinary_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyIsDirectlyBelow_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyIsLocked_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyIsString_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyLock_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyMeta_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyName_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyNeedSync_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyNew_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyNextMeta_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyRewindMeta_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keySetBaseName_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keySetBinary_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keySetMeta_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keySetName_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keySetNamespace_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keySetString_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyString_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyUnescapedName_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyVNew_md.html
+> share/doc/elektra-api/html/doc_api_review_core_keyValue_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksAppendKey_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksAppend_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksAtCursor_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksClear_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksCopy_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksCurrent_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksCut_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksDel_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksDup_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksGetCursor_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksGetSize_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksHead_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksLookupByName_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksLookup_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksNeedSync_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksNew_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksNext_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksPop_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksRewind_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksSetCursor_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksTail_md.html
+> share/doc/elektra-api/html/doc_api_review_core_ksVNew_md.html
+1490,1569d1464
+< share/doc/elektra-api/html/doc_contrib_mmapstorage_md.html
+< share/doc/elektra-api/html/doc_decisions_0_drafts_builder_functions_md.html
+< share/doc/elektra-api/html/doc_decisions_0_drafts_commit_function_md.html
+< share/doc/elektra-api/html/doc_decisions_0_drafts_constructor_functions_md.html
+< share/doc/elektra-api/html/doc_decisions_0_drafts_man_pages_md.html
+< share/doc/elektra-api/html/doc_decisions_0_drafts_metakey_semantics_md.html
+< share/doc/elektra-api/html/doc_decisions_0_drafts_notifications_md.html
+< share/doc/elektra-api/html/doc_decisions_0_drafts_operation_sequences_md.html
+< share/doc/elektra-api/html/doc_decisions_0_drafts_plugin_contract_function_md.html
+< share/doc/elektra-api/html/doc_decisions_0_drafts_readonly_keynames_md.html
+< share/doc/elektra-api/html/doc_decisions_0_drafts_transformations_md.html
+< share/doc/elektra-api/html/doc_decisions_0a_postponed_global_validation_md.html
+< share/doc/elektra-api/html/doc_decisions_0a_postponed_plugin_struct_md.html
+< share/doc/elektra-api/html/doc_decisions_0a_postponed_plugin_variants_md.html
+< share/doc/elektra-api/html/doc_decisions_0a_postponed_validation_md.html
+< share/doc/elektra-api/html/doc_decisions_0b_rejected_cmake_spec_md.html
+< share/doc/elektra-api/html/doc_decisions_0b_rejected_elektra_web_pubsub_md.html
+< share/doc/elektra-api/html/doc_decisions_0b_rejected_null_pointer_checks_md.html
+< share/doc/elektra-api/html/doc_decisions_0b_rejected_separate_key_name_md.html
+< share/doc/elektra-api/html/doc_decisions_0b_rejected_vendor_spec_md.html
+< share/doc/elektra-api/html/doc_decisions_1_problem_clear_change_tracking_md.html
+< share/doc/elektra-api/html/doc_decisions_1_problem_clear_error_handling_md.html
+< share/doc/elektra-api/html/doc_decisions_1_problem_clear_error_semantics_md.html
+< share/doc/elektra-api/html/doc_decisions_1_problem_clear_key_string_return_value_md.html
+< share/doc/elektra-api/html/doc_decisions_1_problem_clear_spec_expressiveness_md.html
+< share/doc/elektra-api/html/doc_decisions_1_problem_clear_spec_metadata_md.html
+< share/doc/elektra-api/html/doc_decisions_2_solutions_clear_binary_md.html
+< share/doc/elektra-api/html/doc_decisions_2_solutions_clear_functions_with_buffers_md.html
+< share/doc/elektra-api/html/doc_decisions_2_solutions_clear_iterators_md.html
+< share/doc/elektra-api/html/doc_decisions_2_solutions_clear_keyset_types_md.html
+< share/doc/elektra-api/html/doc_decisions_2_solutions_clear_simplify_api_md.html
+< share/doc/elektra-api/html/doc_decisions_4_decided_capabilities_md.html
+< share/doc/elektra-api/html/doc_decisions_4_decided_elektra_malloc_md.html
+< share/doc/elektra-api/html/doc_decisions_4_decided_elektra_prefix_md.html
+< share/doc/elektra-api/html/doc_decisions_4_decided_header_file_structure_md.html
+< share/doc/elektra-api/html/doc_decisions_4_decided_header_include_md.html
+< share/doc/elektra-api/html/doc_decisions_4_decided_internal_cache_md.html
+< share/doc/elektra-api/html/doc_decisions_4_decided_iterating_name_parts_md.html
+< share/doc/elektra-api/html/doc_decisions_4_decided_key_below_md.html
+< share/doc/elektra-api/html/doc_decisions_4_decided_keyname_md.html
+< share/doc/elektra-api/html/doc_decisions_4_decided_library_directory_structure_md.html
+< share/doc/elektra-api/html/doc_decisions_4_decided_library_split_md.html
+< share/doc/elektra-api/html/doc_decisions_4_decided_misc_namespace_md.html
+< share/doc/elektra-api/html/doc_decisions_4_decided_private_api_md.html
+< share/doc/elektra-api/html/doc_decisions_5_partially_implemented_array_md.html
+< share/doc/elektra-api/html/doc_decisions_5_partially_implemented_boolean_md.html
+< share/doc/elektra-api/html/doc_decisions_5_partially_implemented_decision_process_md.html
+< share/doc/elektra-api/html/doc_decisions_5_partially_implemented_hooks_md.html
+< share/doc/elektra-api/html/doc_decisions_5_partially_implemented_reference_counting_md.html
+< share/doc/elektra-api/html/doc_decisions_5_partially_implemented_warning_array_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_backend_plugin_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_base_name_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_bootstrap_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_cmake_plugins_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_copy_on_write_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_cryptograhic_key_handling_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_default_values_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_deferred_plugin_calls_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_elektra_web_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_elektra_web_recursive_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_empty_files_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_ensure_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_error_code_implementation_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_error_codes_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_error_message_format_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_global_keyset_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_high_level_api_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_highlevel_help_message_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_holes_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_logging_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_lookup_every_key_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_memory_layout_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_multiple_file_backends_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_null_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_relative_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_rest_api_documentation_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_script_testing_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_semantics_name_md.html
+< share/doc/elektra-api/html/doc_decisions_6_implemented_unit_testing_md.html
+< share/doc/elektra-api/html/doc_decisions_EXPLANATIONS_md.html
+1571,1572c1466,1527
+< share/doc/elektra-api/html/doc_decisions_STEPS_md.html
+< share/doc/elektra-api/html/doc_decisions_TEMPLATE_md.html
+---
+> share/doc/elektra-api/html/doc_decisions_array_md.html
+> share/doc/elektra-api/html/doc_decisions_base_name_md.html
+> share/doc/elektra-api/html/doc_decisions_binary_md.html
+> share/doc/elektra-api/html/doc_decisions_boolean_md.html
+> share/doc/elektra-api/html/doc_decisions_bootstrap_md.html
+> share/doc/elektra-api/html/doc_decisions_capabilities_md.html
+> share/doc/elektra-api/html/doc_decisions_cmake_plugins_md.html
+> share/doc/elektra-api/html/doc_decisions_cmake_spec_md.html
+> share/doc/elektra-api/html/doc_decisions_commit_function_md.html
+> share/doc/elektra-api/html/doc_decisions_cryptograhic_key_handling_md.html
+> share/doc/elektra-api/html/doc_decisions_default_values_md.html
+> share/doc/elektra-api/html/doc_decisions_deferred_plugin_calls_md.html
+> share/doc/elektra-api/html/doc_decisions_elektra_malloc_md.html
+> share/doc/elektra-api/html/doc_decisions_elektra_prefix_md.html
+> share/doc/elektra-api/html/doc_decisions_elektra_web_md.html
+> share/doc/elektra-api/html/doc_decisions_elektra_web_pubsub_md.html
+> share/doc/elektra-api/html/doc_decisions_elektra_web_recursive_md.html
+> share/doc/elektra-api/html/doc_decisions_empty_files_md.html
+> share/doc/elektra-api/html/doc_decisions_ensure_md.html
+> share/doc/elektra-api/html/doc_decisions_error_code_implementation_md.html
+> share/doc/elektra-api/html/doc_decisions_error_codes_md.html
+> share/doc/elektra-api/html/doc_decisions_error_handling_md.html
+> share/doc/elektra-api/html/doc_decisions_error_message_format_md.html
+> share/doc/elektra-api/html/doc_decisions_error_semantics_md.html
+> share/doc/elektra-api/html/doc_decisions_functions_with_buffers_md.html
+> share/doc/elektra-api/html/doc_decisions_global_keyset_md.html
+> share/doc/elektra-api/html/doc_decisions_global_plugins_md.html
+> share/doc/elektra-api/html/doc_decisions_global_validation_md.html
+> share/doc/elektra-api/html/doc_decisions_header_file_structure_md.html
+> share/doc/elektra-api/html/doc_decisions_high_level_api_md.html
+> share/doc/elektra-api/html/doc_decisions_highlevel_help_message_md.html
+> share/doc/elektra-api/html/doc_decisions_holes_md.html
+> share/doc/elektra-api/html/doc_decisions_internal_cache_md.html
+> share/doc/elektra-api/html/doc_decisions_iterating_name_parts_md.html
+> share/doc/elektra-api/html/doc_decisions_iterators_md.html
+> share/doc/elektra-api/html/doc_decisions_key_below_md.html
+> share/doc/elektra-api/html/doc_decisions_key_string_return_value_md.html
+> share/doc/elektra-api/html/doc_decisions_library_directory_structure_md.html
+> share/doc/elektra-api/html/doc_decisions_logging_md.html
+> share/doc/elektra-api/html/doc_decisions_lookup_every_key_md.html
+> share/doc/elektra-api/html/doc_decisions_memory_layout_md.html
+> share/doc/elektra-api/html/doc_decisions_multiple_file_backends_md.html
+> share/doc/elektra-api/html/doc_decisions_notifications_md.html
+> share/doc/elektra-api/html/doc_decisions_null_md.html
+> share/doc/elektra-api/html/doc_decisions_null_pointer_checks_md.html
+> share/doc/elektra-api/html/doc_decisions_plugin_variants_md.html
+> share/doc/elektra-api/html/doc_decisions_private_api_md.html
+> share/doc/elektra-api/html/doc_decisions_reference_counting_md.html
+> share/doc/elektra-api/html/doc_decisions_relative_md.html
+> share/doc/elektra-api/html/doc_decisions_rest_api_documentation_md.html
+> share/doc/elektra-api/html/doc_decisions_script_testing_md.html
+> share/doc/elektra-api/html/doc_decisions_semantics_name_md.html
+> share/doc/elektra-api/html/doc_decisions_separate_key_name_md.html
+> share/doc/elektra-api/html/doc_decisions_simplify_api_md.html
+> share/doc/elektra-api/html/doc_decisions_spec_expressiveness_md.html
+> share/doc/elektra-api/html/doc_decisions_spec_metadata_md.html
+> share/doc/elektra-api/html/doc_decisions_store_name_md.html
+> share/doc/elektra-api/html/doc_decisions_template_md.html
+> share/doc/elektra-api/html/doc_decisions_unit_testing_md.html
+> share/doc/elektra-api/html/doc_decisions_validation_md.html
+> share/doc/elektra-api/html/doc_decisions_vendor_spec_md.html
+> share/doc/elektra-api/html/doc_decisions_warning_array_md.html
+1575d1529
+< share/doc/elektra-api/html/doc_dev_backend-plugins_md.html
+1581,1582d1534
+< share/doc/elektra-api/html/doc_dev_history_md.html
+< share/doc/elektra-api/html/doc_dev_hooks_md.html
+1585d1536
+< share/doc/elektra-api/html/doc_dev_kdb-operations_md.html
+1587d1537
+< share/doc/elektra-api/html/doc_dev_mountpoints_md.html
+1591d1540
+< share/doc/elektra-api/html/doc_doxygen_README_md.html
+1630a1580,1581
+> share/doc/elektra-api/html/doc_help_kdb-global-mount_md.html
+> share/doc/elektra-api/html/doc_help_kdb-global-umount_md.html
+1705d1655
+< share/doc/elektra-api/html/doc_news_2022-10-05_0_9_11_md.html
+1741d1690
+< share/doc/elektra-api/html/doc_tutorials_using_podman_instead_of_docker_md.html
+1743,1757d1691
+< share/doc/elektra-api/html/doc_usecases_core_README_md.html
+< share/doc/elektra-api/html/doc_usecases_core_UC_key_create_md.html
+< share/doc/elektra-api/html/doc_usecases_core_UC_key_meta_md.html
+< share/doc/elektra-api/html/doc_usecases_core_UC_key_name_md.html
+< share/doc/elektra-api/html/doc_usecases_core_UC_key_namespace_md.html
+< share/doc/elektra-api/html/doc_usecases_core_UC_key_value_md.html
+< share/doc/elektra-api/html/doc_usecases_core_UC_keyname_hierarchy_md.html
+< share/doc/elektra-api/html/doc_usecases_core_UC_keyname_ordering_md.html
+< share/doc/elektra-api/html/doc_usecases_core_UC_keyset_create_md.html
+< share/doc/elektra-api/html/doc_usecases_core_UC_keyset_index_access_md.html
+< share/doc/elektra-api/html/doc_usecases_core_UC_keyset_insert_md.html
+< share/doc/elektra-api/html/doc_usecases_core_UC_keyset_lookup_cascading_md.html
+< share/doc/elektra-api/html/doc_usecases_core_UC_keyset_lookup_direct_md.html
+< share/doc/elektra-api/html/doc_usecases_core_UC_keyset_lookup_hierarchy_md.html
+< share/doc/elektra-api/html/doc_usecases_core_UC_keyset_remove_md.html
+1767,1783d1700
+< share/doc/elektra-api/html/doc_usecases_kdb_README_md.html
+< share/doc/elektra-api/html/doc_usecases_kdb_UC_get_config_md.html
+< share/doc/elektra-api/html/doc_usecases_kdb_UC_modify_config_md.html
+< share/doc/elektra-api/html/doc_usecases_kdb_UC_set_config_md.html
+< share/doc/elektra-api/html/doc_usecases_kdb_UC_uptodate_config_md.html
+< share/doc/elektra-api/html/doc_usecases_kdb_UC_validate_config_md.html
+< share/doc/elektra-api/html/doc_usecases_record_elektra_README_md.html
+< share/doc/elektra-api/html/doc_usecases_record_elektra_UC_ansible-libelektra_assert_keys_md.html
+< share/doc/elektra-api/html/doc_usecases_record_elektra_UC_ansible-libelektra_merge_strategies_md.html
+< share/doc/elektra-api/html/doc_usecases_record_elektra_UC_ansible-libelektra_remove_keys_md.html
+< share/doc/elektra-api/html/doc_usecases_record_elektra_UC_ansible-libelektra_start_recording_md.html
+< share/doc/elektra-api/html/doc_usecases_record_elektra_UC_ansible_export_md.html
+< share/doc/elektra-api/html/doc_usecases_record_elektra_UC_change_notifications_md.html
+< share/doc/elektra-api/html/doc_usecases_record_elektra_UC_cmerge_conflict_keys_md.html
+< share/doc/elektra-api/html/doc_usecases_record_elektra_UC_different_hosts_md.html
+< share/doc/elektra-api/html/doc_usecases_record_elektra_UC_interactive_configuration_md.html
+< share/doc/elektra-api/html/doc_usecases_record_elektra_UC_record_changes_md.html
+1941a1859,1863
+> share/doc/elektra-api/html/global_8c.html
+> share/doc/elektra-api/html/global_8c__incl.dot
+> share/doc/elektra-api/html/global_8c__incl.map
+> share/doc/elektra-api/html/global_8c__incl.md5
+> share/doc/elektra-api/html/global_8c__incl.png
+1951a1874
+> share/doc/elektra-api/html/globals_func_c.html
+1953d1875
+< share/doc/elektra-api/html/globals_func_f.html
+1960a1883
+> share/doc/elektra-api/html/globals_func_t.html
+1967a1891
+> share/doc/elektra-api/html/globals_r.html
+2021,2025d1944
+< share/doc/elektra-api/html/hooks_8c.html
+< share/doc/elektra-api/html/hooks_8c__incl.dot
+< share/doc/elektra-api/html/hooks_8c__incl.map
+< share/doc/elektra-api/html/hooks_8c__incl.md5
+< share/doc/elektra-api/html/hooks_8c__incl.png
+2362a2282,2290
+> share/doc/elektra-api/html/kdbglobal_8h.html
+> share/doc/elektra-api/html/kdbglobal_8h__dep__incl.dot
+> share/doc/elektra-api/html/kdbglobal_8h__dep__incl.map
+> share/doc/elektra-api/html/kdbglobal_8h__dep__incl.md5
+> share/doc/elektra-api/html/kdbglobal_8h__dep__incl.png
+> share/doc/elektra-api/html/kdbglobal_8h__incl.dot
+> share/doc/elektra-api/html/kdbglobal_8h__incl.map
+> share/doc/elektra-api/html/kdbglobal_8h__incl.md5
+> share/doc/elektra-api/html/kdbglobal_8h__incl.png
+2690d2617
+< share/doc/elektra-api/html/logo_color_doxygen.svg
+2820a2748,2752
+> share/doc/elektra-api/html/mount_8c.html
+> share/doc/elektra-api/html/mount_8c__incl.dot
+> share/doc/elektra-api/html/mount_8c__incl.map
+> share/doc/elektra-api/html/mount_8c__incl.md5
+> share/doc/elektra-api/html/mount_8c__incl.png
+3026a2959,2963
+> share/doc/elektra-api/html/split_8c.html
+> share/doc/elektra-api/html/split_8c__incl.dot
+> share/doc/elektra-api/html/split_8c__incl.map
+> share/doc/elektra-api/html/split_8c__incl.md5
+> share/doc/elektra-api/html/split_8c__incl.png
+3033a2971
+> share/doc/elektra-api/html/src_libs_getenv_README_md.html
+3035a2974
+> share/doc/elektra-api/html/state.png
+3205a3145,3149
+> share/doc/elektra-api/html/trie_8c.html
+> share/doc/elektra-api/html/trie_8c__incl.dot
+> share/doc/elektra-api/html/trie_8c__incl.map
+> share/doc/elektra-api/html/trie_8c__incl.md5
+> share/doc/elektra-api/html/trie_8c__incl.png
+3353d3296
+< share/elektra/test_data/blockresolver/encoding.block
+3745,3752c3688,3695
+< share/elektra/tool_data/fuse/psutil-5.9.4.egg-info
+< share/elektra/tool_data/fuse/psutil-5.9.4.egg-info/PKG-INFO
+< share/elektra/tool_data/fuse/psutil-5.9.4.egg-info/SOURCES.txt
+< share/elektra/tool_data/fuse/psutil-5.9.4.egg-info/dependency_links.txt
+< share/elektra/tool_data/fuse/psutil-5.9.4.egg-info/installed-files.txt
+< share/elektra/tool_data/fuse/psutil-5.9.4.egg-info/not-zip-safe
+< share/elektra/tool_data/fuse/psutil-5.9.4.egg-info/requires.txt
+< share/elektra/tool_data/fuse/psutil-5.9.4.egg-info/top_level.txt
+---
+> share/elektra/tool_data/fuse/psutil-5.9.2.egg-info
+> share/elektra/tool_data/fuse/psutil-5.9.2.egg-info/PKG-INFO
+> share/elektra/tool_data/fuse/psutil-5.9.2.egg-info/SOURCES.txt
+> share/elektra/tool_data/fuse/psutil-5.9.2.egg-info/dependency_links.txt
+> share/elektra/tool_data/fuse/psutil-5.9.2.egg-info/installed-files.txt
+> share/elektra/tool_data/fuse/psutil-5.9.2.egg-info/not-zip-safe
+> share/elektra/tool_data/fuse/psutil-5.9.2.egg-info/requires.txt
+> share/elektra/tool_data/fuse/psutil-5.9.2.egg-info/top_level.txt
+3773,3774c3716,3717
+< share/elektra/tool_data/fuse/psutil/_psutil_linux.abi3.so
+< share/elektra/tool_data/fuse/psutil/_psutil_posix.abi3.so
+---
+> share/elektra/tool_data/fuse/psutil/_psutil_linux.cpython-36m-x86_64-linux-gnu.so
+> share/elektra/tool_data/fuse/psutil/_psutil_posix.cpython-36m-x86_64-linux-gnu.so
+3823,3827c3766,3770
+< share/java/libelektra-0.9.12-all.jar
+< share/java/libelektra-0.9.12-javadoc.jar
+< share/java/libelektra-0.9.12-sources.jar
+< share/java/libelektra-0.9.12.jar
+< share/java/libelektra-0.9.12.pom.xml
+---
+> share/java/libelektra-0.9.11-all.jar
+> share/java/libelektra-0.9.11-javadoc.jar
+> share/java/libelektra-0.9.11-sources.jar
+> share/java/libelektra-0.9.11.jar
+> share/java/libelektra-0.9.11.pom.xml
+3833,3836c3776,3779
+< share/java/plugins/linkchecker-0.9.12.jar
+< share/java/plugins/sorted-0.9.12.jar
+< share/java/plugins/whitelist-0.9.12.jar
+< share/java/process-0.9.12.jar
+---
+> share/java/plugins/linkchecker-0.9.11.jar
+> share/java/plugins/sorted-0.9.11.jar
+> share/java/plugins/whitelist-0.9.11.jar
+> share/java/process-0.9.11.jar
+3858a3802,3803
+> share/man/man1/kdb-global-mount.1
+> share/man/man1/kdb-global-umount.1
+3911,3912c3856,3857
+< share/man/man3/autotoc_md1010.3elektra
+< share/man/man3/autotoc_md1017.3elektra
+---
+> share/man/man3/autotoc_md1003.3elektra
+> share/man/man3/autotoc_md115.3elektra
+3914,3923c3859,3868
+< share/man/man3/autotoc_md119.3elektra
+< share/man/man3/autotoc_md122.3elektra
+< share/man/man3/autotoc_md126.3elektra
+< share/man/man3/autotoc_md140.3elektra
+< share/man/man3/autotoc_md157.3elektra
+< share/man/man3/autotoc_md166.3elektra
+< share/man/man3/autotoc_md171.3elektra
+< share/man/man3/autotoc_md184.3elektra
+< share/man/man3/autotoc_md189.3elektra
+< share/man/man3/autotoc_md194.3elektra
+---
+> share/man/man3/autotoc_md120.3elektra
+> share/man/man3/autotoc_md124.3elektra
+> share/man/man3/autotoc_md138.3elektra
+> share/man/man3/autotoc_md155.3elektra
+> share/man/man3/autotoc_md164.3elektra
+> share/man/man3/autotoc_md169.3elektra
+> share/man/man3/autotoc_md182.3elektra
+> share/man/man3/autotoc_md187.3elektra
+> share/man/man3/autotoc_md192.3elektra
+> share/man/man3/autotoc_md211.3elektra
+3926,3940c3871,3885
+< share/man/man3/autotoc_md217.3elektra
+< share/man/man3/autotoc_md222.3elektra
+< share/man/man3/autotoc_md243.3elektra
+< share/man/man3/autotoc_md248.3elektra
+< share/man/man3/autotoc_md263.3elektra
+< share/man/man3/autotoc_md276.3elektra
+< share/man/man3/autotoc_md279.3elektra
+< share/man/man3/autotoc_md284.3elektra
+< share/man/man3/autotoc_md289.3elektra
+< share/man/man3/autotoc_md294.3elektra
+< share/man/man3/autotoc_md299.3elektra
+< share/man/man3/autotoc_md309.3elektra
+< share/man/man3/autotoc_md314.3elektra
+< share/man/man3/autotoc_md319.3elektra
+< share/man/man3/autotoc_md337.3elektra
+---
+> share/man/man3/autotoc_md220.3elektra
+> share/man/man3/autotoc_md241.3elektra
+> share/man/man3/autotoc_md246.3elektra
+> share/man/man3/autotoc_md261.3elektra
+> share/man/man3/autotoc_md274.3elektra
+> share/man/man3/autotoc_md277.3elektra
+> share/man/man3/autotoc_md282.3elektra
+> share/man/man3/autotoc_md287.3elektra
+> share/man/man3/autotoc_md292.3elektra
+> share/man/man3/autotoc_md297.3elektra
+> share/man/man3/autotoc_md307.3elektra
+> share/man/man3/autotoc_md312.3elektra
+> share/man/man3/autotoc_md317.3elektra
+> share/man/man3/autotoc_md335.3elektra
+> share/man/man3/autotoc_md342.3elektra
+3942c3887
+< share/man/man3/autotoc_md346.3elektra
+---
+> share/man/man3/autotoc_md362.3elektra
+3944,3956c3889,3900
+< share/man/man3/autotoc_md366.3elektra
+< share/man/man3/autotoc_md376.3elektra
+< share/man/man3/autotoc_md379.3elektra
+< share/man/man3/autotoc_md395.3elektra
+< share/man/man3/autotoc_md404.3elektra
+< share/man/man3/autotoc_md417.3elektra
+< share/man/man3/autotoc_md427.3elektra
+< share/man/man3/autotoc_md431.3elektra
+< share/man/man3/autotoc_md434.3elektra
+< share/man/man3/autotoc_md440.3elektra
+< share/man/man3/autotoc_md445.3elektra
+< share/man/man3/autotoc_md449.3elektra
+< share/man/man3/autotoc_md477.3elektra
+---
+> share/man/man3/autotoc_md374.3elektra
+> share/man/man3/autotoc_md377.3elektra
+> share/man/man3/autotoc_md393.3elektra
+> share/man/man3/autotoc_md402.3elektra
+> share/man/man3/autotoc_md415.3elektra
+> share/man/man3/autotoc_md425.3elektra
+> share/man/man3/autotoc_md429.3elektra
+> share/man/man3/autotoc_md433.3elektra
+> share/man/man3/autotoc_md436.3elektra
+> share/man/man3/autotoc_md442.3elektra
+> share/man/man3/autotoc_md447.3elektra
+> share/man/man3/autotoc_md451.3elektra
+3957a3902
+> share/man/man3/autotoc_md49.3elektra
+3959d3903
+< share/man/man3/autotoc_md50.3elektra
+3961,3978c3905,3921
+< share/man/man3/autotoc_md515.3elektra
+< share/man/man3/autotoc_md523.3elektra
+< share/man/man3/autotoc_md531.3elektra
+< share/man/man3/autotoc_md536.3elektra
+< share/man/man3/autotoc_md552.3elektra
+< share/man/man3/autotoc_md562.3elektra
+< share/man/man3/autotoc_md564.3elektra
+< share/man/man3/autotoc_md571.3elektra
+< share/man/man3/autotoc_md58.3elektra
+< share/man/man3/autotoc_md581.3elektra
+< share/man/man3/autotoc_md59.3elektra
+< share/man/man3/autotoc_md590.3elektra
+< share/man/man3/autotoc_md593.3elektra
+< share/man/man3/autotoc_md595.3elektra
+< share/man/man3/autotoc_md602.3elektra
+< share/man/man3/autotoc_md618.3elektra
+< share/man/man3/autotoc_md625.3elektra
+< share/man/man3/autotoc_md649.3elektra
+---
+> share/man/man3/autotoc_md522.3elektra
+> share/man/man3/autotoc_md530.3elektra
+> share/man/man3/autotoc_md535.3elektra
+> share/man/man3/autotoc_md551.3elektra
+> share/man/man3/autotoc_md561.3elektra
+> share/man/man3/autotoc_md563.3elektra
+> share/man/man3/autotoc_md57.3elektra
+> share/man/man3/autotoc_md570.3elektra
+> share/man/man3/autotoc_md580.3elektra
+> share/man/man3/autotoc_md589.3elektra
+> share/man/man3/autotoc_md592.3elektra
+> share/man/man3/autotoc_md594.3elektra
+> share/man/man3/autotoc_md601.3elektra
+> share/man/man3/autotoc_md617.3elektra
+> share/man/man3/autotoc_md624.3elektra
+> share/man/man3/autotoc_md647.3elektra
+> share/man/man3/autotoc_md648.3elektra
+3980,3984c3923,3927
+< share/man/man3/autotoc_md652.3elektra
+< share/man/man3/autotoc_md659.3elektra
+< share/man/man3/autotoc_md675.3elektra
+< share/man/man3/autotoc_md686.3elektra
+< share/man/man3/autotoc_md690.3elektra
+---
+> share/man/man3/autotoc_md657.3elektra
+> share/man/man3/autotoc_md673.3elektra
+> share/man/man3/autotoc_md684.3elektra
+> share/man/man3/autotoc_md688.3elektra
+> share/man/man3/autotoc_md694.3elektra
+3986,3989c3929,3932
+< share/man/man3/autotoc_md698.3elektra
+< share/man/man3/autotoc_md704.3elektra
+< share/man/man3/autotoc_md717.3elektra
+< share/man/man3/autotoc_md72.3elektra
+---
+> share/man/man3/autotoc_md70.3elektra
+> share/man/man3/autotoc_md702.3elektra
+> share/man/man3/autotoc_md715.3elektra
+> share/man/man3/autotoc_md721.3elektra
+3992,4012c3935,3954
+< share/man/man3/autotoc_md727.3elektra
+< share/man/man3/autotoc_md734.3elektra
+< share/man/man3/autotoc_md738.3elektra
+< share/man/man3/autotoc_md76.3elektra
+< share/man/man3/autotoc_md82.3elektra
+< share/man/man3/autotoc_md83.3elektra
+< share/man/man3/autotoc_md845.3elektra
+< share/man/man3/autotoc_md849.3elektra
+< share/man/man3/autotoc_md856.3elektra
+< share/man/man3/autotoc_md862.3elektra
+< share/man/man3/autotoc_md867.3elektra
+< share/man/man3/autotoc_md872.3elektra
+< share/man/man3/autotoc_md873.3elektra
+< share/man/man3/autotoc_md875.3elektra
+< share/man/man3/autotoc_md882.3elektra
+< share/man/man3/autotoc_md89.3elektra
+< share/man/man3/autotoc_md892.3elektra
+< share/man/man3/autotoc_md897.3elektra
+< share/man/man3/autotoc_md92.3elektra
+< share/man/man3/autotoc_md928.3elektra
+< share/man/man3/autotoc_md98.3elektra
+---
+> share/man/man3/autotoc_md732.3elektra
+> share/man/man3/autotoc_md736.3elektra
+> share/man/man3/autotoc_md74.3elektra
+> share/man/man3/autotoc_md80.3elektra
+> share/man/man3/autotoc_md81.3elektra
+> share/man/man3/autotoc_md843.3elektra
+> share/man/man3/autotoc_md847.3elektra
+> share/man/man3/autotoc_md854.3elektra
+> share/man/man3/autotoc_md859.3elektra
+> share/man/man3/autotoc_md864.3elektra
+> share/man/man3/autotoc_md869.3elektra
+> share/man/man3/autotoc_md87.3elektra
+> share/man/man3/autotoc_md871.3elektra
+> share/man/man3/autotoc_md878.3elektra
+> share/man/man3/autotoc_md883.3elektra
+> share/man/man3/autotoc_md90.3elektra
+> share/man/man3/autotoc_md914.3elektra
+> share/man/man3/autotoc_md96.3elektra
+> share/man/man3/autotoc_md996.3elektra
+> share/man/man3/backend.c.3elektra
+4018d3959
+< share/man/man3/backends.c.3elektra
+4027d3967
+< share/man/man3/cow.c.3elektra
+4041a3982
+> share/man/man3/doc_GIT_md.3elektra
+4043d3983
+< share/man/man3/doc_Git_md.3elektra
+4054,4133c3994,4067
+< share/man/man3/doc_contrib_README_md.3elektra
+< share/man/man3/doc_contrib_api_review_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_README_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_kdbClose_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_kdbGet_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_kdbOpen_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_kdbSet_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyAddBaseName_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyAddName_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyBaseName_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyClear_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyCmp_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyCopyAllMeta_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyCopyMeta_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyCopy_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyCurrentMeta_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyDecRef_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyDel_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyDup_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyGetBaseNameSize_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyGetBaseName_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyGetBinary_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyGetMeta_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyGetNameSize_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyGetName_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyGetNamespace_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyGetRef_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyGetString_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyGetUnescapedNameSize_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyGetValueSize_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyIncRef_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyIsBelowOrSame_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyIsBelow_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyIsBinary_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyIsDirectlyBelow_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyIsLocked_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyIsString_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyLock_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyMeta_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyName_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyNeedSync_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyNew_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyNextMeta_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyRewindMeta_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keySetBaseName_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keySetBinary_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keySetMeta_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keySetName_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keySetNamespace_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keySetString_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyString_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyUnescapedName_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyVNew_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_keyValue_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksAppendKey_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksAppend_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksAtCursor_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksClear_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksCopy_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksCurrent_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksCut_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksDel_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksDup_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksGetCursor_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksGetSize_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksHead_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksLookupByName_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksLookup_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksNeedSync_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksNew_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksNext_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksPop_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksRewind_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksSetCursor_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksTail_md.3elektra
+< share/man/man3/doc_contrib_api_reviews_core_ksVNew_md.3elektra
+< share/man/man3/doc_contrib_api_usecases_README_md.3elektra
+< share/man/man3/doc_contrib_api_usecases_core_md.3elektra
+< share/man/man3/doc_contrib_api_usecases_kdb_md.3elektra
+< share/man/man3/doc_contrib_copy_on_write_md.3elektra
+---
+> share/man/man3/doc_api_review_README_md.3elektra
+> share/man/man3/doc_api_review_core_kdbClose_md.3elektra
+> share/man/man3/doc_api_review_core_kdbGet_md.3elektra
+> share/man/man3/doc_api_review_core_kdbOpen_md.3elektra
+> share/man/man3/doc_api_review_core_kdbSet_md.3elektra
+> share/man/man3/doc_api_review_core_keyAddBaseName_md.3elektra
+> share/man/man3/doc_api_review_core_keyAddName_md.3elektra
+> share/man/man3/doc_api_review_core_keyBaseName_md.3elektra
+> share/man/man3/doc_api_review_core_keyClear_md.3elektra
+> share/man/man3/doc_api_review_core_keyCmp_md.3elektra
+> share/man/man3/doc_api_review_core_keyCopyAllMeta_md.3elektra
+> share/man/man3/doc_api_review_core_keyCopyMeta_md.3elektra
+> share/man/man3/doc_api_review_core_keyCopy_md.3elektra
+> share/man/man3/doc_api_review_core_keyCurrentMeta_md.3elektra
+> share/man/man3/doc_api_review_core_keyDecRef_md.3elektra
+> share/man/man3/doc_api_review_core_keyDel_md.3elektra
+> share/man/man3/doc_api_review_core_keyDup_md.3elektra
+> share/man/man3/doc_api_review_core_keyGetBaseNameSize_md.3elektra
+> share/man/man3/doc_api_review_core_keyGetBaseName_md.3elektra
+> share/man/man3/doc_api_review_core_keyGetBinary_md.3elektra
+> share/man/man3/doc_api_review_core_keyGetMeta_md.3elektra
+> share/man/man3/doc_api_review_core_keyGetNameSize_md.3elektra
+> share/man/man3/doc_api_review_core_keyGetName_md.3elektra
+> share/man/man3/doc_api_review_core_keyGetNamespace_md.3elektra
+> share/man/man3/doc_api_review_core_keyGetRef_md.3elektra
+> share/man/man3/doc_api_review_core_keyGetString_md.3elektra
+> share/man/man3/doc_api_review_core_keyGetUnescapedNameSize_md.3elektra
+> share/man/man3/doc_api_review_core_keyGetValueSize_md.3elektra
+> share/man/man3/doc_api_review_core_keyIncRef_md.3elektra
+> share/man/man3/doc_api_review_core_keyIsBelowOrSame_md.3elektra
+> share/man/man3/doc_api_review_core_keyIsBelow_md.3elektra
+> share/man/man3/doc_api_review_core_keyIsBinary_md.3elektra
+> share/man/man3/doc_api_review_core_keyIsDirectlyBelow_md.3elektra
+> share/man/man3/doc_api_review_core_keyIsLocked_md.3elektra
+> share/man/man3/doc_api_review_core_keyIsString_md.3elektra
+> share/man/man3/doc_api_review_core_keyLock_md.3elektra
+> share/man/man3/doc_api_review_core_keyMeta_md.3elektra
+> share/man/man3/doc_api_review_core_keyName_md.3elektra
+> share/man/man3/doc_api_review_core_keyNeedSync_md.3elektra
+> share/man/man3/doc_api_review_core_keyNew_md.3elektra
+> share/man/man3/doc_api_review_core_keyNextMeta_md.3elektra
+> share/man/man3/doc_api_review_core_keyRewindMeta_md.3elektra
+> share/man/man3/doc_api_review_core_keySetBaseName_md.3elektra
+> share/man/man3/doc_api_review_core_keySetBinary_md.3elektra
+> share/man/man3/doc_api_review_core_keySetMeta_md.3elektra
+> share/man/man3/doc_api_review_core_keySetName_md.3elektra
+> share/man/man3/doc_api_review_core_keySetNamespace_md.3elektra
+> share/man/man3/doc_api_review_core_keySetString_md.3elektra
+> share/man/man3/doc_api_review_core_keyString_md.3elektra
+> share/man/man3/doc_api_review_core_keyUnescapedName_md.3elektra
+> share/man/man3/doc_api_review_core_keyVNew_md.3elektra
+> share/man/man3/doc_api_review_core_keyValue_md.3elektra
+> share/man/man3/doc_api_review_core_ksAppendKey_md.3elektra
+> share/man/man3/doc_api_review_core_ksAppend_md.3elektra
+> share/man/man3/doc_api_review_core_ksAtCursor_md.3elektra
+> share/man/man3/doc_api_review_core_ksClear_md.3elektra
+> share/man/man3/doc_api_review_core_ksCopy_md.3elektra
+> share/man/man3/doc_api_review_core_ksCurrent_md.3elektra
+> share/man/man3/doc_api_review_core_ksCut_md.3elektra
+> share/man/man3/doc_api_review_core_ksDel_md.3elektra
+> share/man/man3/doc_api_review_core_ksDup_md.3elektra
+> share/man/man3/doc_api_review_core_ksGetCursor_md.3elektra
+> share/man/man3/doc_api_review_core_ksGetSize_md.3elektra
+> share/man/man3/doc_api_review_core_ksHead_md.3elektra
+> share/man/man3/doc_api_review_core_ksLookupByName_md.3elektra
+> share/man/man3/doc_api_review_core_ksLookup_md.3elektra
+> share/man/man3/doc_api_review_core_ksNeedSync_md.3elektra
+> share/man/man3/doc_api_review_core_ksNew_md.3elektra
+> share/man/man3/doc_api_review_core_ksNext_md.3elektra
+> share/man/man3/doc_api_review_core_ksPop_md.3elektra
+> share/man/man3/doc_api_review_core_ksRewind_md.3elektra
+> share/man/man3/doc_api_review_core_ksSetCursor_md.3elektra
+> share/man/man3/doc_api_review_core_ksTail_md.3elektra
+> share/man/man3/doc_api_review_core_ksVNew_md.3elektra
+4135,4214d4068
+< share/man/man3/doc_contrib_mmapstorage_md.3elektra
+< share/man/man3/doc_decisions_0_drafts_builder_functions_md.3elektra
+< share/man/man3/doc_decisions_0_drafts_commit_function_md.3elektra
+< share/man/man3/doc_decisions_0_drafts_constructor_functions_md.3elektra
+< share/man/man3/doc_decisions_0_drafts_man_pages_md.3elektra
+< share/man/man3/doc_decisions_0_drafts_metakey_semantics_md.3elektra
+< share/man/man3/doc_decisions_0_drafts_notifications_md.3elektra
+< share/man/man3/doc_decisions_0_drafts_operation_sequences_md.3elektra
+< share/man/man3/doc_decisions_0_drafts_plugin_contract_function_md.3elektra
+< share/man/man3/doc_decisions_0_drafts_readonly_keynames_md.3elektra
+< share/man/man3/doc_decisions_0_drafts_transformations_md.3elektra
+< share/man/man3/doc_decisions_0a_postponed_global_validation_md.3elektra
+< share/man/man3/doc_decisions_0a_postponed_plugin_struct_md.3elektra
+< share/man/man3/doc_decisions_0a_postponed_plugin_variants_md.3elektra
+< share/man/man3/doc_decisions_0a_postponed_validation_md.3elektra
+< share/man/man3/doc_decisions_0b_rejected_cmake_spec_md.3elektra
+< share/man/man3/doc_decisions_0b_rejected_elektra_web_pubsub_md.3elektra
+< share/man/man3/doc_decisions_0b_rejected_null_pointer_checks_md.3elektra
+< share/man/man3/doc_decisions_0b_rejected_separate_key_name_md.3elektra
+< share/man/man3/doc_decisions_0b_rejected_vendor_spec_md.3elektra
+< share/man/man3/doc_decisions_1_problem_clear_change_tracking_md.3elektra
+< share/man/man3/doc_decisions_1_problem_clear_error_handling_md.3elektra
+< share/man/man3/doc_decisions_1_problem_clear_error_semantics_md.3elektra
+< share/man/man3/doc_decisions_1_problem_clear_key_string_return_value_md.3elektra
+< share/man/man3/doc_decisions_1_problem_clear_spec_expressiveness_md.3elektra
+< share/man/man3/doc_decisions_1_problem_clear_spec_metadata_md.3elektra
+< share/man/man3/doc_decisions_2_solutions_clear_binary_md.3elektra
+< share/man/man3/doc_decisions_2_solutions_clear_functions_with_buffers_md.3elektra
+< share/man/man3/doc_decisions_2_solutions_clear_iterators_md.3elektra
+< share/man/man3/doc_decisions_2_solutions_clear_keyset_types_md.3elektra
+< share/man/man3/doc_decisions_2_solutions_clear_simplify_api_md.3elektra
+< share/man/man3/doc_decisions_4_decided_capabilities_md.3elektra
+< share/man/man3/doc_decisions_4_decided_elektra_malloc_md.3elektra
+< share/man/man3/doc_decisions_4_decided_elektra_prefix_md.3elektra
+< share/man/man3/doc_decisions_4_decided_header_file_structure_md.3elektra
+< share/man/man3/doc_decisions_4_decided_header_include_md.3elektra
+< share/man/man3/doc_decisions_4_decided_internal_cache_md.3elektra
+< share/man/man3/doc_decisions_4_decided_iterating_name_parts_md.3elektra
+< share/man/man3/doc_decisions_4_decided_key_below_md.3elektra
+< share/man/man3/doc_decisions_4_decided_keyname_md.3elektra
+< share/man/man3/doc_decisions_4_decided_library_directory_structure_md.3elektra
+< share/man/man3/doc_decisions_4_decided_library_split_md.3elektra
+< share/man/man3/doc_decisions_4_decided_misc_namespace_md.3elektra
+< share/man/man3/doc_decisions_4_decided_private_api_md.3elektra
+< share/man/man3/doc_decisions_5_partially_implemented_array_md.3elektra
+< share/man/man3/doc_decisions_5_partially_implemented_boolean_md.3elektra
+< share/man/man3/doc_decisions_5_partially_implemented_decision_process_md.3elektra
+< share/man/man3/doc_decisions_5_partially_implemented_hooks_md.3elektra
+< share/man/man3/doc_decisions_5_partially_implemented_reference_counting_md.3elektra
+< share/man/man3/doc_decisions_5_partially_implemented_warning_array_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_backend_plugin_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_base_name_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_bootstrap_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_cmake_plugins_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_copy_on_write_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_cryptograhic_key_handling_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_default_values_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_deferred_plugin_calls_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_elektra_web_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_elektra_web_recursive_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_empty_files_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_ensure_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_error_code_implementation_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_error_codes_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_error_message_format_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_global_keyset_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_high_level_api_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_highlevel_help_message_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_holes_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_logging_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_lookup_every_key_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_memory_layout_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_multiple_file_backends_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_null_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_relative_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_rest_api_documentation_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_script_testing_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_semantics_name_md.3elektra
+< share/man/man3/doc_decisions_6_implemented_unit_testing_md.3elektra
+< share/man/man3/doc_decisions_EXPLANATIONS_md.3elektra
+4216,4217c4070,4131
+< share/man/man3/doc_decisions_STEPS_md.3elektra
+< share/man/man3/doc_decisions_TEMPLATE_md.3elektra
+---
+> share/man/man3/doc_decisions_array_md.3elektra
+> share/man/man3/doc_decisions_base_name_md.3elektra
+> share/man/man3/doc_decisions_binary_md.3elektra
+> share/man/man3/doc_decisions_boolean_md.3elektra
+> share/man/man3/doc_decisions_bootstrap_md.3elektra
+> share/man/man3/doc_decisions_capabilities_md.3elektra
+> share/man/man3/doc_decisions_cmake_plugins_md.3elektra
+> share/man/man3/doc_decisions_cmake_spec_md.3elektra
+> share/man/man3/doc_decisions_commit_function_md.3elektra
+> share/man/man3/doc_decisions_cryptograhic_key_handling_md.3elektra
+> share/man/man3/doc_decisions_default_values_md.3elektra
+> share/man/man3/doc_decisions_deferred_plugin_calls_md.3elektra
+> share/man/man3/doc_decisions_elektra_malloc_md.3elektra
+> share/man/man3/doc_decisions_elektra_prefix_md.3elektra
+> share/man/man3/doc_decisions_elektra_web_md.3elektra
+> share/man/man3/doc_decisions_elektra_web_pubsub_md.3elektra
+> share/man/man3/doc_decisions_elektra_web_recursive_md.3elektra
+> share/man/man3/doc_decisions_empty_files_md.3elektra
+> share/man/man3/doc_decisions_ensure_md.3elektra
+> share/man/man3/doc_decisions_error_code_implementation_md.3elektra
+> share/man/man3/doc_decisions_error_codes_md.3elektra
+> share/man/man3/doc_decisions_error_handling_md.3elektra
+> share/man/man3/doc_decisions_error_message_format_md.3elektra
+> share/man/man3/doc_decisions_error_semantics_md.3elektra
+> share/man/man3/doc_decisions_functions_with_buffers_md.3elektra
+> share/man/man3/doc_decisions_global_keyset_md.3elektra
+> share/man/man3/doc_decisions_global_plugins_md.3elektra
+> share/man/man3/doc_decisions_global_validation_md.3elektra
+> share/man/man3/doc_decisions_header_file_structure_md.3elektra
+> share/man/man3/doc_decisions_high_level_api_md.3elektra
+> share/man/man3/doc_decisions_highlevel_help_message_md.3elektra
+> share/man/man3/doc_decisions_holes_md.3elektra
+> share/man/man3/doc_decisions_internal_cache_md.3elektra
+> share/man/man3/doc_decisions_iterating_name_parts_md.3elektra
+> share/man/man3/doc_decisions_iterators_md.3elektra
+> share/man/man3/doc_decisions_key_below_md.3elektra
+> share/man/man3/doc_decisions_key_string_return_value_md.3elektra
+> share/man/man3/doc_decisions_library_directory_structure_md.3elektra
+> share/man/man3/doc_decisions_logging_md.3elektra
+> share/man/man3/doc_decisions_lookup_every_key_md.3elektra
+> share/man/man3/doc_decisions_memory_layout_md.3elektra
+> share/man/man3/doc_decisions_multiple_file_backends_md.3elektra
+> share/man/man3/doc_decisions_notifications_md.3elektra
+> share/man/man3/doc_decisions_null_md.3elektra
+> share/man/man3/doc_decisions_null_pointer_checks_md.3elektra
+> share/man/man3/doc_decisions_plugin_variants_md.3elektra
+> share/man/man3/doc_decisions_private_api_md.3elektra
+> share/man/man3/doc_decisions_reference_counting_md.3elektra
+> share/man/man3/doc_decisions_relative_md.3elektra
+> share/man/man3/doc_decisions_rest_api_documentation_md.3elektra
+> share/man/man3/doc_decisions_script_testing_md.3elektra
+> share/man/man3/doc_decisions_semantics_name_md.3elektra
+> share/man/man3/doc_decisions_separate_key_name_md.3elektra
+> share/man/man3/doc_decisions_simplify_api_md.3elektra
+> share/man/man3/doc_decisions_spec_expressiveness_md.3elektra
+> share/man/man3/doc_decisions_spec_metadata_md.3elektra
+> share/man/man3/doc_decisions_store_name_md.3elektra
+> share/man/man3/doc_decisions_template_md.3elektra
+> share/man/man3/doc_decisions_unit_testing_md.3elektra
+> share/man/man3/doc_decisions_validation_md.3elektra
+> share/man/man3/doc_decisions_vendor_spec_md.3elektra
+> share/man/man3/doc_decisions_warning_array_md.3elektra
+4220d4133
+< share/man/man3/doc_dev_backend-plugins_md.3elektra
+4226,4227d4138
+< share/man/man3/doc_dev_history_md.3elektra
+< share/man/man3/doc_dev_hooks_md.3elektra
+4230d4140
+< share/man/man3/doc_dev_kdb-operations_md.3elektra
+4232d4141
+< share/man/man3/doc_dev_mountpoints_md.3elektra
+4236d4144
+< share/man/man3/doc_doxygen_README_md.3elektra
+4275a4184,4185
+> share/man/man3/doc_help_kdb-global-mount_md.3elektra
+> share/man/man3/doc_help_kdb-global-umount_md.3elektra
+4350d4259
+< share/man/man3/doc_news_2022-10-05_0_9_11_md.3elektra
+4386d4294
+< share/man/man3/doc_tutorials_using_podman_instead_of_docker_md.3elektra
+4388,4402d4295
+< share/man/man3/doc_usecases_core_README_md.3elektra
+< share/man/man3/doc_usecases_core_UC_key_create_md.3elektra
+< share/man/man3/doc_usecases_core_UC_key_meta_md.3elektra
+< share/man/man3/doc_usecases_core_UC_key_name_md.3elektra
+< share/man/man3/doc_usecases_core_UC_key_namespace_md.3elektra
+< share/man/man3/doc_usecases_core_UC_key_value_md.3elektra
+< share/man/man3/doc_usecases_core_UC_keyname_hierarchy_md.3elektra
+< share/man/man3/doc_usecases_core_UC_keyname_ordering_md.3elektra
+< share/man/man3/doc_usecases_core_UC_keyset_create_md.3elektra
+< share/man/man3/doc_usecases_core_UC_keyset_index_access_md.3elektra
+< share/man/man3/doc_usecases_core_UC_keyset_insert_md.3elektra
+< share/man/man3/doc_usecases_core_UC_keyset_lookup_cascading_md.3elektra
+< share/man/man3/doc_usecases_core_UC_keyset_lookup_direct_md.3elektra
+< share/man/man3/doc_usecases_core_UC_keyset_lookup_hierarchy_md.3elektra
+< share/man/man3/doc_usecases_core_UC_keyset_remove_md.3elektra
+4412,4428d4304
+< share/man/man3/doc_usecases_kdb_README_md.3elektra
+< share/man/man3/doc_usecases_kdb_UC_get_config_md.3elektra
+< share/man/man3/doc_usecases_kdb_UC_modify_config_md.3elektra
+< share/man/man3/doc_usecases_kdb_UC_set_config_md.3elektra
+< share/man/man3/doc_usecases_kdb_UC_uptodate_config_md.3elektra
+< share/man/man3/doc_usecases_kdb_UC_validate_config_md.3elektra
+< share/man/man3/doc_usecases_record_elektra_README_md.3elektra
+< share/man/man3/doc_usecases_record_elektra_UC_ansible-libelektra_assert_keys_md.3elektra
+< share/man/man3/doc_usecases_record_elektra_UC_ansible-libelektra_merge_strategies_md.3elektra
+< share/man/man3/doc_usecases_record_elektra_UC_ansible-libelektra_remove_keys_md.3elektra
+< share/man/man3/doc_usecases_record_elektra_UC_ansible-libelektra_start_recording_md.3elektra
+< share/man/man3/doc_usecases_record_elektra_UC_ansible_export_md.3elektra
+< share/man/man3/doc_usecases_record_elektra_UC_change_notifications_md.3elektra
+< share/man/man3/doc_usecases_record_elektra_UC_cmerge_conflict_keys_md.3elektra
+< share/man/man3/doc_usecases_record_elektra_UC_different_hosts_md.3elektra
+< share/man/man3/doc_usecases_record_elektra_UC_interactive_configuration_md.3elektra
+< share/man/man3/doc_usecases_record_elektra_UC_record_changes_md.3elektra
+4457a4334
+> share/man/man3/global.c.3elektra
+4461d4337
+< share/man/man3/hooks.c.3elektra
+4507d4382
+< share/man/man3/kdb_tools_CommitPlugins.3elektra
+4535a4411
+> share/man/man3/kdbglobal.h.3elektra
+4611a4488
+> share/man/man3/mount.c.3elektra
+4660a4538
+> share/man/man3/split.c.3elektra
+4662a4541
+> share/man/man3/src_libs_getenv_README_md.3elektra
+4690a4570
+> share/man/man3/trie.c.3elektra
