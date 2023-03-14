@@ -1,0 +1,959 @@
+commit ae6138b8bec8473bd672a3207d4ae88ac9d46545
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Tue Mar 14 11:21:06 2023 +0000
+
+    release: update debian/changelog
+
+diff --git a/scripts/packaging/debian/changelog b/scripts/packaging/debian/changelog
+index 5d8c0f098..b59d013d8 100644
+--- a/scripts/packaging/debian/changelog
++++ b/scripts/packaging/debian/changelog
+@@ -1,3 +1,9 @@
++elektra (0.9.13-1) jammy; urgency=medium
++
++  * New upstream version.
++
++ -- Jenkins (User for Elektra automated build system) <jenkins@f0b490005d11>  Tue, 14 Mar 2023 11:21:06 +0000
++
+ elektra (0.9.12-1) unstable; urgency=medium
+ 
+   * New upstream version.
+
+commit b9fcc0af08777d5f9216aea42eeb2712a09e6054
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Tue Mar 14 11:21:05 2023 +0000
+
+    release: update fedora/changelog
+
+diff --git a/scripts/packaging/fedora/changelog b/scripts/packaging/fedora/changelog
+index 24888679a..5f9b1c883 100644
+--- a/scripts/packaging/fedora/changelog
++++ b/scripts/packaging/fedora/changelog
+@@ -1,3 +1,6 @@
++* Tue Mar 14 2023 elektrabot <elektrabot@libelektra.org> - 0.9.13-1
++- New upstream version
++
+ * Fri Mar 03 2023 elektrabot <elektrabot@libelektra.org> - 0.9.12-1
+ - New upstream version
+ 
+
+commit 2d6ee4d7d65be737767977ff4a32606556be7829
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Tue Mar 14 11:20:08 2023 +0000
+
+    release: regenerate plugins overview picture
+
+diff --git a/doc/images/plugins.pdf b/doc/images/plugins.pdf
+index 0cb44c028..7bf65570b 100644
+Binary files a/doc/images/plugins.pdf and b/doc/images/plugins.pdf differ
+
+commit 6e588347f129e9c763831459403fb077f9f993e2
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Tue Mar 14 11:45:15 2023 +0100
+
+    Jenkinsfile: fix typo
+
+diff --git a/scripts/jenkins/Jenkinsfile.release b/scripts/jenkins/Jenkinsfile.release
+index ee2e75a83..60364fba7 100644
+--- a/scripts/jenkins/Jenkinsfile.release
++++ b/scripts/jenkins/Jenkinsfile.release
+@@ -196,13 +196,13 @@ def dockerInit() {
+     )
+ 
+     DOCKER_IMAGES.jammy = dockerUtils.createDockerImageDesc(
+-      'ubuntu-jammy, dockerUtils.&idTesting,
++      'ubuntu-jammy', dockerUtils.&idTesting,
+       './scripts/docker/ubuntu/jammy',
+       './scripts/docker/ubuntu/jammy/Dockerfile'
+     )
+ 
+     DOCKER_IMAGES.kinetic = dockerUtils.createDockerImageDesc(
+-      'ubuntu-kinetic, dockerUtils.&idTesting,
++      'ubuntu-kinetic', dockerUtils.&idTesting,
+       './scripts/docker/ubuntu/kinetic',
+       './scripts/docker/ubuntu/kinetic/Dockerfile'
+     )
+
+commit 30f4a21aaf0ba8c65539fe697f52450abe9445ae
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Tue Mar 14 10:59:54 2023 +0100
+
+    elektra: bump to 0.9.13
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 46f3727d8..af482761d 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -5,7 +5,7 @@ set (CMAKE_USER_MAKE_RULES_OVERRIDE "${CMAKE_SOURCE_DIR}/scripts/cmake/Platform.
+ 
+ set (KDB_VERSION_MAJOR 0)
+ set (KDB_VERSION_MINOR 9)
+-set (KDB_VERSION_PATCH 12)
++set (KDB_VERSION_PATCH 13)
+ set (KDB_VERSION "${KDB_VERSION_MAJOR}.${KDB_VERSION_MINOR}.${KDB_VERSION_PATCH}")
+ 
+ set (ELEKTRA_DESCRIPTION
+diff --git a/doc/tutorials/hello-elektra.md b/doc/tutorials/hello-elektra.md
+index dd02f268d..aa3bf79bd 100644
+--- a/doc/tutorials/hello-elektra.md
++++ b/doc/tutorials/hello-elektra.md
+@@ -50,7 +50,7 @@ This basic tutorial shows you how to compile and run a very basic Elektra applic
+    -- Detecting CXX compiler ABI info - done
+    -- Detecting CXX compile features
+    -- Detecting CXX compile features - done
+-   -- Elektra 0.9.12 found
++   -- Elektra 0.9.13 found
+    -- Configuring done
+    -- Generating done
+    -- Build files have been written to: Hello/build
+diff --git a/src/bindings/jna/README.md b/src/bindings/jna/README.md
+index 44d701a7a..3f1dce8b0 100644
+--- a/src/bindings/jna/README.md
++++ b/src/bindings/jna/README.md
+@@ -86,7 +86,7 @@ Simply add libelektra as dependency using:
+     <dependency>
+       <groupId>org.libelektra</groupId>
+       <artifactId>libelektra</artifactId>
+-      <version>0.9.12</version>
++      <version>0.9.13</version>
+     </dependency>
+ ```
+ 
+@@ -103,7 +103,7 @@ repositories {
+ }
+ 
+ dependencies {
+-    implementation "org.libelektra:libelektra:0.9.12"
++    implementation "org.libelektra:libelektra:0.9.13"
+ }
+ ```
+ 
+
+commit f23f549d456b6d3266c94332297d203494c5c46a
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Tue Mar 14 10:25:45 2023 +0100
+
+    doc: finalize release notes
+
+diff --git a/doc/news/_preparation_next_release.md b/doc/news/_preparation_next_release.md
+index a37ccd24c..91235c95a 100644
+--- a/doc/news/_preparation_next_release.md
++++ b/doc/news/_preparation_next_release.md
+@@ -40,12 +40,6 @@ The following text lists news about the [plugins](https://www.libelektra.org/plu
+ 
+ - Add hook placement to gopts plugin in [README](../../src/plugins/gopts/README.md) _(Tomislav Makar @tmakar)_
+ 
+-### <<Plugin>>
+-
+-
+-### <<Plugin>>
+-
+-
+ ### internalnotifications
+ 
+ - Add Maximilian Irlinger as maintainer _(Maximilian Irlinger @atmaxinger)_
+@@ -54,9 +48,6 @@ The following text lists news about the [plugins](https://www.libelektra.org/plu
+ 
+ - Add Maximilian Irlinger as maintainer _(Maximilian Irlinger @atmaxinger)_
+ 
+-### <<Plugin>>
+-
+-
+ ### dbus
+ 
+ - Add Maximilian Irlinger as maintainer _(Maximilian Irlinger @atmaxinger)_
+@@ -65,66 +56,14 @@ The following text lists news about the [plugins](https://www.libelektra.org/plu
+ 
+ The text below summarizes updates to the [C (and C++)-based libraries](https://www.libelektra.org/libraries/readme) of Elektra.
+ 
+-### Compatibility
+-
+-
+-### Core
+-
+-
+ ### tools
+ 
+ - Check for hook placement on `plugin-check` _(Tomislav Makar @tmakar)_
+ 
+-### <<Library>>
+-
+-
+-### <<Library>>
+-
+-
+ ### merge
+ 
+ - Add Maximilian Irlinger as maintainer _(Maximilian Irilnger @atmaxinger)_
+ 
+-### <<Library>>
+-
+-
+-## Bindings
+-
+-Bindings allow you to utilize Elektra using [various programming languages](https://www.libelektra.org/bindings/readme).
+-This section keeps you up-to-date with the multi-language support provided by Elektra.
+-
+-### <<Binding>>
+-
+-
+-### <<Binding>>
+-
+-
+-### <<Binding>>
+-
+-
+-### <<Binding>>
+-
+-
+-### <<Binding>>
+-
+-
+-## Tools
+-
+-### <<Tool>>
+-
+-
+-### <<Tool>>
+-
+-
+-### <<Tool>>
+-
+-
+-### <<Tool>>
+-
+-
+-## Scripts
+-
+-
+ ## Documentation
+ 
+ - .github rework _(Markus Raab)_
+@@ -132,33 +71,6 @@ This section keeps you up-to-date with the multi-language support provided by El
+ - Added `hook` information to [hooks.md](../dev/hooks.md)
+ - Add correct error code in hosts readme _(Tomislav Makar)_
+ 
+-### Use Cases
+-
+-
+-### Decisions
+-
+-
+-### Tutorials
+-
+-
+-### Man Pages
+-
+-
+-## Tests
+-
+-
+-### C
+-
+-
+-### Shell Recorder
+-
+-
+-### C++
+-
+-
+-## Packaging
+-
+-
+ ## Build
+ 
+ ### CMake
+@@ -177,25 +89,26 @@ This section keeps you up-to-date with the multi-language support provided by El
+ - Add Ubuntu Jammy Jellyfish (22.04 LTS) builds and drop Bionic builds. _(Mihael Pranjić @mpranj)_
+ - Add Ubuntu Kinetic Kudu (22.10) builds. _(Mihael Pranjić @mpranj)_
+ 
+-### Cirrus
+-
+-
+-### GitHub Actions
+-
+-
+-## Website
+-
+-The website is generated from the repository, so all information about plugins, bindings and tools are always up-to-date. Furthermore, we changed:
+-
+-
+ ## Outlook
+ 
+ We are currently working on following topics:
+ 
++- 1.0 API _(Klemens Böswirth @kodebach)_ and _(Stefan Hanreich)_
++- Session recording and better Ansible integration _(Maximilian Irlinger @atmaxinger)_
++- Change tracking _(Maximilian Irlinger @atmaxinger)_
++- Rewriting tools in C _(@hannes99)_
++- Elektrify KDE and GNOME _(Mihael Pranjić @mpranj)_
++- Elektrify XFCE _(Richard Stöckl @Eiskasten)_
++- Mounting SQL databases _(Florian Lindner @flo91)_
++- Recording Configuration _(Maximilian Irlinger)_
++- Ansible-Elektra _(Lukas Hartl)_ and _(Maximilian Irlinger)_
++- Configure Olimex Base Images _(Maximilian Irlinger)_
++- Improving Build Server Infrastructure _(Lukas Hartl)_ and _(Maximilian Irlinger)_
++- Improve Java Development Experience _(Michael Tucek)_
+ 
+ ## Statistics
+ 
+-We closed [<<NUMISSUES>> issues](https://github.com/ElektraInitiative/libelektra/milestone/<<MILESTONE>>?closed=1) for this release.
++We closed [5 issues](https://github.com/ElektraInitiative/libelektra/milestone/34?closed=1) for this release.
+ 
+ <<`scripts/git-release-stats 0.9.VER-1 0.9.<<VERSION>>`>>
+ 
+
+commit e8085997a4f92c6914d2ce174ae50c120bb755c7
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Tue Mar 14 10:19:40 2023 +0100
+
+    doc: remove TODOs from release notes
+
+diff --git a/doc/news/_preparation_next_release.md b/doc/news/_preparation_next_release.md
+index 3f75f896a..a37ccd24c 100644
+--- a/doc/news/_preparation_next_release.md
++++ b/doc/news/_preparation_next_release.md
+@@ -35,49 +35,30 @@ The following text lists news about the [plugins](https://www.libelektra.org/plu
+ ### spec
+ 
+ - Add hook placement to spec plugin in [README](../../src/plugins/spec/README.md) _(Tomislav Makar @tmakar)_
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### gopts
+ 
+ - Add hook placement to gopts plugin in [README](../../src/plugins/gopts/README.md) _(Tomislav Makar @tmakar)_
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Plugin>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Plugin>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### internalnotifications
+ 
+-- <<TODO>>
+ - Add Maximilian Irlinger as maintainer _(Maximilian Irlinger @atmaxinger)_
+-- <<TODO>>
+ 
+ ### logchange
+ 
+ - Add Maximilian Irlinger as maintainer _(Maximilian Irlinger @atmaxinger)_
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Plugin>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### dbus
+ 
+-- <<TODO>>
+-- <<TODO>>
+ - Add Maximilian Irlinger as maintainer _(Maximilian Irlinger @atmaxinger)_
+ 
+ ## Libraries
+@@ -86,57 +67,26 @@ The text below summarizes updates to the [C (and C++)-based libraries](https://w
+ 
+ ### Compatibility
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### Core
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### tools
+ 
+ - Check for hook placement on `plugin-check` _(Tomislav Makar @tmakar)_
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Library>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Library>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### merge
+ 
+-- <<TODO>>
+ - Add Maximilian Irlinger as maintainer _(Maximilian Irilnger @atmaxinger)_
+-- <<TODO>>
+ 
+ ### <<Library>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Bindings
+ 
+@@ -145,320 +95,103 @@ This section keeps you up-to-date with the multi-language support provided by El
+ 
+ ### <<Binding>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Binding>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Binding>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Binding>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Binding>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Tools
+ 
+ ### <<Tool>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Tool>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Tool>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Tool>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Scripts
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Documentation
+ 
+ - .github rework _(Markus Raab)_
+ - Added `hook` to `placements` contract in [CONTRACT.ini](../CONTRACT.ini) _(Tomislav Makar @tmakar)_
+ - Added `hook` information to [hooks.md](../dev/hooks.md)
+-- <<TODO>>
+ - Add correct error code in hosts readme _(Tomislav Makar)_
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### Use Cases
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### Decisions
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### Tutorials
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### Man Pages
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Tests
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### C
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### Shell Recorder
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### C++
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Packaging
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Build
+ 
+ ### CMake
+ 
+-- <<TODO>>
+-- <<TODO>>
+ - Add `infos/maintainer` in plugins. _(Maximilian Irlinger @atmaxinger)_
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### Docker
+ 
+-- <<TODO>>
+-- <<TODO>>
+ - Add Ubuntu Jammy Jellyfish (22.04 LTS) images. _(Mihael Pranjić @mpranj)_
+ - Add Ubuntu Kinetic Kudu (22.10) images. _(Mihael Pranjić @mpranj)_
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Infrastructure
+ 
+ ### Jenkins
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ - Add Ubuntu Jammy Jellyfish (22.04 LTS) builds and drop Bionic builds. _(Mihael Pranjić @mpranj)_
+ - Add Ubuntu Kinetic Kudu (22.10) builds. _(Mihael Pranjić @mpranj)_
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### Cirrus
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### GitHub Actions
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Website
+ 
+ The website is generated from the repository, so all information about plugins, bindings and tools are always up-to-date. Furthermore, we changed:
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Outlook
+ 
+ We are currently working on following topics:
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Statistics
+ 
+
+commit 554de2285f9a0a04a47cedcf5979c0d70f304f1b
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Tue Mar 14 10:17:58 2023 +0100
+
+    doc: update release notes
+
+diff --git a/doc/news/_preparation_next_release.md b/doc/news/_preparation_next_release.md
+index 30119994c..3f75f896a 100644
+--- a/doc/news/_preparation_next_release.md
++++ b/doc/news/_preparation_next_release.md
+@@ -1,29 +1,9 @@
+ # 0.9.<<VERSION>> Release
+ 
+-This release did not happen yet.
+-
+-Please always update this file within **every PR**:
+-
+-1. write what changed
+-2. use links pointing to your change (See [Documentation Guidelines](/doc/contrib/documentation.md))
+-3. add your name at the end of the line **Syntax:** _(your name)_
+-
+-For example, Max would write:
+-
+-```
+-- Added a new [doc plugin](https://www.libelektra.org/plugins/doc) _(Max)_
+-```
+-
+-Pick a random line to write your changes to minimize the chances of conflicts in this file.
+-
+-For non-trivial changes, you can choose to be part of the highlighted changes.
+-Please write a highlight section in this case.
+-
+-After the horizontal line the release notes for the next version starts.
+-
+----
+-
+-<<`scripts/generate-news-entry`>>
++- guid: e8fd116d-12ab-4281-aaf3-b6441056dd63
++- author: Mihael Pranjić
++- pubDate: Tue, 14 Mar 2023 10:05:11 +0100
++- shortDesc: Bugfix, Ubuntu Packages
+ 
+ We are proud to release Elektra 0.9.<<VERSION>>.
+ 
+@@ -44,15 +24,9 @@ docker run -it elektra/elektra
+ 
+ ## Highlights
+ 
+-- <<HIGHLIGHT>>
+-- <<HIGHLIGHT>>
+-- <<HIGHLIGHT>>
+-
+-### <<HIGHLIGHT>>
+-
+-### <<HIGHLIGHT>>
+-
+-### <<HIGHLIGHT>>
++- The main purpose of this bugfix release is to fix a regression ([#4859](https://github.com/ElektraInitiative/libelektra/issues/4859)) introduced in Elektra 0.9.12.
++- We added fresh Ubuntu Jammy Jellyfish (22.04 LTS) and Kinetic Kudu (22.10) packages.
++- Please refer to the [Elektra 0.9.12](https://www.libelektra.org/news/0.9.12-release) release notes for a complete list of changes. Due to breaking changes since 0.9.11 we highly recommend to read the upgrade instructions.
+ 
+ ## Plugins
+ 
+
+commit 4f05357297341f705c2969cd0337de2e68bc4503
+Merge: 40e083759 424253786
+Author: Maximilian Irlinger <max@maxirlinger.at>
+Date:   Mon Mar 13 17:50:30 2023 +0100
+
+    Merge pull request #4876 from atmaxinger/authors
+    
+    doc: Maintainership for atmaxinger
+
+commit 424253786054272563fd7e66ded882b67afded4c
+Author: Maximilian Irlinger <max@maxirlinger.at>
+Date:   Mon Mar 13 15:54:59 2023 +0100
+
+    cmake: add info/maintainer
+
+diff --git a/doc/news/_preparation_next_release.md b/doc/news/_preparation_next_release.md
+index 3c64db035..30119994c 100644
+--- a/doc/news/_preparation_next_release.md
++++ b/doc/news/_preparation_next_release.md
+@@ -412,7 +412,7 @@ This section keeps you up-to-date with the multi-language support provided by El
+ 
+ - <<TODO>>
+ - <<TODO>>
+-- <<TODO>>
++- Add `infos/maintainer` in plugins. _(Maximilian Irlinger @atmaxinger)_
+ - <<TODO>>
+ - <<TODO>>
+ - <<TODO>>
+diff --git a/scripts/cmake/Modules/LibAddMacros.cmake b/scripts/cmake/Modules/LibAddMacros.cmake
+index 5aa510b0a..8d794683a 100644
+--- a/scripts/cmake/Modules/LibAddMacros.cmake
++++ b/scripts/cmake/Modules/LibAddMacros.cmake
+@@ -729,6 +729,9 @@ function (generate_readme p) # rerun cmake when README.md is changed  also allow
+ 			"keyNew(\"system:/elektra/modules/${p}/infos/licence\",\nKEY_VALUE, \"\\1\", KEY_END)," contents "${contents}")
+ 	string (REGEX REPLACE "\"- +infos/author *= *([^\\\\]*)\\\\n\""
+ 			      "keyNew(\"system:/elektra/modules/${p}/infos/author\",\nKEY_VALUE, \"\\1\", KEY_END)," contents "${contents}")
++	string (REGEX
++		REPLACE "\"- +infos/maintainer *= *([^\\\\]*)\\\\n\""
++			"keyNew(\"system:/elektra/modules/${p}/infos/maintainer\",\nKEY_VALUE, \"\\1\", KEY_END)," contents "${contents}")
+ 
+ 	string (REGEX MATCH "\"- +infos/provides *= *([a-zA-Z0-9/ ]*)\\\\n\"" PROVIDES "${contents}")
+ 	string (REGEX REPLACE "\"- +infos/provides *= *([a-zA-Z0-9/ ]*)\\\\n\"" "\\1" PROVIDES "${PROVIDES}")
+
+commit fd96c1792cf875923206acf119dcdec6f1885655
+Author: Maximilian Irlinger <max@maxirlinger.at>
+Date:   Mon Mar 13 14:07:08 2023 +0100
+
+    doc: change maintainership
+
+diff --git a/doc/AUTHORS.md b/doc/AUTHORS.md
+index d5b9f8063..a4835ce98 100644
+--- a/doc/AUTHORS.md
++++ b/doc/AUTHORS.md
+@@ -161,7 +161,7 @@ notification system, I/O bindings
+ 
+ ## Maximilian Irlinger
+ 
+-documentation, Python bindings for elektraMerge, copy-on-write functionality of Key and KeySet
++documentation, elektraMerge including its Python bindings, copy-on-write functionality of Key and KeySet, generic changetracking implementation
+ 
+ - email: max@maxirlinger.at
+ - GitHub user: [atmaxinger](https://github.com/atmaxinger)
+diff --git a/doc/news/_preparation_next_release.md b/doc/news/_preparation_next_release.md
+index 913a650fb..3c64db035 100644
+--- a/doc/news/_preparation_next_release.md
++++ b/doc/news/_preparation_next_release.md
+@@ -82,9 +82,15 @@ The following text lists news about the [plugins](https://www.libelektra.org/plu
+ - <<TODO>>
+ - <<TODO>>
+ 
+-### <<Plugin>>
++### internalnotifications
+ 
+ - <<TODO>>
++- Add Maximilian Irlinger as maintainer _(Maximilian Irlinger @atmaxinger)_
++- <<TODO>>
++
++### logchange
++
++- Add Maximilian Irlinger as maintainer _(Maximilian Irlinger @atmaxinger)_
+ - <<TODO>>
+ - <<TODO>>
+ 
+@@ -94,11 +100,11 @@ The following text lists news about the [plugins](https://www.libelektra.org/plu
+ - <<TODO>>
+ - <<TODO>>
+ 
+-### <<Plugin>>
++### dbus
+ 
+ - <<TODO>>
+ - <<TODO>>
+-- <<TODO>>
++- Add Maximilian Irlinger as maintainer _(Maximilian Irlinger @atmaxinger)_
+ 
+ ## Libraries
+ 
+@@ -146,10 +152,10 @@ The text below summarizes updates to the [C (and C++)-based libraries](https://w
+ - <<TODO>>
+ - <<TODO>>
+ 
+-### <<Library>>
++### merge
+ 
+ - <<TODO>>
+-- <<TODO>>
++- Add Maximilian Irlinger as maintainer _(Maximilian Irilnger @atmaxinger)_
+ - <<TODO>>
+ 
+ ### <<Library>>
+diff --git a/src/libs/merge/README.md b/src/libs/merge/README.md
+new file mode 100644
+index 000000000..b9a2a8269
+--- /dev/null
++++ b/src/libs/merge/README.md
+@@ -0,0 +1 @@
++infos/maintainer = Maximilian Irlinger <max@maxirlinger.at>
+diff --git a/src/plugins/dbus/README.md b/src/plugins/dbus/README.md
+index 23bfe4a8d..8679c4f99 100644
+--- a/src/plugins/dbus/README.md
++++ b/src/plugins/dbus/README.md
+@@ -1,5 +1,6 @@
+ - infos = Information about the dbus plugin is in keys below
+ - infos/author = Markus Raab <elektra@libelektra.org>
++- infos/maintainer = Maximilian Irlinger <max@maxirlinger.at>
+ - infos/licence = BSD
+ - infos/provides = notification
+ - infos/needs =
+diff --git a/src/plugins/internalnotification/README.md b/src/plugins/internalnotification/README.md
+index bcc746b3b..b98e15a5e 100644
+--- a/src/plugins/internalnotification/README.md
++++ b/src/plugins/internalnotification/README.md
+@@ -1,5 +1,6 @@
+ - infos = Plugin for internal notification
+ - infos/author = Thomas Wahringer <waht@libelektra.org>
++- infos/maintainer = Maximilian Irlinger <max@maxirlinger.at>
+ - infos/licence = BSD
+ - infos/needs =
+ - infos/provides =
+diff --git a/src/plugins/logchange/README.md b/src/plugins/logchange/README.md
+index 78cbce963..783ad3a71 100644
+--- a/src/plugins/logchange/README.md
++++ b/src/plugins/logchange/README.md
+@@ -1,5 +1,6 @@
+ - infos = Information about the logchange plugin is in keys below
+ - infos/author = Markus Raab <elektra@libelektra.org>
++- infos/maintainer = Maximilian Irlinger <max@maxirlinger.at>
+ - infos/licence = BSD
+ - infos/needs =
+ - infos/provides = tracing

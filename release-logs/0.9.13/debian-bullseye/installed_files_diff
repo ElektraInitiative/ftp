@@ -1,0 +1,102 @@
+420c420
+< lib/libelektra-core.so.0.9.13
+---
+> lib/libelektra-core.so.0.9.12
+423c423
+< lib/libelektra-ease.so.0.9.13
+---
+> lib/libelektra-ease.so.0.9.12
+426c426
+< lib/libelektra-full.so.0.9.13
+---
+> lib/libelektra-full.so.0.9.12
+429c429
+< lib/libelektra-globbing.so.0.9.13
+---
+> lib/libelektra-globbing.so.0.9.12
+432c432
+< lib/libelektra-highlevel.so.0.9.13
+---
+> lib/libelektra-highlevel.so.0.9.12
+435c435
+< lib/libelektra-invoke.so.0.9.13
+---
+> lib/libelektra-invoke.so.0.9.12
+438c438
+< lib/libelektra-io.so.0.9.13
+---
+> lib/libelektra-io.so.0.9.12
+441c441
+< lib/libelektra-kdb.so.0.9.13
+---
+> lib/libelektra-kdb.so.0.9.12
+444c444
+< lib/libelektra-merge.so.0.9.13
+---
+> lib/libelektra-merge.so.0.9.12
+447c447
+< lib/libelektra-meta.so.0.9.13
+---
+> lib/libelektra-meta.so.0.9.12
+450c450
+< lib/libelektra-notification.so.0.9.13
+---
+> lib/libelektra-notification.so.0.9.12
+453c453
+< lib/libelektra-opts.so.0.9.13
+---
+> lib/libelektra-opts.so.0.9.12
+456c456
+< lib/libelektra-plugin.so.0.9.13
+---
+> lib/libelektra-plugin.so.0.9.12
+459c459
+< lib/libelektra-pluginprocess.so.0.9.13
+---
+> lib/libelektra-pluginprocess.so.0.9.12
+463c463
+< lib/libelektra-utility.so.0.9.13
+---
+> lib/libelektra-utility.so.0.9.12
+469c469
+< lib/libelektraintercept-env.so.0.9.13
+---
+> lib/libelektraintercept-env.so.0.9.12
+471c471
+< lib/libelektratools-full.so.0.9.13
+---
+> lib/libelektratools-full.so.0.9.12
+475c475
+< lib/libelektratools.so.0.9.13
+---
+> lib/libelektratools.so.0.9.12
+1734d1733
+< share/doc/elektra-api/html/doc_news_2023-03-03_0_9_12_md.html
+3166d3164
+< share/doc/elektra-api/html/src_libs_merge_README_md.html
+3975,3979c3973,3977
+< share/java/libelektra-0.9.13-all.jar
+< share/java/libelektra-0.9.13-javadoc.jar
+< share/java/libelektra-0.9.13-sources.jar
+< share/java/libelektra-0.9.13.jar
+< share/java/libelektra-0.9.13.pom.xml
+---
+> share/java/libelektra-0.9.12-all.jar
+> share/java/libelektra-0.9.12-javadoc.jar
+> share/java/libelektra-0.9.12-sources.jar
+> share/java/libelektra-0.9.12.jar
+> share/java/libelektra-0.9.12.pom.xml
+3985,3988c3983,3986
+< share/java/plugins/linkchecker-0.9.13.jar
+< share/java/plugins/sorted-0.9.13.jar
+< share/java/plugins/whitelist-0.9.13.jar
+< share/java/process-0.9.13.jar
+---
+> share/java/plugins/linkchecker-0.9.12.jar
+> share/java/plugins/sorted-0.9.12.jar
+> share/java/plugins/whitelist-0.9.12.jar
+> share/java/process-0.9.12.jar
+4400d4397
+< share/man/man3/doc_news_2023-03-03_0_9_12_md.3elektra
+4815d4811
+< share/man/man3/src_libs_merge_README_md.3elektra

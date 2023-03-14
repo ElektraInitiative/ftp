@@ -1,0 +1,28 @@
+726a727,729
+> 
+> 
+> 
+832d834
+< encoding.block
+1018,1024c1020,1026
+< psutil-5.9.4.dist-info
+< psutil-5.9.4.dist-info/INSTALLER
+< psutil-5.9.4.dist-info/LICENSE
+< psutil-5.9.4.dist-info/METADATA
+< psutil-5.9.4.dist-info/RECORD
+< psutil-5.9.4.dist-info/WHEEL
+< psutil-5.9.4.dist-info/top_level.txt
+---
+> psutil-5.9.2.dist-info
+> psutil-5.9.2.dist-info/INSTALLER
+> psutil-5.9.2.dist-info/LICENSE
+> psutil-5.9.2.dist-info/METADATA
+> psutil-5.9.2.dist-info/RECORD
+> psutil-5.9.2.dist-info/WHEEL
+> psutil-5.9.2.dist-info/top_level.txt
+1045,1046c1047,1048
+< psutil/_psutil_linux.abi3.so
+< psutil/_psutil_posix.abi3.so
+---
+> psutil/_psutil_linux.cpython-310-x86_64-linux-gnu.so
+> psutil/_psutil_posix.cpython-310-x86_64-linux-gnu.so
