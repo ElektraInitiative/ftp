@@ -1,0 +1,98 @@
+415c415
+< lib/libelektra-core.so.0.9.14
+---
+> lib/libelektra-core.so.0.9.13
+418c418
+< lib/libelektra-ease.so.0.9.14
+---
+> lib/libelektra-ease.so.0.9.13
+421c421
+< lib/libelektra-full.so.0.9.14
+---
+> lib/libelektra-full.so.0.9.13
+424c424
+< lib/libelektra-globbing.so.0.9.14
+---
+> lib/libelektra-globbing.so.0.9.13
+427c427
+< lib/libelektra-highlevel.so.0.9.14
+---
+> lib/libelektra-highlevel.so.0.9.13
+430c430
+< lib/libelektra-invoke.so.0.9.14
+---
+> lib/libelektra-invoke.so.0.9.13
+433c433
+< lib/libelektra-io.so.0.9.14
+---
+> lib/libelektra-io.so.0.9.13
+436c436
+< lib/libelektra-kdb.so.0.9.14
+---
+> lib/libelektra-kdb.so.0.9.13
+439c439
+< lib/libelektra-merge.so.0.9.14
+---
+> lib/libelektra-merge.so.0.9.13
+442c442
+< lib/libelektra-meta.so.0.9.14
+---
+> lib/libelektra-meta.so.0.9.13
+445c445
+< lib/libelektra-notification.so.0.9.14
+---
+> lib/libelektra-notification.so.0.9.13
+448c448
+< lib/libelektra-opts.so.0.9.14
+---
+> lib/libelektra-opts.so.0.9.13
+451c451
+< lib/libelektra-plugin.so.0.9.14
+---
+> lib/libelektra-plugin.so.0.9.13
+454c454
+< lib/libelektra-pluginprocess.so.0.9.14
+---
+> lib/libelektra-pluginprocess.so.0.9.13
+458c458
+< lib/libelektra-utility.so.0.9.14
+---
+> lib/libelektra-utility.so.0.9.13
+464c464
+< lib/libelektraintercept-env.so.0.9.14
+---
+> lib/libelektraintercept-env.so.0.9.13
+466c466
+< lib/libelektratools-full.so.0.9.14
+---
+> lib/libelektratools-full.so.0.9.13
+470c470
+< lib/libelektratools.so.0.9.14
+---
+> lib/libelektratools.so.0.9.13
+1730d1729
+< share/doc/elektra-api/html/doc_news_2023-03-14_0_9_13_md.html
+3965,3969c3964,3968
+< share/java/libelektra-0.9.14-all.jar
+< share/java/libelektra-0.9.14-javadoc.jar
+< share/java/libelektra-0.9.14-sources.jar
+< share/java/libelektra-0.9.14.jar
+< share/java/libelektra-0.9.14.pom.xml
+---
+> share/java/libelektra-0.9.13-all.jar
+> share/java/libelektra-0.9.13-javadoc.jar
+> share/java/libelektra-0.9.13-sources.jar
+> share/java/libelektra-0.9.13.jar
+> share/java/libelektra-0.9.13.pom.xml
+3975,3978c3974,3977
+< share/java/plugins/linkchecker-0.9.14.jar
+< share/java/plugins/sorted-0.9.14.jar
+< share/java/plugins/whitelist-0.9.14.jar
+< share/java/process-0.9.14.jar
+---
+> share/java/plugins/linkchecker-0.9.13.jar
+> share/java/plugins/sorted-0.9.13.jar
+> share/java/plugins/whitelist-0.9.13.jar
+> share/java/process-0.9.13.jar
+4391d4389
+< share/man/man3/doc_news_2023-03-14_0_9_13_md.3elektra

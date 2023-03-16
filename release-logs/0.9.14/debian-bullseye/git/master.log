@@ -1,0 +1,890 @@
+commit 6c44e99e58c41887a8ea950712c7ff37ddba9d0d
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Thu Mar 16 15:12:37 2023 +0000
+
+    release: update debian/changelog
+
+diff --git a/scripts/packaging/debian/changelog b/scripts/packaging/debian/changelog
+index b23380cfe..667b46434 100644
+--- a/scripts/packaging/debian/changelog
++++ b/scripts/packaging/debian/changelog
+@@ -1,3 +1,9 @@
++elektra (0.9.14-1) unstable; urgency=medium
++
++  * New upstream version.
++
++ -- Jenkins (User for Elektra automated build system) <jenkins@a0253d66fbbf>  Thu, 16 Mar 2023 15:12:37 +0000
++
+ elektra (0.9.13-1) unstable; urgency=medium
+ 
+   * New upstream version.
+
+commit 0b7d3bedbe042d59bb4cf02545fb951e76031dea
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Thu Mar 16 15:12:37 2023 +0000
+
+    release: update fedora/changelog
+
+diff --git a/scripts/packaging/fedora/changelog b/scripts/packaging/fedora/changelog
+index 5f9b1c883..30c396058 100644
+--- a/scripts/packaging/fedora/changelog
++++ b/scripts/packaging/fedora/changelog
+@@ -1,3 +1,6 @@
++* Thu Mar 16 2023 elektrabot <elektrabot@libelektra.org> - 0.9.14-1
++- New upstream version
++
+ * Tue Mar 14 2023 elektrabot <elektrabot@libelektra.org> - 0.9.13-1
+ - New upstream version
+ 
+
+commit 087452ac2dbba9b8928e026f7e38540625436409
+Author: elektrabot <elektrabot@libelektra.org>
+Date:   Thu Mar 16 15:11:44 2023 +0000
+
+    release: regenerate plugins overview picture
+
+diff --git a/doc/images/plugins.pdf b/doc/images/plugins.pdf
+index d9e33af79..4bb99b01c 100644
+Binary files a/doc/images/plugins.pdf and b/doc/images/plugins.pdf differ
+
+commit e1cd8651d0724652e2a8b100b8a416919eddff45
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Thu Mar 16 14:52:41 2023 +0100
+
+    elektra: bump to 0.9.14
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index af482761d..fb15b1445 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -5,7 +5,7 @@ set (CMAKE_USER_MAKE_RULES_OVERRIDE "${CMAKE_SOURCE_DIR}/scripts/cmake/Platform.
+ 
+ set (KDB_VERSION_MAJOR 0)
+ set (KDB_VERSION_MINOR 9)
+-set (KDB_VERSION_PATCH 13)
++set (KDB_VERSION_PATCH 14)
+ set (KDB_VERSION "${KDB_VERSION_MAJOR}.${KDB_VERSION_MINOR}.${KDB_VERSION_PATCH}")
+ 
+ set (ELEKTRA_DESCRIPTION
+diff --git a/doc/tutorials/hello-elektra.md b/doc/tutorials/hello-elektra.md
+index aa3bf79bd..14b872001 100644
+--- a/doc/tutorials/hello-elektra.md
++++ b/doc/tutorials/hello-elektra.md
+@@ -50,7 +50,7 @@ This basic tutorial shows you how to compile and run a very basic Elektra applic
+    -- Detecting CXX compiler ABI info - done
+    -- Detecting CXX compile features
+    -- Detecting CXX compile features - done
+-   -- Elektra 0.9.13 found
++   -- Elektra 0.9.14 found
+    -- Configuring done
+    -- Generating done
+    -- Build files have been written to: Hello/build
+diff --git a/src/bindings/jna/README.md b/src/bindings/jna/README.md
+index 3f1dce8b0..cc7f6ad88 100644
+--- a/src/bindings/jna/README.md
++++ b/src/bindings/jna/README.md
+@@ -86,7 +86,7 @@ Simply add libelektra as dependency using:
+     <dependency>
+       <groupId>org.libelektra</groupId>
+       <artifactId>libelektra</artifactId>
+-      <version>0.9.13</version>
++      <version>0.9.14</version>
+     </dependency>
+ ```
+ 
+@@ -103,7 +103,7 @@ repositories {
+ }
+ 
+ dependencies {
+-    implementation "org.libelektra:libelektra:0.9.13"
++    implementation "org.libelektra:libelektra:0.9.14"
+ }
+ ```
+ 
+
+commit bffacdd787b5c8378132dd00602a51d59ce142fb
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Thu Mar 16 14:51:01 2023 +0100
+
+    doc: finalize release notes
+
+diff --git a/doc/news/_preparation_next_release.md b/doc/news/_preparation_next_release.md
+index cf7aabc49..58c769c54 100644
+--- a/doc/news/_preparation_next_release.md
++++ b/doc/news/_preparation_next_release.md
+@@ -1,29 +1,9 @@
+ # 0.9.<<VERSION>> Release
+ 
+-This release did not happen yet.
+-
+-Please always update this file within **every PR**:
+-
+-1. write what changed
+-2. use links pointing to your change (See [Documentation Guidelines](/doc/contrib/documentation.md))
+-3. add your name at the end of the line **Syntax:** _(your name)_
+-
+-For example, Max would write:
+-
+-```
+-- Added a new [doc plugin](https://www.libelektra.org/plugins/doc) _(Max)_
+-```
+-
+-Pick a random line to write your changes to minimize the chances of conflicts in this file.
+-
+-For non-trivial changes, you can choose to be part of the highlighted changes.
+-Please write a highlight section in this case.
+-
+-After the horizontal line the release notes for the next version starts.
+-
+----
+-
+-<<`scripts/generate-news-entry`>>
++- guid: 9e1e0790-e7ae-4947-9906-2c176a4f8dd2
++- author: Mihael Pranjić
++- pubDate: Thu, 16 Mar 2023 14:43:04 +0100
++- shortDesc: Bugfix Release
+ 
+ We are proud to release Elektra 0.9.<<VERSION>>.
+ 
+@@ -44,35 +24,13 @@ docker run -it elektra/elektra
+ 
+ ## Highlights
+ 
+-- <<HIGHLIGHT>>
+-- <<HIGHLIGHT>>
+-- <<HIGHLIGHT>>
+-
+-### <<HIGHLIGHT>>
+-
+-### <<HIGHLIGHT>>
+-
+-### <<HIGHLIGHT>>
++- The main purpose of this bugfix release is to fix regressions ([#4859](https://github.com/ElektraInitiative/libelektra/issues/4859)) introduced in Elektra 0.9.12 and 0.9.13.
++- Please refer to the [Elektra 0.9.12](https://www.libelektra.org/news/0.9.12-release) release notes for a complete list of changes. Due to breaking changes since 0.9.11 we highly recommend to read the upgrade instructions.
+ 
+ ## Plugins
+ 
+ The following text lists news about the [plugins](https://www.libelektra.org/plugins/readme) we updated in this release.
+ 
+-### <<Plugin>>
+-
+-
+-### <<Plugin>>
+-
+-
+-### <<Plugin>>
+-
+-
+-### <<Plugin>>
+-
+-
+-### <<Plugin>>
+-
+-
+ ### timeofday
+ 
+ - Use separate symbols for `set` and `commit` functions to satisfy `kdb plugin-check` _(@kodebach)_
+@@ -82,132 +40,36 @@ The following text lists news about the [plugins](https://www.libelektra.org/plu
+ 
+ - Use separate symbols for `set` and `commit` functions to satisfy `kdb plugin-check` _(@kodebach)_
+ 
+-## Libraries
+-
+-The text below summarizes updates to the [C (and C++)-based libraries](https://www.libelektra.org/libraries/readme) of Elektra.
+-
+-### Compatibility
+-
+-
+-### Core
+-
+-
+-### <<Library>>
+-
+-
+-### <<Library>>
+-
+-
+-### <<Library>>
+-
+-
+-### <<Library>>
+-
+-
+-### <<Library>>
+-
+-
+-## Bindings
+-
+-Bindings allow you to utilize Elektra using [various programming languages](https://www.libelektra.org/bindings/readme).
+-This section keeps you up-to-date with the multi-language support provided by Elektra.
+-
+-### <<Binding>>
+-
+-
+-### <<Binding>>
+-
+-
+-### <<Binding>>
+-
+-
+-### <<Binding>>
+-
+-
+-### <<Binding>>
+-
+-
+-## Tools
+-
+-### <<Tool>>
+-
+-
+-### <<Tool>>
+-
+-
+-### <<Tool>>
+-
+-
+-### <<Tool>>
+-
+-
+-## Scripts
+-
+-
+-## Documentation
+-
+-
+-### Use Cases
+-
+-
+-### Decisions
+-
+-
+-### Tutorials
+-
+-
+-### Man Pages
+-
+-
+ ## Tests
+ 
+ - Enable more `kdb plugin-check` tests _(@kodebach)_
+ 
+-### C
+-
+-
+-### Shell Recorder
+-
+-
+-### C++
+-
+-
+-## Packaging
+-
+-
+ ## Build
+ 
+-### CMake
+-
+-
+ ### Docker
+ 
+ - Fix conflicting Java versions in CentOS Stream 8 image _(@kodebach)_
+ 
+-## Infrastructure
+-
+-### Jenkins
+-
+-
+-### Cirrus
+-
+-
+-### GitHub Actions
+-
+-
+-## Website
+-
+-The website is generated from the repository, so all information about plugins, bindings and tools are always up-to-date. Furthermore, we changed:
+-
+-
+ ## Outlook
+ 
+ We are currently working on following topics:
+ 
++- 1.0 API _(Klemens Böswirth @kodebach)_ and _(Stefan Hanreich)_
++- Session recording and better Ansible integration _(Maximilian Irlinger @atmaxinger)_
++- Change tracking _(Maximilian Irlinger @atmaxinger)_
++- Rewriting tools in C _(@hannes99)_
++- Elektrify KDE and GNOME _(Mihael Pranjić @mpranj)_
++- Elektrify XFCE _(Richard Stöckl @Eiskasten)_
++- Mounting SQL databases _(Florian Lindner @flo91)_
++- Recording Configuration _(Maximilian Irlinger)_
++- Ansible-Elektra _(Lukas Hartl)_ and _(Maximilian Irlinger)_
++- Configure Olimex Base Images _(Maximilian Irlinger)_
++- Improving Build Server Infrastructure _(Lukas Hartl)_ and _(Maximilian Irlinger)_
++- Improve Java Development Experience _(Michael Tucek)_
+ 
+ ## Statistics
+ 
+-We closed [<<NUMISSUES>> issues](https://github.com/ElektraInitiative/libelektra/milestone/<<MILESTONE>>?closed=1) for this release.
++We closed [2 issues](https://github.com/ElektraInitiative/libelektra/milestone/35?closed=1) for this release.
+ 
+ <<`scripts/git-release-stats 0.9.VER-1 0.9.<<VERSION>>`>>
+ 
+
+commit d318bf9fd78b8bc3f175f14822fa7078da657890
+Author: Mihael Pranjic <mpranj@limun.org>
+Date:   Thu Mar 16 14:42:55 2023 +0100
+
+    doc: cleanup TODOs from release notes
+
+diff --git a/doc/news/_preparation_next_release.md b/doc/news/_preparation_next_release.md
+index cd4f0a797..cf7aabc49 100644
+--- a/doc/news/_preparation_next_release.md
++++ b/doc/news/_preparation_next_release.md
+@@ -60,45 +60,27 @@ The following text lists news about the [plugins](https://www.libelektra.org/plu
+ 
+ ### <<Plugin>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Plugin>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Plugin>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Plugin>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Plugin>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### timeofday
+ 
+ - Use separate symbols for `set` and `commit` functions to satisfy `kdb plugin-check` _(@kodebach)_
+ - Use new `elektraPluginGetPhase()` instead of counting executions _(@kodebach)_
+-- <<TODO>>
+ 
+ ### tracer
+ 
+ - Use separate symbols for `set` and `commit` functions to satisfy `kdb plugin-check` _(@kodebach)_
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Libraries
+ 
+@@ -106,57 +88,24 @@ The text below summarizes updates to the [C (and C++)-based libraries](https://w
+ 
+ ### Compatibility
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### Core
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Library>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Library>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Library>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Library>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Library>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Bindings
+ 
+@@ -165,314 +114,96 @@ This section keeps you up-to-date with the multi-language support provided by El
+ 
+ ### <<Binding>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Binding>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Binding>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Binding>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Binding>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Tools
+ 
+ ### <<Tool>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Tool>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Tool>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### <<Tool>>
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Scripts
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Documentation
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### Use Cases
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### Decisions
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### Tutorials
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### Man Pages
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Tests
+ 
+ - Enable more `kdb plugin-check` tests _(@kodebach)_
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### C
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### Shell Recorder
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### C++
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Packaging
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Build
+ 
+ ### CMake
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### Docker
+ 
+ - Fix conflicting Java versions in CentOS Stream 8 image _(@kodebach)_
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Infrastructure
+ 
+ ### Jenkins
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### Cirrus
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ### GitHub Actions
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Website
+ 
+ The website is generated from the repository, so all information about plugins, bindings and tools are always up-to-date. Furthermore, we changed:
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Outlook
+ 
+ We are currently working on following topics:
+ 
+-- <<TODO>>
+-- <<TODO>>
+-- <<TODO>>
+ 
+ ## Statistics
+ 
+
+commit 30dc4f7f3abc6a5e424ccd842af07f9464495057
+Merge: c5fb44c3c fdb163a8d
+Author: Mihael Pranjić <mpranj@limun.org>
+Date:   Thu Mar 16 07:42:45 2023 +0100
+
+    Merge pull request #4879 from kodebach/samesymbol
+
+commit fdb163a8dfc87876b3b3bb28419607d672fcbf3b
+Author: Klemens Böswirth <k.boeswirth+git@gmail.com>
+Date:   Wed Mar 15 22:51:25 2023 +0100
+
+    ci: ensure systemd-machine-id-setup is run
+
+diff --git a/.cirrus.yml b/.cirrus.yml
+index 4edd23dfc..6e427312d 100644
+--- a/.cirrus.yml
++++ b/.cirrus.yml
+@@ -94,6 +94,7 @@ task:
+     # Work around stalled process plugin and library problems on FreeBSD: https://issues.libelektra.org/2323
+     - sudo mount -t fdescfs fdesc /dev/fd
+     - export $(dbus-launch) # Some libraries such as xfconf require a running dbus instance
++    - systemd-machine-id-setup || true # xfconf also requires a machine-id
+     - *run_tests
+ 
+ task:
+@@ -250,6 +251,7 @@ task:
+     - export LUA_CPATH="${CIRRUS_WORKING_DIR}/install/lib/lua/5.2/?.so;"
+     - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$CIRRUS_WORKING_DIR/install/lib"
+     - export $(dbus-launch) # Some libraries such as xfconf require a running dbus instance
++    - systemd-machine-id-setup || true # xfconf also requires a machine-id
+     - *run_tests
+ 
+ task:
+diff --git a/scripts/docker/debian/bullseye/release.Dockerfile b/scripts/docker/debian/bullseye/release.Dockerfile
+index f2a362649..187a70af1 100644
+--- a/scripts/docker/debian/bullseye/release.Dockerfile
++++ b/scripts/docker/debian/bullseye/release.Dockerfile
+@@ -34,6 +34,7 @@ RUN --mount=type=tmpfs,target=/tmp \
+     --mount=type=tmpfs,target=/root/.cache/elektra \
+     --mount=type=tmpfs,target=/root/.config \
+     export $(dbus-launch); \
++    systemd-machine-id-setup || true # xfconf also requires a machine-id; \
+     kdb run_all
+ 
+ RUN echo "%sudo ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+diff --git a/scripts/docker/debian/buster/release.Dockerfile b/scripts/docker/debian/buster/release.Dockerfile
+index c4ce79203..2a09d6ec4 100644
+--- a/scripts/docker/debian/buster/release.Dockerfile
++++ b/scripts/docker/debian/buster/release.Dockerfile
+@@ -34,6 +34,7 @@ RUN --mount=type=tmpfs,target=/tmp \
+     --mount=type=tmpfs,target=/root/.cache/elektra \
+     --mount=type=tmpfs,target=/root/.config \
+     export $(dbus-launch); \
++    systemd-machine-id-setup || true # xfconf also requires a machine-id; \
+     kdb run_all
+ 
+ RUN echo "%sudo ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+diff --git a/scripts/docker/opensuse/15.3/release.Dockerfile b/scripts/docker/opensuse/15.3/release.Dockerfile
+index b2e47cf8e..7ed3c1728 100644
+--- a/scripts/docker/opensuse/15.3/release.Dockerfile
++++ b/scripts/docker/opensuse/15.3/release.Dockerfile
+@@ -33,6 +33,7 @@ RUN --mount=type=tmpfs,target=/tmp \
+     --mount=type=tmpfs,target=/root/.cache/elektra \
+     --mount=type=tmpfs,target=/root/.config \
+     export $(dbus-launch); \
++    systemd-machine-id-setup || true # xfconf also requires a machine-id; \
+     kdb run_all
+ 
+ RUN echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+diff --git a/scripts/jenkins/Jenkinsfile b/scripts/jenkins/Jenkinsfile
+index 82621cf81..fbb23a3eb 100644
+--- a/scripts/jenkins/Jenkinsfile
++++ b/scripts/jenkins/Jenkinsfile
+@@ -1084,6 +1084,8 @@ export DBUS_SESSION_BUS_ADDRESS=`dbus-daemon --session --fork --print-address`
+ export LUA_CPATH="${WORKSPACE}/system/lib/lua/5.2/?.so;"
+ export $(dbus-launch)
+ 
++systemd-machine-id-setup || true # xfconf also requires a machine-id
++
+ env
+ 
+ kdb run_all
+@@ -1480,6 +1482,7 @@ def ctest(target = "Test", printFailedLogs = false) {
+   */
+   def script = """
+       export \$(dbus-launch)
++      systemd-machine-id-setup || true # xfconf also requires a machine-id
+ 
+       ${printFailedLogs ? "set +e" : ""}
+       ctest -j 1 \
+diff --git a/src/plugins/xfconf/README.md b/src/plugins/xfconf/README.md
+index a5d009c32..e3194bb6a 100644
+--- a/src/plugins/xfconf/README.md
++++ b/src/plugins/xfconf/README.md
+@@ -53,6 +53,7 @@ This plugin is tested with the xfconf versions `4.16` and above.
+ Before you can start working with the plugin, you have to make sure dbus is running.
+ If you use a common desktop environment this should already be fulfilled.
+ Otherwise, `export $(dbus-launch)` can be used to start it.
++You may also need to use `systemd-machine-id-setup` to create `/etc/machine-id`.
+ 
+ Note that this plugin does not support macOS since Xfce is not commonly used there, Mac Ports only provides a very old version (`4.12`) and Brew does not provide Xfce at all.
+ 
+
+commit 64e14747003ac5fee8914d834cdf42dead78ea2c
+Author: Klemens Böswirth <k.boeswirth+git@gmail.com>
+Date:   Wed Mar 15 19:03:31 2023 +0100
+
+    tests: exclude xfconf if dbus-launch is missing
+
+diff --git a/tests/shell/check_kdb_internal_check.sh b/tests/shell/check_kdb_internal_check.sh
+index 69845b0c6..1be1578c0 100755
+--- a/tests/shell/check_kdb_internal_check.sh
++++ b/tests/shell/check_kdb_internal_check.sh
+@@ -28,6 +28,13 @@ for PLUGIN in $ACTUAL_PLUGINS; do
+ 	ARGS=""
+ 	case "$PLUGIN" in
+ 	# exclude plugins with known issues
++	"xfconf")
++		# xfconf needs running dbus
++		# sometimes dbus is available when compiling, but not during packaging
++		if ! command -v dbus-launch; then
++			continue
++		fi
++		;;
+ 	esac
+ 
+ 	ASAN='@ENABLE_ASAN@'
