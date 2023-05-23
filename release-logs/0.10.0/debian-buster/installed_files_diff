@@ -1,0 +1,564 @@
+35d34
+< include/elektra/kdbchangetracking.h
+104,205c103,205
+< lib/elektra/libelektra-plugin-augeas.so
+< lib/elektra/libelektra-plugin-backend.so
+< lib/elektra/libelektra-plugin-base64.so
+< lib/elektra/libelektra-plugin-blacklist.so
+< lib/elektra/libelektra-plugin-blockresolver.so
+< lib/elektra/libelektra-plugin-c.so
+< lib/elektra/libelektra-plugin-ccode.so
+< lib/elektra/libelektra-plugin-conditionals.so
+< lib/elektra/libelektra-plugin-constants.so
+< lib/elektra/libelektra-plugin-counter.so
+< lib/elektra/libelektra-plugin-cpptemplate.so
+< lib/elektra/libelektra-plugin-crypto.so
+< lib/elektra/libelektra-plugin-csvstorage.so
+< lib/elektra/libelektra-plugin-curlget.so
+< lib/elektra/libelektra-plugin-date.so
+< lib/elektra/libelektra-plugin-dbus.so
+< lib/elektra/libelektra-plugin-dbusrecv.so
+< lib/elektra/libelektra-plugin-desktop.so
+< lib/elektra/libelektra-plugin-directoryvalue.so
+< lib/elektra/libelektra-plugin-doc.so
+< lib/elektra/libelektra-plugin-dpkg.so
+< lib/elektra/libelektra-plugin-dump.so
+< lib/elektra/libelektra-plugin-email.so
+< lib/elektra/libelektra-plugin-error.so
+< lib/elektra/libelektra-plugin-fcrypt.so
+< lib/elektra/libelektra-plugin-file.so
+< lib/elektra/libelektra-plugin-filecheck.so
+< lib/elektra/libelektra-plugin-fstab.so
+< lib/elektra/libelektra-plugin-gitresolver.so
+< lib/elektra/libelektra-plugin-glob.so
+< lib/elektra/libelektra-plugin-gopts.so
+< lib/elektra/libelektra-plugin-gpgme.so
+< lib/elektra/libelektra-plugin-hexcode.so
+< lib/elektra/libelektra-plugin-hexnumber.so
+< lib/elektra/libelektra-plugin-hosts.so
+< lib/elektra/libelektra-plugin-iconv.so
+< lib/elektra/libelektra-plugin-internalnotification.so
+< lib/elektra/libelektra-plugin-ipaddr.so
+< lib/elektra/libelektra-plugin-iterate.so
+< lib/elektra/libelektra-plugin-jni.so
+< lib/elektra/libelektra-plugin-journald.so
+< lib/elektra/libelektra-plugin-kconfig.so
+< lib/elektra/libelektra-plugin-keytometa.so
+< lib/elektra/libelektra-plugin-length.so
+< lib/elektra/libelektra-plugin-line.so
+< lib/elektra/libelektra-plugin-lineendings.so
+< lib/elektra/libelektra-plugin-logchange.so
+< lib/elektra/libelektra-plugin-lua.so
+< lib/elektra/libelektra-plugin-macaddr.so
+< lib/elektra/libelektra-plugin-mathcheck.so
+< lib/elektra/libelektra-plugin-mini.so
+< lib/elektra/libelektra-plugin-missing.so
+< lib/elektra/libelektra-plugin-modules.so
+< lib/elektra/libelektra-plugin-mozprefs.so
+< lib/elektra/libelektra-plugin-network.so
+< lib/elektra/libelektra-plugin-ni.so
+< lib/elektra/libelektra-plugin-noresolver.so
+< lib/elektra/libelektra-plugin-passwd.so
+< lib/elektra/libelektra-plugin-path.so
+< lib/elektra/libelektra-plugin-process.so
+< lib/elektra/libelektra-plugin-profile.so
+< lib/elektra/libelektra-plugin-python.so
+< lib/elektra/libelektra-plugin-quickdump.so
+< lib/elektra/libelektra-plugin-range.so
+< lib/elektra/libelektra-plugin-reference.so
+< lib/elektra/libelektra-plugin-rename.so
+< lib/elektra/libelektra-plugin-resolver.so
+< lib/elektra/libelektra-plugin-resolver_fm_b_b.so
+< lib/elektra/libelektra-plugin-resolver_fm_hb_b.so
+< lib/elektra/libelektra-plugin-resolver_fm_hp_b.so
+< lib/elektra/libelektra-plugin-resolver_fm_hpu_b.so
+< lib/elektra/libelektra-plugin-resolver_fm_pb_b.so
+< lib/elektra/libelektra-plugin-resolver_fm_ub_x.so
+< lib/elektra/libelektra-plugin-resolver_fm_uhb_xb.so
+< lib/elektra/libelektra-plugin-resolver_fm_xb_x.so
+< lib/elektra/libelektra-plugin-resolver_fm_xhp_x.so
+< lib/elektra/libelektra-plugin-resolver_fm_xp_x.so
+< lib/elektra/libelektra-plugin-rgbcolor.so
+< lib/elektra/libelektra-plugin-shell.so
+< lib/elektra/libelektra-plugin-simpleini.so
+< lib/elektra/libelektra-plugin-spec.so
+< lib/elektra/libelektra-plugin-specload.so
+< lib/elektra/libelektra-plugin-storage.so
+< lib/elektra/libelektra-plugin-sync.so
+< lib/elektra/libelektra-plugin-syslog.so
+< lib/elektra/libelektra-plugin-template.so
+< lib/elektra/libelektra-plugin-timeofday.so
+< lib/elektra/libelektra-plugin-toml.so
+< lib/elektra/libelektra-plugin-tracer.so
+< lib/elektra/libelektra-plugin-type.so
+< lib/elektra/libelektra-plugin-uname.so
+< lib/elektra/libelektra-plugin-unit.so
+< lib/elektra/libelektra-plugin-validation.so
+< lib/elektra/libelektra-plugin-version.so
+< lib/elektra/libelektra-plugin-wresolver.so
+< lib/elektra/libelektra-plugin-xerces.so
+< lib/elektra/libelektra-plugin-xfconf.so
+< lib/elektra/libelektra-plugin-xmltool.so
+< lib/elektra/libelektra-plugin-yajl.so
+< lib/elektra/libelektra-plugin-yamlcpp.so
+< lib/elektra/libelektra-plugin-zeromqrecv.so
+< lib/elektra/libelektra-plugin-zeromqsend.so
+---
+> lib/elektra/libelektra-augeas.so
+> lib/elektra/libelektra-backend.so
+> lib/elektra/libelektra-base64.so
+> lib/elektra/libelektra-blacklist.so
+> lib/elektra/libelektra-blockresolver.so
+> lib/elektra/libelektra-c.so
+> lib/elektra/libelektra-ccode.so
+> lib/elektra/libelektra-conditionals.so
+> lib/elektra/libelektra-constants.so
+> lib/elektra/libelektra-counter.so
+> lib/elektra/libelektra-cpptemplate.so
+> lib/elektra/libelektra-crypto.so
+> lib/elektra/libelektra-csvstorage.so
+> lib/elektra/libelektra-curlget.so
+> lib/elektra/libelektra-date.so
+> lib/elektra/libelektra-dbus.so
+> lib/elektra/libelektra-dbusrecv.so
+> lib/elektra/libelektra-desktop.so
+> lib/elektra/libelektra-directoryvalue.so
+> lib/elektra/libelektra-doc.so
+> lib/elektra/libelektra-dpkg.so
+> lib/elektra/libelektra-dump.so
+> lib/elektra/libelektra-email.so
+> lib/elektra/libelektra-error.so
+> lib/elektra/libelektra-fcrypt.so
+> lib/elektra/libelektra-file.so
+> lib/elektra/libelektra-filecheck.so
+> lib/elektra/libelektra-fstab.so
+> lib/elektra/libelektra-gitresolver.so
+> lib/elektra/libelektra-glob.so
+> lib/elektra/libelektra-gopts.so
+> lib/elektra/libelektra-gpgme.so
+> lib/elektra/libelektra-hexcode.so
+> lib/elektra/libelektra-hexnumber.so
+> lib/elektra/libelektra-hosts.so
+> lib/elektra/libelektra-iconv.so
+> lib/elektra/libelektra-internalnotification.so
+> lib/elektra/libelektra-ipaddr.so
+> lib/elektra/libelektra-iterate.so
+> lib/elektra/libelektra-jni.so
+> lib/elektra/libelektra-journald.so
+> lib/elektra/libelektra-kconfig.so
+> lib/elektra/libelektra-keytometa.so
+> lib/elektra/libelektra-length.so
+> lib/elektra/libelektra-line.so
+> lib/elektra/libelektra-lineendings.so
+> lib/elektra/libelektra-logchange.so
+> lib/elektra/libelektra-lua.so
+> lib/elektra/libelektra-macaddr.so
+> lib/elektra/libelektra-mathcheck.so
+> lib/elektra/libelektra-mini.so
+> lib/elektra/libelektra-missing.so
+> lib/elektra/libelektra-modules.so
+> lib/elektra/libelektra-mozprefs.so
+> lib/elektra/libelektra-multifile.so
+> lib/elektra/libelektra-network.so
+> lib/elektra/libelektra-ni.so
+> lib/elektra/libelektra-noresolver.so
+> lib/elektra/libelektra-passwd.so
+> lib/elektra/libelektra-path.so
+> lib/elektra/libelektra-process.so
+> lib/elektra/libelektra-profile.so
+> lib/elektra/libelektra-python.so
+> lib/elektra/libelektra-quickdump.so
+> lib/elektra/libelektra-range.so
+> lib/elektra/libelektra-reference.so
+> lib/elektra/libelektra-rename.so
+> lib/elektra/libelektra-resolver.so
+> lib/elektra/libelektra-resolver_fm_b_b.so
+> lib/elektra/libelektra-resolver_fm_hb_b.so
+> lib/elektra/libelektra-resolver_fm_hp_b.so
+> lib/elektra/libelektra-resolver_fm_hpu_b.so
+> lib/elektra/libelektra-resolver_fm_pb_b.so
+> lib/elektra/libelektra-resolver_fm_ub_x.so
+> lib/elektra/libelektra-resolver_fm_uhb_xb.so
+> lib/elektra/libelektra-resolver_fm_xb_x.so
+> lib/elektra/libelektra-resolver_fm_xhp_x.so
+> lib/elektra/libelektra-resolver_fm_xp_x.so
+> lib/elektra/libelektra-rgbcolor.so
+> lib/elektra/libelektra-shell.so
+> lib/elektra/libelektra-simpleini.so
+> lib/elektra/libelektra-spec.so
+> lib/elektra/libelektra-specload.so
+> lib/elektra/libelektra-storage.so
+> lib/elektra/libelektra-sync.so
+> lib/elektra/libelektra-syslog.so
+> lib/elektra/libelektra-template.so
+> lib/elektra/libelektra-timeofday.so
+> lib/elektra/libelektra-toml.so
+> lib/elektra/libelektra-tracer.so
+> lib/elektra/libelektra-type.so
+> lib/elektra/libelektra-uname.so
+> lib/elektra/libelektra-unit.so
+> lib/elektra/libelektra-validation.so
+> lib/elektra/libelektra-version.so
+> lib/elektra/libelektra-wresolver.so
+> lib/elektra/libelektra-xerces.so
+> lib/elektra/libelektra-xfconf.so
+> lib/elektra/libelektra-xmltool.so
+> lib/elektra/libelektra-yajl.so
+> lib/elektra/libelektra-yamlcpp.so
+> lib/elektra/libelektra-zeromqrecv.so
+> lib/elektra/libelektra-zeromqsend.so
+219d218
+< lib/elektra/tool_exec/check_external_example_codegen_econf_empty_array_spec
+276d274
+< lib/elektra/tool_exec/test_changetracking
+280,281d277
+< lib/elektra/tool_exec/test_diff
+< lib/elektra/tool_exec/test_diffprivate
+369d364
+< lib/elektra/tool_exec/testmod_logchange
+425c420
+< lib/libelektra-core.so.0.10.0
+---
+> lib/libelektra-core.so.0.9.14
+428c423
+< lib/libelektra-ease.so.0.10.0
+---
+> lib/libelektra-ease.so.0.9.14
+431c426
+< lib/libelektra-full.so.0.10.0
+---
+> lib/libelektra-full.so.0.9.14
+434c429
+< lib/libelektra-globbing.so.0.10.0
+---
+> lib/libelektra-globbing.so.0.9.14
+437c432
+< lib/libelektra-highlevel.so.0.10.0
+---
+> lib/libelektra-highlevel.so.0.9.14
+440c435
+< lib/libelektra-invoke.so.0.10.0
+---
+> lib/libelektra-invoke.so.0.9.14
+443c438
+< lib/libelektra-io.so.0.10.0
+---
+> lib/libelektra-io.so.0.9.14
+446c441
+< lib/libelektra-kdb.so.0.10.0
+---
+> lib/libelektra-kdb.so.0.9.14
+449c444
+< lib/libelektra-merge.so.0.10.0
+---
+> lib/libelektra-merge.so.0.9.14
+452c447
+< lib/libelektra-meta.so.0.10.0
+---
+> lib/libelektra-meta.so.0.9.14
+455c450
+< lib/libelektra-notification.so.0.10.0
+---
+> lib/libelektra-notification.so.0.9.14
+458c453
+< lib/libelektra-opts.so.0.10.0
+---
+> lib/libelektra-opts.so.0.9.14
+461c456
+< lib/libelektra-plugin.so.0.10.0
+---
+> lib/libelektra-plugin.so.0.9.14
+464c459
+< lib/libelektra-pluginprocess.so.0.10.0
+---
+> lib/libelektra-pluginprocess.so.0.9.14
+468c463
+< lib/libelektra-utility.so.0.10.0
+---
+> lib/libelektra-utility.so.0.9.14
+474c469
+< lib/libelektraintercept-env.so.0.10.0
+---
+> lib/libelektraintercept-env.so.0.9.14
+476c471
+< lib/libelektratools-full.so.0.10.0
+---
+> lib/libelektratools-full.so.0.9.14
+480c475
+< lib/libelektratools.so.0.10.0
+---
+> lib/libelektratools.so.0.9.14
+548,549c543,544
+< share/doc/elektra-api/html/autotoc_md1015.html
+< share/doc/elektra-api/html/autotoc_md1022.html
+---
+> share/doc/elektra-api/html/autotoc_md1010.html
+> share/doc/elektra-api/html/autotoc_md1017.html
+601,605c596,600
+< share/doc/elektra-api/html/autotoc_md547.html
+< share/doc/elektra-api/html/autotoc_md557.html
+< share/doc/elektra-api/html/autotoc_md559.html
+< share/doc/elektra-api/html/autotoc_md566.html
+< share/doc/elektra-api/html/autotoc_md576.html
+---
+> share/doc/elektra-api/html/autotoc_md536.html
+> share/doc/elektra-api/html/autotoc_md552.html
+> share/doc/elektra-api/html/autotoc_md562.html
+> share/doc/elektra-api/html/autotoc_md564.html
+> share/doc/elektra-api/html/autotoc_md571.html
+607,608c602
+< share/doc/elektra-api/html/autotoc_md585.html
+< share/doc/elektra-api/html/autotoc_md588.html
+---
+> share/doc/elektra-api/html/autotoc_md581.html
+611,623c605,620
+< share/doc/elektra-api/html/autotoc_md597.html
+< share/doc/elektra-api/html/autotoc_md613.html
+< share/doc/elektra-api/html/autotoc_md620.html
+< share/doc/elektra-api/html/autotoc_md644.html
+< share/doc/elektra-api/html/autotoc_md645.html
+< share/doc/elektra-api/html/autotoc_md647.html
+< share/doc/elektra-api/html/autotoc_md654.html
+< share/doc/elektra-api/html/autotoc_md670.html
+< share/doc/elektra-api/html/autotoc_md681.html
+< share/doc/elektra-api/html/autotoc_md685.html
+< share/doc/elektra-api/html/autotoc_md691.html
+< share/doc/elektra-api/html/autotoc_md693.html
+< share/doc/elektra-api/html/autotoc_md699.html
+---
+> share/doc/elektra-api/html/autotoc_md593.html
+> share/doc/elektra-api/html/autotoc_md595.html
+> share/doc/elektra-api/html/autotoc_md602.html
+> share/doc/elektra-api/html/autotoc_md618.html
+> share/doc/elektra-api/html/autotoc_md625.html
+> share/doc/elektra-api/html/autotoc_md649.html
+> share/doc/elektra-api/html/autotoc_md650.html
+> share/doc/elektra-api/html/autotoc_md652.html
+> share/doc/elektra-api/html/autotoc_md659.html
+> share/doc/elektra-api/html/autotoc_md675.html
+> share/doc/elektra-api/html/autotoc_md686.html
+> share/doc/elektra-api/html/autotoc_md690.html
+> share/doc/elektra-api/html/autotoc_md696.html
+> share/doc/elektra-api/html/autotoc_md698.html
+> share/doc/elektra-api/html/autotoc_md704.html
+> share/doc/elektra-api/html/autotoc_md717.html
+625,630c622,626
+< share/doc/elektra-api/html/autotoc_md722.html
+< share/doc/elektra-api/html/autotoc_md728.html
+< share/doc/elektra-api/html/autotoc_md730.html
+< share/doc/elektra-api/html/autotoc_md732.html
+< share/doc/elektra-api/html/autotoc_md739.html
+< share/doc/elektra-api/html/autotoc_md743.html
+---
+> share/doc/elektra-api/html/autotoc_md723.html
+> share/doc/elektra-api/html/autotoc_md725.html
+> share/doc/elektra-api/html/autotoc_md727.html
+> share/doc/elektra-api/html/autotoc_md734.html
+> share/doc/elektra-api/html/autotoc_md738.html
+634,636c630,633
+< share/doc/elektra-api/html/autotoc_md850.html
+< share/doc/elektra-api/html/autotoc_md854.html
+< share/doc/elektra-api/html/autotoc_md861.html
+---
+> share/doc/elektra-api/html/autotoc_md845.html
+> share/doc/elektra-api/html/autotoc_md849.html
+> share/doc/elektra-api/html/autotoc_md856.html
+> share/doc/elektra-api/html/autotoc_md862.html
+639,642c636,638
+< share/doc/elektra-api/html/autotoc_md877.html
+< share/doc/elektra-api/html/autotoc_md878.html
+< share/doc/elektra-api/html/autotoc_md880.html
+< share/doc/elektra-api/html/autotoc_md887.html
+---
+> share/doc/elektra-api/html/autotoc_md873.html
+> share/doc/elektra-api/html/autotoc_md875.html
+> share/doc/elektra-api/html/autotoc_md882.html
+643a640
+> share/doc/elektra-api/html/autotoc_md892.html
+645d641
+< share/doc/elektra-api/html/autotoc_md902.html
+647c643
+< share/doc/elektra-api/html/autotoc_md933.html
+---
+> share/doc/elektra-api/html/autotoc_md928.html
+1517a1514
+> share/doc/elektra-api/html/doc_decisions_1_problem_clear_change_tracking_md.html
+1528d1524
+< share/doc/elektra-api/html/doc_decisions_3_in_review_change_tracking_md.html
+1564d1559
+< share/doc/elektra-api/html/doc_decisions_6_implemented_gradle_md.html
+1619a1615
+> share/doc/elektra-api/html/doc_help_elektra-sync-flag_md.html
+1716d1711
+< share/doc/elektra-api/html/doc_news_2023-03-16_0_9_14_md.html
+1723d1717
+< share/doc/elektra-api/html/doc_tutorials_changetracking_md.html
+1731d1724
+< share/doc/elektra-api/html/doc_tutorials_dockerd-specification_md.html
+1737a1731
+> share/doc/elektra-api/html/doc_tutorials_install-webui_md.html
+1810,1813d1803
+< share/doc/elektra-api/html/doc_usecases_specification_array-specification_md.html
+< share/doc/elektra-api/html/doc_usecases_specification_enum-specification_md.html
+< share/doc/elektra-api/html/doc_usecases_specification_simple-specification_md.html
+< share/doc/elektra-api/html/doc_usecases_specification_underline-specification_md.html
+2715d2704
+< share/doc/elektra-api/html/md_doc_tutorials_install-webui.html
+3782,3789c3771,3778
+< share/elektra/tool_data/fuse/psutil-5.9.5-py3.7.egg-info
+< share/elektra/tool_data/fuse/psutil-5.9.5-py3.7.egg-info/PKG-INFO
+< share/elektra/tool_data/fuse/psutil-5.9.5-py3.7.egg-info/SOURCES.txt
+< share/elektra/tool_data/fuse/psutil-5.9.5-py3.7.egg-info/dependency_links.txt
+< share/elektra/tool_data/fuse/psutil-5.9.5-py3.7.egg-info/installed-files.txt
+< share/elektra/tool_data/fuse/psutil-5.9.5-py3.7.egg-info/not-zip-safe
+< share/elektra/tool_data/fuse/psutil-5.9.5-py3.7.egg-info/requires.txt
+< share/elektra/tool_data/fuse/psutil-5.9.5-py3.7.egg-info/top_level.txt
+---
+> share/elektra/tool_data/fuse/psutil-5.9.4-py3.7.egg-info
+> share/elektra/tool_data/fuse/psutil-5.9.4-py3.7.egg-info/PKG-INFO
+> share/elektra/tool_data/fuse/psutil-5.9.4-py3.7.egg-info/SOURCES.txt
+> share/elektra/tool_data/fuse/psutil-5.9.4-py3.7.egg-info/dependency_links.txt
+> share/elektra/tool_data/fuse/psutil-5.9.4-py3.7.egg-info/installed-files.txt
+> share/elektra/tool_data/fuse/psutil-5.9.4-py3.7.egg-info/not-zip-safe
+> share/elektra/tool_data/fuse/psutil-5.9.4-py3.7.egg-info/requires.txt
+> share/elektra/tool_data/fuse/psutil-5.9.4-py3.7.egg-info/top_level.txt
+3860,3864c3849,3853
+< share/java/libelektra-0.10.0-all.jar
+< share/java/libelektra-0.10.0-javadoc.jar
+< share/java/libelektra-0.10.0-sources.jar
+< share/java/libelektra-0.10.0.jar
+< share/java/libelektra-0.10.0.pom.xml
+---
+> share/java/libelektra-0.9.14-all.jar
+> share/java/libelektra-0.9.14-javadoc.jar
+> share/java/libelektra-0.9.14-sources.jar
+> share/java/libelektra-0.9.14.jar
+> share/java/libelektra-0.9.14.pom.xml
+3870,3873c3859,3862
+< share/java/plugins/linkchecker-0.10.0.jar
+< share/java/plugins/sorted-0.10.0.jar
+< share/java/plugins/whitelist-0.10.0.jar
+< share/java/process-0.10.0.jar
+---
+> share/java/plugins/linkchecker-0.9.14.jar
+> share/java/plugins/sorted-0.9.14.jar
+> share/java/plugins/whitelist-0.9.14.jar
+> share/java/process-0.9.14.jar
+3948,3949c3937,3938
+< share/man/man3/autotoc_md1015.3elektra
+< share/man/man3/autotoc_md1022.3elektra
+---
+> share/man/man3/autotoc_md1010.3elektra
+> share/man/man3/autotoc_md1017.3elektra
+4001,4005c3990,3994
+< share/man/man3/autotoc_md547.3elektra
+< share/man/man3/autotoc_md557.3elektra
+< share/man/man3/autotoc_md559.3elektra
+< share/man/man3/autotoc_md566.3elektra
+< share/man/man3/autotoc_md576.3elektra
+---
+> share/man/man3/autotoc_md536.3elektra
+> share/man/man3/autotoc_md552.3elektra
+> share/man/man3/autotoc_md562.3elektra
+> share/man/man3/autotoc_md564.3elektra
+> share/man/man3/autotoc_md571.3elektra
+4007,4008c3996
+< share/man/man3/autotoc_md585.3elektra
+< share/man/man3/autotoc_md588.3elektra
+---
+> share/man/man3/autotoc_md581.3elektra
+4011,4023c3999,4014
+< share/man/man3/autotoc_md597.3elektra
+< share/man/man3/autotoc_md613.3elektra
+< share/man/man3/autotoc_md620.3elektra
+< share/man/man3/autotoc_md644.3elektra
+< share/man/man3/autotoc_md645.3elektra
+< share/man/man3/autotoc_md647.3elektra
+< share/man/man3/autotoc_md654.3elektra
+< share/man/man3/autotoc_md670.3elektra
+< share/man/man3/autotoc_md681.3elektra
+< share/man/man3/autotoc_md685.3elektra
+< share/man/man3/autotoc_md691.3elektra
+< share/man/man3/autotoc_md693.3elektra
+< share/man/man3/autotoc_md699.3elektra
+---
+> share/man/man3/autotoc_md593.3elektra
+> share/man/man3/autotoc_md595.3elektra
+> share/man/man3/autotoc_md602.3elektra
+> share/man/man3/autotoc_md618.3elektra
+> share/man/man3/autotoc_md625.3elektra
+> share/man/man3/autotoc_md649.3elektra
+> share/man/man3/autotoc_md650.3elektra
+> share/man/man3/autotoc_md652.3elektra
+> share/man/man3/autotoc_md659.3elektra
+> share/man/man3/autotoc_md675.3elektra
+> share/man/man3/autotoc_md686.3elektra
+> share/man/man3/autotoc_md690.3elektra
+> share/man/man3/autotoc_md696.3elektra
+> share/man/man3/autotoc_md698.3elektra
+> share/man/man3/autotoc_md704.3elektra
+> share/man/man3/autotoc_md717.3elektra
+4025,4030c4016,4020
+< share/man/man3/autotoc_md722.3elektra
+< share/man/man3/autotoc_md728.3elektra
+< share/man/man3/autotoc_md730.3elektra
+< share/man/man3/autotoc_md732.3elektra
+< share/man/man3/autotoc_md739.3elektra
+< share/man/man3/autotoc_md743.3elektra
+---
+> share/man/man3/autotoc_md723.3elektra
+> share/man/man3/autotoc_md725.3elektra
+> share/man/man3/autotoc_md727.3elektra
+> share/man/man3/autotoc_md734.3elektra
+> share/man/man3/autotoc_md738.3elektra
+4034,4036c4024,4027
+< share/man/man3/autotoc_md850.3elektra
+< share/man/man3/autotoc_md854.3elektra
+< share/man/man3/autotoc_md861.3elektra
+---
+> share/man/man3/autotoc_md845.3elektra
+> share/man/man3/autotoc_md849.3elektra
+> share/man/man3/autotoc_md856.3elektra
+> share/man/man3/autotoc_md862.3elektra
+4039,4042c4030,4032
+< share/man/man3/autotoc_md877.3elektra
+< share/man/man3/autotoc_md878.3elektra
+< share/man/man3/autotoc_md880.3elektra
+< share/man/man3/autotoc_md887.3elektra
+---
+> share/man/man3/autotoc_md873.3elektra
+> share/man/man3/autotoc_md875.3elektra
+> share/man/man3/autotoc_md882.3elektra
+4043a4034
+> share/man/man3/autotoc_md892.3elektra
+4045d4035
+< share/man/man3/autotoc_md902.3elektra
+4047c4037
+< share/man/man3/autotoc_md933.3elektra
+---
+> share/man/man3/autotoc_md928.3elektra
+4190a4181
+> share/man/man3/doc_decisions_1_problem_clear_change_tracking_md.3elektra
+4201d4191
+< share/man/man3/doc_decisions_3_in_review_change_tracking_md.3elektra
+4237d4226
+< share/man/man3/doc_decisions_6_implemented_gradle_md.3elektra
+4292a4282
+> share/man/man3/doc_help_elektra-sync-flag_md.3elektra
+4389d4378
+< share/man/man3/doc_news_2023-03-16_0_9_14_md.3elektra
+4396d4384
+< share/man/man3/doc_tutorials_changetracking_md.3elektra
+4404d4391
+< share/man/man3/doc_tutorials_dockerd-specification_md.3elektra
+4410a4398
+> share/man/man3/doc_tutorials_install-webui_md.3elektra
+4483,4486d4470
+< share/man/man3/doc_usecases_specification_array-specification_md.3elektra
+< share/man/man3/doc_usecases_specification_enum-specification_md.3elektra
+< share/man/man3/doc_usecases_specification_simple-specification_md.3elektra
+< share/man/man3/doc_usecases_specification_underline-specification_md.3elektra
+4635d4618
+< share/man/man3/md_doc_tutorials_install-webui.3elektra
+4763a4747
+> share/man/man7/elektra-sync-flag.7

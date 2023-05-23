@@ -1,0 +1,17 @@
+-rwxr-xr-x 1 jenkins jenkins   277792 May 22 18:17 libelektra-core.so.0.10.0
+-rwxr-xr-x 1 jenkins jenkins    91984 May 22 18:17 libelektra-ease.so.0.10.0
+-rwxr-xr-x 1 jenkins jenkins  7602664 May 22 18:17 libelektra-full.so.0.10.0
+-rwxr-xr-x 1 jenkins jenkins    20520 May 22 18:17 libelektra-globbing.so.0.10.0
+-rwxr-xr-x 1 jenkins jenkins   162888 May 22 18:17 libelektra-highlevel.so.0.10.0
+-rwxr-xr-x 1 jenkins jenkins    29168 May 22 18:18 libelektra-invoke.so.0.10.0
+-rwxr-xr-x 1 jenkins jenkins    36208 May 22 18:18 libelektra-io.so.0.10.0
+-rwxr-xr-x 1 jenkins jenkins   190672 May 22 18:17 libelektra-kdb.so.0.10.0
+-rwxr-xr-x 1 jenkins jenkins    75416 May 22 18:17 libelektra-merge.so.0.10.0
+-rwxr-xr-x 1 jenkins jenkins    46248 May 22 18:18 libelektra-meta.so.0.10.0
+-rwxr-xr-x 1 jenkins jenkins   147928 May 22 18:18 libelektra-opts.so.0.10.0
+-rwxr-xr-x 1 jenkins jenkins    21440 May 22 18:17 libelektra-plugin.so.0.10.0
+-rwxr-xr-x 1 jenkins jenkins    48744 May 22 18:18 libelektra-pluginprocess.so.0.10.0
+-rwxr-xr-x 1 jenkins jenkins    11368 May 22 18:17 libelektra-utility.so.0.10.0
+-rwxr-xr-x 1 jenkins jenkins  1116992 May 22 18:18 libelektraintercept-env.so.0.10.0
+-rwxr-xr-x 1 jenkins jenkins 11181376 May 22 18:18 libelektratools-full.so.0.10.0
+-rwxr-xr-x 1 jenkins jenkins 11188752 May 22 18:18 libelektratools.so.0.10.0
