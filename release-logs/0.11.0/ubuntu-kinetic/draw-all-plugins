@@ -1,0 +1,17 @@
+
+GPL Ghostscript 9.56.1 (2022-04-04)
+Copyright (C) 2022 Artifex Software, Inc.  All rights reserved.
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
+see the file COPYING for details.
+Loading NimbusRoman-Regular font from /usr/share/ghostscript/9.56.1/Resource/Font/NimbusRoman-Regular... 4964544 3450533 1954624 653038 2 done.
+Loading NimbusRoman-Italic font from /usr/share/ghostscript/9.56.1/Resource/Font/NimbusRoman-Italic... 5030624 3664824 2035424 740999 2 done.
+Loading NimbusRoman-Bold font from /usr/share/ghostscript/9.56.1/Resource/Font/NimbusRoman-Bold... 5217904 3876738 2055624 749932 2 done.
+Loading NimbusRoman-BoldItalic font from /usr/share/ghostscript/9.56.1/Resource/Font/NimbusRoman-BoldItalic... 5445584 4102971 2055624 755430 2 done.
+Loading NimbusSans-Regular font from /usr/share/ghostscript/9.56.1/Resource/Font/NimbusSans-Regular... 5632864 4286214 2055624 761015 2 done.
+Loading NimbusSans-Italic font from /usr/share/ghostscript/9.56.1/Resource/Font/NimbusSans-Italic... 5840344 4489189 2075824 770200 2 done.
+Loading NimbusSans-Bold font from /usr/share/ghostscript/9.56.1/Resource/Font/NimbusSans-Bold... 6027624 4676002 2075824 775712 2 done.
+Loading NimbusSans-BoldItalic font from /usr/share/ghostscript/9.56.1/Resource/Font/NimbusSans-BoldItalic... 6235104 4881339 2075824 781207 2 done.
+Loading NimbusMonoPS-Regular font from /usr/share/ghostscript/9.56.1/Resource/Font/NimbusMonoPS-Regular... 6462784 5107369 2096024 790154 2 done.
+Loading NimbusMonoPS-Italic font from /usr/share/ghostscript/9.56.1/Resource/Font/NimbusMonoPS-Italic... 6690464 5335650 2096024 795809 2 done.
+Loading NimbusMonoPS-Bold font from /usr/share/ghostscript/9.56.1/Resource/Font/NimbusMonoPS-Bold... 6938344 5580680 2116224 804747 2 done.
+Loading NimbusMonoPS-BoldItalic font from /usr/share/ghostscript/9.56.1/Resource/Font/NimbusMonoPS-BoldItalic... 7186224 5823503 2116224 810250 2 done.
